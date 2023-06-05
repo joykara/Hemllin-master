@@ -1,0 +1,26 @@
+.features-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 20px;
+}
+.blog:nth-child(2){
+    flex-direction: row-reverse;
+}
+.blog:nth-child(2) .blog-content{
+    background-color: var(--color-bg);
+}
+.blog:nth-child(2) .blog-content h1{
+    color: #fff;
+}
+.blog:nth-child(2) .blog-content  p, 
+.blog:nth-child(2) .blog-content  a{
+    color: #fff;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1080px){
+    .blog:nth-child(2){
+        flex-direction: column;
+    }
+}

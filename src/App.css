@@ -1,0 +1,36 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  background: none;
+  font-family: 'Roboto';
+}
+.cta-link{
+  border-bottom: var(--color-link) 2px solid;
+  color: #fff;
+}
+h2, h3{
+  font-size: 48px;
+  font-weight: 700;
+  font-family: var(--font-family);
+}
+a{
+  color: #000;
+  font-family: var(--links-font-family);
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 768px){
+  h2, h3{
+    font-size: 32px;
+  }
+}

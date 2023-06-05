@@ -1,0 +1,35 @@
+.industry-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: .2rem 1rem;
+    background: #f5f0f0;
+}
+.industry__logo{
+    padding: 10px;
+    text-align: left;
+    background: #D9D9D9;
+    cursor: pointer;
+}
+.industry__toggle-menu button{
+    cursor: pointer;
+}
+.industry__menu-links{
+    display: none;
+}
+.industry__menu-links.show{
+    display: flex;
+    position: absolute;
+    top: 2.8rem;
+    right: 0;
+    height: 100%;
+    background: #fff;
+    z-index: 999;
+}
+.industry__menu-links-top{
+    padding: 1rem 0;
+}
+.industry__menu-links__container .menu{
+    margin-top: 3rem;
+    color: #fff;
+}

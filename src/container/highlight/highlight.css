@@ -1,0 +1,5 @@
+.highlight-bar__item{
+    display: flex;
+    /* //display items in row */
+    justify-content: space-evenly;
+}

@@ -1,0 +1,205 @@
+.aboutnavbar{
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #a29f9f;
+    scroll-behavior: smooth;
+}
+.aboutnavbar__logo,
+.aboutnavbar__menu-links-top{
+    display: flex;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #fff;
+    text-align: left;
+    cursor: pointer;
+}
+.aboutnavbar__logo button,
+.aboutnavbar__menu-links-top button{
+    left: 21px;
+    top: 14px;
+    margin: 0 20px;
+    cursor: pointer;
+    color: #040404;
+    transition: 0.3s ease-in-out;
+}
+.aboutnavbar__logo p,
+.aboutnavbar__menu-links-top p{
+    padding: 15px;
+    text-align: left;
+    background: #D9D9D9;
+}
+.aboutnavbar__menu{
+    margin-left: -10%;
+}
+.aboutnavbar__menu-content{
+    display: flex;
+    flex: 2;
+    justify-content: left;
+    align-items: flex-start;
+}
+.aboutnavbar__menu-content p{
+    margin-right: 30px;
+    font-size: 1.25rem;
+    text-align: center;
+    transition-delay: .2s ease-in-out;
+}
+.aboutnavbar__menu-content ul{
+    display: none;
+}
+.aboutnavbar__menu-content ul{
+    display: grid
+}
+.aboutnavbar__menu-content h4{
+    margin-right: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--color-link);
+}
+
+.aboutnavbar__menu-content h4,
+.aboutnavbar__menu-content a{
+    color: #000000;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+}
+.aboutnavbar__menu-content a:hover,
+.aboutnavbar__search a:hover{
+    padding-bottom: .5rem;
+    border-bottom: 2px solid var(--color-link);
+}
+.aboutnavbar__menu-content .dropdown-menu{
+    display: none;
+}
+
+.aboutnavbar__search{
+    display: flex;
+    flex-direction: column;
+    justify-content:right;
+    align-items: flex-end;
+    margin-bottom: auto;
+    padding-top: 0;
+    font-family: sans-serif;
+    font-size: 1rem;
+}
+.aboutnavbar__search a{
+    color: #000000;
+}
+/* hamburger-menu nav */
+.aboutnavbar__menu-links{
+    display: none;
+}
+.aboutnavbar__menu-links.show{
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 999;
+}
+.aboutnavbar__menu-links-top{
+    padding: 1rem 0;
+    border-bottom: 2px solid rgb(82, 88, 88);
+}
+.aboutnavbar__menu-links__container{
+    background: var(--color-bg);
+    width: 60%;
+}
+.aboutnavbar__menu-links__container .menu{
+    margin-top: 3rem;
+}
+
+.aboutnavbar__menu-links__container .menu p,
+.aboutnavbar__menu-links__container .menu p a{
+    font-family: var(--links-font-family);
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 1rem 2rem;
+    color: #fff;
+}
+/* .navbar__menu-links__container .menu p span{
+    justify-content: left;
+} */
+.aboutnavbar__menu-links__container .menu a:hover,
+.aboutnavbar__menu-links__container .menu p:hover{
+    cursor: pointer;
+    color:  var(--color-link)
+}
+.aboutnavbar__menu-links__container .menu p:nth-child(4){
+    color: var(--color-link);
+}
+.aboutnavbar__menu-links__details{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.aboutnavbar__menu-links__search{
+    display: flex;
+    padding: 1rem 0;
+    border: 1px solid red;  /*view it*/
+}
+.aboutnavbar__menu-links__search input{
+    width: 100%;
+    height: 50px;
+    margin: auto 0;
+    outline: none;
+    border: none;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+.aboutnavbar__menu-links__search button{
+    background: none;
+    border: none;
+}
+.aboutdrop-down-menu,
+.aboutdrop-down-menu2,
+.aboutdrop-down-menu3{
+    display: none;
+}
+.aboutdrop-down-menu.active,
+.aboutdrop-down-menu2.active2,
+.aboutdrop-down-menu3.active3{
+    display: flex;
+    position: absolute;
+    padding: 1rem;
+    margin-left: 6rem;
+    background: #fff;
+    z-index: 999;
+    border: none;
+}
+.aboutdrop-down-menu-container{
+    display: flex;
+    flex-direction: column;
+}
+.aboutdrop-down-menu-container li{
+    padding: 1rem 0;
+}
+.aboutnavbar__menu-content {
+  position: relative;
+}
+
+.aboutnavbar__menu-content .aboutdrop-down-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 1rem 0;
+  background: #fff;
+  z-index: 999;
+}
+
+.aboutnavbar__menu-content:hover .aboutdrop-down-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1044px){
+    .aboutnavbar__menu{
+        display: none;
+    }
+}

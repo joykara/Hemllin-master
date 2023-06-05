@@ -1,0 +1,65 @@
+.industries-list ul{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 1.5rem 5rem;
+    padding-top: 1rem;
+}
+.industries-list h3{
+    padding: 1rem;
+    font-size: 25px;
+    border-bottom: 1px solid #514d4d;
+    width: 90%;
+}
+.industries-list{
+    width: 90%;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* SERVICES */
+
+
+/* FEATURED INSIGHTS */
+.featured-insights-list,
+.about-us-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 2rem;
+}
+.featured-insights-list h3{
+    padding: .5rem;
+    font-size: 25px;
+    border-bottom: 1px solid #514d4d;
+}
+.featured-insights-list p{
+    padding: .5rem 0;
+}
+.featured-insights-list ul{
+    padding-left: 2rem;
+}
+.featured-insights-list ul li{
+    list-style: disc;
+}
+
+.industries-dropdown-item  a,
+.services-dropdown-item  a,
+.insights-dropdown-item  a,
+.about-dropdown-item  a{
+    color: var(--color-bg);
+    padding: 20px;
+    font-family: var(--links-font-family);
+}
+.industries-dropdown-item  a:hover,
+.services-dropdown-item  a:hover,
+.insights-dropdown-item  a:hover,
+.about-dropdown-item  a:hover{
+    color: var(--color-link);
+    padding: 20px;
+    font-family: var(--links-font-family);
+    border: none;
+}
