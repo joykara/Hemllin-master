@@ -7,16 +7,6 @@ import AboutUs from '../../container/dropdowns/AboutUs';
 import {IndustriesMenu, ServicesMenu, InsightsMenu, AboutMenu} from '../../container';
 
 
-const Menu = () => (
-    <>
-        <p><a href="/industries" >Industries</a></p>
-        <p><a href="/services">Services</a></p>
-        <p><a href="/insights">Featured Insights</a></p>
-        <p><a href="/careers">Careers</a></p>
-        <p><a href="/about/blog">Blog</a></p>
-        <p><a href="/about">About Us</a></p>
-    </>
-)
 const AboutNavbar = () => {
 //   const [active, setActive] = useState(false);
     const [toggleMenu, setToggleMenu] = useState(false);
@@ -95,7 +85,7 @@ const AboutNavbar = () => {
                                 About Us
                             </p>
                             <p><a href="/careers">Careers</a></p>
-                            <p><a href="/about/blog">Blog</a></p>
+                            <p><a href="/about-us/blog">Blog</a></p>
                             <p><a href="#subscribe">Email Subscriptions</a></p>
                             <p><a href="#sign-in">Sign In</a></p>
                         </div>

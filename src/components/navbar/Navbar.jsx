@@ -88,7 +88,7 @@ const Navbar = () => {
                                 </p>
                             </div>
                             <p><a href="/careers">Careers</a></p>
-                            <p><a href="/about/blog">Blog</a></p>
+                            <p><a href="/about-us/blog">Blog</a></p>
                             <p><a href="#subscribe">Email Subscriptions</a></p>
                             <p><a href="#sign-in">Sign In</a></p>
                         </div>
@@ -110,7 +110,7 @@ const Navbar = () => {
             <div className="navbar__menu">
                 <div className="navbar__menu-content">
                     <div>
-                        <p onMouseEnter={()=> {setDropdown(!dropdown)}}>Industries</p>
+                        <p onMouseEnter={()=> {setDropdown(dropdown)}}>Industries</p>
                         <div className={`drop-down-menu ${dropdown ? 'active' : ''}`}>
                             <div className='drop-down-menu-container'>
                                 <IndustriesMenu />
@@ -134,7 +134,7 @@ const Navbar = () => {
                         </div>
                     </div>
                     <p>Careers</p>
-                    <p><a href="/about/blog">Blog</a></p>
+                    <p><a href="/about-us/blog">Blog</a></p>
                     <p>About Us</p>
                 </div>
                 
