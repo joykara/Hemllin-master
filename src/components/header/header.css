@@ -33,7 +33,6 @@
 }
 .header-content  p{
     font-family: var(--font-family);
-    font-size: 18px;
     line-height: 30px;
     color: #fff;
 }
@@ -100,7 +99,6 @@
     padding: 0 1rem;
 }
 .highlight-item-title a span{
-    font-size: 20px;
     line-height: 24px;
     padding: 0 1rem;
     transition-delay: .5s;

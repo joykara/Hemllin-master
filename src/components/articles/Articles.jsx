@@ -34,8 +34,8 @@ const Articles = () => {
           </div>
           <div className="career-content__text">
             <h2>Join Hemllin</h2>
-            <button type='button'><a href="">Careers <span className='arrow'><img src={arrow} alt="arrow nav" /></span></a></button>
-            <button type='button'><a href="">Check our process <span className='arrow'><img src={arrow} alt="arrow nav" /></span></a></button>
+            <button type='button'><a href="" className='cta-link'>Careers <span className='arrow'><img src={arrow} alt="arrow nav" /></span></a></button>
+            <button type='button'><a href="" >Check our process <span className='arrow '><img src={arrow} alt="arrow nav" /></span></a></button>
           </div>
         </div>
       </div>

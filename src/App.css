@@ -14,10 +14,6 @@
   background: none;
   font-family: 'Roboto';
 }
-.cta-link{
-  border-bottom: var(--color-link) 2px solid;
-  color: #fff;
-}
 h2, h3{
   font-size: 48px;
   font-weight: 700;
@@ -26,6 +22,17 @@ h2, h3{
 a{
   color: #000;
   font-family: var(--links-font-family);
+}
+p{
+  font-size: 18px;
+  font-weight: 400;
+}
+.cta-link:hover{
+  color: var(--color-link);
+  cursor: pointer;
+}
+.arrow{
+  transition: padding .4s ease-in-out;
 }
 
 /* MEDIA QUERIES */

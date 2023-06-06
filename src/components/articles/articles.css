@@ -95,8 +95,10 @@
 }
 .career-content__text{
     display: flex;
+    justify-content: center;
+    align-items: flex-start;
     flex-direction: column;
-    padding: 10rem;
+    padding: 9rem;
     font-size: 15px;
     font-family: sans-serif;
     letter-spacing: 1px;
@@ -109,6 +111,7 @@
 }
 .career-content__text button{
     padding-bottom: 1rem;
+    align-items: flex-start;
 }
 .career-content__text a{
     font-family: var(--links-font-family);
@@ -118,10 +121,7 @@
     line-height: 24px;
     text-align: left;
 }
-.career-content__text a:hover{
-    color: var(--color-link);
-    cursor: pointer;
-}
+
 .career-content__text a .arrow{
     margin-top: auto;
     padding-left: 1rem;
@@ -154,6 +154,10 @@
 }
 .hm-cta-container .hm-cta__text a{
     font-family: var(--font-family);
+}
+.hm-cta-container .hm-cta__text span a{
+    border-bottom: var(--color-link) 2px solid;
+    color: #fff;
 }
 
 

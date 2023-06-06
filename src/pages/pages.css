@@ -524,29 +524,66 @@ form .contact-us-question-options label{
     padding-bottom: 3rem;
 }
 .hm-media-title{
-    height: 200px;
+    height: 400px;
     width: 100%;
     text-align: center;
-    background: #f5ebeb;
+    border: 1px solid #514d4d;
 }
 .hm-media-intro{
     padding: 2rem 5rem;
-    background: #e9e6e6;
+    background: #efe0e083;
+    width: 100%;
 }
 .hm-media-intro__text{
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #ffffff;
     padding: 3rem 2rem;
     margin: 1rem 0;
 }
-.hm-media-intro__content,
+
+.hm-media-intro__content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 0;
+}
+.hm-media-intro__content-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-right: 1rem;
+    margin-top: 1.2rem;
+    width: 50%;
+}
+.hm-media-intro__content-title h2{
+    font-size: 24px;
+}
+.hm-media-intro__content-image{
+    width: 95%;
+    height: 500px;
+    background: #ffffff;
+    border: 1px solid #514d4d;
+}
+.hm-media-intro__content-text{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+}
+.hm-media-intro__content-text .image-details{
+    width: 45%;
+    height: 300px;
+    margin: .5rem;
+    background: #ffffff;
+    border: 1px solid #514d4d;
+}
 .hm-media-intro__other-content{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #ffffff;
     padding: 1rem 0;
 }
 .hm-media-intro__content h4,
@@ -556,24 +593,30 @@ form .contact-us-question-options label{
 
 .hm-media-intro__other-content{
     padding: 2rem 5rem;
-    background: #efe9e98c;
+    background: #efe0e08f;
 }
-.hm-media-intro__content-text{
+.hm-media-intro__other-content-text{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
 }
 .details{
     margin-right: 1rem;
-    padding: 1rem 0;
+    background: #dedada8c;
 }
-.details button .arrow img{
-    padding-left: 1rem;
-    width: 2.5rem;
+.details h2{
+    font-size: 24px;
+}
+.details h2,
+.details p{
+    padding: .5rem 1rem;
 }
 .hm-media-content-image{
     height: 200px;
     background: #ffffff;
-    margin: 1rem 0;
+    margin-bottom: 1rem;
+    border: 1px solid #514d4d;
 }
 
 /* INDUSTRY PAGES */
@@ -735,7 +778,7 @@ form .contact-us-question-options label{
         align-items: center;
     }
     .details{
-        padding-left: 1rem;
+        margin-bottom: 2rem;
     }
     .hm-agriculture-industry__themes-content{
         flex-direction: column;
@@ -743,6 +786,14 @@ form .contact-us-question-options label{
     .hm-agriculture-industry__themes-content-text{
         margin: 1rem 0;
         width: 90%;
+    }
+    .hm-media-intro__content,
+    .hm-media-intro__content-title,
+    .hm-media-intro__content-text,
+    .hm-media-intro__content-text .image-details,
+    .hm-media-intro__other-content-text{
+        flex-direction: column;
+        width: 100%;
     }
 
 }

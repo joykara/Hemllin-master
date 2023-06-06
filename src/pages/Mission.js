@@ -11,7 +11,7 @@ const Mission = () => {
         <AboutNavbar/>
         <div className="mission-container">
             <div className="mission-content">
-                <a href="/about"><span className='arrow'><img src={arrow} alt="arrow nav" />Back to About Us Overview</span></a>
+                <a href="/about-us"><span className='arrow'><img src={arrow} alt="arrow nav" />Back to About Us Overview</span></a>
                 <div className="mission-content-intro">
                     <h2>Our Purpose, Mission and Values</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quos reiciendis laudantium </p>

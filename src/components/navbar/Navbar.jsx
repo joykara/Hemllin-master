@@ -41,6 +41,22 @@ const Navbar = () => {
         setServicesContent(false);
         setInsightsContent(false);
     }
+ 
+    const handleDropdownLeave = () => {
+        setDropdown(false);
+    };
+
+    const handleDropdown2Leave = () => {
+        setDropdown2(false);
+    };
+
+    const handleDropdown3Leave = () => {
+        setDropdown3(false);
+    };
+
+    const handleDropdown4Leave = () => {
+        setDropdown4(false);
+    };
 
 
     const [dropdown, setDropdown] = useState(false);
@@ -95,7 +111,7 @@ const Navbar = () => {
                     </div>
                     <div className="navbar__menu-links__details">
                         <div className="navbar__menu-links__search">
-                            <input type="text" />
+                            <input type="text" placeholder='Type to search...' />
                             <button><RiSearchLine size={40}/></button>
                         </div>
                         <div className="navbar__menu-link__content">
@@ -110,24 +126,24 @@ const Navbar = () => {
             <div className="navbar__menu">
                 <div className="navbar__menu-content">
                     <div>
-                        <p onMouseEnter={()=> {setDropdown(dropdown)}}>Industries</p>
-                        <div className={`drop-down-menu ${dropdown ? 'active' : ''}`}>
+                        <p onMouseEnter={()=> {setDropdown(!dropdown)}}>Industries</p>
+                        <div className={`drop-down-menu ${dropdown ? 'active' : ''}`} onMouseLeave={handleDropdownLeave}>
                             <div className='drop-down-menu-container'>
                                 <IndustriesMenu />
                             </div>
                         </div>
                     </div>
                     <div>
-                        <p onMouseEnter={()=> {setDropdown2(!dropdown2)}}onMouseLeave={()=> {setDropdown2(!dropdown2)}}><a href="/services">Services</a></p>
-                        <div className={`drop-down-menu2 ${dropdown2 ? 'active2' : ''}`}>
+                        <p onMouseEnter={()=> {setDropdown2(!dropdown2)}}><a href="/services">Services</a></p>
+                        <div className={`drop-down-menu2 ${dropdown2 ? 'active2' : ''}`} onMouseLeave={handleDropdown2Leave}>
                             <div className='drop-down-menu-container'>
                                 <ServicesMenu />
                             </div>
                         </div>
                     </div>
                     <div>
-                        <p onMouseEnter={()=> {setDropdown3(!dropdown3)}}onMouseLeave={()=> {setDropdown3(!dropdown3)}}>Featured Insights</p>
-                        <div className={`drop-down-menu3 ${dropdown3 ? 'active3' : ''}`}>
+                        <p onMouseEnter={()=> {setDropdown3(!dropdown3)}}>Featured Insights</p>
+                        <div className={`drop-down-menu3 ${dropdown3 ? 'active3' : ''}`} onMouseLeave={handleDropdown3Leave}>
                             <div className='drop-down-menu-container'>
                                 <InsightsMenu />
                             </div>
@@ -135,7 +151,14 @@ const Navbar = () => {
                     </div>
                     <p>Careers</p>
                     <p><a href="/about-us/blog">Blog</a></p>
-                    <p>About Us</p>
+                    <div>
+                        <p onMouseOver={()=> {setDropdown4(!dropdown4)}}>About Us</p>
+                        <div className={`drop-down-menu4 ${dropdown4 ? 'active4' : ''}`} onMouseLeave={handleDropdown4Leave}>
+                            <div className='drop-down-menu-container'>
+                                <AboutMenu />
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
             </div>

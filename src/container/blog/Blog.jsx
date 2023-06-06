@@ -13,8 +13,8 @@ const Blog = ({imageUrl, featureTitle, featureUrl1, featureUrl2, featureCta1, fe
           <h1>{featureTitle}</h1>
           <p>{featureText}</p>
             <div className="blog-content__button">
-              <button type='button'><a href={featureUrl1}>{featureCta1} <span className='arrow'><img src={arrow} alt="arrow nav" /></span></a> </button>
-              <button type='button'><a href={featureUrl2}>{featureCta2} <span className='arrow'><img src={arrow} alt="arrow nav" /></span></a> </button>
+              <button type='button'><a href={featureUrl1} className='cta-link'>{featureCta1} <span className='arrow'><img src={arrow} alt="arrow nav" /></span></a> </button>
+              <button type='button'><a href={featureUrl2} className='cta-link'>{featureCta2} <span className='arrow'><img src={arrow} alt="arrow nav" /></span></a> </button>
             </div>
         </div>
         

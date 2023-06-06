@@ -4,6 +4,7 @@ import './dropdownmenu.css';
 const ServicesMenu = () => {
     return (
         <>
+        <ul className='services-list'>
           <li className='services-dropdown-item'>
               <a href='/services/management'>Management</a>
           </li>
@@ -19,6 +20,7 @@ const ServicesMenu = () => {
           <li className='services-dropdown-item'>
               <a href='/services/events-management'>Events Management</a>
           </li>
+        </ul>
         </>
     )
 }

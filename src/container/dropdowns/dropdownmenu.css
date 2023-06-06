@@ -1,8 +1,8 @@
 .industries-list ul{
     display: grid;
     grid-template-columns: auto auto auto;
-    gap: 1.5rem 5rem;
     padding-top: 1rem;
+    width: 90%;
 }
 .industries-list h3{
     padding: 1rem;
@@ -11,15 +11,33 @@
     width: 90%;
 }
 .industries-list{
-    width: 90%;
-    padding: 0 1rem;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    padding: 0 1rem;
+}
+.industries-dropdown-item,
+.services-dropdown-item,
+.featured-insights-dropdown-item{
+    padding: .5rem 0;
 }
 
-/* SERVICES */
+/* ABOUT */
+.about-us-list{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+#sections{
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 100%;
+}
+.about-us-sections{
+    padding: 1rem 0;
+}
 
 
 /* FEATURED INSIGHTS */
@@ -42,24 +60,24 @@
 .featured-insights-list ul{
     padding-left: 2rem;
 }
-.featured-insights-list ul li{
-    list-style: disc;
-}
+
 
 .industries-dropdown-item  a,
 .services-dropdown-item  a,
-.insights-dropdown-item  a,
-.about-dropdown-item  a{
+.featured-insights-dropdown-item  a,
+.about-us-dropdown-item  a,
+.about-us-sections a{
     color: var(--color-bg);
-    padding: 20px;
+    padding: 20px 0;
     font-family: var(--links-font-family);
 }
 .industries-dropdown-item  a:hover,
 .services-dropdown-item  a:hover,
-.insights-dropdown-item  a:hover,
-.about-dropdown-item  a:hover{
+.featured-insights-dropdown-item  a:hover,
+.about-us-dropdown-item  a:hover,
+.about-us-sections a:hover{
     color: var(--color-link);
-    padding: 20px;
     font-family: var(--links-font-family);
     border: none;
 }
+
