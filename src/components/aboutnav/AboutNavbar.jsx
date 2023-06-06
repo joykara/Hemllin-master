@@ -8,12 +8,13 @@ import {IndustriesMenu, ServicesMenu, InsightsMenu, AboutMenu} from '../../conta
 
 
 const AboutNavbar = () => {
-//   const [active, setActive] = useState(false);
     const [toggleMenu, setToggleMenu] = useState(false);
 
+// handle... is used to toggle the menu on and off
     const handleToggle = () => {
         setToggleMenu(!toggleMenu);
     };
+
     const handleIndustriesContent = () => {
         setIndustriesContent(true);
         setServicesContent(false);
@@ -111,7 +112,8 @@ const AboutNavbar = () => {
                             {/* enter correct links to pages */}
                                 <AboutUs linkUrl={'/about-us/our-team'} linkItem={'Our Team'}/>
                                 <AboutUs linkUrl={'/about-us/our-purpose-mission-and-values'} linkItem={'Purpose, Mission & Values'}/>
-                                <AboutUs linkUrl={'/about-us/history-of-our-firm'} linkItem={'History of Our Firm'}/>       
+                                <AboutUs linkUrl={'/about-us/history-of-our-firm'} linkItem={'History of Our Firm'}/>    
+                                <AboutUs linkUrl={'/about-us/our-governance'} linkItem={'Our Governance'}/>   
                             </div>
                         </div>
                     </div>
