@@ -8,6 +8,7 @@ export { default as Services } from '../pages/Services';
 export { default as Management } from '../pages/Management';
 export { default as Education } from '../pages/Education';
 export { default as Media } from '../pages/Media';
+export { default as OurGovernance } from '../pages/OurGovernance';
 export { default as AgricultureIndustry } from '../pages/AgricultureIndustry';
 /* export { default as AutomotiveIndustry } from '../pages/AutomotiveIndustry';
 export { default as ConstructionIndustry } from '../pages/ConstructionIndustry';

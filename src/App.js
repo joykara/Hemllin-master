@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import {BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import {Media, About, Homepage, ContactUs, Blog, Mission, Services, Management, Education, AgricultureIndustry} from './pages';
+import {Media, About, Homepage, ContactUs, Blog, Mission, OurGovernance, Services, Management, Education, AgricultureIndustry} from './pages';
 
 function App() {
   return (
@@ -12,6 +12,7 @@ function App() {
           <Route path="/about-us" element={<About />} />
           <Route path="/about-us/blog" element={<Blog />} />
           <Route path="/about-us/our-purpose-mission-and-values" element={<Mission />} />
+          <Route path="/about-us/our-governance" element={<OurGovernance />} />
           <Route path="/about-us/media" element={<Media />} />
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/services" element={<Services />} />

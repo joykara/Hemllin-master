@@ -1,7 +1,5 @@
 import React from 'react'
-import AboutNavbar from '../components/aboutnav/AboutNavbar'
-import Footer from '../components/footer/Footer';
-import arrow from '../assets/arrow.png'
+import { Footer, AboutNavbar } from '../components';
 
 
 const Media = () => {

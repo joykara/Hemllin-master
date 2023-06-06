@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
-import AboutNavbar from '../components/aboutnav/AboutNavbar'
-import Footer from '../components/footer/Footer'
+import { Footer, AboutNavbar } from '../components';
 import arrow from '../assets/Vector.png'
 import rightArrow from '../assets/arrow.png'
 
