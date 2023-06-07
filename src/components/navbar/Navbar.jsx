@@ -12,6 +12,7 @@ const Navbar = () => {
 
     const handleToggle = () => {
         setToggleMenu(!toggleMenu);
+        handleIndustriesContent();
     };
     const handleIndustriesContent = () => {
         setDropdown(false);

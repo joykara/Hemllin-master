@@ -6,3 +6,4 @@ export { default as IndustriesMenu } from './dropdowns/IndustriesMenu';
 export { default as ServicesMenu } from './dropdowns/ServicesMenu';
 export { default as InsightsMenu } from './dropdowns/InsightsMenu';
 export { default as AboutMenu } from './dropdowns/AboutMenu';
+export { default as AnimateOnScroll } from './animate/AnimateOnscroll';

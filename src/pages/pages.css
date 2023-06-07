@@ -626,7 +626,7 @@ form .contact-us-question-options label{
     justify-content: center;
     align-items: center;
     padding: 2rem 0;
-    height: 50vh;
+    height: 100vh;
     border: 1px solid #857c7c;
 }
 .hm-agriculture-industry__content{
@@ -635,7 +635,10 @@ form .contact-us-question-options label{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}   
+}
+.hm-agriculture-industry__content-intro{
+    height: 50vh;
+}
 .hm-agriculture-industry__content-intro-image{
     height: 300px;
     width: 90%;
@@ -648,6 +651,7 @@ form .contact-us-question-options label{
     justify-content: center;
     align-items: center;
     padding: 2rem 0;
+    height: 100vh;
 }
 .hm-agriculture-industry__themes-content{
     display: flex;

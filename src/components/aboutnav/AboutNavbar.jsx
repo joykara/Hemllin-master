@@ -13,6 +13,7 @@ const AboutNavbar = () => {
 // handle... is used to toggle the menu on and off
     const handleToggle = () => {
         setToggleMenu(!toggleMenu);
+        handleAboutContent();
     };
 
     const handleIndustriesContent = () => {
