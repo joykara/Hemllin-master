@@ -12,7 +12,7 @@ const Blog = () => {
         <AboutNavbar/>
         <div className="blog-container">
           <div className="blog-intro">
-            <a href="/about"><span className='arrow'><img src={arrow} alt="arrow nav" />Back to About Us Overview</span></a>
+            <a href="/about-us"><span className='arrow'><img src={arrow} alt="arrow nav" />Back to About Us Overview</span></a>
             <h2>Hemllin Blog</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
           </div>

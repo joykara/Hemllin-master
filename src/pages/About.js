@@ -94,7 +94,7 @@ const About = () => {
         <div className="case-study">
           <h4>Case Study</h4>
           <div className="case-study-content">
-            <div className="case-study-content__detail">
+            <div className="case-study-content__detail scale-up">
               <div className="case-study-image"></div>
               <div className="case-study-text">
                 <span>lorem ipsum</span>
@@ -102,7 +102,7 @@ const About = () => {
                 <article>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam neque itaque ea asperi</article>
               </div>
             </div>
-            <div className="case-study-content__detail">
+            <div className="case-study-content__detail scale-up">
               <div className="case-study-image"></div>
               <div className="case-study-text">
                 <span>lorem ipsum</span>
@@ -116,7 +116,7 @@ const About = () => {
         <div className="explore">
           <h4>Explore</h4>
           <div className="case-study-content">
-            <div className="case-study-content__detail">
+            <div className="case-study-content__detail scale-up">
               <div className="case-study-image"></div>
               <div className="case-study-text">
                 <span>lorem ipsum</span>
@@ -124,14 +124,14 @@ const About = () => {
                 <article>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam neque itaque ea asperi</article>
               </div>
             </div>
-            <div className="case-study-content__detail">
+            <div className="case-study-content__detail scale-up">
               <div className="case-study-image"></div>
               <div className="case-study-text">
                 <h4>Lorem ipsum dolor sit amet consectetur</h4>
                 <article>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam neque itaque ea asperi</article>
               </div>
             </div>
-            <div className="case-study-content__detail">
+            <div className="case-study-content__detail scale-up">
               <div className="case-study-image"></div>
               <div className="case-study-text">
                 <h4>Lorem ipsum dolor sit amet consectetur</h4>

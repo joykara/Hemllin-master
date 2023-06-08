@@ -37,9 +37,10 @@
 .navbar__menu-content p{
     margin-right: 3rem;
     text-align: center;
-    transition-delay: .2s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 .navbar__menu-content{
+    position: relative;
     display: flex;
     flex: 2;
     justify-content: left;
@@ -58,10 +59,15 @@
     font-weight: 700;
     line-height: 24px;
 }
-.navbar__menu p:hover,
+.navbar__menu-content p:hover,
+.navbar__menu-content p a:hover{
+    cursor: pointer;
+    border-bottom: 3px solid var(--color-link);
+    color: var(--color-link);
+    transition: 0.3s ease-in-out;
+}
 .navbar__search a:hover{
     cursor: pointer;
-    border-bottom: 2px solid var(--color-link);
 }
 .navbar__menu .dropdown-menu{
     display: none;
@@ -205,6 +211,7 @@
 .drop-down-menu-container .featured-insights-list,
 .drop-down-menu-container .about-us-list{
     padding: .5rem 1rem;
+    width: 100%;
 }
 .drop-down-menu-container .featured-insights-list ul{
     padding: 0;

@@ -11,7 +11,7 @@ const IndustriesMenu = () => {
                     <a href='/industries/agriculture'>Agriculture</a>
                 </li>
                 <li className='industries-dropdown-item'>
-                    <a href='/industries/automative'>Automative</a>
+                    <a href='/industries/automotive'>Automotive</a>
                 </li>
                 <li className='industries-dropdown-item'>
                     <a href='/industries/education'>Education</a>

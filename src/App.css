@@ -34,6 +34,13 @@ p{
 .arrow{
   transition: padding .4s ease-in-out;
 }
+.sub-text{
+  text-align: center;
+}
+.scale-up:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
 /* .hidden{
   opacity: 0;
   transition: all 1s;

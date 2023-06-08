@@ -2,7 +2,7 @@
 export { default as Homepage } from '../pages/Homepage';
 export { default as About } from '../pages/About';
 export { default as Blog } from '../pages/Blog';
-export { default as Mission } from '../pages/Mission';
+export { default as Mission } from './OurMission';
 export { default as ContactUs } from '../pages/ContactUs';
 export { default as Services } from '../pages/Services';
 export { default as Management } from '../pages/Management';
@@ -20,3 +20,4 @@ export { default as RetailIndustry } from '../pages/RetailIndustry';
 export { default as TechnologyIndustry } from '../pages/TechnologyIndustry';
 export { default as TelecommunicationsIndustry } from '../pages/TelecommunicationsIndustry';
 export { default as TransportationIndustry } from '../pages/TransportationIndustry'; */
+export { default as ArtificialIntelligence } from '../pages/ArtificialIntelligence';

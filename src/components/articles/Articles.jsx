@@ -41,7 +41,7 @@ const Articles = () => {
       </div>
       <div className="hm-cta-container">
         <h2>Let's Make Magic Happen! How Can We Be Your Superheroes?</h2>
-        <p className='hm-cta__text'><span><a href="" className='cta-link'>Contact us</a></span> or <span><a href="" className='cta-link'>book an appointment</a></span> with us.</p>
+        <p className='hm-cta__text'><span><a href="/contact-us" className='cta-link'>Contact us</a></span> or <span><a href="" className='cta-link'>book an appointment</a></span> with us.</p>
       </div>
     </>
   )

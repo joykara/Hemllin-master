@@ -42,9 +42,11 @@ const AboutNavbar = () => {
     }
 
 
-    const [dropdown, setDropdown] = useState(false);
+    const [aboutDropdown, setAboutDropdown] = useState(false);
     // const [dropdown2, setDropdown2] = useState(false);
-
+    const handleAboutDropdownLeave = () => {
+        setAboutDropdown(false);
+    };
     const [industriesContent, setIndustriesContent] = useState(false);
     const [servicesContent, setServicesContent] = useState(false);
     const [insightsContent, setInsightsContent] = useState(false);
@@ -53,7 +55,7 @@ const AboutNavbar = () => {
     return (
         <div className="aboutnavbar">
             <div className="aboutnavbar__logo">
-                <button onClick={handleAboutContent && handleToggle}>
+                <button onClick={handleToggle}>
                     {toggleMenu ? <RiCloseLine size={50} /> : <RiMenuLine size={40} />}
                 </button>
                 <p><Link to='/'>Logo</Link></p>
@@ -105,22 +107,24 @@ const AboutNavbar = () => {
             <div className="aboutnavbar__menu">
                 <div>About Us</div>
                 <div className="aboutnavbar__menu-content">
-                    <p>Overview</p>
+                    <div id='about-overview'>
+                        <p>Overview</p>
+                    </div>
                     <div>
-                        <p onMouseOver={()=> {setDropdown(!dropdown)}} ><a href="/about/who we are">Who We Are</a></p>
-                        <div className={`aboutdrop-down-menu ${dropdown ? 'active' : ''}`}>
+                        <p onMouseOver={()=> {setAboutDropdown(!aboutDropdown)}} >Who We Are</p>
+                        <div className={`aboutdrop-down-menu ${aboutDropdown ? 'isactive' : ''}`} onMouseLeave={handleAboutDropdownLeave}>
                             <div className='aboutdrop-down-menu-container'>
                             {/* enter correct links to pages */}
-                                <AboutUs linkUrl={'/about-us/our-team'} linkItem={'Our Team'}/>
+                               <AboutUs linkUrl={'/about-us/our-team'} linkItem={'Our Team'}/>
                                 <AboutUs linkUrl={'/about-us/our-purpose-mission-and-values'} linkItem={'Purpose, Mission & Values'}/>
                                 <AboutUs linkUrl={'/about-us/history-of-our-firm'} linkItem={'History of Our Firm'}/>    
                                 <AboutUs linkUrl={'/about-us/our-governance'} linkItem={'Our Governance'}/>   
                             </div>
                         </div>
                     </div>
-                    <p><a href="/careers">How We Work</a></p>
-                    <p><a href="/about-us/media">Media</a></p>
-                    <p><a href="/about-us/blog">Hemllin Blog</a></p>
+                    <p><Link to='/careers'>How We Work</Link></p>
+                    <p><Link to='/about-us/media'>Media</Link></p>
+                    <p><Link to='/about-us/blog'>Hemllin Blog</Link></p>
                 </div>
             </div>
             <div className="aboutnavbar__search">

@@ -13,8 +13,8 @@ const AgricultureIndustry = () => {
 
   return (
     <>
+        <IndustriesNavbar/>
         <div className='hm-agriculture-industry-container'>
-            <IndustriesNavbar/>
             <div className='hm-agriculture-industry__banner hidden' data-aos='zoom-in'>
                 <div className='hm-agriculture-industry__banner-title'>
                     <h4>LOREM IPSUM</h4>

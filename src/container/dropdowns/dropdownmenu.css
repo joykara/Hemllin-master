@@ -37,6 +37,10 @@
 }
 .about-us-sections{
     padding: 1rem 0;
+    width: 100%;
+}
+.about-us-sections ul{
+    width: 100%;
 }
 
 
@@ -48,6 +52,7 @@
     justify-content: center;
     align-items: flex-start;
     padding-left: 2rem;
+    width: 100%;
 }
 .featured-insights-list h3{
     padding: .5rem;

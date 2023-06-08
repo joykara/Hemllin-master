@@ -104,10 +104,6 @@
     align-items: center;
     width: 100%;
 }
-.case-study-content__detail:hover{
-    cursor: pointer;
-    transform: scale(1.05);
-}
 .case-study-image{
     width: 90%;
     height: 200px;
@@ -200,6 +196,161 @@
     grid-template-columns: auto auto auto;
     padding: 2rem 10rem;
     background-color: #e9e6e6;
+}
+
+
+/* OUR GOVERNANCE */
+.hm-governance-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #514d4d;
+}
+.hm-governance-title{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid #514d4d;
+}
+.hm-gov-image01{
+    width: 50%;
+    height: 500px;
+    background: #857c7c;
+}
+.hm-governance-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 0;
+    background-color: #f7eded;
+}
+.hm-gov-content02{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    background: #ffffff;
+}
+.hm-gov-sub-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+    border: 1px solid #857c7c63;
+}
+.hm-gov-sub-content-image01{
+    width: 50%;
+    height: 300px;
+    background: #857c7c;
+}
+.hm-gov-sub-content-text{
+    width: 50%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0 2rem;
+}
+.hm-gov-content03,
+.hm-gov-content05{
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 65%;
+    background: #ffffff;
+    margin: 1.5rem 2rem;
+}
+.hm-gov-sub-content2{
+    display: grid;
+    grid-template-columns: auto;
+    border: 1px solid #857c7c63;
+}
+.hm-gov-sub-content2:nth-child(1){
+    margin-right: 2rem;
+}
+.hm-gov-sub-content-image02{
+    width: 100%;
+    height: 300px;
+    background: #857c7c;
+    margin-bottom: 1rem;
+}
+
+.hm-gov-content04{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 3rem 0;
+    background: #ded9d9;
+}
+.hm-gov-content05-intro{
+    background: #ffffff;
+    margin: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hm-gov-content06{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: #ffffff;
+}
+.hm-gov-content06-info{
+    padding: 1rem 0;
+}
+.hm-gov-sub-content3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 4rem;
+    width: 70%;
+}
+.hm-gov-sub-content-details{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #857c7c63;
+    margin-right: 2rem;
+}
+.hm-gov-sub-content-detail-image{
+    width: 100%;
+    height: 200px;
+    background: #857c7c;
+    margin-bottom: 2rem;
+}
+.hm-governance-more-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 70%;
+    padding: 1rem 0;
+}
+.hm-governance-more-info h4{
+    padding: 2rem 0;
+}
+.hm-governance-more-info-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+}
+.hm-governance-more-info-details{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #857c7c63;
+    margin-right: 2rem;
+    padding: 1rem;
+}
+.hm-governance-more-info-image{
+    width: 100%;
+    height: 200px;
+    background: #857c7c;
+    margin-bottom: 2rem;
 }
 
 /* MISSIONS PAGE */
@@ -296,6 +447,18 @@
 }
 .hm-contact-form{
    width: 100%;
+}
+textarea{
+    width: 95%;
+    height: 150px;
+    border: 1px solid #181616;
+    font-size: 16px;
+    margin: 10px 0;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    resize: none;
 }
 .contact-us-other-details{
     display: flex;
@@ -620,6 +783,17 @@ form .contact-us-question-options label{
 }
 
 /* INDUSTRY PAGES */
+.industry-nav{
+    position: fixed;
+}
+.hm-agriculture-industry-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 3px solid #857c7c;
+    margin-bottom: 3rem;
+    margin-top: auto;
+}
 .hm-agriculture-industry__banner{
     display: flex;
     flex-direction: column;
@@ -669,10 +843,21 @@ form .contact-us-question-options label{
     background: #e9e6e6;
 }
 
+
+
+
 /* MEDIA QUERIES */
 @media screen and (max-width: 1440px){
     .service-options-container{
         padding: 2rem;
+    }
+    .hm-governance-content{
+        padding: 5rem 2rem;
+    }
+    
+    .hm-gov-content03,
+    .hm-gov-content05{
+        width: 100%;
     }
 }
 
@@ -799,7 +984,10 @@ form .contact-us-question-options label{
         flex-direction: column;
         width: 100%;
     }
-
+    
+    .hm-gov-content03{
+        width: 100%;
+    }
 }
 @media screen and (max-width: 768px){
     .browse-blog{

@@ -9,7 +9,7 @@ const ContactUs = () => {
     email: '',
     organization: '',
     title: '',
-    subject: ''
+    subject: '',
   })
 
   const inputs = [
@@ -54,7 +54,7 @@ const ContactUs = () => {
       errorMessage: 'SUBJECT is required',
       label: 'SUBJECT',
       required: true,
-    }
+    },
   ]
   const [question, setQuestion] = useState("Medium")
 
@@ -123,6 +123,8 @@ const ContactUs = () => {
                 {inputs.map((input) => (
                   <FormInput key={input.id} {...input} value={values[input.name]} onChange={onChange} />
                 ))}
+                <label htmlFor="message">MESSAGE *</label>
+                <textarea required></textarea>
                 {/* <ReCAPTCHA sitekey="Your client site key" onChange={onChange}/> */}
                   <button className='contact-submit-btn'>Submit</button>
               </form>
