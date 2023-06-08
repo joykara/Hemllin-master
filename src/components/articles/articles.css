@@ -127,9 +127,9 @@
     padding-left: 1rem;
     transition: padding .4s ease-in-out;
 }
-/* .career-content__text a:hover .arrow{
+.career-content__text a:hover .arrow{
     padding-left: 2.5rem;
-} */
+}
 .career-content__text a .arrow img{
     width: 40px;
 }
@@ -158,6 +158,9 @@
 .hm-cta-container .hm-cta__text span a{
     border-bottom: var(--color-link) 2px solid;
     color: #fff;
+}
+.hm-cta-container .hm-cta__text span a:hover{
+    color: var(--color-link);
 }
 
 

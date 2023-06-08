@@ -32,6 +32,7 @@ p{
   cursor: pointer;
 }
 .arrow{
+  padding-left: 1rem;
   transition: padding .4s ease-in-out;
 }
 .sub-text{
