@@ -105,7 +105,7 @@ const AboutNavbar = () => {
                 </div>
             )}
             <div className="aboutnavbar__menu">
-                <div>About Us</div>
+                <div><p>About Us</p></div>
                 <div className="aboutnavbar__menu-content">
                     <div id='about-overview'>
                         <p>Overview</p>

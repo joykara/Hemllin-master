@@ -15,16 +15,29 @@
   font-family: 'Roboto';
 }
 
-h2, h3{
+h2{
   font-size: 48px;
   font-weight: 700;
   font-family: var(--font-family);
 }
+h3{
+  font-size: 48px;
+  font-weight: 600;
+  font-family: var(--font-family);
+}
+h4{
+  font-size: 20px;
+  font-weight: 700;
+  font-family: var(--font-family);
+}
 a{
+  font-size: 16px;
   color: #000;
   font-family: var(--links-font-family);
 }
 p{
+  font-family: var(--font-family);
+  line-height: 32px;
   font-size: 18px;
   font-weight: 400;
 }
@@ -41,7 +54,12 @@ p{
 }
 .scale-up:hover{
   cursor: pointer;
-  transform: scale(1.1);
+  transform: scale(1.05);
+  transition: transform .4s ease-in-out;
+}
+.links-font{
+  font-family: var(--links-font-family);
+  padding: 2rem 0;
 }
 /* .hidden{
   opacity: 0;

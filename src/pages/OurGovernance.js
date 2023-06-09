@@ -8,7 +8,9 @@ const OurGovernance = () => {
         <div className='hm-governance-container'>
             <div className='hm-governance-title'>
               <div className='hm-gov-image01'></div>
-              <h3>Our Governance</h3>
+              <div className='hm-gov-intro-text'>
+                <h3>Our Governance</h3>
+              </div>
             </div>
             <div className='hm-governance-content'>
               <div className='hm-gov-content01 sub-text'>

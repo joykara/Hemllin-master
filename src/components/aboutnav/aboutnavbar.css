@@ -1,9 +1,9 @@
 .aboutnavbar{
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1rem 0 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #a29f9f;
+    background: #ffffff;
     scroll-behavior: smooth;
 }
 .aboutnavbar__logo,
@@ -11,7 +11,7 @@
     display: flex;
     font-size: 1.25rem;
     font-weight: 600;
-    color: #fff;
+    color: #afa5a5;
     text-align: left;
     cursor: pointer;
 }
@@ -65,7 +65,8 @@
     line-height: 24px;
 }
 #about-overview p{
-    color: var(--color-link);
+    padding-bottom: 1rem;
+    border-bottom: 3px solid #051C2C;
 }
 .aboutnavbar__menu-content p:hover{
     cursor: pointer;
@@ -201,6 +202,7 @@
 }
 .aboutnavbar__menu-content {
   position: relative;
+  color:#051C2C;
 }
 
 

@@ -1,10 +1,10 @@
 import React from 'react';
-import { Footer, Navbar } from '../components';
+import { Footer, Navbar2 } from '../components';
 
 const Education = () => {
   return (
     <>
-          <Navbar />
+          <Navbar2 />
           <div className="education-container">
               <div className="hm-education-title">
                   <h2>Lorem Ipsum</h2>

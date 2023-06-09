@@ -3,57 +3,107 @@
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    background-color: #e9e6e6;
-    padding: 0 20px;
+    background: url(../assets/about-overview.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    padding: 5rem 0;
 }
 .overview-videotext{
-    margin-top: auto;
-    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    padding-top: 10rem;
+    color: #ffffff;
     width: 50%;
 }
 .overview-videotext h2{
     font-size: 3rem;
-    font-weight: 700;
+    font-weight: 400;
     margin-bottom: 1rem;
+}
+.overview-videotext p{
+    font-family: var(--links-font-family);
+    line-height: 20px;
 }
 .overview-intro{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: var(--color-bg);
+    color: #ffffff;
     padding: 5rem 10rem;
-    width: 90%;
+    width: 100%;
+}
+.overview-intro h3{
+    font-size: 28px;
+    line-height: 40px;
+    margin-bottom: 2rem;
 }
 .overview-wwa__content,
-.overview-wwa__content2{
+.overview-wwa__content2,
+.overview-wwa__content3{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+}
+.overview-wwa__content3{
+    background: var(--color-bg);
 }
 .overview-wwa__content2{
     flex-direction: row-reverse;
 }
 .overview-wwa__content-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: 5rem;
-    background-color: #e9e6e6;
+    background-color: #ffffff;
+    width: 50%;
     height: 100%;
 }
+.overview-wwa__content-text2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem;
+    background-color: var(--color-bg);
+    color: #ffffff;
+    width: 50%;
+    height: 100%;
+}
+.overview-wwa__content-text h3,
+.overview-wwa__content-text2 h3{
+    line-height: 40px;
+    margin-bottom: 3rem;
+}
 .overview-wwa__content-img{
+    width: 50%;
+    height: auto;
+    overflow: hidden;
+}
+.overview-wwa__content-img img{
     width: 100%;
     height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .overview-wwa__details{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    background: var(--color-bg);
     padding: 4rem 10rem;
 }
 .wwa-detail{
     display: flex;
     flex-direction: column;
     padding: 2rem;
-    background-color: #e9e6e6;
+    color: #ffffff;
     margin-right: 10px;
 }
 .wwa-detail h4{
@@ -62,6 +112,12 @@
 .wwa-detail p{
     line-height: 2rem;
     padding-bottom: 1rem;
+}
+.wwa-detail__button button{
+    padding-bottom: 10px;
+}
+.wwa-detail__button a{
+    color: #ffffff;
 }
 .wwa-detail__button a:hover{
     color: var(--color-link);
@@ -205,6 +261,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
     border-bottom: 1px solid #514d4d;
 }
 .hm-governance-title{
@@ -217,6 +274,9 @@
     width: 50%;
     height: 500px;
     background: #857c7c;
+}
+.hm-gov-intro-text{
+    width: 50%;
 }
 .hm-governance-content{
     display: flex;
@@ -338,6 +398,7 @@
     justify-content: center;
     align-items: center;
     padding: 1rem 0;
+    width: 100%;
 }
 .hm-governance-more-info-details{
     display: flex;
@@ -359,13 +420,15 @@
     justify-content: center;
     align-items: flex-start;
     border-bottom: 1px solid #514d4d;
+    border-top: 1px solid #8d83837f;
+    padding: 2rem 0;
 }
 .mission-content{
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 1rem 0;
-    margin-right: 5rem;
+    margin-right: 10rem;
 }
 .mission-content-intro{
     display: flex;
@@ -375,8 +438,16 @@
     padding: 1rem 0;
     max-width: 700px;
 }
+.mission-content-intro h3{
+    font-size: 36px;
+    line-height: 52px;
+}
+.mission-content-intro p span{
+    font-family: var(--links-font-family);
+    margin-bottom: 2rem;
+}
 .mission-content-intro h4{
-    padding: 1rem 0;
+    padding: 2rem 0;
 }
 .mission-content-intro ul{
     padding: .5rem 0 .5rem 3rem;
@@ -397,10 +468,10 @@
 .mission-other-content h4{
     padding-bottom: 1rem;
 }
-.mission-other-content-image{
+.mission-other-content-image1,
+.mission-other-content-image2{
     width: 100%;
-    height: 100px;
-    background: #e9e6e6;
+    height: auto;
 }
 .mission-other-content-text{
     padding: 1rem 0;
@@ -811,7 +882,11 @@ form .contact-us-question-options label{
     align-items: center;
 }
 .hm-agriculture-industry__content-intro{
-    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 .hm-agriculture-industry__content-intro-image{
     height: 300px;
@@ -845,12 +920,140 @@ form .contact-us-question-options label{
 
 
 /* FEATURED INSIGHTS PAGES */
-
-
+.hm-featured-insights-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 3px solid #857c7c;
+    background: #e9e6e6;
+    padding-bottom: 3rem;
+    margin-top: auto;
+}
+.hm-featured-insights-intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    background: #ded9d9;
+}
+.hm-featured-insights-intro h1{
+    padding: 2rem 0;
+}
+.hm-featured-insights-intro p{
+    padding: 1rem 5rem;
+    width: 70%;
+    background: #ffffff;
+}
+.hm-featured-insights__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 3rem 0;
+    background: #e9e6e6;
+}
+.hm-featured-insights__content h5{
+    padding: 1rem;
+}
+.hm-featured-insights__content-image{
+    height: 400px;
+    width: 80%;
+    margin: 2rem;
+    background: #ffffff;
+    border: 1px solid #514d4d;
+}
+.hm-featured-insights__content-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin-top: -4rem;
+    margin-bottom: 2rem;
+    width: 60%;
+    background: #ffffff;
+    border: 1px solid #ada1a1;
+}
+.hm-featured-insights__details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    margin-top: .5rem;
+    width: 80%;
+}
+.hm-featured-insights__details-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin-right: 2rem;
+    border: 1px solid #ada1a1;
+}
+.hm-featured-insights__details-content-image{
+    height: 300px;
+    width: 100%;
+    margin-bottom: 1rem;
+    background: #ffffff;
+    border: 1px solid #ada1a1;
+}
+.hm-featured-insights__details-content-text{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+}
+.hm-featured-insights__details-content-text p{
+    padding-top: 1.5rem;
+}
+.hm-featured-insights__details01{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 1rem 0;
+    border-top: 1px solid #514d4d;
+}
+.hm-featured-insights__details01 h4{
+    padding: 1rem 0;
+}
+.hm-featured-insights__details01-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin-right: 2rem;
+    border: 1px solid #ada1a1;
+}
+.hm-featured-insights__details01-content-image{
+    height: 300px;
+    width: 100%;
+    margin-bottom: 1rem;
+    background: #ffffff;
+    border: 1px solid #ada1a1;
+}
+.hm-featured-insights__details01-content-text{
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+}
+.hm-featured-insights__details01-content-text p{
+    margin-top: auto;
+}
 
 
 /* MEDIA QUERIES */
 @media screen and (max-width: 1440px){
+    .overview-videotext{
+        padding: 3rem;
+        padding-top: auto;
+        margin-bottom: -4rem;
+        width: 100%;
+    }
+    .mission-container{
+        padding: 2rem 5rem;
+    }
     .service-options-container{
         padding: 2rem;
     }
@@ -862,6 +1065,10 @@ form .contact-us-question-options label{
     .hm-gov-content05{
         width: 100%;
     }
+    .hm-gov-sub-content3{
+        width: 100%;
+        padding: 1rem 2rem;
+    }
 }
 
 @media screen and (max-width: 1084px){
@@ -870,6 +1077,9 @@ form .contact-us-question-options label{
     }
     .overview-videotext{
         padding-top: auto;
+        margin: 1rem;
+        margin-bottom: -4rem;
+        width: 100%;
     }
     .overview-videotext h2{
         font-size: 36px;
@@ -879,16 +1089,6 @@ form .contact-us-question-options label{
     }
     .overview-intro h3{
         padding-bottom: 1rem;
-    }
-    .overview-wwa__content,
-    .overview-wwa__content2{
-        flex-direction: column-reverse;
-    }
-    .overview-wwa__content-text{
-        padding: 4rem;
-    }
-    .overview-wwa__content-img{
-        height: 200px;
     }
     .overview-wwa__details{
         padding: 4rem 5rem;
@@ -927,6 +1127,7 @@ form .contact-us-question-options label{
     }
     .mission-content{
         padding: 1rem 0;
+        margin: 0;
     }
     .mission-container{
         padding: 2rem 5rem;
@@ -991,8 +1192,25 @@ form .contact-us-question-options label{
     .hm-gov-content03{
         width: 100%;
     }
+    .hm-gov-sub-content3{
+        padding: 1rem;
+    }
 }
 @media screen and (max-width: 768px){
+    .overview-wwa__content,
+    .overview-wwa__content2,
+    .overview-wwa__content3{
+        flex-direction: column-reverse;
+    }
+    .overview-wwa__content-text,
+    .overview-wwa__content-text2{
+        padding: 4rem;
+        width: 100%;
+    }
+    .overview-wwa__content-img{
+        height: auto;
+        width: 100%;
+    }
     .browse-blog{
         flex-direction: column;
         justify-content: left;
@@ -1025,5 +1243,29 @@ form .contact-us-question-options label{
     .hm-management-option__content,
     .hm-education-option__content{
         width: 100%;
+    }
+    .hm-featured-insights__details{
+        flex-direction: column;
+    }
+    .hm-featured-insights__details-content{
+        width: 100%;
+        margin: 1rem 0;
+    }
+    .hm-governance-title{
+        flex-direction: column;
+    }
+    .hm-gov-intro-text,
+    .hm-gov-image01{
+        width: 100%;
+    }
+    .hm-gov-sub-content3,
+    .hm-governance-more-info-content{
+        flex-direction: column;
+    }
+    .hm-gov-sub-content-details{
+        margin: 1rem 0;
+    }
+    .hm-governance-more-info-details{
+        margin: 1rem 0;
     }
 }

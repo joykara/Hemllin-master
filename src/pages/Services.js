@@ -1,10 +1,10 @@
 import React from 'react'
-import { Footer, Navbar } from '../components'
+import { Footer, Navbar2 } from '../components'
 
 const Services = () => {
   return (
       <>
-          <Navbar />
+          <Navbar2 />
           <div className="services-container">
               <div className="services-title">
                     <h2>Services</h2>

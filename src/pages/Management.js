@@ -1,10 +1,10 @@
 import React from 'react';
-import { Footer, Navbar } from '../components';
+import { Footer, Navbar2 } from '../components';
 
 const Management = () => {
   return (
       <>
-          <Navbar />
+          <Navbar2 />
           <div className="management-container">
               <div className="hm-management-title">
                   <h2>Lorem Ipsum</h2>

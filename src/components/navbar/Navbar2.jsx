@@ -11,8 +11,32 @@ const Navbar = () => {
 
   const handleToggle = () => {
     setToggleMenu(!toggleMenu);
-    handleIndustriesContent();
+    handleContent('industries', true);
   };
+
+  const [industriesContent, setIndustriesContent] = useState(false);
+  const [servicesContent, setServicesContent] = useState(false);
+  const [insightsContent, setInsightsContent] = useState(false);
+  const [aboutContent, setAboutContent] = useState(false);
+
+  const handleContent = (section, flag) => {
+    const contentStates = {
+      industries: [setIndustriesContent],
+      services: [setServicesContent],
+      insights: [setInsightsContent],
+      about: [setAboutContent]
+    };
+
+    for (const [setter] of Object.values(contentStates)) {
+      if (setter === contentStates[section][0]) {
+        setter(flag);
+      } else {
+        setter(false);
+      }
+    }
+  };
+
+
 
   const handleIndustriesContent = () => {
     setActiveDropdown('industries');
@@ -36,7 +60,48 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
-      {/* ... Rest of the code ... */}
+      <div className="navbar__logo">
+        <button onClick={handleToggle}>
+          {toggleMenu ? <RiCloseLine size={50} /> : <RiMenuLine size={40} />}
+        </button>
+        <p><Link to="/">Logo</Link></p>
+      </div>
+      {toggleMenu && (
+        <div className={`navbar__menu-links ${toggleMenu ? 'show' : ''}`}>
+          <div className="navbar__menu-links__container">
+            <div className="navbar__menu-links-top">
+              <button onClick={handleToggle}>
+                {toggleMenu ? <RiCloseLine color="#fff" size={45} /> : <RiMenuLine color="#fff" size={30} />}
+              </button>
+              <p><Link to="/">Logo</Link></p>
+            </div>
+            <div className="menu">
+            <div className="show-menu">
+                <p onClick={() => handleContent('industries', true)}>Industries</p>
+                <p onClick={() => handleContent('services', true)}>Services</p>
+                <p onClick={() => handleContent('insights', true)}>Featured Insights</p>
+                <p onClick={() => handleContent('about', true)}>About Us</p>
+              </div>
+              <p><a href="/careers">Careers</a></p>
+              <p><a href="/about-us/blog">Blog</a></p>
+              <p><a href="#subscribe">Email Subscriptions</a></p>
+              <p><a href="#sign-in">Sign In</a></p>
+            </div>
+          </div>
+          <div className="navbar__menu-links__details">
+            <div className="navbar__menu-links__search">
+              <input type="text" placeholder="Type to search..." />
+              <button><RiSearchLine size={40} /></button>
+            </div>
+            <div className="navbar__menu-link__content">
+              {industriesContent && <IndustriesMenu />}
+              {servicesContent && <ServicesMenu />}
+              {insightsContent && <InsightsMenu />}
+              {aboutContent && <AboutMenu />}
+            </div>
+          </div>
+        </div>
+      )}
       <div className="navbar__menu">
         <div className="navbar__menu-content">
           <div>
@@ -75,7 +140,10 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      {/* ... Rest of the code ... */}
+      <div className="navbar__search">
+        <p><a href="">Sign In</a> | <a href="">Subscribe</a></p>
+        <p><a href=""><RiSearchLine size={20} /></a></p>
+      </div>
     </div>
   );
 };

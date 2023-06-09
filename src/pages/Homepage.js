@@ -1,10 +1,10 @@
 import React from 'react'
-import { Header, Navbar, Features, Articles, Footer} from '../components';
+import { Header, Navbar2, Features, Articles, Footer} from '../components';
 
 function Homepage() {
   return (
     <div>
-         <Navbar />
+         <Navbar2 />
          <Header />
          <Features />
          <Articles />

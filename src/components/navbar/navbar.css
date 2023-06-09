@@ -55,8 +55,9 @@
 .navbar__menu p,
 .navbar__menu p a{
     color: #fff;
-    font-family: var(--font-family);
-    font-weight: 700;
+    font-family: 'Merriweather';
+    font-size: 18px;
+    font-weight: 400;
     line-height: 24px;
 }
 .navbar__menu-content p:hover,
@@ -190,6 +191,7 @@
 }
 .drop-down-menu4.active4{
     padding: 0;
+    width: 48%;
 }
 .drop-down-menu3.active3{
     margin-left: .5rem;
@@ -204,8 +206,8 @@
 .industries-list{
     display: grid;
 }
-.featured-insights-list h3,
-.featured-insights-list p{
+.drop-down-menu-container .featured-insights-list h3,
+.drop-down-menu-container .featured-insights-list p{
     display: none;
 }
 .drop-down-menu-container .featured-insights-list,
@@ -214,10 +216,12 @@
     width: 100%;
 }
 .drop-down-menu-container .featured-insights-list ul{
+    font-size: 16px;
     padding: 0;
     width: 100%;
 }
 .drop-down-menu-container .industries-list ul{
+    font-size: 16px;
     padding: 0;
     width: 100%;
 }
@@ -243,9 +247,64 @@
     .navbar__menu{
         display: none;
     }
+    .about-us-list #sections .about-us-sections h4{
+        width:50%;
+    }
 }
-@media screen and (max-width: 600px){
+@media screen and (max-width: 1086px){
+    .navbar__menu-links-top button{
+        margin: 0 10px;
+    }
+    .menu .show-menu{
+        margin: 0;
+    }
+    .navbar__menu-links__container .menu p{
+        margin: 1rem 1rem;
+    }
+    .navbar__menu-links__container .menu p a{
+        margin: 0;
+    }
+    .navbar__menu-link__content .industries-list{
+        padding: 0 1rem;
+        align-items: flex-start;
+    }
+    .navbar__menu-link__content .industries-list ul{
+        padding: 0;
+        grid-template-columns: auto auto;
+    }
+    .navbar__menu-link__content .services-list{
+        padding: 0 2rem;
+    }
+    .navbar__menu-link__content .services-list h3{
+        width: 70%;
+    }
+    .navbar__menu-link__content .featured-insights-list{
+        padding: 1rem 2rem;
+    }
+    .navbar__menu-link__content .featured-insights-list p,
+    .navbar__menu-link__content .featured-insights-list ul{
+        padding: 0.5rem;
+    }
+    .navbar__menu-link__content .featured-insights-list ul{
+        width: 100%;
+    }
+
+}
+@media screen and (max-width: 786px){
+    .navbar__menu-links__container{
+        width: 40%;
+    }
     .navbar__search{
         display: none;
+    }
+    .about-us-list{
+        padding: 0;
+    }
+    .about-us-list #sections{
+        display: flex;
+        flex-direction: column;
+    }
+    .about-us-list #sections .about-us-sections h4{
+        width: 80%;
     }
 }
