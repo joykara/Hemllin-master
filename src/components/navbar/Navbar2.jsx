@@ -146,7 +146,7 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-          <p>Careers</p>
+          <p><Link to='/careers'>Careers</Link></p>
           <p><a href="/about-us/blog">Blog</a></p>
           <div>
             <p onMouseEnter={handleAboutContent} className={activeDropdown === 'about' ? 'active-dropdown' : ''}>

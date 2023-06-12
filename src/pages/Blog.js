@@ -26,7 +26,7 @@ const Blog = () => {
             <h4>BROWSE BLOG</h4>
             <div className='browse-blog-options'>
               <p>Browse by: <span>Lorem</span> | <span>Lorem</span></p>
-            </div>  
+            </div>
           </div>
 
           <div className="blog-details">
