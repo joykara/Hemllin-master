@@ -53,7 +53,7 @@ const About = () => {
                 <button type='button'><a href="/about-us/our-purpose-mission-and-values">Learn more about our values<span className='arrow'><img src={arrow} alt="arrow nav" /></span></a></button>
             </div>
             <div className="wwa-detail__button">
-                <button type='button'><a href="">Meet our team<span className='arrow'><img src={arrow} alt="arrow nav" /></span></a></button>
+                <button type='button'><a href="/about-us/history-of-our-firm">Explore the history of our firm<span className='arrow'><img src={arrow} alt="arrow nav" /></span></a></button>
             </div>
           </div>
           <div className="wwa-detail">
@@ -61,14 +61,14 @@ const About = () => {
             <p>As an organization guided by strong values, we strive to uphold the utmost professional and ethical standards in all aspects of our work.</p>
 
             <div className="wwa-detail__button">
-                <button type='button'><a href="">Trending insights<span className='arrow'><img src={arrow} alt="arrow nav" /></span></a></button>
+                <button type='button'><a href="/about-us/our-governance">Learn about the governance<span className='arrow'><img src={arrow} alt="arrow nav" /></span></a></button>
             </div>
           </div>
         </div>
         <div className="overview-wwa__content2">
           <div className="overview-wwa__content-text">
             <h3>How do we work?</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum nam culpa alias. Iure alias, earum voluptatibus ea quis minima eum consequatur esse illo voluptas reiciendis illum rerum! Delectus, dolorem ducimus.</p>
+            <p>At every level of the organization, we collaborate closely with our clients, enabling them to drive sustainable innovation, attain enduring improvements in performance, and cultivate resilient workforces that will flourish in both the present and future generations.</p>
           </div>
           <div className="overview-wwa__content-img">
             <img src={hww} alt="how do we work" />

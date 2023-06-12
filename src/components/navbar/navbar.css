@@ -224,6 +224,8 @@
     width: 100%;
 }
 .drop-down-menu-container .featured-insights-list ul{
+    display: flex;
+    flex-direction: column;
     font-size: 16px;
     padding: 0;
     width: 100%;

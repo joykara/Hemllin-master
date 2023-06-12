@@ -31,7 +31,7 @@ const AboutMenu = () => {
                             <a href='/about-us/agriculture'>Agriculture</a>
                         </li>
                         <li className='about-us-dropdown-item'>
-                            <a href='/about-us/automative'>Automative</a>
+                            <a href='/about-us/automotive'>Automotive</a>
                         </li>
                         <li className='about-us-dropdown-item'>
                             <a href='/about-us/education'>Education</a>
@@ -41,11 +41,7 @@ const AboutMenu = () => {
                 <div className="about-us-sections">
                     <p><Link to="/about-us/media"> MEDIA </Link></p>
                 </div>
-                <div className="about-us-sections">
-                    <p><Link to="/about-us/blog"> BLOG </Link></p>
-                </div>
               </div>
-              
         </div>
       </>
   )

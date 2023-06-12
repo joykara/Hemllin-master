@@ -11,16 +11,16 @@ const InsightsMenu = () => {
                         <a href='/featured-insights/ai'>Artificial Intelligence</a>
                     </li>
                     <li className='featured-insights-dropdown-item'>
-                        <a href='/featured-insights/automative'>Cloud Capabilities</a>
+                        <a href='/featured-insights/cloud-capabilities'>Cloud Capabilities</a>
                     </li>
                     <li className='featured-insights-dropdown-item'>
-                        <a href='/featured-insights/education'>Glocal Recruitment</a>
+                        <a href='/featured-insights/global-recruitment'>Global Recruitment</a>
                     </li>
                     <li className='featured-insights-dropdown-item'>
-                        <a href='/featured-insights/agriculture'>Retention Strategies</a>
+                        <a href='/featured-insights/retention/strategies'>Retention Strategies</a>
                     </li>
                     <li className='featured-insights-dropdown-item'>
-                        <a href='/featured-insights/automative'>ESG Measures</a>
+                        <a href='/featured-insights/ESG-measures'>ESG Measures</a>
                     </li>
                 </ul>
             </div>

@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, {useState} from 'react'
 import { RiMenuLine, RiCloseLine, RiSearchLine } from 'react-icons/ri';
+import {SlArrowRight} from 'react-icons/sl'
 import './aboutnavbar.css';
 import { Link } from 'react-router-dom';
 import AboutUs from '../../container/dropdowns/AboutUs';
@@ -11,35 +12,37 @@ const AboutNavbar = () => {
     const [toggleMenu, setToggleMenu] = useState(false);
 
 // handle... is used to toggle the menu on and off
-    const handleToggle = () => {
-        setToggleMenu(!toggleMenu);
-        handleAboutContent();
+  const [activeMenu, setActiveMenu] = useState(null);
+
+
+  const handleToggle = () => {
+    setToggleMenu(!toggleMenu);
+    handleContent('industries', true);
+  };
+
+  const [industriesContent, setIndustriesContent] = useState(false);
+  const [servicesContent, setServicesContent] = useState(false);
+  const [insightsContent, setInsightsContent] = useState(false);
+  const [aboutContent, setAboutContent] = useState(false);
+
+  const handleContent = (section, flag) => {
+    const contentStates = {
+      industries: [setIndustriesContent],
+      services: [setServicesContent],
+      insights: [setInsightsContent],
+      about: [setAboutContent]
     };
 
-    const handleIndustriesContent = () => {
-        setIndustriesContent(true);
-        setServicesContent(false);
-        setInsightsContent(false);
-        setAboutContent(false);
+    for (const [setter] of Object.values(contentStates)) {
+      if (setter === contentStates[section][0]) {
+        setter(flag);
+        setActiveMenu(section); // Set the active menu item
+      } else {
+        setter(false);
+      }
     }
-    const handleServicesContent = () => {
-        setServicesContent(true);
-        setIndustriesContent(false);
-        setInsightsContent(false);
-        setAboutContent(false);
-    }
-    const handleInsightsContent = () => {
-        setInsightsContent(true);
-        setIndustriesContent(false);
-        setServicesContent(false);
-        setAboutContent(false);
-    }
-    const handleAboutContent = () => {
-        setAboutContent(true);
-        setIndustriesContent(false);
-        setServicesContent(false);
-        setInsightsContent(false);
-    }
+  };
+
 
 
     const [aboutDropdown, setAboutDropdown] = useState(false);
@@ -47,10 +50,6 @@ const AboutNavbar = () => {
     const handleAboutDropdownLeave = () => {
         setAboutDropdown(false);
     };
-    const [industriesContent, setIndustriesContent] = useState(false);
-    const [servicesContent, setServicesContent] = useState(false);
-    const [insightsContent, setInsightsContent] = useState(false);
-    const [aboutContent, setAboutContent] = useState(false);
 
     return (
         <div className="aboutnavbar">
@@ -62,46 +61,46 @@ const AboutNavbar = () => {
             </div>
             {toggleMenu && (
                 <div className={`navbar__menu-links ${toggleMenu ? 'show' : ''}`}>
-                    <div className="navbar__menu-links__container">
-                        <div className="navbar__menu-links-top">
-                            <button onClick={handleToggle}>
-                                {toggleMenu ? <RiCloseLine color="#fff" size={45} /> : <RiMenuLine color="#fff" size={30} />}
-                            </button>
-                            <p><Link to='/'>Logo</Link></p>
-                        </div>
-                        <div className="menu">
-                            <div className="show-menu">
-                                <p onClick={handleIndustriesContent}>
-                                    Industries
-                                </p>
-                                <p onClick={handleServicesContent}>
-                                    Services
-                                </p>
-                                <p onClick={handleInsightsContent}>
-                                    Featured Insights
-                                </p>
-                                <p onClick={handleAboutContent}>
-                                    About Us
-                                </p>
-                            </div>
-                            <p><a href="/careers">Careers</a></p>
-                            <p><a href="/about-us/blog">Blog</a></p>
-                            <p><a href="#subscribe">Email Subscriptions</a></p>
-                            <p><a href="#sign-in">Sign In</a></p>
-                        </div>
+                <div className="navbar__menu-links__container">
+                    <div className="navbar__menu-links-top">
+                    <button onClick={handleToggle}>
+                        {toggleMenu ? <RiCloseLine color="#fff" size={45} /> : <RiMenuLine color="#fff" size={30} />}
+                    </button>
+                    <p><Link to="/">Logo</Link></p>
                     </div>
-                    <div className="navbar__menu-links__details">
-                        <div className="navbar__menu-links__search">
-                            <input type="text" placeholder='Type to search...' />
-                            <button><RiSearchLine size={40}/></button>
-                        </div>
-                        <div className="navbar__menu-link__content">
-                            {industriesContent && <IndustriesMenu />}
-                            {servicesContent && <ServicesMenu />}
-                            {insightsContent && <InsightsMenu />}
-                            {aboutContent && <AboutMenu/>}
-                        </div>
+                    <div className="menu">
+                    <div className="show-menu">
+                    <p onClick={() => handleContent('industries', true)} className={activeMenu === 'industries' ? 'active-link' : ''}>
+                        <span>Industries</span><span><SlArrowRight size={10} /></span>
+                    </p>
+                        <p onClick={() => handleContent('services', true)} className={activeMenu === 'services' ? 'active-link' : ''}>
+                        <span>Services</span><span><SlArrowRight size={10} /></span>
+                        </p>
+                        <p onClick={() => handleContent('insights', true)} className={activeMenu === 'insights' ? 'active-link' : ''}>
+                        <span>Featured Insights</span><span><SlArrowRight size={10} /></span>
+                        </p>
+                        <p onClick={() => handleContent('about', true)} className={activeMenu === 'about' ? 'active-link' : ''}>
+                        <span>About Us</span><span><SlArrowRight size={10} /></span>
+                        </p>
                     </div>
+                    <p><a href="/careers">Careers</a></p>
+                    <p><a href="/about-us/blog">Blog</a></p>
+                    <p><a href="#subscribe">Email Subscriptions</a></p>
+                    <p><a href="#sign-in">Sign In</a></p>
+                    </div>
+                </div>
+                <div className="navbar__menu-links__details">
+                    <div className="navbar__menu-links__search">
+                    <input type="text" placeholder="Type to search..." />
+                    <button><RiSearchLine size={40} /></button>
+                    </div>
+                    <div className="navbar__menu-link__content">
+                    {industriesContent && <IndustriesMenu />}
+                    {servicesContent && <ServicesMenu />}
+                    {insightsContent && <InsightsMenu />}
+                    {aboutContent && <AboutMenu />}
+                    </div>
+                </div>
                 </div>
             )}
             <div className="aboutnavbar__menu">
@@ -124,7 +123,6 @@ const AboutNavbar = () => {
                     </div>
                     <p><Link to='/careers'>How We Work</Link></p>
                     <p><Link to='/about-us/media'>Media</Link></p>
-                    <p><Link to='/about-us/blog'>Hemllin Blog</Link></p>
                 </div>
             </div>
             <div className="aboutnavbar__search">
