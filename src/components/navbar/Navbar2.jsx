@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { RiMenuLine, RiCloseLine, RiSearchLine, RiArrowDropDownLine, RiArrowDropUpLine } from 'react-icons/ri';
+import { RiMenuLine, RiCloseLine, RiSearchLine } from 'react-icons/ri';
+import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
 import {SlArrowRight} from 'react-icons/sl'
 import './navbar.css';
 import { Link } from 'react-router-dom';
@@ -115,8 +116,8 @@ const Navbar = () => {
         <div className="navbar__menu-content">
           <div>
             <p onMouseEnter={handleIndustriesContent} className={activeDropdown === 'industries' ? 'active-dropdown' : ''}>
-              Industries
-              {activeDropdown === 'industries' ? <RiArrowDropUpLine /> : <RiArrowDropDownLine />}
+              Industries <span>
+              {activeDropdown === 'industries' ? < IoIosArrowUp /> : <IoIosArrowDown />}</span>
             </p>
             <div className={`drop-down-menu ${activeDropdown === 'industries' ? 'active' : ''}`} onMouseLeave={handleDropdownLeave}>
               <div className="drop-down-menu-container">
@@ -126,8 +127,8 @@ const Navbar = () => {
           </div>
           <div>
             <p onMouseEnter={handleServicesContent} className={activeDropdown === 'services' ? 'active-dropdown' : ''}>
-              <a href="/services">Services</a>
-              {activeDropdown === 'services' ? <RiArrowDropUpLine /> : <RiArrowDropDownLine />}
+              <a href="/services">Services</a> <span>
+              {activeDropdown === 'services' ? < IoIosArrowUp /> : <IoIosArrowDown />}</span>
             </p>
             <div className={`drop-down-menu2 ${activeDropdown === 'services' ? 'active2' : ''}`} onMouseLeave={handleDropdownLeave}>
               <div className="drop-down-menu-container">
@@ -137,8 +138,8 @@ const Navbar = () => {
           </div>
           <div>
             <p onMouseEnter={handleInsightsContent} className={activeDropdown === 'insights' ? 'active-dropdown' : ''}>
-              Featured Insights
-              {activeDropdown === 'insights' ? <RiArrowDropUpLine /> : <RiArrowDropDownLine />}
+              Featured Insights <span>
+              {activeDropdown === 'insights' ? < IoIosArrowUp /> : <IoIosArrowDown />}</span>
             </p>
             <div className={`drop-down-menu3 ${activeDropdown === 'insights' ? 'active3' : ''}`} onMouseLeave={handleDropdownLeave}>
               <div className="drop-down-menu-container">
@@ -150,8 +151,8 @@ const Navbar = () => {
           <p><a href="/about-us/blog">Blog</a></p>
           <div>
             <p onMouseEnter={handleAboutContent} className={activeDropdown === 'about' ? 'active-dropdown' : ''}>
-              About Us
-              {activeDropdown === 'about' ? <RiArrowDropUpLine /> : <RiArrowDropDownLine />}
+              About Us <span>
+              {activeDropdown === 'about' ? < IoIosArrowUp /> : <IoIosArrowDown />}</span>
             </p>
             <div className={`drop-down-menu4 ${activeDropdown === 'about' ? 'active4' : ''}`} onMouseLeave={handleDropdownLeave}>
               <div className="drop-down-menu-container">

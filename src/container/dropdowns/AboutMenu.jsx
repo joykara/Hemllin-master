@@ -1,11 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { BsArrowRight } from 'react-icons/bs'
 
 const AboutMenu = () => {
   return (
     <>
-        <div className="about-us-list">
-              <h3>About Us</h3>
+          <div className="about-us-list">
+              <div id="title">
+                  <h3>About Us</h3>
+                  <p><Link>About Us Overview</Link><BsArrowRight/></p>
+              </div>
               <div id="sections">
                 <div className="about-us-sections">
                     <h4>WHO WE ARE</h4>

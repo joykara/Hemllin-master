@@ -892,6 +892,36 @@ form .contact-us-question-options label{
   padding: 3rem 2rem;
   margin: 1rem 0;
 }
+.hm-careers-intro__about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    width: 100%;
+    border-bottom: 1px solid var(--color-bg);
+}
+.hm-career-about-title{
+    margin-right: 1rem;
+    padding: 4rem 0;
+    width: 50%;
+    height: 100%;
+}
+.hm-career-about-title h2{
+    padding: 1rem;
+}
+.hm-career-about-title h2 span{
+    color: #09b025;
+    font-family: var(--font-family);
+}
+.hm-careers-about-text{
+    color: var(--color-bg);
+    width: 50%;
+}
+.hm-careers-about-text p{
+    padding: 1rem;
+    font-size: 24px;
+    line-height: 40px;
+}
 .hm-careers-intro__benefits{
     display: flex;
     justify-content: center;
@@ -930,6 +960,9 @@ form .contact-us-question-options label{
 }
 .benefit-tile h4{
     margin-bottom: 1.5rem;
+}
+.benefit-tile__text{
+    text-align: center;
 }
 .hm-careers-intro__content{
   display: flex;
