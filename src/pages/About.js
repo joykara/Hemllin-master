@@ -83,32 +83,6 @@ const About = () => {
             <img src={ourValues} alt="our values" />
           </div>
         </div>
-        <div className="overview-wwa__details">
-          <div className="wwa-detail">
-            <h4>Lorem ipsum</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A odit rem perspiciatis quo aliquam eligendi consectetur.</p>
-
-            <div className="wwa-detail__button">
-                <button type='button'><a href="">Trending insights<span className='arrow'><img src={arrow} alt="arrow nav" /></span></a></button>
-            </div>
-          </div>
-          <div className="wwa-detail">
-            <h4>Lorem ipsum</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A odit rem perspiciatis quo aliquam eligendi consectetur.</p>
-
-            <div className="wwa-detail__button">
-                <button type='button'><a href="">Trending insights<span className='arrow'><img src={arrow} alt="arrow nav" /></span></a></button>
-            </div>
-          </div>
-          <div className="wwa-detail">
-            <h4>Lorem ipsum</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A odit rem perspiciatis quo aliquam eligendi consectetur.</p>
-
-            <div className="wwa-detail__button">
-                <button type='button'><a href="">Trending insights<span className='arrow'><img src={arrow} alt="arrow nav" /></span></a></button>
-            </div>
-          </div>
-        </div>
 
         <div className="case-study">
           <h4>Case Study</h4>

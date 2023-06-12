@@ -56,16 +56,20 @@
 .navbar__menu p a{
     color: #fff;
     font-family: 'Merriweather';
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 24px;
 }
 .navbar__menu-content p:hover,
 .navbar__menu-content p a:hover{
     cursor: pointer;
-    border-bottom: 3px solid var(--color-link);
     color: var(--color-link);
     transition: 0.3s ease-in-out;
+}
+.active-dropdown{
+    cursor: pointer;
+    border-bottom: 3px solid var(--color-link);
+    color: var(--color-link);
 }
 .navbar__search a:hover{
     cursor: pointer;
@@ -132,16 +136,20 @@
 .menu .show-menu{
     margin-left: 2rem;
 }
-/* .navbar__menu-links__container .menu p span{
-    justify-content: left;
-} */
+.show-menu .active-link span{
+    color: var(--color-link);
+}
+.navbar__menu-links__container .menu .show-menu p{
+    display: flex;
+    justify-content: space-between;
+}
+.navbar__menu-links__container .menu p span{
+    font-family: var(--links-font-family);
+}
 .navbar__menu-links__container .menu a:hover,
 .navbar__menu-links__container .menu p:hover{
     cursor: pointer;
     color:  var(--color-link)
-}
-.navbar__menu-links__container .menu p:nth-child(1){
-    color: var(--color-link);
 }
 .navbar__menu-links__details{
     display: flex;
@@ -243,6 +251,12 @@
 
 
 /* MEDIA QUERIES */
+@media screen and (min-width: 1440px){
+    .navbar__menu p,
+    .navbar__menu p a{
+    font-size: 18px;
+    }
+}
 @media screen and (max-width: 1300px){
     .navbar__menu{
         display: none;

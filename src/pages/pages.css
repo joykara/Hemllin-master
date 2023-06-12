@@ -52,6 +52,7 @@
     height: 100%;
 }
 .overview-wwa__content3{
+    flex-direction: row-reverse;
     background: var(--color-bg);
 }
 .overview-wwa__content2{

@@ -149,13 +149,14 @@
 }
 .hm-cta-container .hm-cta__text{
     padding-top: 1rem;
-    font-size: 24px;
+    font-size: 18px;
     letter-spacing: 2px;
 }
 .hm-cta-container .hm-cta__text a{
     font-family: var(--font-family);
 }
 .hm-cta-container .hm-cta__text span a{
+    font-size: 18px;
     border-bottom: var(--color-link) 2px solid;
     color: #fff;
 }

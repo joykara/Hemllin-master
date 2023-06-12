@@ -1,6 +1,6 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from 'react';
-import { RiMenuLine, RiCloseLine, RiSearchLine } from 'react-icons/ri';
+import { RiMenuLine, RiCloseLine, RiSearchLine, RiArrowDropDownLine, RiArrowDropUpLine } from 'react-icons/ri';
+import {SlArrowRight} from 'react-icons/sl'
 import './navbar.css';
 import { Link } from 'react-router-dom';
 import { IndustriesMenu, ServicesMenu, InsightsMenu, AboutMenu } from '../../container';
@@ -8,6 +8,8 @@ import { IndustriesMenu, ServicesMenu, InsightsMenu, AboutMenu } from '../../con
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const [activeMenu, setActiveMenu] = useState(null);
+
 
   const handleToggle = () => {
     setToggleMenu(!toggleMenu);
@@ -30,13 +32,12 @@ const Navbar = () => {
     for (const [setter] of Object.values(contentStates)) {
       if (setter === contentStates[section][0]) {
         setter(flag);
+        setActiveMenu(section); // Set the active menu item
       } else {
         setter(false);
       }
     }
   };
-
-
 
   const handleIndustriesContent = () => {
     setActiveDropdown('industries');
@@ -76,11 +77,19 @@ const Navbar = () => {
               <p><Link to="/">Logo</Link></p>
             </div>
             <div className="menu">
-            <div className="show-menu">
-                <p onClick={() => handleContent('industries', true)}>Industries</p>
-                <p onClick={() => handleContent('services', true)}>Services</p>
-                <p onClick={() => handleContent('insights', true)}>Featured Insights</p>
-                <p onClick={() => handleContent('about', true)}>About Us</p>
+              <div className="show-menu">
+              <p onClick={() => handleContent('industries', true)} className={activeMenu === 'industries' ? 'active-link' : ''}>
+                <span>Industries</span><span><SlArrowRight size={10} /></span>
+              </p>
+                <p onClick={() => handleContent('services', true)} className={activeMenu === 'services' ? 'active-link' : ''}>
+                <span>Services</span><span><SlArrowRight size={10} /></span>
+                </p>
+                <p onClick={() => handleContent('insights', true)} className={activeMenu === 'insights' ? 'active-link' : ''}>
+                <span>Featured Insights</span><span><SlArrowRight size={10} /></span>
+                </p>
+                <p onClick={() => handleContent('about', true)} className={activeMenu === 'about' ? 'active-link' : ''}>
+                <span>About Us</span><span><SlArrowRight size={10} /></span>
+                </p>
               </div>
               <p><a href="/careers">Careers</a></p>
               <p><a href="/about-us/blog">Blog</a></p>
@@ -105,7 +114,10 @@ const Navbar = () => {
       <div className="navbar__menu">
         <div className="navbar__menu-content">
           <div>
-            <p onMouseEnter={handleIndustriesContent}>Industries</p>
+            <p onMouseEnter={handleIndustriesContent} className={activeDropdown === 'industries' ? 'active-dropdown' : ''}>
+              Industries
+              {activeDropdown === 'industries' ? <RiArrowDropUpLine /> : <RiArrowDropDownLine />}
+            </p>
             <div className={`drop-down-menu ${activeDropdown === 'industries' ? 'active' : ''}`} onMouseLeave={handleDropdownLeave}>
               <div className="drop-down-menu-container">
                 <IndustriesMenu />
@@ -113,7 +125,10 @@ const Navbar = () => {
             </div>
           </div>
           <div>
-            <p onMouseEnter={handleServicesContent}><a href="/services">Services</a></p>
+            <p onMouseEnter={handleServicesContent} className={activeDropdown === 'services' ? 'active-dropdown' : ''}>
+              <a href="/services">Services</a>
+              {activeDropdown === 'services' ? <RiArrowDropUpLine /> : <RiArrowDropDownLine />}
+            </p>
             <div className={`drop-down-menu2 ${activeDropdown === 'services' ? 'active2' : ''}`} onMouseLeave={handleDropdownLeave}>
               <div className="drop-down-menu-container">
                 <ServicesMenu />
@@ -121,7 +136,10 @@ const Navbar = () => {
             </div>
           </div>
           <div>
-            <p onMouseEnter={handleInsightsContent}>Featured Insights</p>
+            <p onMouseEnter={handleInsightsContent} className={activeDropdown === 'insights' ? 'active-dropdown' : ''}>
+              Featured Insights
+              {activeDropdown === 'insights' ? <RiArrowDropUpLine /> : <RiArrowDropDownLine />}
+            </p>
             <div className={`drop-down-menu3 ${activeDropdown === 'insights' ? 'active3' : ''}`} onMouseLeave={handleDropdownLeave}>
               <div className="drop-down-menu-container">
                 <InsightsMenu />
@@ -131,7 +149,10 @@ const Navbar = () => {
           <p>Careers</p>
           <p><a href="/about-us/blog">Blog</a></p>
           <div>
-            <p onMouseEnter={handleAboutContent}>About Us</p>
+            <p onMouseEnter={handleAboutContent} className={activeDropdown === 'about' ? 'active-dropdown' : ''}>
+              About Us
+              {activeDropdown === 'about' ? <RiArrowDropUpLine /> : <RiArrowDropDownLine />}
+            </p>
             <div className={`drop-down-menu4 ${activeDropdown === 'about' ? 'active4' : ''}`} onMouseLeave={handleDropdownLeave}>
               <div className="drop-down-menu-container">
                 <AboutMenu />
