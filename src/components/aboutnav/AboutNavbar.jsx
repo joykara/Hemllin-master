@@ -107,7 +107,7 @@ const AboutNavbar = () => {
                 <div><p>About Us</p></div>
                 <div className="aboutnavbar__menu-content">
                     <div id='about-overview'>
-                        <p>Overview</p>
+                        <p><Link to='/about-us'>Overview</Link></p>
                     </div>
                     <div>
                         <p onMouseOver={()=> {setAboutDropdown(!aboutDropdown)}} >Who We Are</p>

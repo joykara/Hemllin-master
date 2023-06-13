@@ -415,6 +415,157 @@
     margin-bottom: 2rem;
 }
 
+/* OUR HISTORY */
+.hm-history-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--color-bg);
+    width: 100%;
+}
+.hm-history-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 0;
+    width: 100%;
+}
+.hm-history-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+    width: 50%;
+}
+.hm-history-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #FFFCFC;
+    padding: 1rem 2rem;
+    margin-right: 3rem;
+    width: 50%;
+}
+.hm-history-text p{
+    padding: 1rem 0;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 40px;
+}
+.hm-history-content__nav{
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+    width: 100%;
+}
+.hm-history-content__nav p{
+    font-family: var(--links-font-family);
+    font-size: 24px;
+}
+.hm-history-content__nav span svg{
+    margin-bottom: -5px;
+}
+.hm-history-content__nav--links{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    vertical-align: top;
+    width: 100%;
+    padding: 1rem 0;
+}
+.hm-history-content__nav--links button{
+    background: #d9d9d9;
+    cursor: pointer;
+    padding: .5rem 2rem;
+    border-radius: 1rem;
+    color: #000000;
+}
+.hm-history-content__nav--links a{
+    font-family: var(--font-family);
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    color: #000000;
+}
+.hm-history-video{
+    background: #d9d9d9;
+    width: 90%;
+    height: clamp(200px, 50vh, 500px);
+}
+.hm-history-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin-top: 3rem;
+}
+#hm-2019-history,
+#hm-2020-history,
+#hm-2021-history,
+#hm-2022-history,
+#hm-2023-history{
+    display: flex;
+    height: clamp(200px, 50vh, 500px);
+}
+.border-line{
+    height: 100;
+    width: 2px;
+    margin-right: 1rem;
+    background: #000000;
+}
+.history-img{
+    width: 50%;
+    background-color: #857c7c;
+    height: 200px;
+    margin: 2rem;
+    padding: 5rem 0;
+}
+.history-content{
+    padding: 5rem 0;
+    height: 100%;
+    width: 50%;
+}
+.history-content span{
+    margin-left: -1.1rem;
+}
+.history-content-text{
+    padding-left: 3rem;
+}
+.history-content-text p{
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    margin-bottom: 1rem;
+}
+#hm-2020-history,
+#hm-2022-history{
+    flex-direction: row-reverse;
+}
+#hm-2020-history .history-content,
+#hm-2022-history .history-content{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: right;
+    text-align: right;
+}
+#hm-2020-history .history-img,
+#hm-2022-history .history-img{
+    margin: 2rem 0;
+    margin-left: 3rem;
+}
+#hm-2020-history .border-line,
+#hm-2022-history .border-line{
+    margin-left: 7rem;
+}
+#hm-2020-history .history-content span,
+#hm-2022-history .history-content span{
+    margin-right: -7rem;
+}
+#hm-2020-history .history-content-text,
+#hm-2022-history .history-content-text{
+    padding-right: 5rem;
+}
+
+
 /* MISSIONS PAGE */
 .mission-container{
     display: flex;
@@ -1368,6 +1519,21 @@ form .contact-us-question-options label{
         margin: 1rem 0;
         width: 90%;
     }
+    /* HISTORY */
+    .hm-history-content{
+        flex-direction: column;
+        padding: 0 2rem;
+    }
+    .hm-history-title,
+    .hm-history-text{
+        width: 100%;
+        padding: 2rem 1rem;
+    }
+    .hm-history-text{
+        margin: 0;
+    }
+
+    /* MEDIA */
     .hm-media-intro__content,
     .hm-media-intro__content-title,
     .hm-media-intro__content-text,
@@ -1455,5 +1621,44 @@ form .contact-us-question-options label{
     }
     .hm-governance-more-info-details{
         margin: 1rem 0;
+    }
+    /* HISTORY PAGE */
+    .hm-history-details{
+        width: 100%;
+    }
+    .hm-history-content__nav--links{
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    .hm-history-content__nav--links button{
+        margin: 1rem;
+    }
+    #hm-2019-history,
+    #hm-2020-history,
+    #hm-2021-history,
+    #hm-2022-history,
+    #hm-2023-history{
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+    }
+    #hm-2020-history .history-content,
+    #hm-2022-history .history-content{
+        text-align: left;
+    }
+    #hm-2020-history .history-img,
+    #hm-2022-history .history-img{
+        margin: 2rem;
+    }
+    .history-img,
+    .history-content{
+        width: 80%;
+    }
+    .history-content{
+        padding: 2rem 0;
+    }
+    .border-line,
+    .history-content span{
+        display: none;
     }
 }

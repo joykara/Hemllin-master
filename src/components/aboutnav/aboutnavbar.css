@@ -4,6 +4,7 @@
     justify-content: space-between;
     align-items: center;
     background: #ffffff;
+    border-bottom: 1px solid #E5E5E5;
     scroll-behavior: smooth;
 }
 .aboutnavbar__logo,
@@ -83,6 +84,9 @@
     border-bottom: 3px solid var(--color-link);
     color: var(--color-link);
     transition: 0.3s ease-in-out;
+}
+.aboutnavbar__menu-content #about-overview a:hover{
+    border: none;
 }
 .aboutnavbar__menu-content .dropdown-menu{
     display: none;
