@@ -121,7 +121,7 @@ const AboutNavbar = () => {
                             </div>
                         </div>
                     </div>
-                    <p><Link to='/careers'>How We Work</Link></p>
+                    <p><Link to='/about-us/how-we-work'>How We Work</Link></p>
                     <p><Link to='/about-us/media'>Media</Link></p>
                 </div>
             </div>
