@@ -1,10 +1,10 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
-import { Footer, AboutNavbar } from '../components';
-import arrow from '../assets/Vector.png'
-import rightArrow from '../assets/arrow.png'
-import ourHistory from '../assets/history.png';
-import ourTeam from '../assets/team.png'
+import { Footer, AboutNavbar } from '../../components';
+import arrow from '../../assets/Vector.png'
+import rightArrow from '../../assets/arrow.png'
+import ourHistory from '../../assets/history.png';
+import ourTeam from '../../assets/team.png'
 
 const Mission = () => {
   return (
@@ -59,7 +59,7 @@ const Mission = () => {
                         <img src={ourHistory} alt="arrow nav" />
                     </div>
                     <div className='mission-other-content-text'>
-                        <button type='button'><a href="">HISTORY OF OUR FIRM<span className='arrow'><img src={rightArrow} alt="arrow nav" /></span></a></button>
+                        <button type='button'><a href="/about-us/history-of-our-firm">HISTORY OF OUR FIRM<span className='arrow'><img src={rightArrow} alt="arrow nav" /></span></a></button>
                         <p>Learn more about our firm.</p>
                     </div>
                 </div>

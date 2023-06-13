@@ -1,11 +1,11 @@
 import React from 'react'
-import AboutNavbar from '../components/aboutnav/AboutNavbar'
-import arrow from '../assets/arrow.png';
-import wwa1 from '../assets/who-are-we.png';
-import hww from '../assets/how-we-work.png';
-import ourValues from '../assets/our-values.png'
-import './pages.css';
-import { Footer } from '../components';
+import AboutNavbar from '../../components/aboutnav/AboutNavbar'
+import arrow from '../../assets/arrow.png';
+import wwa1 from '../../assets/who-are-we.png';
+import hww from '../../assets/how-we-work.png';
+import ourValues from '../../assets/our-values.png'
+import '../pages.css';
+import { Footer } from '../../components';
 
 
 const About = () => {

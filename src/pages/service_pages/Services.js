@@ -1,5 +1,5 @@
 import React from 'react'
-import { Footer, Navbar2 } from '../components'
+import { Footer, Navbar2 } from '../../components'
 
 const Services = () => {
   return (

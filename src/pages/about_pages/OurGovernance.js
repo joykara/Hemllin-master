@@ -1,5 +1,5 @@
 import React from 'react';
-import { Footer, AboutNavbar } from '../components';
+import { Footer, AboutNavbar } from '../../components';
 
 const OurGovernance = () => {
   return (
