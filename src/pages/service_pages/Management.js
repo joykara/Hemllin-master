@@ -7,7 +7,7 @@ const Management = () => {
           <Navbar2 />
           <div className="management-container">
               <div className="hm-management-title">
-                  <h2>Lorem Ipsum</h2>
+                  <h4>SERVICES / MANAGEMENT CONSULTANCY</h4>
               </div>
 
               <div className="hm-management-intro">

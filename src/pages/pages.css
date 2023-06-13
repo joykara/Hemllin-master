@@ -755,7 +755,7 @@ form .contact-us-question-options label{
 .service-options-container{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     padding: 3rem;
     width: 100%;
 }
@@ -765,8 +765,9 @@ form .contact-us-question-options label{
     flex-direction: row-reverse;
 }
 .service-option__image{
-    width: 50%;
+    width: 40%;
     height: 300px;
+    margin-top: 2rem;
     background: #e9e6e6;
 }
 .service-option__content{
@@ -775,19 +776,35 @@ form .contact-us-question-options label{
     justify-content: center;
     align-items: flex-start;
     padding: 1rem 5rem;
-    width: 50%;
+    width: 60%;
 }
 .service-option__content h3{
     padding: 1rem 0;
     border: none;
 }
 .service-option__content p{
-    padding-bottom: 1rem;
+    padding-bottom: .5rem;
+    font-weight: 500;
 }
 .service-option__content button{
-    padding: 1rem;
-    background: #807b7b;
-    margin: 1rem 0;
+    padding: .5rem 1.5rem;
+    border-radius: 1rem;
+    background: var(--color-bg);
+    margin: 1rem 2rem;
+}
+.service-option__content button a{
+    color: #ffffff;
+}
+.service-option__content button a:hover{
+    color: var(--color-link);
+}
+.services-included{
+    padding-left: 3rem;
+}
+.services-included li{
+    list-style-type: disc;
+    font-family: var(--links-font-family);
+    padding-bottom: .5rem;
 }
 
 /* MANAGEMENT SERVICES PAGE */
@@ -804,9 +821,13 @@ form .contact-us-question-options label{
     height: 400px;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    background: #807b7b;
+    background: #c7bfbf;
+}
+.hm-management-title h4,
+.hm-education-title h4{
+    padding-left: 4rem;
 }
 .hm-management-intro,
 .hm-education-intro{
