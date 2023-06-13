@@ -1039,9 +1039,9 @@ form .contact-us-question-options label{
   padding-bottom: 3rem;
 }
 .hm-careers-title{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   height: 400px;
   width: 100%;
   background: url(/src/assets/careers.png);
@@ -1088,8 +1088,12 @@ form .contact-us-question-options label{
     font-family: var(--font-family);
 }
 .hm-careers-about-text{
-    color: var(--color-bg);
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
     width: 50%;
+}
+
+.hm-careers-about-text p{
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
 }
 .hm-careers-about-text p{
     padding: 1rem;
@@ -1621,6 +1625,20 @@ form .contact-us-question-options label{
     .hm-education-option__content{
         width: 100%;
     }
+
+    /* CAREERS */
+    .hm-careers-intro {
+        padding: 2rem;
+        width: 100%;
+    }
+    .hm-careers-intro__about{
+        flex-direction: column;
+    }
+    .hm-careers-about-text{
+        width: 100%;
+    }
+
+    /* FEATURED INSIGHTS */
     .hm-featured-insights__details{
         flex-direction: column;
     }
@@ -1628,6 +1646,8 @@ form .contact-us-question-options label{
         width: 100%;
         margin: 1rem 0;
     }
+
+    /* GOVERNANCE */
     .hm-governance-title{
         flex-direction: column;
     }
