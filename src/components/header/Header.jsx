@@ -8,7 +8,8 @@ import heroImage from '../../assets/heroImage.png';
 import arrow from '../../assets/arrow.png'
 // import hemllinVideo from '../../assets/hemllin4.mp4'
 
-const Header = () => {
+const 
+Header = () => {
 return (
   <>
     <div className="header-container">

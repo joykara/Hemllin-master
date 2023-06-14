@@ -76,8 +76,6 @@
     align-items: center;
     background: #fff;
     padding: .5rem 0;
-    overflow-x: auto;
-    overflow-y: hidden;
     margin-top: -2rem;
 }
 .highlight-bar__container{
@@ -85,7 +83,6 @@
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    white-space: nowrap;
 }
 .highlight-bar__container ul{
     display: flex;
@@ -109,17 +106,15 @@
 }
 .highlight-item-title{
     text-align: left;
-    padding: 0 1rem;
+    padding-left: 1rem;
 }
 .highlight-item-title a span{
     line-height: 24px;
-    padding: 0 1rem;
     transition-delay: .5s;
 }
 
 .highlight-item-title:hover a span{
     color: var(--color-link);
-    background: var(--color-bg);
     cursor: pointer;
     /* scale */
     transition: 1s ease-in-out;
@@ -138,6 +133,20 @@
 @media screen and (min-width: 1640px){
     .header-content{
         margin: 10rem 15rem 10rem 0;
+    }
+}
+@media screen and (max-width: 1300px){
+    .header__highlight-bar{
+        display: flex;
+        align-items: center;
+        background: #fff;
+        padding: .5rem 0;
+        overflow-x: auto;
+        overflow-y: hidden;
+        margin-top: -2rem;
+    }
+    .highlight-bar__container{
+        white-space: nowrap;
     }
 }
 @media screen and (max-width: 1080px){
