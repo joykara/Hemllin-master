@@ -11,12 +11,36 @@ const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [activeMenu, setActiveMenu] = useState(null);
 
-
   const handleToggle = () => {
     setToggleMenu(!toggleMenu);
     handleContent('industries', true);
   };
 
+    //navbar menu content for devices <768px
+  const [industriesContentVisible, setIndustriesContentVisible] = useState(false);
+  const [servicesContentVisible, setServicesContentVisible] = useState(false);
+  const [insightsContentVisible, setInsightsContentVisible] = useState(false);
+  const [aboutContentVisible, setAboutContentVisible] = useState(false);
+
+  const handleContentVisible = (section, flag) => {
+    const contentStates = {
+      industries: setIndustriesContentVisible,
+      services: setServicesContentVisible,
+      insights: setInsightsContentVisible,
+      about: setAboutContentVisible
+    };
+
+    for (const [key, setter] of Object.entries(contentStates)) {
+      if (key === section) {
+        setter(flag);
+        setActiveMenu(section); // Set the active menu item
+      } else {
+        setter(false);
+      }
+    }
+  };
+
+    //navbar menu content for devices >768px
   const [industriesContent, setIndustriesContent] = useState(false);
   const [servicesContent, setServicesContent] = useState(false);
   const [insightsContent, setInsightsContent] = useState(false);
@@ -79,18 +103,55 @@ const Navbar = () => {
             </div>
             <div className="menu">
               <div className="show-menu">
-              <p onClick={() => handleContent('industries', true)} className={activeMenu === 'industries' ? 'active-link' : ''}>
-                <span>Industries</span><span><SlArrowRight size={10} /></span>
-              </p>
-                <p onClick={() => handleContent('services', true)} className={activeMenu === 'services' ? 'active-link' : ''}>
-                <span>Services</span><span><SlArrowRight size={10} /></span>
-                </p>
-                <p onClick={() => handleContent('insights', true)} className={activeMenu === 'insights' ? 'active-link' : ''}>
-                <span>Featured Insights</span><span><SlArrowRight size={10} /></span>
-                </p>
-                <p onClick={() => handleContent('about', true)} className={activeMenu === 'about' ? 'active-link' : ''}>
-                <span>About Us</span><span><SlArrowRight size={10} /></span>
-                </p>
+                  <p
+                  onClick={() => handleContent('industries', true) || handleContentVisible('industries', !industriesContentVisible)}
+                  className={activeMenu === 'industries' ? 'active-link' : ''}
+                  >
+                  <span>Industries</span>
+                  <span>
+                      <SlArrowRight size={10} />
+                  </span>
+                  </p>
+                  {/* display menu for devices <768px */}
+                  <div className="navbar__mini-menu-content">
+                  {industriesContentVisible && <IndustriesMenu />}
+                  </div>
+                  <p
+                  onClick={() => handleContent('services', true) || handleContentVisible('services', !servicesContentVisible)}
+                  className={activeMenu === 'services' ? 'active-link' : ''}
+                  >
+                  <span>Services</span>
+                  <span>
+                      <SlArrowRight size={10} />
+                  </span>
+                  </p>
+                  <div className="navbar__mini-menu-content">
+                  {servicesContentVisible && <ServicesMenu />}
+                  </div>
+                  <p
+                  onClick={() => handleContent('insights', true) || handleContentVisible('insights', !insightsContentVisible)}
+                  className={activeMenu === 'insights' ? 'active-link' : ''}
+                  >
+                  <span>Featured Insights</span>
+                  <span>
+                      <SlArrowRight size={10} />
+                  </span>
+                  </p>
+                  <div className="navbar__mini-menu-content">
+                  {insightsContentVisible && <InsightsMenu />}
+                  </div>
+                  <p
+                  onClick={() => handleContent('about', true) || handleContentVisible('about', !aboutContentVisible)}
+                  className={activeMenu === 'about' ? 'active-link' : ''}
+                  >
+                  <span>About Us</span>
+                  <span>
+                      <SlArrowRight size={10} />
+                  </span>
+                  </p>
+                  <div className="navbar__mini-menu-content">
+                  {aboutContentVisible && <AboutMenu />}
+                  </div>
               </div>
               <p><a href="/careers">Careers</a></p>
               <p><a href="/about-us/blog">Blog</a></p>

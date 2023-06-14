@@ -126,7 +126,7 @@
 }
 .navbar__menu-links__container{
     background: var(--color-bg);
-    width: 30%;
+    width: 40%;
 }
 .navbar__menu-links__container .menu{
     margin-top: 1rem;
@@ -314,8 +314,19 @@
 
 }
 @media screen and (max-width: 786px){
+    .navbar__menu-links__details{
+        display: none;
+    }
     .navbar__menu-links__container{
-        width: 40%;
+        width: 100%;
+    }
+    .navbar__menu-links .show-menu p {
+      display: block;
+    }
+    .navbar__menu-links .show-menu .navbar__mini-menu-content {
+      display: flex;
+      flex-direction: column;
+      background: #D9D9D9;
     }
     .navbar__search{
         display: none;
@@ -330,4 +341,10 @@
     .about-us-list #sections .about-us-sections h4{
         width: 80%;
     }
+}
+
+@media (min-width: 768px) {
+  .navbar__menu-links .show-menu .navbar__mini-menu-content {
+    display: none;
+  }
 }
