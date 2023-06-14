@@ -1,8 +1,8 @@
 import React from 'react';
 import { AboutNavbar, Footer } from '../../components';
 import { CgArrowLongRight } from 'react-icons/cg';
-import {AiOutlineLine} from 'react-icons/ai'
-import { Link } from 'react-router-dom';
+import { AiOutlineLine } from 'react-icons/ai';
+import { HashLink as Link } from 'react-router-hash-link';
 
 const OurHistory = () => {
   return (
