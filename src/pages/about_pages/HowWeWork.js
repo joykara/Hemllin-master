@@ -58,7 +58,7 @@ const HowWeWork = () => {
                     <li className="hww-content-detail">
                         <span className='hww-detail01'>05</span>
                         <div className='hww-detail-text'>
-                            <h3>Implementation andExecution:</h3>
+                            <h3>Implementation and Execution:</h3>
                             <p>
                                 We believe that execution is as crucial as strategy. Our consultants roll up their sleeves and work hand in hand with your team to ensure a smooth and successful implementation of the recommended solutions. We provide guidance, project management, and change management support,ensuring that the transition is seamless and your organisation is equipped to realize the intended outcomes.
                             </p>
@@ -67,7 +67,7 @@ const HowWeWork = () => {
                     <li className="hww-content-detail">
                         <span className='hww-detail01'>06</span>
                         <div className='hww-detail-text'>
-                            <h3>Monitoring andEvaluation:</h3>
+                            <h3>Monitoring and Evaluation:</h3>
                             <p>
                                 Our commitment to success doesn't end with implementation. We monitor the progress and impact of our solutions, collecting feedback and measuring key performance indicators to assess their effectiveness. We remain agile, making adjustments as needed to drive continuous improvement and optimize results. We believe in fostering long-term partnerships, and our ongoing support ensures sustained success for your organisation.
                             </p>

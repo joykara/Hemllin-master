@@ -51,8 +51,9 @@
 }
 .hww-content-details{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
     grid-gap: 6rem 2.5rem;
+    margin-bottom: 2rem;
 }
 .hww-content-detail{
     display: flex;
@@ -61,7 +62,7 @@
     padding: 1rem;
 }
 .hww-content-detail:hover{
-    box-shadow: 1px 1px 2px 1px #000000;
+    box-shadow: 0px 16px 32px -1px rgba(5,28,44,.2),0px 0px 1px 0px rgba(5,28,44,.15);
     transition: all 0.5s ease-in-out;
 }
 .hww-content-detail span{
