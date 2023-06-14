@@ -10,7 +10,8 @@ import arrow from '../../assets/arrow.png'
 const Header = () => {
 return (
   <>
-    <div className='header'>
+    <div className="header-container">
+      <div className='header'>
 
       <div className="header-image">
         <img src={heroImage} alt="hero" />
@@ -40,6 +41,8 @@ Insights</h2>
         </ul>
       </div>
     </div>
+    </div>
+    
   </>
   )
 }

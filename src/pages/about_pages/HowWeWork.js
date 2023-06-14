@@ -47,43 +47,43 @@ const HowWeWork = () => {
                         </div>
                     </li>
                     <li className="hww-content-detail">
-                        <span className='hww-detail01'>03</span>
+                        <span className='hww-detail01'>04</span>
                         <div className='hww-detail-text'>
-                            <h3>Strategy and Planning:</h3>
+                            <h3>Solution Design and Development:</h3>
                             <p>
-                                We are relentless in our pursuit of quality. From meticulous research to flawless execution, our dedicated team strives for excellence at every stage. With an unwavering commitment to delivering top-notch services, we exceed your expectations.
+                                With the strategy in place, we move into action. Our experienced consultants work alongside your team to design and develop customized solutions that address your challenges head-on. Whether it's streamlining processes, implementing new technologies, or optimizing your business model, we leverage our deep expertise to design practical, sustainable, and future-ready solutions.
                             </p>
                         </div>
                     </li>
                     <li className="hww-content-detail">
-                        <span className='hww-detail01'>03</span>
+                        <span className='hww-detail01'>05</span>
                         <div className='hww-detail-text'>
-                            <h3>Strategy and Planning:</h3>
+                            <h3>Implementation andExecution:</h3>
                             <p>
-                                We are relentless in our pursuit of quality. From meticulous research to flawless execution, our dedicated team strives for excellence at every stage. With an unwavering commitment to delivering top-notch services, we exceed your expectations.
+                                We believe that execution is as crucial as strategy. Our consultants roll up their sleeves and work hand in hand with your team to ensure a smooth and successful implementation of the recommended solutions. We provide guidance, project management, and change management support,ensuring that the transition is seamless and your organisation is equipped to realize the intended outcomes.
                             </p>
                         </div>
                     </li>
                     <li className="hww-content-detail">
-                        <span className='hww-detail01'>03</span>
+                        <span className='hww-detail01'>06</span>
                         <div className='hww-detail-text'>
-                            <h3>Strategy and Planning:</h3>
+                            <h3>Monitoring andEvaluation:</h3>
                             <p>
-                                We are relentless in our pursuit of quality. From meticulous research to flawless execution, our dedicated team strives for excellence at every stage. With an unwavering commitment to delivering top-notch services, we exceed your expectations.
+                                Our commitment to success doesn't end with implementation. We monitor the progress and impact of our solutions, collecting feedback and measuring key performance indicators to assess their effectiveness. We remain agile, making adjustments as needed to drive continuous improvement and optimize results. We believe in fostering long-term partnerships, and our ongoing support ensures sustained success for your organisation.
                             </p>
                         </div>
                     </li>
                     <li className="hww-content-detail">
-                        <span className='hww-detail01'>03</span>
+                        <span className='hww-detail01'>07</span>
                         <div className='hww-detail-text'>
-                            <h3>Strategy and Planning:</h3>
+                            <h3>Knowledge Transfer and Empowerment:</h3>
                             <p>
-                                We are relentless in our pursuit of quality. From meticulous research to flawless execution, our dedicated team strives for excellence at every stage. With an unwavering commitment to delivering top-notch services, we exceed your expectations.
+                            We are dedicated to empowering your team with the knowledge and skills needed for sustainable success. Through training programs, workshops, and knowledge transfer sessions, we equip your team with the tools and capabilities to maintain and build upon the achievements made. We strive to leave a lasting impact, transforming your organisation from within.
                             </p>
                         </div>
                     </li>
                 </ul>
-                
+
             </div>
 
             <div className="hww-other-content">

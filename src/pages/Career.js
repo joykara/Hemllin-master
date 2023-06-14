@@ -21,7 +21,7 @@ const Career = () => {
                   <div className="hm-career-about-title">
                       <h2><span>Working at Hemllin</span></h2>
                   </div>
-                      <div className="hm-careers-about-text">
+                  <div className="hm-careers-about-text">
                           <p>At Hemllin, we believe that our success lies in the collective talents, expertise, and passion of our team members<br />We are always on the look out for exceptional individuals who can contribute to our dynamic and innovative consulting firm.</p>
                           <p>Join us and embark on a journey where your skills will be honed, your ideas will be valued, and your career will thrive</p>
                   </div>
