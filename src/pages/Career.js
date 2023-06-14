@@ -97,7 +97,7 @@ const Career = () => {
               <section className='hm-career-application'>
                 <article className='career-application-process'>
                   <div className='hm-application-overview'>
-                    <h3>Join Our Team:</h3>
+                    <h3>Join Our Team</h3>
                     <p>At Hemllin, we believe that our success hinges on the talent and dedication of our employees. We have a rigorous and comprehensive selection process in place to ensure that we attract, assess, and onboard the best candidates who align with our values and contribute to our thriving work environment. Here's an overview of our employee selection process:</p>
                   </div>
                   <h4>Application Process:</h4>
