@@ -1,5 +1,6 @@
 import React from 'react';
 import { Footer, Navbar2 } from '../../components';
+import './service-pages.css';
 
 const Management = () => {
   return (

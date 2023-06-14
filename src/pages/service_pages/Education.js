@@ -1,5 +1,6 @@
 import React from 'react';
 import { Footer, Navbar2 } from '../../components';
+import './service-pages.css';
 
 const Education = () => {
   return (
@@ -7,7 +8,8 @@ const Education = () => {
           <Navbar2 />
           <div className="education-container">
               <div className="hm-education-title">
-                  <h2>Lorem Ipsum</h2>
+                  <h4>SERVICES / EDUCATION CONSULTANCY</h4>
+                  <p>Education consulting is intended to improve students' outcomes by increasing the accessibility and affordability of the education ecosystem.</p>
               </div>
 
               <div className="hm-education-intro">

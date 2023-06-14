@@ -5,6 +5,7 @@ import rightArrow from '../../assets/arrow.png'
 import ourHistory from '../../assets/history.png';
 import ourTeam from '../../assets/team.png';
 import './about-pages.css'
+import { Link } from 'react-router-dom';
 
 const HowWeWork = () => {
   return (
@@ -12,7 +13,7 @@ const HowWeWork = () => {
         <AboutNavbar/>
         <div className="hm-hww-container">
 
-            <a href="/about-us"><span className='arrow links-font'><img src={arrow} alt="arrow nav" />Back to About Us Overview</span></a>
+            <a id='back' href="/about-us"><span className='arrow links-font'><img src={arrow} alt="arrow nav" />Back to About Us Overview</span></a>
 
             <div className='hww-content-title'>
                 <h2>How We Work</h2>
@@ -85,10 +86,21 @@ const HowWeWork = () => {
                 </ul>
 
             </div>
-
+            <div className="hww-footer-content">
+                <p>Partner with Hemllin today and let us guide you on the path to success. Together, we will navigate challenges, seize opportunities, and unlock your organisation's true potential. Contact us to embark on a transformative journey today</p>
+            </div>
             <div className="hww-other-content">
-                <div className="hww-other-content--right">
+                <div className="hww-other-content__details">
                     <h4>RELATED</h4>
+                    <div className="hww-other-content-link scale-up">
+                        <div className='hww-other--link-image'>
+                            <img src={ourHistory} alt="our history" />
+                        </div>
+                        <div className='hww-other--link-text'>
+                            <h2><Link to='/about-us/history-of-our-firm'>Our History</Link></h2>
+                            <p>Learn more about our journey and how we got to where we are today.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

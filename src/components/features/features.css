@@ -17,6 +17,9 @@
 .blog:nth-child(2) .blog-content  a{
     color: #fff;
 }
+.blog:nth-child(2) .blog-content  a:hover{
+    color: var(--color-link);
+}
 
 /* MEDIA QUERIES */
 @media screen and (max-width: 1080px){
