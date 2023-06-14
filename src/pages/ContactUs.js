@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import ReCAPTCHA from "react-google-recaptcha";
-import { Footer, Navbar } from '../components'
+import { Footer, Navbar2 } from '../components'
 import FormInput from '../components/FormInput'
 
 const ContactUs = () => {
@@ -73,7 +73,7 @@ const ContactUs = () => {
 
   return (
     <>
-      <Navbar />
+      <Navbar2 />
         <h2 id='title'>Contact Us</h2>
         <div className="contact-us-container">
           <div className="contact-us-details">

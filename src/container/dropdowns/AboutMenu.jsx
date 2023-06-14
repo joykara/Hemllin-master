@@ -29,20 +29,7 @@ const AboutMenu = () => {
                     </ul>
                 </div>
                 <div className="about-us-sections">
-                    <h4>HOW WE WORK</h4>
-                    <ul>
-                        <li className='about-us-dropdown-item'>
-                            <a href='/about-us/agriculture'>Agriculture</a>
-                        </li>
-                        <li className='about-us-dropdown-item'>
-                            <a href='/about-us/automotive'>Automotive</a>
-                        </li>
-                        <li className='about-us-dropdown-item'>
-                            <a href='/about-us/education'>Education</a>
-                        </li>
-                    </ul>
-                </div>
-                <div className="about-us-sections">
+                    <p><Link to="/about-us/how-we-work">HOW WE WORK</Link></p>
                     <p><Link to="/about-us/media"> MEDIA </Link></p>
                 </div>
               </div>
