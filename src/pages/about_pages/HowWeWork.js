@@ -1,9 +1,7 @@
 import React from 'react';
 import { Footer, AboutNavbar } from '../../components';
-import arrow from '../../assets/Vector.png'
-import rightArrow from '../../assets/arrow.png'
+import arrow from '../../assets/Vector.png';
 import ourHistory from '../../assets/history.png';
-import ourTeam from '../../assets/team.png';
 import './about-pages.css'
 import { Link } from 'react-router-dom';
 

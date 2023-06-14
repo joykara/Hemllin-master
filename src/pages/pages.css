@@ -840,27 +840,35 @@ form .contact-us-question-options label{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-bottom: 3px solid #857c7c;
+  border-bottom: 1px solid #857c7c;
   padding-bottom: 3rem;
 }
 .hm-careers-title{
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
-  height: 400px;
+  align-items: flex-start;
+  padding: 2rem 15rem;
+  height: auto;
   width: 100%;
   background: url(/src/assets/careers.png);
   background-repeat: no-repeat;
   background-size: cover;
-  text-align: center;
-  border: 1px solid #514d4d;
+  text-align: left;
 }
 .hm-careers-title h2{
-    width: 60%;
-    margin: auto 0;
+  font-size: clamp(1.5rem, 3vw, 3rem);
+  padding: 1rem 0;
+}
+.hm-careers-about-text{
+    width: 50%;
+}
+.hm-careers-about-text p{
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    line-height: 40px;
+    margin-bottom: 1rem;
 }
 .hm-careers-intro{
-  padding: 2rem 5rem;
   width: 100%;
 }
 .hm-careers-intro__text{
@@ -868,54 +876,20 @@ form .contact-us-question-options label{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 3rem 2rem;
+  padding: 2rem;
   margin: 1rem 0;
-}
-.hm-careers-intro__about{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem 0;
-    width: 100%;
-    border-bottom: 1px solid var(--color-bg);
-}
-.hm-career-about-title{
-    margin-right: 1rem;
-    padding: 4rem 0;
-    width: 50%;
-    height: 100%;
-}
-.hm-career-about-title h2{
-    padding: 1rem;
-}
-.hm-career-about-title h2 span{
-    color: #09b025;
-    font-family: var(--font-family);
-}
-.hm-careers-about-text{
-    font-size: clamp(1rem, 1.5vw, 1.5rem);
-    width: 50%;
-}
-
-.hm-careers-about-text p{
-    font-size: clamp(1rem, 1.5vw, 1.5rem);
-}
-.hm-careers-about-text p{
-    padding: 1rem;
-    font-size: 24px;
-    line-height: 40px;
 }
 .hm-careers-intro__benefits{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem 0;
+    padding: 2rem 5rem;
     margin: 0 auto;
 }
 .hm-career-benefits{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    grid-gap: 6rem 2.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    grid-gap: 6rem 3.5rem;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -947,66 +921,72 @@ form .contact-us-question-options label{
 .benefit-tile__text{
     text-align: center;
 }
-.hm-careers-intro__content{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background: #efe0e083;
-  padding: 2rem 0;
+.hm-career-application{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    margin: 0 auto;
 }
-.hm-careers-intro__content-title{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding-right: 1rem;
-  margin-top: 1.2rem;
-  width: 50%;
+.career-application-process{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.hm-careers-intro__content-title h2{
-  font-size: 24px;
+.career-application-process h4{
+    margin: 1rem 0;
+    font-size: clamp(1.5rem, 2vw, 2rem);
 }
-.hm-careers-intro__content-image{
-  width: 95%;
-  height: 500px;
-  background: #ffffff;
-  border: 1px solid #514d4d;
+.hm-application-overview{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-bg);
+    color: #ffffff;
+    padding: 2rem 5rem;
+    width: 100%;
+    margin: 0 auto;
 }
-.hm-careers-intro__content-text{
-  display: flex;
-  flex-wrap: wrap;
-  width: 50%;
+.hm-application-overview h3{
+    margin-bottom: 2rem;
+    color: var(--color-link);
 }
-.hm-careers-intro__content-text .image-details{
-  width: 45%;
-  height: 300px;
-  margin: .5rem;
-  background: #ffffff;
-  border: 1px solid #514d4d;
+.hm-application-overview p{
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    letter-spacing: 1px;
+    width: 70%;
 }
-.hm-careers-intro__other-content{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem 0;
+.hm-application-process{
+    padding: 2rem 8rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-gap: 3rem 5rem;
 }
-.hm-careers-intro__content h4,
-.hm-careers-intro__other-content h4{
-  padding: .5rem 0;
+.hm-application-process__step{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 16px 32px -1px rgba(5,28,44,.2),0px 0px 1px 0px rgba(5,28,44,.15);
+    padding: 2rem;
+}
+.hm-application-process__step-number{
+    margin-bottom: 1rem;
+    color: #0f9024;
+}
+.hm-application-process__step-number span{
+    color: black;
+    font-size: 3rem;
+    margin-left: 1rem;
 }
 
-.hm-careers-intro__other-content{
-  padding: 2rem 5rem;
-  background: #efe0e08f;
+.hm-application-process__step:hover .hm-application-process__step-number span{
+    color: #0f9024;
+    transition: padding-left 0.5s ease-in-out;
+    padding-left: 1.5rem;
 }
-.hm-careers-intro__other-content-text{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem 0;
-}
-.details{
+/* .details{
   margin-right: 1rem;
   background: #dedada8c;
 }
@@ -1022,7 +1002,7 @@ form .contact-us-question-options label{
   background: #ffffff;
   margin-bottom: 1rem;
   border: 1px solid #514d4d;
-}
+} */
 
 /* INDUSTRY PAGES */
 .industry-nav{
@@ -1211,6 +1191,49 @@ form .contact-us-question-options label{
 }
 .hm-featured-insights__details01-content-text p{
     margin-top: auto;
+}
+
+/* CTA TAG */
+.cta-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0;
+    background: var(--color-bg);
+}
+.cta-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    padding: 1rem;
+    width: 80%;
+}
+.cta-content__buttons{
+    margin-left: 5rem;
+}
+.cta-content__buttons button{
+    padding: .8rem 2rem;
+    background: transparent;
+    border: 3px solid #0ead03;
+    border-radius: 1rem;
+}
+.cta-content__buttons button:nth-child(1){
+    margin-right: 2rem;
+}
+.cta-content__buttons button:hover{
+    background: #ffffff;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+.cta-content__buttons button a{
+    color: #ffffff;
+    font-family: 'Merriweather', serif;
+}
+.cta-content__buttons button:hover a{
+    color: #000000;
+    transition: all .5s ease-in-out;
 }
 
 
@@ -1508,5 +1531,13 @@ form .contact-us-question-options label{
     .border-line,
     .history-content span{
         display: none;
+    }
+
+    /* CTA TAG */
+    .cta-content{
+      flex-direction: column;
+    }
+    .cta-content button{
+        padding: 1rem;
     }
 }
