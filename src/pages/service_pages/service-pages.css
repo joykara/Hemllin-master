@@ -115,11 +115,12 @@
 }
 .hm-management-intro,
 .hm-education-intro,
-{
+.hm-travel-intro{
     margin: 2rem 0;
 }
 .hm-management-intro__text,
-.hm-education-intro__text{
+.hm-education-intro__text,
+.hm-travel-intro__text{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -127,13 +128,15 @@
     padding: 1rem 5rem;
 }
 .hm-management-intro__text h4,
-.hm-education-intro__text h3{
+.hm-education-intro__text h3,
+.hm-travel-intro__text h4{
     padding: 1rem 0;
     font-size: clamp(1.5rem, 5vw, 2rem);
 }
 
 .hm-management-intro__text p,
-.hm-education-intro__text p{
+.hm-education-intro__text p,
+.hm-travel-intro__text p{
     padding-top: 1rem;
     text-align: center;
     width: 80%;
@@ -142,7 +145,8 @@
     width: 50%;
 }
 .hm-management-content,
-.hm-education-content{
+.hm-education-content,
+.hm-travel-content{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -150,7 +154,8 @@
     padding: 2rem;
 }
 .hm-management-options-container,
-.hm-education-options-container{
+.hm-education-options-container,
+.hm-travel-options-container{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -171,14 +176,16 @@
     flex-direction: row-reverse;
 }
 .hm-management-option__image,
-.hm-education-option__image{
+.hm-education-option__image,
+.hm-travel-option__image{
     width: 40%;
     height: 300px;
     background: #e9e6e6;
     padding: 0 1rem;
 }
 .hm-management-option__content,
-.hm-education-option__content{
+.hm-education-option__content,
+.hm-travel-option__content{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -188,20 +195,23 @@
     height: 100%;
 }
 .hm-mng-step-number,
-.hm-edu-step-number{
+.hm-edu-step-number,
+.hm-travel-step-number{
     margin-bottom: 1rem;
     font-size: clamp(1.5rem, 5vw, 2rem);
     color: #0f9024;
 }
 .hm-mng-step-number span,
-.hm-edu-step-number span{
+.hm-edu-step-number span,
+.hm-travel-step-number span{
     color: black;
     font-family: var(--font-family);
     font-size: clamp(1.5rem, 5vw, 2rem);
     margin-left: 1rem;
 }
 .hm-management-option__content p,
-.hm-education-option__content p{
+.hm-education-option__content p,
+.hm-travel-option__content p{
     font-size: clamp(1rem, 3vw, 1.2rem);
     padding-bottom: 1rem;
 }
@@ -219,18 +229,21 @@
     padding-bottom: 1rem;
 }
 .hm-management-option__content__list ul,
-.hm-education-option__content__list ul{
+.hm-education-option__content__list ul,
+.hm-travel-option__content__list ul{
     padding-left: 3rem;
 }
 .hm-management-option__content__list ul li,
-.hm-education-option__content__list ul li{
+.hm-education-option__content__list ul li,
+.hm-travel-option__content__list ul li{
     list-style-type: disc;
     font-family: var(--links-font-family);
     letter-spacing: .8px;
     padding-bottom: .5rem;
 }
 .hm-management-footer,
-.hm-education-footer{
+.hm-education-footer,
+.hm-travel-footer{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -240,8 +253,10 @@
 }
 .hm-management-footer h3,
 .hm-education-footer h3,
+.hm-travel-footer h3,
 .hm-management-footer p,
-.hm-education-footer p{
+.hm-education-footer p,
+.hm-travel-footer p{
     text-align: center;
     padding: 1rem 0;
     width: 90%;
@@ -251,7 +266,8 @@
 /* MEDIA QUERIES */
 @media screen and (max-width: 1084px){
     .hm-management-intro__text p,
-    .hm-education-intro__text p{
+    .hm-education-intro__text p,
+    .hm-travel-intro__text p{
         width: 100%;
     }
     .hm-management-options-container{
@@ -265,11 +281,13 @@
         flex-direction: column;
     }
     .hm-management-option__image,
-    .hm-education-option__image{
+    .hm-education-option__image,
+    .hm-travel-option__image{
         width: 100%;
     }
     .hm-management-option__content,
-    .hm-education-option__content{
+    .hm-education-option__content,
+    .hm-travel-option__content{
         width: 100%;
     }
 
