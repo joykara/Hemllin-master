@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 // import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 import './App.css';
 import {BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import {Media, About, Homepage, ContactUs, Blog, Career, Mission, OurGovernance, Services, Management, Education, AgricultureIndustry, ArtificialIntelligence, OurHistory, HowWeWork} from './pages';
+import {Media, About, Homepage, ContactUs, Blog, Career, Mission, OurGovernance, Services, Management, Education, AgricultureIndustry, ArtificialIntelligence, OurHistory, HowWeWork, Travel} from './pages';
 import { SplashScreen } from './components';
 
 function App() {
@@ -34,6 +34,7 @@ function App() {
               <Route path="/services" element={<Services />} />
               <Route path="/services/management" element={<Management />} />
               <Route path="/services/education" element={<Education />} />
+              <Route path="/services/travel" element={<Travel />} />
               <Route path="/industries/agriculture" element={<AgricultureIndustry />} />
               <Route path="/featured-insights/ai" element={<ArtificialIntelligence />} />
 

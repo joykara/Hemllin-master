@@ -1,4 +1,3 @@
-
 /* SERVICES PAGE */
 .services-container{
     display: flex;
@@ -80,7 +79,8 @@
 
 /* MANAGEMENT SERVICES PAGE */
 .management-container,
-.education-container{
+.education-container,
+.travel-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -88,49 +88,57 @@
     border-bottom: 1px solid #514d4d;
 }
 .hm-management-title,
-.hm-education-title{
+.hm-education-title,
+.hm-travel-title{
     height: 400px;
     width: 100%;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    background: #c7bfbf;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    background: var(--color-bg);
+    color: #ffffff;
 }
 .hm-management-title h4,
-.hm-education-title h4{
-    padding-left: 4rem;
+.hm-education-title h4,
+.hm-travel-title h4{
+    padding-left: 5rem;
+    margin: 1rem 0;
     letter-spacing: 2px;
     font-family: Arial, Helvetica, sans-serif;
+}
+.hm-management-title p,
+.hm-education-title p,
+.hm-travel-title p{
+    padding: 2rem 5rem;
+    letter-spacing: 2px;
 }
 .hm-management-intro,
 .hm-education-intro{
     margin: 2rem 0;
-}
-.hm-management-intro__image,
-.hm-education-intro__image{
-    width: 100%;
-    height: 300px;
-    background: #e9e6e6;
 }
 .hm-management-intro__text,
 .hm-education-intro__text{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    padding: 1rem 3rem;
-    width: 80%;
+    align-items: center;
+    padding: 1rem 5rem;
 }
 .hm-management-intro__text h4,
-.hm-education-intro__text h4{
+.hm-education-intro__text h3{
     padding: 1rem 0;
+    font-size: clamp(1.5rem, 5vw, 2rem);
 }
-.hm-management-intro__text button,
-.hm-education-intro__text button{
-    padding: 1rem;
-    background: #807b7b;
-    margin: 1rem 0;
-    align-items: center;
+
+.hm-management-intro__text p,
+.hm-education-intro__text p{
+    padding-top: 1rem;
+    text-align: center;
+    width: 80%;
+}
+.hm-education-intro__text p{
+    width: 50%;
 }
 .hm-management-content,
 .hm-education-content{
@@ -146,17 +154,27 @@
     justify-content: center;
     align-items: center;
     padding: 2rem 0;
-    width: 100%;
+    margin-bottom: 2rem;
+    width: 60%;
+    transition: all 2s ease-in-out;
+    transition-delay: .2s;
+}
+.hm-education-options-container{
+    width: 80%;
+    justify-content: space-evenly;
 }
 .hm-management-options-container:nth-child(2),
-.hm-education-options-container:nth-child(2){
+.hm-management-options-container:nth-child(4),
+.hm-education-options-container:nth-child(2),
+.hm-education-options-container:nth-child(4){
     flex-direction: row-reverse;
 }
 .hm-management-option__image,
 .hm-education-option__image{
-    width: 50%;
+    width: 40%;
     height: 300px;
     background: #e9e6e6;
+    padding: 0 1rem;
 }
 .hm-management-option__content,
 .hm-education-option__content{
@@ -165,16 +183,50 @@
     justify-content: center;
     align-items: flex-start;
     padding: 1rem 5rem;
-    width: 50%;
+    width: 60%;
+    height: 100%;
 }
-.hm-management-option__content h3,
-.hm-education-option__content h3{
-    padding: 1rem 0;
-    border: none;
+.hm-mng-step-number,
+.hm-edu-step-number{
+    margin-bottom: 1rem;
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    color: #0f9024;
+}
+.hm-mng-step-number span,
+.hm-edu-step-number span{
+    color: black;
+    font-family: var(--font-family);
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    margin-left: 1rem;
 }
 .hm-management-option__content p,
 .hm-education-option__content p{
+    font-size: clamp(1rem, 3vw, 1.2rem);
     padding-bottom: 1rem;
+}
+.hm-management-option__content__list,
+.hm-management-option__content:hover .hm-management-option__content__desc{
+    display: none;
+}
+.hm-management-option__content__desc,
+.hm-management-option__content:hover .hm-management-option__content__list{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+.hm-management-option__content__list h4{
+    padding-bottom: 1rem;
+}
+.hm-management-option__content__list ul,
+.hm-education-option__content__list ul{
+    padding-left: 3rem;
+}
+.hm-management-option__content__list ul li,
+.hm-education-option__content__list ul li{
+    list-style-type: disc;
+    font-family: var(--links-font-family);
+    letter-spacing: .8px;
+    padding-bottom: .5rem;
 }
 .hm-management-footer,
 .hm-education-footer{
@@ -192,4 +244,32 @@
     text-align: center;
     padding: 1rem 0;
     width: 90%;
+}
+
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1084px){
+    .hm-management-intro__text p,
+    .hm-education-intro__text p{
+        width: 100%;
+    }
+    .hm-management-options-container{
+        flex-direction: column;
+        width: 90%;
+    }
+    .hm-management-options-container:nth-child(2),
+    .hm-management-options-container:nth-child(4),
+    .hm-education-options-container:nth-child(2),
+    .hm-education-options-container:nth-child(4){
+        flex-direction: column;
+    }
+    .hm-management-option__image,
+    .hm-education-option__image{
+        width: 100%;
+    }
+    .hm-management-option__content,
+    .hm-education-option__content{
+        width: 100%;
+    }
+
 }
