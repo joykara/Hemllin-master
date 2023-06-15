@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react';
+import React, {useEffect} from 'react';
 // import {BsArrowRight} from 'react-icons/bs';
 import './header.css';
 import '../../container/highlight/highlight.css';
@@ -8,14 +8,27 @@ import heroImage from '../../assets/heroImage.png';
 import arrow from '../../assets/arrow.png'
 // import hemllinVideo from '../../assets/hemllin4.mp4'
 
-const 
-Header = () => {
+const Header = () => {
+  useEffect(() => {
+  const container = document.getElementById('curved-lines-container');
+  const totalLines = 35;
+  const angleIncrement = 75 / totalLines;
+
+  for (let i = 0; i < totalLines; i++) {
+    const line = document.createElement('div');
+    line.classList.add('curved-lines');
+    line.style.animationDelay = `${i * 0.02}s`;
+    line.style.transform = `rotate(-${25 + angleIncrement * i}deg) translateY(24000%)`;
+    container.appendChild(line);
+  }
+}, []);
 return (
   <>
     <div className="header-container">
       {/* <video autoPlay='autoplay' id="myVideo">
         <source src={hemllinVideo} type="video/mp4"/>
       </video> */}
+      <div id="curved-lines-container"></div>
       <div className='header'>
         <div className="header-image">
           <img src={heroImage} alt="hero" />

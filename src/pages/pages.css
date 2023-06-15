@@ -968,6 +968,7 @@ form .contact-us-question-options label{
     flex-direction: column;
     box-shadow: 0px 16px 32px -1px rgba(5,28,44,.2),0px 0px 1px 0px rgba(5,28,44,.15);
     padding: 2rem;
+    border-radius: 1rem;
 }
 .hm-application-process__step-number{
     margin-bottom: 1rem;
