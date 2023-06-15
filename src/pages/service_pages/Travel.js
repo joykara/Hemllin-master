@@ -27,23 +27,18 @@ const Travel = () => {
                             <div className="hm-travel-option__content">
                                 <div className="hm-travel-option__content__desc">
                                     <div className='hm-mng-step-number'>
-                                        <h3>1 <span>Operations Consulting</span></h3>
+                                        <h3>Why You Need to Travel Abroad</h3>
                                     </div>
-                                    <p>While travel consultancy focuses on helping senior travel streamline organizational strategy, operation consulting focuses on internal issues and the performance of business activities. Operations consultants are more interested in helping leaders understand how their employees, teams, and workflow affect the attainment of business objectives.</p>
-                                    <p>Operations consulting enables companies to improve their ability to deal with clients, enhance travel systems (such as Information Technology), and streamline the culture to support efficiency. Operations consulting comprises 30 percent of the global market and has continued to grow with the demands from national and multinational businesses.</p>
+                                    <p>We specialize in Visa Consulting - assisting people who want to emigrate from one country to another by guiding them through the documentation process to increase their chances of immigration for study, work, travel, or business purpose. </p>
+                                    <p>We also provide information about exceptional serene tourist destinations worldwide to give our clients lifetime experiences by facilitating their travel and logistics. </p>
                                 </div>
                                 <div className="hm-travel-option__content__list">
-                                    <h4>Why Do I Need Operations Consultancy Services?</h4>
-                                    <p>Organizations face significant challenges from problematic internal issues like unmotivated employees or insufficient resources. Companies must maintain operational resiliency to survive adverse economic conditions common in contemporary business environments. Therefore, a companys ability to sustainably maintain its operations during such times is critical in ensuring it bounces back from economic downfall.</p>
-                                    <p>Hemllin Consultants provides operations consultancy services enabling you to explore alternatives for dealing with internal operational issues. For example, you need to know how to deal with unfavorable market conditions through strategic downsizing and revenue growth plans. You need to get reliable and relevant information on growing your business by providing the following services:</p>
+                                    <p>Our services include:</p>
                                     <ul>
-                                        <li>Organizational Operations</li>
-                                        <li>Sales and Marketing Strategies </li>
-                                        <li>Sourcing and Procurements</li>
-                                        <li>Business Process travel</li>
-                                        <li>Research and Development</li>
-                                        <li>Outsourcing</li>
-                                        <li>Business transformation</li>
+                                        <li>Air Ticketing</li>
+                                        <li>Hotel booking </li>
+                                        <li>Guest house booking</li>
+                                        <li>Villa book</li>
                                     </ul>
                                 </div>
                             </div>
