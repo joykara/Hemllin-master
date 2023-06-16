@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { RiMenuLine, RiCloseLine, RiSearchLine } from 'react-icons/ri';
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
 import { SlArrowRight, SlArrowLeft } from 'react-icons/sl';
