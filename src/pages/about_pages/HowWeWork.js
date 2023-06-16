@@ -2,6 +2,7 @@ import React from 'react';
 import { Footer, AboutNavbar } from '../../components';
 import arrow from '../../assets/Vector.png';
 import ourHistory from '../../assets/history.png';
+import ourPurpose from '../../assets/how-we-work.png'
 import './about-pages.css'
 import { Link } from 'react-router-dom';
 
@@ -90,14 +91,26 @@ const HowWeWork = () => {
             <div className="hww-other-content">
                 <div className="hww-other-content__details">
                     <h4>RELATED</h4>
-                    <div className="hww-other-content-link scale-up">
-                        <div className='hww-other--link-image'>
-                            <img src={ourHistory} alt="our history" />
+                    <div className='hww-other-content-link__container'>
+                        <div className="hww-other-content-link scale-up">
+                            <div className='hww-other--link-image'>
+                                <img src={ourHistory} alt="our history" />
+                            </div>
+                            <div className='hww-other--link-text'>
+                                <h2><Link to='/about-us/history-of-our-firm'>Our History</Link></h2>
+                                <p>Learn more about our journey and how we got to where we are today.</p>
+                            </div>
                         </div>
-                        <div className='hww-other--link-text'>
-                            <h2><Link to='/about-us/history-of-our-firm'>Our History</Link></h2>
-                            <p>Learn more about our journey and how we got to where we are today.</p>
+                        <div className="hww-other-content-link scale-up">
+                            <div className='hww-other--link-image'>
+                                <img src={ourPurpose} alt="our history" />
+                            </div>
+                            <div className='hww-other--link-text'>
+                                <h2><Link to='/about-us/history-of-our-firm'>Our Purpose, Mission and Values</Link></h2>
+                                <p>Learn more about our journey and how we got to where we are today.</p>
+                            </div>
                         </div>
+
                     </div>
                 </div>
             </div>
