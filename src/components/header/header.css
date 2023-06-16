@@ -13,10 +13,12 @@
     height: 100%;
 }
 .curved-lines{
-    width: 100%;
+    width: 120%;
     height: 1px;
     background-color: transparent;
     position: absolute;
+    right: 1%;
+    overflow: hidden;
     transform-origin: center center;
 }
 .curved-lines::before {
@@ -25,17 +27,16 @@
     height: 1px;
     background-color: rgba(133, 197, 73, 0.718);
     position: absolute;
-    top: 50%;
     overflow: hidden;
     animation: animateLine 1s linear;
     transform-origin: center center;
 }
 @keyframes animateLine {
     from {
-        transform: rotate(-90deg) translateY(20000%);
+        transform: rotate(-90deg) translateY(200%);
     }
     to {
-        transform: rotate(0deg) translateY(0);
+        transform: rotate(0deg) translateY(1%);
     }
 }
 .header-container{
@@ -50,6 +51,7 @@
 }
 .header-image{
     position: relative;
+    z-index: 2;
     left: 50px;
     width: 50%;
 }
@@ -205,6 +207,10 @@
     }
 }
 @media screen and (max-width: 768px){
+    
+    #curved-lines-container{
+        display: none;
+    }
     .header{
         flex-direction: column;
     }
