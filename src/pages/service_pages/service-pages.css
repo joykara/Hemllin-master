@@ -314,7 +314,7 @@
 .other-services-content__detail{
     display: flex;
     flex-direction: column;
-    margin-right: 10px;
+    margin-right: 1rem;
     justify-content: center;
     align-items: center;
     width: 100%;
