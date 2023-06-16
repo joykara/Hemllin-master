@@ -31,6 +31,7 @@
     overflow: hidden;
     animation: animateLine 1s linear;
     transform-origin: center center;
+    transition-duration: 2s;
 }
 @keyframes animateLine {
     from {
