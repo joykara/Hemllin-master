@@ -8,19 +8,16 @@ const ServicesMenu = () => {
                 <h3>Our Services</h3>
                 <ul>
                     <li className='services-dropdown-item'>
-                        <a href='/our-services/management'>Management</a>
+                        <a href='/our-services/management'>Management Consultancy</a>
                     </li>
                     <li className='services-dropdown-item'>
-                        <a href='/our-services/education'>Education</a>
+                        <a href='/our-services/education'>Education Consultancy</a>
                     </li>
                     <li className='services-dropdown-item'>
-                        <a href='/our-services/travel'>Travel</a>
+                        <a href='/our-services/travel'>Travel Consultancy</a>
                     </li>
                     <li className='services-dropdown-item'>
-                        <a href='/our-services/training-and-coaching'>Coaching</a>
-                    </li>
-                    <li className='services-dropdown-item'>
-                        <a href='/our-services/events-management'>Events Management</a>
+                        <a href='/our-services/training-and-coaching'>Coaching and Training</a>
                     </li>
                 </ul>
             </div>

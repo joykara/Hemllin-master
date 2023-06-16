@@ -328,13 +328,18 @@
     .navbar__menu-links .show-menu p {
       display: block;
     }
-    .navbar__menu-links .show-menu .navbar__mini-menu-content {
+    .navbar__menu-links .show-menu .navbar__mini-menu-content{
+        display: none;
+    }
+    .navbar__menu-links .show-menu .navbar__mini-menu-content.active{
         position: absolute;
         z-index: 999;
-      display: flex;
-      flex-direction: column;
-      background: #ffffff;
-      height: 100%;
+        display: flex;
+        flex-direction: column;
+        background: #ffffff;
+        width: 100%;
+        top: 6rem;
+        left: 0;
     }
     .navbar__mini-menu-content .industries-list
     .navbar__search{

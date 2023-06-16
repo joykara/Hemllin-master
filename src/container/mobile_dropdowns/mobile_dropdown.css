@@ -1,0 +1,29 @@
+.mb-industries-list,
+.mb-services-list,
+.mb-featured-insights-list,
+.mb-about-us-list {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    position: absolute;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    width: 100%;
+    left: 0;
+}
+.mb-industries-list ul,
+.mb-services-list ul,
+.mb-featured-insights-list ul,
+.mb-about-us-list ul {
+    padding: 1rem  0 0 5rem;
+    display: flex;
+    flex-direction: column;
+}
+.mb-industries-list ul li,
+.mb-services-list ul li,
+.mb-featured-insights-list ul li,
+.mb-about-us-list ul li {
+    padding: 0.5rem 0;
+}
