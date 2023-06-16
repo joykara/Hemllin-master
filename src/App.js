@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 // import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 import './App.css';
 import {BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import {Media, About, Homepage, ContactUs, Blog, Career, Mission, OurGovernance, Services, Management, Education, AgricultureIndustry, ArtificialIntelligence, OurHistory, HowWeWork, Travel} from './pages';
+import {Media, About, Homepage, ContactUs, Blog, Career, Mission, OurGovernance, Services, Management, Education, AgricultureIndustry, ArtificialIntelligence, OurHistory, HowWeWork, Travel, CoachingAndTraining} from './pages';
 import { SplashScreen } from './components';
 
 function App() {
@@ -31,10 +31,11 @@ function App() {
               <Route path="/about-us/media" element={<Media />} />
               <Route path="/careers" element={<Career />} />
               <Route path="/contact-us" element={<ContactUs />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/services/management" element={<Management />} />
-              <Route path="/services/education" element={<Education />} />
-              <Route path="/services/travel" element={<Travel />} />
+              <Route path="/our-services" element={<Services />} />
+              <Route path="/our-services/management" element={<Management />} />
+              <Route path="/our-services/education" element={<Education />} />
+              <Route path="/our-services/travel" element={<Travel />} />
+              <Route path="/our-services/training-and-coaching" element={<CoachingAndTraining />} />
               <Route path="/industries/agriculture" element={<AgricultureIndustry />} />
               <Route path="/featured-insights/ai" element={<ArtificialIntelligence />} />
 

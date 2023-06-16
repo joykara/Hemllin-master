@@ -188,7 +188,7 @@ const Navbar = () => {
           </div>
           <div>
             <p onMouseEnter={handleServicesContent} className={activeDropdown === 'services' ? 'active-dropdown' : ''}>
-              <a href="/services">Services</a> <span>
+              <a href="/our-services">Services</a> <span>
               {activeDropdown === 'services' ? < IoIosArrowUp /> : <IoIosArrowDown />}</span>
             </p>
             <div className={`drop-down-menu2 ${activeDropdown === 'services' ? 'active2' : ''}`} onMouseLeave={handleDropdownLeave}>
