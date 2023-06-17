@@ -173,6 +173,32 @@ const Management = () => {
                   <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
               </div>
+              <div className="explore-services">
+                    <h4>Explore</h4>
+                    <div className="other-services-content">
+                        <div className="other-services-content__detail scale-up">
+                            <div className="other-services-image"></div>
+                            <div className="other-services-text">
+                                <h4>Education Consultancy</h4>
+                                <article>At Hemllin, we work with students, parents, schools, and other beneficiaries with educational planning to improve educational experiences, facilities, and outcomes.</article>
+                            </div>
+                        </div>
+                        <div className="other-services-content__detail scale-up">
+                            <div className="other-services-image"></div>
+                            <div className="other-services-text">
+                                <h4>Travel Consultancy</h4>
+                                <article>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam neque itaque ea asperi</article>
+                            </div>
+                        </div>
+                        <div className="other-services-content__detail scale-up">
+                            <div className="other-services-image"></div>
+                            <div className="other-services-text">
+                                <h4>Coaching and Training</h4>
+                                <article>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam neque itaque ea asperi</article>
+                            </div>
+                        </div>
+                    </div>
+              </div>
           </div>
           
           <Cta ctaTitle='Ready to Work with Us?' ctaLink1='/contact-us' ctaLink1Text='Contact Us'ctaLink2='/contact-us' ctaLink2Text='Contact Us'/>

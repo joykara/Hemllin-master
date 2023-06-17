@@ -25,7 +25,7 @@ const Services = () => {
                             <li>Market Consultancy </li>
                             <li>Financial Advisory</li>
                         </ul>
-                        <button type='button'><a href="/services/management">Read More</a></button>
+                        <button type='button'><a href="/our-services/management">Read More</a></button>
                     </div>
                 </div>
                 <div className="service-options-container">
@@ -43,7 +43,7 @@ const Services = () => {
                             <li>Course advisory</li>
                             <li>Career counseling</li>
                         </ul>
-                        <button type='button'><a href="/services/education">Read More</a></button>
+                        <button type='button'><a href="/our-services/education">Read More</a></button>
                     </div>
                 </div>
                 <div className="service-options-container">
@@ -52,7 +52,7 @@ const Services = () => {
                     <div className="service-option__content">
                         <h3>Travel Consultancy</h3>
                         <p>Traveling to differing destinations for diverse reasons is an aspiration for many people. Whether for education, touring, or employment, we provide the necessary information and guidance to achieve these objectives. </p>
-                        <button type='button'><a href="/services/travel">Read More</a></button>
+                        <button type='button'><a href="/our-services/travel">Read More</a></button>
                     </div>
                 </div>
                 <div className="service-options-container">
@@ -61,7 +61,7 @@ const Services = () => {
                     <div className="service-option__content">
                         <h3>Training and Coaching</h3>
                         <p>We have specialized methods of training, counseling, or instructing an individual or a group on how to develop skills to enhance their productivity or overcome a performance problem.</p>
-                        <button type='button'><a href="/services/training-and-coaching">Read More</a></button>
+                        <button type='button'><a href="/our-services/training-and-coaching">Read More</a></button>
 
                     </div>
                 </div>

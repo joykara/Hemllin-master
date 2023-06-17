@@ -4,7 +4,6 @@ import { RiMailSendLine, RiTeamLine } from 'react-icons/ri';
 import { AiOutlineFundProjectionScreen, AiOutlineComment, AiOutlineFileSearch } from 'react-icons/ai';
 import { VscReferences } from 'react-icons/vsc';
 import { GiDiscussion } from 'react-icons/gi';
-import { FcCollaboration } from 'react-icons/fc';
 import { SiFuturelearn } from 'react-icons/si';
 import { MdDiversity3, MdWork, MdOutlinePersonSearch } from 'react-icons/md';
 import { IoAnalyticsOutline } from 'react-icons/io5';

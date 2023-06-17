@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { RiMenuLine, RiCloseLine, RiSearchLine } from 'react-icons/ri';
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
-import {SlArrowRight} from 'react-icons/sl'
+import { SlArrowRight, SlArrowLeft } from 'react-icons/sl';
 import './navbar.css';
 import { Link } from 'react-router-dom';
-import { IndustriesMenu, ServicesMenu, InsightsMenu, AboutMenu } from '../../container';
+import { IndustriesMenu, ServicesMenu, InsightsMenu, AboutMenu, MobileIndustriesMenu, MobileAboutMenu, MobileInsightsMenu, MobileServicesMenu} from '../../container';
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -16,7 +16,7 @@ const Navbar = () => {
     handleContent('industries', true);
   };
 
-    //navbar menu content for devices <768px
+  // Navbar menu content for devices <768px
   const [industriesContentVisible, setIndustriesContentVisible] = useState(false);
   const [servicesContentVisible, setServicesContentVisible] = useState(false);
   const [insightsContentVisible, setInsightsContentVisible] = useState(false);
@@ -27,7 +27,7 @@ const Navbar = () => {
       industries: setIndustriesContentVisible,
       services: setServicesContentVisible,
       insights: setInsightsContentVisible,
-      about: setAboutContentVisible
+      about: setAboutContentVisible,
     };
 
     for (const [key, setter] of Object.entries(contentStates)) {
@@ -40,7 +40,16 @@ const Navbar = () => {
     }
   };
 
-    //navbar menu content for devices >768px
+  // useEffect(
+  //   () => {
+  //     const back = document.getElementById('back');
+  //     const miniMenu = document.getElementsByClassName('active');
+  //     // if back is clicked set display of miniMenu to none
+  //     back.onClick(miniMenu.style.display= 'none');
+  // }
+  // )
+
+  // Navbar menu content for devices >768px
   const [industriesContent, setIndustriesContent] = useState(false);
   const [servicesContent, setServicesContent] = useState(false);
   const [insightsContent, setInsightsContent] = useState(false);
@@ -48,14 +57,14 @@ const Navbar = () => {
 
   const handleContent = (section, flag) => {
     const contentStates = {
-      industries: [setIndustriesContent],
-      services: [setServicesContent],
-      insights: [setInsightsContent],
-      about: [setAboutContent]
+      industries: setIndustriesContent,
+      services: setServicesContent,
+      insights: setInsightsContent,
+      about: setAboutContent,
     };
 
-    for (const [setter] of Object.values(contentStates)) {
-      if (setter === contentStates[section][0]) {
+    for (const [key, setter] of Object.entries(contentStates)) {
+      if (key === section) {
         setter(flag);
         setActiveMenu(section); // Set the active menu item
       } else {
@@ -90,67 +99,102 @@ const Navbar = () => {
         <button onClick={handleToggle}>
           {toggleMenu ? <RiCloseLine size={50} /> : <RiMenuLine size={40} />}
         </button>
-        <p><Link to="/">Logo</Link></p>
+        <p>
+          <Link to="/">Logo</Link>
+        </p>
       </div>
       {toggleMenu && (
         <div className={`navbar__menu-links ${toggleMenu ? 'show' : ''}`}>
           <div className="navbar__menu-links__container">
             <div className="navbar__menu-links-top">
               <button onClick={handleToggle}>
-                {toggleMenu ? <RiCloseLine color="#fff" size={45} /> : <RiMenuLine color="#fff" size={30} />}
+                {toggleMenu ? (
+                  <RiCloseLine color="#fff" size={45} />
+                ) : (
+                  <RiMenuLine color="#fff" size={30} />
+                )}
               </button>
-              <p><Link to="/">Logo</Link></p>
+              <p>
+                <Link to="/">Logo</Link>
+              </p>
             </div>
             <div className="menu">
               <div className="show-menu">
-                  <p
-                  onClick={() => handleContent('industries', true) || handleContentVisible('industries', !industriesContentVisible)}
+                <p
+                  onClick={() =>
+                    handleContent('industries', true) ||
+                    handleContentVisible('industries', !industriesContentVisible)
+                  }
                   className={activeMenu === 'industries' ? 'active-link' : ''}
-                  >
+                >
                   <span>Industries</span>
                   <span>
-                      <SlArrowRight size={10} />
+                    {industriesContentVisible ? (
+                      <SlArrowLeft color="black" size={15} />
+                    ) : (
+                      <SlArrowRight color="black" size={15} />
+                    )}
                   </span>
-                  </p>
-                  {/* display menu for devices <768px */}
-                  <div className="navbar__mini-menu-content">
-                  {industriesContentVisible && <IndustriesMenu />}
-                  </div>
-                  <p
-                  onClick={() => handleContent('services', true) || handleContentVisible('services', !servicesContentVisible)}
+                </p>
+                {/* Display menu for devices <768px */}
+                <div className="navbar__mini-menu-content">
+                  {industriesContentVisible && <MobileIndustriesMenu />}
+                </div>
+                <p
+                  onClick={() =>
+                    handleContent('services', true) ||
+                    handleContentVisible('services', !servicesContentVisible)
+                  }
                   className={activeMenu === 'services' ? 'active-link' : ''}
-                  >
+                >
                   <span>Services</span>
                   <span>
-                      <SlArrowRight size={10} />
+                    {servicesContentVisible ? (
+                      <SlArrowLeft color="black" size={15} />
+                    ) : (
+                      <SlArrowRight color="black" size={15} />
+                    )}
                   </span>
-                  </p>
-                  <div className="navbar__mini-menu-content">
-                  {servicesContentVisible && <ServicesMenu />}
-                  </div>
-                  <p
-                  onClick={() => handleContent('insights', true) || handleContentVisible('insights', !insightsContentVisible)}
+                </p>
+                <div className="navbar__mini-menu-content">
+                  {servicesContentVisible && <MobileServicesMenu />}
+                </div>
+
+                <p
+                  onClick={() =>
+                    handleContent('insights', true) ||
+                    handleContentVisible('insights', !insightsContentVisible)
+                  }
                   className={activeMenu === 'insights' ? 'active-link' : ''}
-                  >
+                >
                   <span>Featured Insights</span>
                   <span>
-                      <SlArrowRight size={10} />
+                    {insightsContentVisible ? (
+                      <SlArrowLeft color="black" size={15} />
+                    ) : (
+                      <SlArrowRight color="black" size={15} />
+                    )}
                   </span>
-                  </p>
-                  <div className="navbar__mini-menu-content">
-                  {insightsContentVisible && <InsightsMenu />}
-                  </div>
-                  <p
-                  onClick={() => handleContent('about', true) || handleContentVisible('about', !aboutContentVisible)}
+                </p>
+                <div className={`navbar__mini-menu-content ${insightsContent ? 'active' : ''}`}>
+                <h4><span><SlArrowLeft color='black' size={15} /></span>Back</h4>
+                  {insightsContent && <MobileInsightsMenu />}
+                </div>
+
+                <p
+                  onClick={() =>
+                    handleContent('about', true) ||
+                    handleContentVisible('about', !aboutContentVisible)
+                  }
                   className={activeMenu === 'about' ? 'active-link' : ''}
-                  >
+                >
                   <span>About Us</span>
                   <span>
-                      <SlArrowRight size={10} />
+                    {aboutContentVisible ? <SlArrowLeft color='black' size={15} /> : <SlArrowRight color='black' size={15} />}
                   </span>
                   </p>
                   <div className="navbar__mini-menu-content">
-                  {aboutContentVisible && <AboutMenu />}
+                    {aboutContentVisible && <MobileAboutMenu />}
                   </div>
               </div>
               <p><a href="/careers">Careers</a></p>
@@ -188,7 +232,7 @@ const Navbar = () => {
           </div>
           <div>
             <p onMouseEnter={handleServicesContent} className={activeDropdown === 'services' ? 'active-dropdown' : ''}>
-              <a href="/services">Services</a> <span>
+              <a href="/our-services">Services</a> <span>
               {activeDropdown === 'services' ? < IoIosArrowUp /> : <IoIosArrowDown />}</span>
             </p>
             <div className={`drop-down-menu2 ${activeDropdown === 'services' ? 'active2' : ''}`} onMouseLeave={handleDropdownLeave}>
@@ -224,8 +268,8 @@ const Navbar = () => {
         </div>
       </div>
       <div className="navbar__search">
-        <p><a href="">Sign In</a> | <a href="">Subscribe</a></p>
-        <p><a href=""><RiSearchLine size={20} /></a></p>
+        <p><a href="/">Sign In</a> | <a href="/">Subscribe</a></p>
+        <p><a href="/"><RiSearchLine size={20} /></a></p>
       </div>
     </div>
   );

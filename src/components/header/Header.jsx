@@ -6,22 +6,22 @@ import '../../container/highlight/highlight.css';
 import Highlight from '../../container/highlight/Highlight';  // import Highlight container
 import heroImage from '../../assets/heroImage.png';
 import arrow from '../../assets/arrow.png'
-// import hemllinVideo from '../../assets/hemllin4.mp4'
 
 const Header = () => {
   useEffect(() => {
-  const container = document.getElementById('curved-lines-container');
-  const totalLines = 35;
-  const angleIncrement = 75 / totalLines;
+    const container = document.getElementById('curved-lines-container');
+    const totalLines = 35;
+    const angleIncrement = 70 / totalLines;
 
-  for (let i = 0; i < totalLines; i++) {
-    const line = document.createElement('div');
-    line.classList.add('curved-lines');
-    line.style.animationDelay = `${i * 0.02}s`;
-    line.style.transform = `rotate(-${25 + angleIncrement * i}deg) translateY(24000%)`;
-    container.appendChild(line);
-  }
-}, []);
+    for (let i = 0; i < totalLines; i++) {
+      const line = document.createElement('div');
+      line.classList.add('curved-lines');
+      line.style.animationDuration = `${1 + i * 0.1}s`;
+      line.style.animationDelay = `${i * 0.02}s`;
+      line.style.transform = `rotate(-${10 + angleIncrement * i}deg) translateY(24000%)`;
+      container.appendChild(line);
+    }
+  }, []);
 return (
   <>
     <div className="header-container">

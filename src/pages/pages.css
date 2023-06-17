@@ -848,12 +848,11 @@ form .contact-us-question-options label{
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 2rem 15rem;
+  padding: 3rem 15rem;
   height: auto;
   width: 100%;
-  background: url(/src/assets/careers.png);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: black;
+  color: white;
   text-align: left;
 }
 .hm-careers-title h2{

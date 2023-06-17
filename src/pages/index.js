@@ -9,6 +9,7 @@ export { default as Services } from './service_pages/Services';
 export { default as Management } from './service_pages/Management';
 export { default as Education } from './service_pages/Education';
 export {default as Travel} from './service_pages/Travel';
+export { default as CoachingAndTraining } from './service_pages/CoachingAndTraining';
 export { default as Media } from './about_pages/Media';
 export { default as Career } from '../pages/Career';
 export { default as OurGovernance } from './about_pages/OurGovernance';
