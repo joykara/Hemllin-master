@@ -1215,6 +1215,7 @@ form .contact-us-question-options label p{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     color: #ffffff;
     padding: 1rem;
     width: 80%;
@@ -1227,6 +1228,7 @@ form .contact-us-question-options label p{
     background: transparent;
     border: 3px solid #0ead03;
     border-radius: 1rem;
+    margin-top: .5rem;
 }
 .cta-content__buttons button:nth-child(1){
     margin-right: 2rem;

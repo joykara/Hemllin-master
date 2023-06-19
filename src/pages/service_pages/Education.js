@@ -11,36 +11,31 @@ const Education = () => {
           <div className="education-container">
               <div className="hm-education-title">
                   <h4>SERVICES / EDUCATION CONSULTANCY</h4>
-                  <p>Education consulting is intended to improve students' outcomes by increasing the accessibility and affordability of the education ecosystem.</p>
+                  <p>Welcome to Hemllin , your trusted partner in overseas education advisory, career coaching, and IELTS training! </p>
               </div>
 
               <div className="hm-education-intro">
                     <div className="hm-education-intro__text">
                       <h3>EDUCATION CONSULTANCY</h3>
-                      <p>Although education is the key to life, many organizations must address the student's and parents' evolving needs. The education sector has faced significant reforms recently owing to the curriculum changes and the need to address the mismatch between knowledge and available employment opportunities. </p>
-                      <p>Education consulting is intended to improve students' outcomes by increasing the accessibility and affordability of the education ecosystem. The global educational landscape has changed significantly as much as the labor market, meaning stakeholders should update their knowledge and expectations. </p> 
-                      <p>At Hemllin, we work with students, parents, schools, and other beneficiaries with educational planning to improve educational experiences, facilities, and outcomes. We work with educational institutions and systems, philanthropists, governments, and investors to understand the sector's major challenges. We also help students map out their aspirations by pursuing relevant local and international opportunities. </p>
+                      <p>Our mission is to empower individuals achieve their educational and career goals, providing comprehensive guidance and support throughout the entire process. With our expertise and personalized approach, we ensure that you have the best possible chance of success in your educational journey.</p>
                   </div>
 
                   <div className="hm-education-content">
+                        <h3>Our Services include:</h3>
                         <div className="hm-education-options-container scale-up" >
                             <div className="hm-education-option__image">
                             </div>
                             <div className="hm-education-option__content">
                                 <div className="hm-education-option__content__desc">
                                     <div className='hm-edu-step-number'>
-                                        <h3>Our Services include:</h3>
+                                        <h4>Overseas Education Advisory:</h4>
                                     </div>
                                 </div>
                                 <div className="hm-education-option__content__list">
                                     <ul>
-                                        <li>Organizational Operations</li>
-                                        <li>Sales and Marketing Strategies </li>
-                                        <li>Sourcing and Procurements</li>
-                                        <li>Business Process education</li>
-                                        <li>Research and Development</li>
-                                        <li>Outsourcing</li>
-                                        <li>Business transformation</li>
+                                        <li>We offer expert guidance on studying abroad, assisting you in choosing the right country, university, and program that aligns with your interests, goals, and budget.</li>
+                                        <li>Our experienced consultants provide thorough information about admission requirements, application procedures, and visa processes, ensuring a smooth transition to your desired destination.</li>
+                                        <li>We stay up-to-date with the latest educational trends and opportunities worldwide, giving you access to a wide range of options and helping you make informed decisions.</li>
                                     </ul>
                                 </div>
                             </div>
@@ -51,14 +46,32 @@ const Education = () => {
                             <div className="hm-education-option__content">
                                 <div className="hm-education-option__content__desc">
                                     <div className='hm-edu-step-number'>
-                                        <h3>Additionally: </h3>
+                                        <h4>Career Coaching:</h4>
                                     </div>
                                 </div>
                                 <div className="hm-education-option__content__list">
                                     <ul>
-                                        <li>We also specialize in educational program planning for schools, colleges, and universities.</li>
-                                        <li>We provide directions for systematic problem fixtures, improvisation of the learning atmosphere, and special and advanced training for teachers and faculties.</li>
-                                        <li>We also offer student skill development and training programs with collaborations from the top coaching centers and institutes.</li>
+                                        <li>Our career coaching services are designed to help you explore and identify your true potential, interests, and career aspirations.</li>
+                                        <li>Our professional coaches provide one-on-one sessions to assess your skills, strengths, and weaknesses, and offer personalized guidance to help you make strategic career choices.</li>
+                                        <li>We assist in developing effective resumes, preparing for interviews, and enhancing your networking and job search skills, ensuring you are well-prepared for the competitive job market.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="hm-education-options-container scale-up" >
+                            <div className="hm-education-option__image">
+                            </div>
+                            <div className="hm-education-option__content">
+                                <div className="hm-education-option__content__desc">
+                                    <div className='hm-edu-step-number'>
+                                        <h4>Language Training :</h4>
+                                    </div>
+                                </div>
+                                <div className="hm-education-option__content__list">
+                                    <ul>
+                                        <li>Our IELTS Coaching program is tailored to help you achieve your desired band score in the International English Language Testing System (IELTS) examination.</li>
+                                        <li>Our experienced trainers provide comprehensive lessons, practice materials, and mock tests to improve your English language proficiency across all four sections: listening, reading, writing, and speaking.</li>
+                                        <li>We focus on individual attention and provide feedback to help you identify areas of improvement, enhancing your chances of obtaining the required score for study or immigration purposes.</li>
                                     </ul>
                                 </div>
                             </div>
@@ -66,8 +79,8 @@ const Education = () => {
                   </div>
               </div>
               <div className="hm-education-footer">
-                  <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <h4>Contact us to schedule an appointment with one of our consultants or to learn more about our services. </h4>
+                  <p>We look forward to being a part of your journey towards success.</p>
               </div>
               <div className="explore-services">
                     <h4>Explore</h4>
@@ -96,7 +109,7 @@ const Education = () => {
                     </div>
               </div>
           </div>
-          <Cta ctaTitle='Ready to Work with Us?' ctaLink1='/contact-us' ctaLink1Text='Book a Meeting'ctaLink2='/contact-us' ctaLink2Text='Contact Us'/>
+          <Cta ctaTitle='Get started on your educational and career advancement today! ' ctaLink1='/contact-us' ctaLink1Text='Book a Meeting'ctaLink2='/contact-us' ctaLink2Text='Contact Us'/>
           <Footer/>
       </>
   )
