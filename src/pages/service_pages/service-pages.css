@@ -139,6 +139,7 @@
 .hm-cntr-intro__text h4{
     padding: 1rem 0;
     font-size: clamp(1.5rem, 5vw, 2rem);
+    color: #0f9024;
 }
 
 .hm-management-intro__text p,
@@ -331,6 +332,11 @@
 }
 .other-services-text h4{
     padding-bottom: 2rem;
+}
+.other-services-text h4 a{
+    font-size: 20px;
+    font-weight: 700;
+    font-family: var(--font-family);
 }
 
 

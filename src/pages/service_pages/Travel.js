@@ -2,6 +2,7 @@ import React from 'react';
 import { Footer, Navbar2 } from '../../components';
 import './service-pages.css';
 import Cta from '../Cta';
+import { Link } from 'react-router-dom';
 
 const Travel = () => {
   return (
@@ -24,9 +25,6 @@ const Travel = () => {
                             </div>
                             <div className="hm-travel-option__content">
                                 <div className="hm-travel-option__content__desc">
-                                    <div className='hm-travel-step-number'>
-                                        <h3>TRAVEL CONSULTANCY</h3>
-                                    </div>
                                     <p>Welcome to Hemllin,your trusted partner in creating unforgettable travel experiences. As a premier travel consulting firm, we specialize in providing personalized and tailored services to discerning travelers seeking expert guidance and exceptional journeys.</p>
                                     <p>At Hemllin, we understand that each traveler has unique preferences, interests, and expectations. That's why we take the time to listen and understand your desires, allowing us to curate bespoke travel experiences that surpass your wildest dreams. Our team of experienced travel consultants possesses in-depth knowledge of global destinations, insider connections, and a passion for exploration, ensuring that every aspect of your journey is meticulously planned and executed.</p>
                                 </div>
@@ -55,21 +53,21 @@ const Travel = () => {
                         <div className="other-services-content__detail scale-up">
                             <div className="other-services-image"></div>
                             <div className="other-services-text">
-                                <h4>Education Consultancy</h4>
+                                <h4><Link to='/our-services/education'>Education Consultancy</Link></h4>
                                 <article>At Hemllin, we work with students, parents, schools, and other beneficiaries with educational planning to improve educational experiences, facilities, and outcomes.</article>
                             </div>
                         </div>
                         <div className="other-services-content__detail scale-up">
                             <div className="other-services-image"></div>
                             <div className="other-services-text">
-                                <h4>Travel Consultancy</h4>
+                                <h4><Link to='/our-services/management'>Management Consultancy</Link></h4>
                                 <article>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam neque itaque ea asperi</article>
                             </div>
                         </div>
                         <div className="other-services-content__detail scale-up">
                             <div className="other-services-image"></div>
                             <div className="other-services-text">
-                                <h4>Coaching and Training</h4>
+                                <h4><Link to='/our-services/training-and-coaching'>Coaching and Training</Link></h4>
                                 <article>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam neque itaque ea asperi</article>
                             </div>
                         </div>

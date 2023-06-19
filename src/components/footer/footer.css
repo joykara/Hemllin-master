@@ -103,11 +103,16 @@
 
 /* MEDIA QUERIES */
 @media screen and (max-width: 900px){
+    .hm-footer{
+        width: 100%;
+        padding: 1rem 2rem;
+    }
     .hm-footer-container{
         flex-direction: column;
     }
     .hm-footer-content{
         flex-direction: column;
+        width: 95%;
     }
     .hm-email{
         margin-right: 0;
@@ -115,6 +120,7 @@
     }
     .hm-email-input input{
         width: 100%;
+        margin: 1rem 2rem 0 0;
     }
     .hm-email button{
         width: 40%;

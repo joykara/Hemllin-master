@@ -2,6 +2,7 @@ import React from 'react';
 import { Footer, Navbar2 } from '../../components';
 import './service-pages.css';
 import Cta from '../Cta';
+import { Link } from 'react-router-dom';
 
 const Education = () => {
   return (
@@ -74,21 +75,21 @@ const Education = () => {
                         <div className="other-services-content__detail scale-up">
                             <div className="other-services-image"></div>
                             <div className="other-services-text">
-                                <h4>Education Consultancy</h4>
+                                <h4><Link to='/our-services/management'>Management Consultancy</Link></h4>
                                 <article>At Hemllin, we work with students, parents, schools, and other beneficiaries with educational planning to improve educational experiences, facilities, and outcomes.</article>
                             </div>
                         </div>
                         <div className="other-services-content__detail scale-up">
                             <div className="other-services-image"></div>
                             <div className="other-services-text">
-                                <h4>Travel Consultancy</h4>
+                                <h4><Link to='/our-services/travel'>Travel Consultancy</Link></h4>
                                 <article>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam neque itaque ea asperi</article>
                             </div>
                         </div>
                         <div className="other-services-content__detail scale-up">
                             <div className="other-services-image"></div>
                             <div className="other-services-text">
-                                <h4>Coaching and Training</h4>
+                                <h4><Link to='/our-services/training-and-coaching'>Coaching and Training</Link></h4>
                                 <article>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam neque itaque ea asperi</article>
                             </div>
                         </div>

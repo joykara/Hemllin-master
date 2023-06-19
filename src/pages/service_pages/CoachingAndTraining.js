@@ -2,6 +2,7 @@ import React from 'react';
 import { Footer, Navbar2 } from '../../components';
 import './service-pages.css';
 import Cta from '../Cta';
+import { Link } from 'react-router-dom';
 
 const CoachingAndTraining = () => {
   return (
@@ -24,9 +25,6 @@ const CoachingAndTraining = () => {
                             </div>
                             <div className="hm-cntr-option__content">
                                 <div className="hm-cntr-option__content__desc">
-                                    <div className='hm-cntr-step-number'>
-                                        <h3>COACHING AND TRAINING CONSULTANCY</h3>
-                                    </div>
                                     <p>At Hemllin, we are dedicated to empowering individuals and organisations to reach their full potential through transformative coaching and comprehensive training programs. We understand that investing in the development of your employees is key to fostering a culture of continuous improvement and driving business success.</p>
                                     <p>Our team of highly skilled coaches and trainers bring a wealth of expertise across various industries, allowing us to design customised programs that cater to your specific needs. Whether you're seeking executive coaching to enhance leadership skills, sales training to boost revenue, or team-building workshops to improve collaboration, we have the knowledge and experience to deliver impactful results.</p>
                                 </div>
@@ -55,21 +53,21 @@ const CoachingAndTraining = () => {
                         <div className="other-services-content__detail scale-up">
                             <div className="other-services-image"></div>
                             <div className="other-services-text">
-                                <h4>Education Consultancy</h4>
+                                <h4><Link to='/our-services/education'>Education Consultancy</Link></h4>
                                 <article>At Hemllin, we work with students, parents, schools, and other beneficiaries with educational planning to improve educational experiences, facilities, and outcomes.</article>
                             </div>
                         </div>
                         <div className="other-services-content__detail scale-up">
                             <div className="other-services-image"></div>
                             <div className="other-services-text">
-                                <h4>Travel Consultancy</h4>
+                                <h4><Link to='/our-services/travel'>Travel Consultancy</Link></h4>
                                 <article>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam neque itaque ea asperi</article>
                             </div>
                         </div>
                         <div className="other-services-content__detail scale-up">
                             <div className="other-services-image"></div>
                             <div className="other-services-text">
-                                <h4>Coaching and Training</h4>
+                                <h4><Link to='/our-services/management'>Management Consultancy</Link></h4>
                                 <article>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam neque itaque ea asperi</article>
                             </div>
                         </div>

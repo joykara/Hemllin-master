@@ -93,7 +93,7 @@ const ContactUs = () => {
                     checked={question === "Consulting"}
                     onChange={onOptionChange}
                     />
-                    <label htmlFor="Consulting">Consulting</label>
+                    <label htmlFor="Consulting"><p>Consulting</p></label>
                   </div>
                   <div className="contact-us-question-option">
                     <input
@@ -104,7 +104,7 @@ const ContactUs = () => {
                     checked={question === "Consulting"}
                     onChange={onOptionChange}
                     />
-                    <label htmlFor="Consulting">Consulting</label>
+                    <label htmlFor="Consulting"><p>Coaching</p></label>
                   </div>
                   <div className="contact-us-question-option">
                     <input
@@ -115,7 +115,7 @@ const ContactUs = () => {
                     checked={question === "Consulting"}
                     onChange={onOptionChange}
                     />
-                    <label htmlFor="Consulting">Consulting</label>
+                    <label htmlFor="Consulting"><p>Book an Appointment</p></label>
                   </div>
                 </div>
                 </div>
