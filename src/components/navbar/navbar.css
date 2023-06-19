@@ -201,7 +201,7 @@
     display: flex;
     position: absolute;
     padding: .5rem 0 1rem 0;
-    margin-top: 1rem;
+    margin-top: .1rem;
     margin-left: -2rem;
     background: #ffffff;
     z-index: 999;
@@ -265,15 +265,20 @@
 @media screen and (min-width: 1440px){
     .navbar__menu p,
     .navbar__menu p a{
-    font-size: 18px;
+    font-size: 17px;
     }
 }
-@media screen and (max-width: 1300px){
-    .navbar__menu{
-        display: none;
-    }
+@media screen and (max-width: 1370px){
     .about-us-list #sections .about-us-sections h4{
         width:50%;
+    }
+    .navbar__menu{
+        margin-left: .3rem;
+    }
+}
+@media screen and (max-width: 1260px){
+    .navbar__menu{
+        display: none;
     }
 }
 @media screen and (max-width: 1086px){
@@ -341,6 +346,9 @@
         top: 6rem;
         left: 0;
     }
+    .navbar__mini-menu-content.active p{
+        color: #111010;
+    }
     .navbar__mini-menu-content .industries-list
     .navbar__search{
         display: none;
@@ -362,3 +370,4 @@
     display: none;
   }
 }
+

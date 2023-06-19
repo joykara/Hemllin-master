@@ -35,7 +35,7 @@ const Articles = () => {
           <div className="career-content__text">
             <h2>Join Hemllin</h2>
             <button type='button'><a href="/careers" className='cta-link'>Careers <span className='arrow'><img src={arrow} alt="arrow nav" /></span></a></button>
-            <button type='button'><a href="" className='cta-link'>Check our process <span className='arrow '><img src={arrow} alt="arrow nav" /></span></a></button>
+            <button type='button'><a href="/about-us/how-we-work" className='cta-link'>Check our process <span className='arrow '><img src={arrow} alt="arrow nav" /></span></a></button>
           </div>
         </div>
       </div>

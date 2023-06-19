@@ -77,6 +77,31 @@ const Education = () => {
                             </div>
                         </div>
                   </div>
+                  <div className='hm-education-wu'>
+                    <h3>Why Us?</h3>
+                    <div className='hm-education-wu__content'>
+                        <div className='hm-education-wu__content__desc scale-up'>
+                            <h4>Expertise and Experience</h4>
+                            <p>Our team of highly knowledgeable and experienced consultants have a deep understanding of the education industry and are well-equipped to guide you through the entire process.</p>
+                            <p>We have established strong partnerships with leading universities and educational institutions globally, ensuring access to top-notch educational opportunities.</p>
+                        </div>
+                        <div className='hm-education-wu__content__desc scale-up'>
+                            <h4>Personalized Approach:</h4>
+                            <p>We believe in a personalized approach to education consulting, recognizing that every individual has unique goals and requirements.</p>
+                            <p>Our consultants take the time to understand your aspirations and provide customized solutions, tailoring our services to meet your specific needs.</p>
+                        </div>
+                        <div className='hm-education-wu__content__desc scale-up'>
+                            <h4>Support at Every Step:</h4>
+                            <p>From the initial consultation to post-enrollment support, we are with you at every step of your educational journey.</p>
+                            <p>Our team is dedicated to providing timely assistance, answering your queries, and addressing any concerns you may have.</p>
+                        </div>
+                        <div className='hm-education-wu__content__desc scale-up'>
+                            <h4>Success Stories:</h4>
+                            <p>We take pride in the success stories of our clients who have pursued their dreams of studying abroad or excelling in their careers.</p>
+                            <p>Our testimonials and case studies highlight the positive impact of our services and the transformative experiences of our clients.</p>
+                        </div>
+                    </div>
+                  </div>
               </div>
               <div className="hm-education-footer">
                   <h4>Contact us to schedule an appointment with one of our consultants or to learn more about our services. </h4>

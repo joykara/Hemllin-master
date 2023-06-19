@@ -148,7 +148,7 @@
 .hm-cntr-intro__text p{
     padding-top: 1rem;
     text-align: center;
-    width: 80%;
+    width: 70%;
 }
 .hm-management-content,
 .hm-education-content,
@@ -270,7 +270,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem 0;
+    padding: 2rem .5rem;
     width: 100%;
 }
 .hm-management-footer h3,
@@ -290,6 +290,36 @@
     text-align: center;
     padding: 1rem 0;
     width: 90%;
+}
+.hm-education-wu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hm-education-wu h3{
+    margin: 1rem 0;
+}
+.hm-education-wu__content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-gap: 3rem 6rem;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    padding: 1rem;
+}
+.hm-education-wu__content__desc{
+    padding: 1rem;
+    border-radius: 1rem;
+}
+.hm-education-wu__content__desc h4{
+    font-size: clamp(1rem, 2vw, 1.4rem);
+    padding: .5rem 0;
+    color: #0f9024;
+}
+.hm-education-wu__content__desc p{
+    font-size: clamp(1rem, 3vw, 1.2rem);
 }
 .explore-services{
     display: flex;
@@ -337,6 +367,10 @@
     font-weight: 700;
     font-family: var(--font-family);
 }
+.other-services-text h4:hover a{
+    cursor: pointer;
+    color: var(--color-link);
+}
 
 
 
@@ -374,7 +408,7 @@
     .hm-travel-option__content,
     .hm-cntr-option__content{
         width: 100%;
-        padding: 1rem 2rem;
+        padding: 1rem 1.5rem;
     }
     .other-services-image{
         width: 100%;
@@ -432,6 +466,17 @@
     .hm-travel-intro__text, 
     .hm-cntr-intro__text {
         padding: 1rem;
+    }
+    .hm-management-option__content__list ul,
+    .hm-education-option__content__list ul,
+    .hm-travel-option__content__list ul,
+    .hm-cntr-option__content__list ul{
+        padding-left: 2rem;
+    }
+    .hm-education-wu__content{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
     }
     .explore-services{
         padding: 0 2rem;

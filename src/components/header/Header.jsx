@@ -10,13 +10,13 @@ import arrow from '../../assets/arrow.png'
 const Header = () => {
   useEffect(() => {
     const container = document.getElementById('curved-lines-container');
-    const totalLines = 35;
+    const totalLines = 40;
     const angleIncrement = 70 / totalLines;
 
     for (let i = 0; i < totalLines; i++) {
       const line = document.createElement('div');
       line.classList.add('curved-lines');
-      line.style.animationDuration = `${1 + i * 0.1}s`;
+      line.style.animationDuration = `${1 + i * 0.5}s`;
       line.style.animationDelay = `${i * 0.02}s`;
       line.style.transform = `rotate(-${10 + angleIncrement * i}deg) translateY(24000%)`;
       container.appendChild(line);
@@ -47,7 +47,7 @@ return (
       </div>
 
       <div className="header__highlight-bar">
-          <h2 className="highlight-bar__heading">Current Insights</h2>
+          <h2 className="highlight-bar__heading">CURRENT INSIGHTS</h2>
         <div className="highlight-bar__container">
           <ul>
           <Highlight number='1' labelLink='' label='AI and Digitization for improved business performance.'/>

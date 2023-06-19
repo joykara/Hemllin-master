@@ -177,8 +177,9 @@ const Navbar = () => {
                   </span>
                 </p>
                 <div className={`navbar__mini-menu-content ${insightsContent ? 'active' : ''}`}>
-                <h4><span><SlArrowLeft color='black' size={15} /></span>Back</h4>
-                  {insightsContent && <MobileInsightsMenu />}
+                  <h4><span><SlArrowLeft color='black' size={15} /></span>Back</h4>
+                  {insightsContent && 
+                  <MobileInsightsMenu />}
                 </div>
 
                 <p

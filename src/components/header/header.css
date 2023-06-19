@@ -26,8 +26,9 @@
     content: "";
     width: 100%;
     height: 1px;
-    background-color: rgba(133, 197, 73, 0.718);
+    background-color: rgb(133, 197, 73);
     position: absolute;
+    top: 50%;
     overflow: hidden;
     animation: animateLine 1s linear;
     transform-origin: center center;
@@ -35,7 +36,7 @@
 }
 @keyframes animateLine {
     from {
-        transform: rotate(-90deg) translateY(200%);
+        transform: rotate(-90deg) translateY(2000%);
     }
     to {
         transform: rotate(0deg) translateY(1%);
@@ -49,7 +50,7 @@
     justify-content: space-between;
     align-items: center;
     background: var(--color-bg);
-    height: 90%;
+    height: 80%;
 }
 .header-image{
     position: relative;
@@ -60,7 +61,7 @@
 .header-image img{
     z-index: 2;
     height: 90%;
-    width: 87%;
+    width: 83%;
     margin-left: 4rem;
 }
 .header-content{
@@ -75,7 +76,7 @@
 .header-content  h1{
     font-family: var(--font-family);
     font-weight: 700;
-    font-size: 64px;
+    font-size: clamp(2.7rem, 3vw, 5rem);
     line-height: 70px;
     color: #fff;
     padding-bottom: 10px;
@@ -91,12 +92,13 @@
 }
 .header-content__button{
     padding: 1rem;
+    margin-bottom: 1rem;
 }
 .header-content__button a{
     font-family: var(--links-font-family);
     font-style: normal;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 24px;
     color: #fff;
 }
@@ -111,6 +113,9 @@
 }
 .header-content__button a:hover .arrow{
     padding-left: 2.5rem;
+}
+.header-content__button .arrow img{
+    width: 2.5rem;
 }
 .header__highlight-bar{
     position: relative;
@@ -145,15 +150,17 @@
     font-size: 48px;
     line-height: 24px;
     padding: 1rem;
-    border-right: .4rem solid #C0BFBF;
+    border-right: .2rem solid #d3f084;
 }
 .highlight-item-title{
     text-align: left;
     padding-left: 1rem;
 }
 .highlight-item-title a span{
-    line-height: 24px;
+    line-height: 10px;
     transition-delay: .5s;
+    font-family: sans-serif;
+    font-size: 13px;
 }
 
 .highlight-item-title:hover a span{
@@ -163,10 +170,10 @@
     transition: 1s ease-in-out;
 }
 .highlight-bar__heading{
-    padding: 0 5rem;
-    font-family: 'Roboto';
+    padding: 0 2rem 0 4rem;
+    font-family: var(--links-font-family);
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 20px;
     line-height: 24px;
 }
@@ -178,7 +185,7 @@
         margin: 10rem 15rem 10rem 0;
     }
 }
-@media screen and (max-width: 1300px){
+@media screen and (max-width: 1200px){
     .header__highlight-bar{
         display: flex;
         align-items: center;
@@ -199,13 +206,17 @@
     .header-image img{
         width: 100%;
         height: 100%;
-        font-size: 48px;
+        margin: 0;
     }
     .header-content{
-        margin: 3rem 5rem;
+        margin:0 5rem 3rem 5rem;
     }
     .header-content__button{
         padding: 1rem 0;
+    }
+    .curved-lines::before{
+        top: 90%;
+        right: 50px;
     }
 }
 @media screen and (max-width: 768px){
@@ -218,6 +229,10 @@
     }
     .header-content{
         margin: 0;
-        padding: 3rem;
+        padding: 1.2rem 1rem;
+    }
+    .header-content p{
+        font-size: 1.1rem;
+        letter-spacing: .2px;
     }
 }
