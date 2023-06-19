@@ -14,7 +14,7 @@ const MobileServicesMenu = () => {
   ); //onscroll animation
   return (
     <>
-            <div className="mb-services-list" data-aos='slide-right'>
+            <div className="mb-services-list" data-aos='slide-left'>
                 <h3>Our Services</h3>
                 <ul>
                     <li className='mb-services-dropdown-item'>
@@ -31,7 +31,7 @@ const MobileServicesMenu = () => {
                     </li>
                 </ul>
             </div>
-            
+
         </>
   )
 }

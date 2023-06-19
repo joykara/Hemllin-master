@@ -7,7 +7,7 @@ import 'aos/dist/aos.css';
 const MobileInsightsMenu = () => {
     useEffect(() => {
       AOS.init({
-          duration: 1000,
+          duration: 100,
           delay: 0,
       });
   }, []
