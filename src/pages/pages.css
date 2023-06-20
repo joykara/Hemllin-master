@@ -38,7 +38,6 @@
     width: 100%;
 }
 .overview-intro h3{
-    font-size: 28px;
     line-height: 40px;
     margin-bottom: 2rem;
 }
@@ -250,8 +249,9 @@
 }
 .blog-details{
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     padding: 2rem 10rem;
+    width: 100%;
     background-color: #e9e6e6;
 }
 
@@ -643,10 +643,11 @@
 
 /* CONTACT US PAGE */
 #title{
-    margin-bottom: 1rem;
+    margin: 1rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 2rem 0;
 }
 #title h2{
     text-align: center;
@@ -657,7 +658,8 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding: 1rem 10rem;
+    margin: 0 auto;
+    width: 70%;
     border-bottom: 1px solid #514d4d;
 }
 .contact-us-details{
@@ -665,8 +667,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    margin-right: 5rem;
+    margin-right: 1rem;
     max-width: 900px;
+    padding: 1rem 2rem;
 }
 .contact-us-details h3{
     padding: 3rem 0;
@@ -680,7 +683,7 @@
 textarea{
     width: 95%;
     height: 150px;
-    border: 1px solid #181616;
+    border: 1px solid #9b8e8e;
     font-size: 16px;
     margin: 10px 0;
     padding: 12px 20px;
@@ -698,11 +701,14 @@ textarea{
     padding: 1rem 2rem 0;
 }
 .contact-us-other-content{
-    padding: 3rem 0;
+    padding: 2rem 0;
     border-top: 1px solid black;
 }
 .contact-us-other-content h4{
-    padding-bottom: 1rem;
+    padding-bottom: .8rem;
+}
+.contact-us-other-content p{
+    padding-bottom: 2rem;
 }
 form .contact-submit-btn{
     width: 5rem;
@@ -725,6 +731,7 @@ form .contact-us-question-options{
 }
 form .contact-us-question-option{
     margin-right: 2rem;
+    cursor: pointer;
 }
 form .contact-us-question-option input{
     width: 1.5rem;
@@ -734,8 +741,13 @@ form .contact-us-question-option input{
     transition: all 0.3s ease-in-out;
 }
 form .contact-us-question-options label p{
-    padding-left: 2rem;
+    margin-left: 2rem;
     margin-top: -3rem;
+    font-family: sans-serif;
+}
+form .contact-us-question-options label:hover{
+    border-bottom: 1px solid var(--color-link);
+    color: var(--color-link);
 }
 
 
@@ -948,7 +960,7 @@ form .contact-us-question-options label p{
 }
 .career-application-process h4{
     margin: 1rem 0;
-    font-size: clamp(1.5rem, 2vw, 2rem);
+    font-size: clamp(1.5rem, 2vw, 1.8rem);
 }
 .hm-application-overview{
     display: flex;
@@ -969,16 +981,17 @@ form .contact-us-question-options label p{
     width: 50%;
 }
 .hm-application-process{
-    padding: 2rem 8rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    grid-gap: 3rem 5rem;
+    grid-template-columns: repeat(auto-fit, minmax(35vh, 1fr));
+    grid-gap: 3rem 4rem;
+    width: 90%;
+    padding: 2rem 10rem;
 }
 .hm-application-process__step{
     display: flex;
     flex-direction: column;
     box-shadow: 0px 16px 32px -1px rgba(5,28,44,.2),0px 0px 1px 0px rgba(5,28,44,.15);
-    padding: 2rem;
+    padding: 1rem;
     border-radius: 1rem;
 }
 .hm-application-process__step-number{
@@ -996,23 +1009,7 @@ form .contact-us-question-options label p{
     transition: padding-left 0.5s ease-in-out;
     padding-left: 1.5rem;
 }
-/* .details{
-  margin-right: 1rem;
-  background: #dedada8c;
-}
-.details h2{
-  font-size: 24px;
-}
-.details h2,
-.details p{
-  padding: .5rem 1rem;
-}
-.hm-careers-content-image{
-  height: 200px;
-  background: #ffffff;
-  margin-bottom: 1rem;
-  border: 1px solid #514d4d;
-} */
+
 
 /* INDUSTRY PAGES */
 .industry-nav{
@@ -1291,6 +1288,9 @@ form .contact-us-question-options label p{
         max-width: 60%;
         margin: 0;
     }
+    .contact-us-other-details{
+        margin: 0;
+    }
 }
 
 @media screen and (max-width: 1084px){
@@ -1298,8 +1298,7 @@ form .contact-us-question-options label p{
         height: auto;
     }
     .overview-videotext{
-        padding-top: auto;
-        margin: 1rem;
+        margin: 0;
         margin-bottom: -4rem;
         width: 100%;
     }
@@ -1354,21 +1353,14 @@ form .contact-us-question-options label p{
     .mission-container{
         padding: 2rem 5rem;
     }
+
+    /* CONTACT PAGE */
+    
     .contact-us-container{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 3rem 0;
+        padding: 1rem 2rem;
     }
-    .contact-us-details{
-        padding-left: .8rem;
-    }
-    .contact-us-details,
-    .contact-us-other-details{
-        margin: 0;
-        max-width: 90%;
-    }
+    
+    /* SERVICES PAGE */
     .services-content{
         display: flex;
         padding: 1rem;
@@ -1454,6 +1446,16 @@ form .contact-us-question-options label p{
     }
 }
 @media screen and (max-width: 768px){
+    /* ABOUT OVERVIEW */
+    .overview-videotext{
+        padding: 1rem;
+    }
+    .overview-intro{
+        padding: 2rem 1.5rem;
+    }
+    .overview-intro h3{
+        margin: 0;
+    }
     .overview-wwa__content,
     .overview-wwa__content2,
     .overview-wwa__content3{
@@ -1461,13 +1463,36 @@ form .contact-us-question-options label p{
     }
     .overview-wwa__content-text,
     .overview-wwa__content-text2{
-        padding: 4rem;
+        padding: 1.5rem;
         width: 100%;
+    }
+    .overview-wwa__content-text h3, 
+    .overview-wwa__content-text2 h3 {
+        margin: 0;
+    }
+    .overview-wwa__details {
+        padding: 1rem 2rem;
+    }
+    .wwa-detail {
+        margin: 0;
+        padding: .5rem;
     }
     .overview-wwa__content-img{
         height: auto;
         width: 100%;
     }
+    .case-study,
+    .explore{
+        padding: 0 1rem;
+    }
+    .case-study-content {
+        padding: 1rem 0;
+    }
+    .case-study-text h4 {
+        padding-bottom: 1rem;
+    }
+
+    /* BLOG PAGE */
     .browse-blog{
         flex-direction: column;
         justify-content: left;
@@ -1502,12 +1527,41 @@ form .contact-us-question-options label p{
         width: 100%;
     }
 
+    /* BLOG PAGE */
+    .blog-container{
+        padding: 0 1rem1;
+    }
+    .blog-details{
+        padding: 2rem 1rem;
+    }
+
+
+    /* CONTACT PAGE */
+    #title{
+        margin: 0;
+    }
+    .contact-us-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 3rem 0;
+    }
+    .contact-us-details{
+        padding-left: .8rem;
+    }
+    .contact-us-details,
+    .contact-us-other-details{
+        margin: 0;
+        max-width: 90%;
+    }
+
     /* CAREERS */
     .hm-careers-title{
         padding: 2rem;
     }
     .hm-careers-intro {
-        padding: 2rem;
+        padding: 2rem .5rem;
         width: 100%;
     }
     .hm-careers-intro__about{
@@ -1551,6 +1605,12 @@ form .contact-us-question-options label p{
         flex-direction: column;
         padding: 0;
         grid-gap: 2rem;
+    }
+    .benefit-tile{
+        padding: .5rem;
+    }
+    .benefit-tile h4{
+        margin-bottom: 1rem;
     }
 
     /* FEATURED INSIGHTS */

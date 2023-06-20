@@ -20,12 +20,12 @@ h1{
   font-family: var(--font-family);
 }
 h2{
-  font-size: 48px;
+  font-size: clamp(1.8rem, 2vw, 2.5rem);
   font-weight: 700;
   font-family: var(--font-family);
 }
 h3{
-  font-size: 48px;
+  font-size: clamp(1.5rem, 2vw, 2rem);
   font-weight: 600;
   font-family: var(--font-family);
 }
@@ -42,7 +42,7 @@ a{
 p{
   font-family: var(--font-family);
   line-height: 32px;
-  font-size: 18px;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
   font-weight: 400;
 }
 .cta-link:hover{
@@ -67,6 +67,9 @@ p{
   font-family: var(--links-font-family);
   padding: 2rem 0;
 }
+.main-container .navbar{
+  background: #0e0d0df3;
+}
 /* .hidden{
   opacity: 0;
   transition: all 1s;
@@ -76,8 +79,4 @@ p{
 } */
 
 /* MEDIA QUERIES */
-@media screen and (max-width: 768px){
-  h2, h3{
-    font-size: 32px;
-  }
-}
+

@@ -73,11 +73,12 @@ const ContactUs = () => {
 
   return (
     <>
+    <div className='main-container'>
       <Navbar2 />
         <h2 id='title'>Contact Us</h2>
         <div className="contact-us-container">
           <div className="contact-us-details">
-            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</h3>
+            <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut </p>
             <div className="hm-contact-form">
               <form onSubmit={handleSubmit}>
@@ -146,6 +147,8 @@ const ContactUs = () => {
           </div>
       </div>
       <Footer/>
+    </div>
+      
     </>
   )
 }
