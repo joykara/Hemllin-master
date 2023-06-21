@@ -210,6 +210,10 @@
 .mission-content a{
     font-size: 16px;
 }
+.blog-intro a span{
+    color: #000;
+    font-family: var(--links-font-family);
+}
 .blog-intro .arrow:hover,
 .mission-content .arrow:hover{
     color: var(--color-link);

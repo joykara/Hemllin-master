@@ -22,6 +22,11 @@
     height: auto;
     background: #ffffff;
 }
+.article-content h3 a{
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    font-weight: 600;
+    font-family: var(--font-family);
+}
 .article-content p{
     padding: .5rem 0;
 }
