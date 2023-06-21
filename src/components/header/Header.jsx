@@ -1,13 +1,28 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, {useEffect} from 'react';
-// import {BsArrowRight} from 'react-icons/bs';
+import React, { useEffect, useState } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import './header.css';
 import '../../container/highlight/highlight.css';
 import Highlight from '../../container/highlight/Highlight';  // import Highlight container
 import heroImage from '../../assets/heroImage.png';
 import arrow from '../../assets/arrow.png'
+import {RiCloseLine} from 'react-icons/ri'
 
 const Header = () => {
+  useEffect(() => {
+    AOS.init({
+        duration: 2000,
+        delay: 1000,
+    });
+}, []
+); //onscroll animation
+  const [hemllinVisible, setHemllinVisible] = useState(true);
+
+  const handleCloseClick = () => {
+    setHemllinVisible(false);
+  };
+
   useEffect(() => {
     const container = document.getElementById('curved-lines-container');
     const totalLines = 40;
@@ -22,6 +37,7 @@ const Header = () => {
       container.appendChild(line);
     }
   }, []);
+
 return (
   <>
     <div className="header-container">
@@ -45,7 +61,20 @@ return (
           </div>
         </div>
       </div>
+      {hemllinVisible && (
+      <section class="hemllin whatsnew" data-aos='slide-left'>
+        <div class="say-hello">
+          <a class="close" onClick={handleCloseClick}>
+            <span aria-hidden="true"><RiCloseLine/></span>
+            </a>
+          <a title="Hemllin" href="https://api.whatsapp.com/send/?phone=254705080821&amp;text=%5BKE%5D+Hi+Hemllin&amp;app_absent=0" target="_blank" rel="nofollow noopener noreferrer">Hi welcome to Hemllin , how can I help you today?</a>
+        </div>
+        <a id='image-title' title="modal" href="https://api.whatsapp.com/send/?phone=254705080821&amp;text=%5BKE%5D+Hi+Zuri&amp;app_absent=0" target="_blank" rel="nofollow noopener noreferrer">
+          <img src={heroImage} alt="Safaricom Neo"/>
+        </a>
+      </section>
 
+      )}
       <div className="header__highlight-bar">
           <h2 className="highlight-bar__heading">CURRENT INSIGHTS</h2>
         <div className="highlight-bar__container">

@@ -9,7 +9,7 @@
 } */
 #curved-lines-container {
     position: relative;
-    width: 100%;
+    width: 97%;
     height: 100%;
     margin: 0 auto;
 }
@@ -26,7 +26,7 @@
     content: "";
     width: 100%;
     height: 1px;
-    background-color: rgb(133, 197, 73);
+    background-color: rgba(133, 197, 73, 0.398);
     position: absolute;
     top: 50%;
     overflow: hidden;
@@ -70,14 +70,13 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    margin: 10rem 5rem 10rem 0;
+    margin: 0 5rem 0 0;
     align-items: flex-start;
 }
 .header-content  h1{
     font-family: var(--font-family);
     font-weight: 700;
     font-size: clamp(2.7rem, 3vw, 5rem);
-    line-height: 70px;
     color: #fff;
     padding-bottom: 10px;
 }
@@ -124,7 +123,7 @@
     align-items: center;
     background: #fff;
     padding: .5rem 0;
-    margin-top: -2rem;
+    margin-top: -1rem;
 }
 .highlight-bar__container{
     display: flex;
@@ -178,6 +177,82 @@
     line-height: 24px;
 }
 
+/* SAY HELLO */
+.hemllin {
+    position: fixed;
+    top: 80vh;
+    right: 30px;
+    z-index: 999;
+    overflow: visible;
+    display: flex;
+}
+.hemllin a {
+    position: relative;
+}
+.hemllin a img {
+    height: 50px;
+}
+.say-hello{
+    background: #53b44b;
+    color: #fff;
+    padding: 15px 10px;
+    width: 159px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 2;
+    left: -2rem;
+    top: 0rem;
+    box-shadow: #0000002e 0px 0px 6px 2px;
+    transition: all linear 0.8s;
+    animation: 1s ease-in-out 0s normal none 1 running fadeInUp;
+}
+.say-hello:hover {
+    background: #fff;
+}
+.say-hello:hover .close{
+    background: #53b44b;
+}
+.say-hello .close {
+    position: absolute;
+    left: -20px;
+    background: #eeeeee;
+    line-height: 0;
+    padding: 7px;
+    border-radius: 15px;
+    top: -10px;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    opacity: 1;
+    cursor: pointer;
+}
+.say-hello a {
+    font-size: 12px;
+    color: #000 !important;
+    margin: 0;
+    display: inline-block;
+    font-family: sans-serif;
+}
+
+.say-hello .close:hover {
+    background: #000;
+}
+.say-hello .close:hover span, .say-hello:hover .close span {
+    color: #fff !important;
+}
+.close {
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+}
+.close:not(:disabled) {
+    cursor: pointer;
+}
 
 /* MEDIA QUERIES */
 @media screen and (min-width: 1640px){
@@ -217,6 +292,11 @@
     .curved-lines::before{
         top: 90%;
         right: 50px;
+    }
+}
+@media only screen and (max-width: 991px){
+    .zuri {
+        top: 65vh !important;
     }
 }
 @media screen and (max-width: 768px){
