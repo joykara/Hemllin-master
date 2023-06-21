@@ -40,14 +40,6 @@ const Navbar = () => {
     }
   };
 
-  // useEffect(
-  //   () => {
-  //     const back = document.getElementById('back');
-  //     const miniMenu = document.getElementsByClassName('active');
-  //     // if back is clicked set display of miniMenu to none
-  //     back.onClick(miniMenu.style.display= 'none');
-  // }
-  // )
 
   // Navbar menu content for devices >768px
   const [industriesContent, setIndustriesContent] = useState(false);
