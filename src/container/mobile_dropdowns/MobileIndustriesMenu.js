@@ -13,7 +13,7 @@ const MobileIndustriesMenu = () => {
 ); //onscroll animation
   return (
     <>
-    <div className="mb-industries-list" data-aos='slide-right'>
+    <div className="mb-industries-list" data-aos='slide-left'>
         <h4>industries</h4>
         <ul>
             <li className='mb-industries-dropdown-item'>

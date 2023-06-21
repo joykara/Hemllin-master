@@ -22,6 +22,11 @@ const Navbar = () => {
   const [insightsContentVisible, setInsightsContentVisible] = useState(false);
   const [aboutContentVisible, setAboutContentVisible] = useState(false);
 
+  const [mobileInsightsVisible, setMobileInsightsVisible] = useState(false);
+  const [mobileAboutVisible, setMobileAboutVisible] = useState(false);
+  const [mobileServicesVisible, setMobileServicesVisible] = useState(false);
+
+
   const handleContentVisible = (section, flag) => {
     const contentStates = {
       industries: setIndustriesContentVisible,
@@ -48,22 +53,32 @@ const Navbar = () => {
   const [aboutContent, setAboutContent] = useState(false);
 
   const handleContent = (section, flag) => {
-    const contentStates = {
-      industries: setIndustriesContent,
-      services: setServicesContent,
-      insights: setInsightsContent,
-      about: setAboutContent,
-    };
-
-    for (const [key, setter] of Object.entries(contentStates)) {
-      if (key === section) {
-        setter(flag);
-        setActiveMenu(section); // Set the active menu item
-      } else {
-        setter(false);
-      }
-    }
+  const contentStates = {
+    industries: setIndustriesContent,
+    services: setServicesContent,
+    insights: setInsightsContent,
+    about: setAboutContent,
   };
+
+  for (const [key, setter] of Object.entries(contentStates)) {
+    if (key === section) {
+      setter(flag);
+      setActiveMenu(section); // Set the active menu item
+      if (section === 'insights') {
+        setMobileInsightsVisible(flag); // Set the visibility of MobileInsightsMenu
+      }
+      else if (section === 'about') {
+        setMobileAboutVisible(flag); // Set the visibility of MobileAboutMenu
+      }
+      else if (section === 'services') {
+        setMobileServicesVisible(flag); // Set the visibility of MobileServicesMenu
+      }
+    } else {
+      setter(false);
+    }
+  }
+};
+
 
   const handleIndustriesContent = () => {
     setActiveDropdown('industries');
@@ -120,12 +135,7 @@ const Navbar = () => {
                   className={activeMenu === 'industries' ? 'active-link' : ''}
                 >
                   <span>Industries</span>
-                  <span>
-                    {industriesContentVisible ? (
-                      <SlArrowLeft color="black" size={15} />
-                    ) : (
-                      <SlArrowRight color="black" size={15} />
-                    )}
+                  <span>{industriesContentVisible ? (  <SlArrowRight color="black" size={15} />) : (  <SlArrowRight color="black" size={15} />)}
                   </span>
                 </p>
                 {/* Display menu for devices <768px */}
@@ -140,15 +150,16 @@ const Navbar = () => {
                   className={activeMenu === 'services' ? 'active-link' : ''}
                 >
                   <span>Services</span>
-                  <span>
-                    {servicesContentVisible ? (
-                      <SlArrowLeft color="black" size={15} />
-                    ) : (
-                      <SlArrowRight color="black" size={15} />
-                    )}
+                  <span>{servicesContentVisible ? (  <SlArrowRight color="black" size={15} />) : (  <SlArrowRight color="black" size={15} />)}
                   </span>
                 </p>
-                <div className="navbar__mini-menu-content">
+                <div className={`navbar__mini-menu-content ${mobileServicesVisible ? 'active' : ''}`}>
+                  <h4>
+                    <span onClick={() => handleContent('services', false)}>
+                      <SlArrowLeft color="black" size={15} />
+                    </span>
+                    Back
+                  </h4>
                   {servicesContentVisible && <MobileServicesMenu />}
                 </div>
 
@@ -161,17 +172,17 @@ const Navbar = () => {
                 >
                   <span>Featured Insights</span>
                   <span>
-                    {insightsContentVisible ? (
-                      <SlArrowLeft color="black" size={15} />
-                    ) : (
-                      <SlArrowRight color="black" size={15} />
-                    )}
+                    {insightsContentVisible ? (  <SlArrowRight color="black" size={15} />) : (  <SlArrowRight color="black" size={15} />)}
                   </span>
                 </p>
-                <div className={`navbar__mini-menu-content ${insightsContent ? 'active' : ''}`}>
-                  <h4><span><SlArrowLeft color='black' size={15} /></span>Back</h4>
-                  {insightsContent && 
-                  <MobileInsightsMenu />}
+                <div className={`navbar__mini-menu-content ${mobileInsightsVisible ? 'active' : ''}`}>
+                  <h4>
+                    <span onClick={() => handleContent('insights', false)}>
+                      <SlArrowLeft color="black" size={15} />
+                    </span>
+                    Back
+                  </h4>
+                  {mobileInsightsVisible && <MobileInsightsMenu />}
                 </div>
 
                 <p
@@ -183,10 +194,16 @@ const Navbar = () => {
                 >
                   <span>About Us</span>
                   <span>
-                    {aboutContentVisible ? <SlArrowLeft color='black' size={15} /> : <SlArrowRight color='black' size={15} />}
+                    {aboutContentVisible ? <SlArrowRight color='black' size={15} /> : <SlArrowRight color='black' size={15} />}
                   </span>
                   </p>
-                  <div className="navbar__mini-menu-content">
+                  <div className={`navbar__mini-menu-content ${mobileAboutVisible ? 'active' : ''}`}>
+                    <h4>
+                      <span onClick={() => handleContent('about', false)}>
+                        <SlArrowLeft color="black" size={15} />
+                      </span>
+                      Back
+                    </h4>
                     {aboutContentVisible && <MobileAboutMenu />}
                   </div>
               </div>

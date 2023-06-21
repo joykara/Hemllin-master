@@ -16,7 +16,7 @@ const MobileAboutMenu = () => {
   ); //onscroll animation
   return (
     <>
-          <div className="mb-about-us-list" data-aos='slide-right'>
+          <div className="mb-about-us-list" data-aos='slide-left'>
               <div id="title">
                   <h3>About Us</h3>
                   <p><Link>About Us Overview</Link><BsArrowRight/></p>
