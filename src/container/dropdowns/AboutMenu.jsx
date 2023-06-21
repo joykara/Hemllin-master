@@ -6,13 +6,13 @@ const AboutMenu = () => {
   return (
     <>
           <div className="about-us-list">
-              <div id="title">
+              <div id="about-title">
                   <h3>About Us</h3>
-                  <p><Link>About Us Overview</Link><BsArrowRight/></p>
+                  <p><Link to='/about-us'>About Us Overview</Link><BsArrowRight color='black'/></p>
               </div>
               <div id="sections">
                 <div className="about-us-sections">
-                    <h4>WHO WE ARE</h4>
+                    <p>WHO WE ARE</p>
                     <ul>
                         <li className='about-us-dropdown-item'>
                             <a href='/about-us/our-team'>Our Team</a>

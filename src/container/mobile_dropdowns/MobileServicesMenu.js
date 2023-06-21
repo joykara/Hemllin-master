@@ -7,7 +7,7 @@ import 'aos/dist/aos.css';
 const MobileServicesMenu = () => {
     useEffect(() => {
       AOS.init({
-          duration: 1000,
+          duration: 100,
           delay: 0,
       });
   }, []
@@ -15,7 +15,6 @@ const MobileServicesMenu = () => {
   return (
     <>
             <div className="mb-services-list" data-aos='slide-left'>
-                <h3>Our Services</h3>
                 <ul>
                     <li className='mb-services-dropdown-item'>
                         <a href='/our-services/management'>Management Consultancy</a>

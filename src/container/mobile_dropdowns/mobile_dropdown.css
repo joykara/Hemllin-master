@@ -4,12 +4,12 @@
 .mb-about-us-list {
     display: flex;
     flex-direction: column;
-    padding: 1rem 2rem;
     position: absolute;
     z-index: 999;
     display: flex;
     flex-direction: column;
     background: #ffffff;
+    margin-top: 3.8rem;
     width: 100%;
     left: 0;
 }
@@ -17,7 +17,7 @@
 .mb-services-list ul,
 .mb-featured-insights-list ul,
 .mb-about-us-list ul {
-    padding-left: 5rem;
+    padding: 0 0 1rem 5rem;
     display: flex;
     flex-direction: column;
 }
@@ -26,4 +26,22 @@
 .mb-featured-insights-list ul li,
 .mb-about-us-list ul li {
     padding: 0.5rem 0;
+}
+.mb-about-us-sections,
+#mobile-sections{
+    display: flex;
+    flex-direction: column;
+}
+#overview{
+    display: flex;
+    justify-content: right;
+}
+#overview p{
+    margin: .2rem 1rem;
+}
+#overview p a{
+    color: black;
+}
+#overview p svg{
+    margin: 10px 0 0 10px;
 }

@@ -6,7 +6,7 @@ import 'aos/dist/aos.css';
 const MobileIndustriesMenu = () => {
   useEffect(() => {
     AOS.init({
-        duration: 1000,
+        duration: 100,
         delay: 0,
     });
 }, []
@@ -14,7 +14,6 @@ const MobileIndustriesMenu = () => {
   return (
     <>
     <div className="mb-industries-list" data-aos='slide-left'>
-        <h4>industries</h4>
         <ul>
             <li className='mb-industries-dropdown-item'>
                 <a href='/industries/agriculture'>Agriculture</a>

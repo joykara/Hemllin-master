@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { RiMenuLine, RiCloseLine, RiSearchLine } from 'react-icons/ri';
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
 import { SlArrowRight, SlArrowLeft } from 'react-icons/sl';
@@ -7,6 +9,15 @@ import { Link } from 'react-router-dom';
 import { IndustriesMenu, ServicesMenu, InsightsMenu, AboutMenu, MobileIndustriesMenu, MobileAboutMenu, MobileInsightsMenu, MobileServicesMenu} from '../../container';
 
 const Navbar = () => {
+  useEffect(() => {
+    AOS.init({
+        duration: 1200,
+        delay: 1000,
+    });
+}, []
+); //onscroll animation
+
+  // TOOGLE MENU STATES
   const [toggleMenu, setToggleMenu] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [activeMenu, setActiveMenu] = useState(null);
@@ -25,6 +36,7 @@ const Navbar = () => {
   const [mobileInsightsVisible, setMobileInsightsVisible] = useState(false);
   const [mobileAboutVisible, setMobileAboutVisible] = useState(false);
   const [mobileServicesVisible, setMobileServicesVisible] = useState(false);
+  const [mobileIndustriesVisible, setMobileIndustriesVisible] = useState(false);
 
 
   const handleContentVisible = (section, flag) => {
@@ -72,6 +84,9 @@ const Navbar = () => {
       }
       else if (section === 'services') {
         setMobileServicesVisible(flag); // Set the visibility of MobileServicesMenu
+      }
+      else if (section === 'industries') {
+        setMobileIndustriesVisible(flag); // Set the visibility of MobileIndustriesMenu
       }
     } else {
       setter(false);
@@ -135,12 +150,18 @@ const Navbar = () => {
                   className={activeMenu === 'industries' ? 'active-link' : ''}
                 >
                   <span>Industries</span>
-                  <span>{industriesContentVisible ? (  <SlArrowRight color="black" size={15} />) : (  <SlArrowRight color="black" size={15} />)}
+                  <span>{industriesContentVisible ? (  <SlArrowRight color="white" size={15} />) : (  <SlArrowRight color="white" size={15} />)}
                   </span>
                 </p>
                 {/* Display menu for devices <768px */}
-                <div className="navbar__mini-menu-content">
-                  {industriesContentVisible && <MobileIndustriesMenu />}
+                <div className={`navbar__mini-menu-content ${mobileIndustriesVisible ? 'active' : ''}`} data-aos='slide-left'>
+                  <h4>
+                    <span onClick={() => handleContent('industries', false)}>
+                      <SlArrowLeft color="black" size={15} />
+                    </span>
+                    Industries
+                  </h4>
+                  {mobileIndustriesVisible && <MobileIndustriesMenu />}
                 </div>
                 <p
                   onClick={() =>
@@ -150,17 +171,17 @@ const Navbar = () => {
                   className={activeMenu === 'services' ? 'active-link' : ''}
                 >
                   <span>Services</span>
-                  <span>{servicesContentVisible ? (  <SlArrowRight color="black" size={15} />) : (  <SlArrowRight color="black" size={15} />)}
+                  <span>{servicesContentVisible ? (  <SlArrowRight color="white" size={15} />) : (  <SlArrowRight color="white" size={15} />)}
                   </span>
                 </p>
-                <div className={`navbar__mini-menu-content ${mobileServicesVisible ? 'active' : ''}`}>
+                <div className={`navbar__mini-menu-content ${mobileServicesVisible ? 'active' : ''}`} data-aos='slide-left'>
                   <h4>
                     <span onClick={() => handleContent('services', false)}>
                       <SlArrowLeft color="black" size={15} />
                     </span>
-                    Back
+                    Services
                   </h4>
-                  {servicesContentVisible && <MobileServicesMenu />}
+                  {mobileServicesVisible && <MobileServicesMenu />}
                 </div>
 
                 <p
@@ -172,15 +193,15 @@ const Navbar = () => {
                 >
                   <span>Featured Insights</span>
                   <span>
-                    {insightsContentVisible ? (  <SlArrowRight color="black" size={15} />) : (  <SlArrowRight color="black" size={15} />)}
+                    {insightsContentVisible ? (  <SlArrowRight color="white" size={15} />) : (  <SlArrowRight color="white" size={15} />)}
                   </span>
                 </p>
-                <div className={`navbar__mini-menu-content ${mobileInsightsVisible ? 'active' : ''}`}>
+                <div className={`navbar__mini-menu-content ${mobileInsightsVisible ? 'active' : ''}`} data-aos='slide-left'>
                   <h4>
                     <span onClick={() => handleContent('insights', false)}>
                       <SlArrowLeft color="black" size={15} />
                     </span>
-                    Back
+                    Featured Insights
                   </h4>
                   {mobileInsightsVisible && <MobileInsightsMenu />}
                 </div>
@@ -194,17 +215,17 @@ const Navbar = () => {
                 >
                   <span>About Us</span>
                   <span>
-                    {aboutContentVisible ? <SlArrowRight color='black' size={15} /> : <SlArrowRight color='black' size={15} />}
+                    {aboutContentVisible ? <SlArrowRight color='white' size={15} /> : <SlArrowRight color='white' size={15} />}
                   </span>
                   </p>
-                  <div className={`navbar__mini-menu-content ${mobileAboutVisible ? 'active' : ''}`}>
+                  <div className={`navbar__mini-menu-content ${mobileAboutVisible ? 'active' : ''}`} data-aos='slide-left'>
                     <h4>
                       <span onClick={() => handleContent('about', false)}>
                         <SlArrowLeft color="black" size={15} />
                       </span>
-                      Back
+                      About Us
                     </h4>
-                    {aboutContentVisible && <MobileAboutMenu />}
+                    {mobileAboutVisible && <MobileAboutMenu />}
                   </div>
               </div>
               <p><a href="/careers">Careers</a></p>

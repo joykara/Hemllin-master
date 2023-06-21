@@ -15,7 +15,6 @@ const MobileInsightsMenu = () => {
   return (
     <>
         <div className="mb-featured-insights-list" data-aos='slide-left'>
-                <h3>Featured Insights</h3>
                 <p><strong> TRENDING TOPICS</strong></p>
             <ul>
                 <li className='mb-featured-insights-dropdown-item'>

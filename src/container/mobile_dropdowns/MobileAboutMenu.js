@@ -9,7 +9,7 @@ import 'aos/dist/aos.css';
 const MobileAboutMenu = () => {
     useEffect(() => {
       AOS.init({
-          duration: 1000,
+          duration: 100,
           delay: 0,
       });
   }, []
@@ -17,13 +17,12 @@ const MobileAboutMenu = () => {
   return (
     <>
           <div className="mb-about-us-list" data-aos='slide-left'>
-              <div id="title">
-                  <h3>About Us</h3>
-                  <p><Link>About Us Overview</Link><BsArrowRight/></p>
+              <div id="overview">
+                  <p><Link to='/about-us'>About Us Overview</Link><BsArrowRight/></p>
               </div>
-              <div id="sections">
-                <div className="mb-about-us-sections">
-                    <h4>WHO WE ARE</h4>
+              <div id="mobile-sections">
+                <div className="mb-about-us-sections" id="overview">
+                    <p>WHO WE ARE</p>
                     <ul>
                         <li className='mb-about-us-dropdown-item'>
                             <a href='/about-us/our-team'>Our Team</a>
@@ -39,7 +38,7 @@ const MobileAboutMenu = () => {
                         </li>
                     </ul>
                 </div>
-                <div className="mb-about-us-sections">
+                <div className="mb-about-us-sections" id="overview">
                     <p><Link to="/about-us/how-we-work">HOW WE WORK</Link></p>
                     <p><Link to="/about-us/media"> MEDIA </Link></p>
                 </div>
