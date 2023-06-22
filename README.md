@@ -30,7 +30,7 @@ License
 
 
 ## Installation
-1. Clone this repository and navigate into its root directory on a terminal or command line interface.
+- Clone this repository and navigate into its root directory on a terminal or command line interface.
 ### Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
