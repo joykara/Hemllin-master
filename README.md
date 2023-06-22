@@ -168,6 +168,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 │   ├── index.js
 │   └── ...
 ├── .gitignore
+├── package-lock.json
 ├── package.json
 ├── README.md
 └── ...
@@ -175,8 +176,8 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 #### Explanation:
 
- - The public directory contains the HTML template (index.html) and other static files like favicon.
- - The src directory is the main directory for the project's source code.
+ - The `public` directory contains the HTML template (index.html) and other static files like favicon.
+ - The `src` directory is the main directory for the project's source code.
  - The assets directory holds static assets such as images, fonts, or videos.
  - The components directory contains reusable UI components organized into separate folders (e.g., Header, Footer) with their respective JavaScript files, CSS files, and other related files.
  - The pages directory contains components that represent different pages of the website. Each page has its folder (e.g., Home, About) with its JavaScript file, CSS file, and other related files.
