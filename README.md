@@ -1,3 +1,41 @@
+# Hemllin - Company Website
+
+This is a solution to the [QR code component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+
+## Table of contents
+
+
+
+Configuration
+Development Workflow
+Deployment
+Folder Structure
+Components
+Styling
+Data Management
+Routing
+Testing
+Troubleshooting
+Contributing
+License
+- [Installation](#overview)
+  - [npm start](#npm-start)
+  - [Links](#links)
+- [Project Structure](#project-structure)
+    - [Dependencies](#dependencies)
+    - [Installation](#installation)
+    - [Getting started](#getting-started)
+    - [Folder Structure](#folder-structure)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+
+
+
+## Installation
+1. Clone this repository and navigate into its root directory on a terminal or command line interface.
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -29,7 +67,58 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+
+### Project Structure
+
+![](./images/FrontendMentor_QRcode_solution.jpg)
+
+
+### Links
+
+- Solution URL: [https://github.com/joykara/qrcode_challenge.git]
+- Live URL: [https://joykara.github.io/qrcode_challenge/]
+
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- [Styled Components](https://styled-components.com/) - For styles
+
+
+### Continued development
+
+The areas I want to continue focusing on in future projects include:
+- Dealing with the styling of my margins and padding
+- Refining my code lines too.
+
+
+### Useful resources
+
+- [Example resource 1](https://stackoverflow.com/questions/26665324/center-div-with-padding-instead-of-margin) - This is an amazing article which helped me finally understand how to center my margins and padding. I'd recommend it to anyone still learning this concept.
+
+
+## Author
+
+- Website - [Joy Mwende Karani](https://github.com/joykara/qrcode_challenge.git)
+- Frontend Mentor - [@joykara](https://www.frontendmentor.io/profile/joykara)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
@@ -67,4 +156,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->
