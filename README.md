@@ -26,7 +26,7 @@ License
     - [Dependencies](#dependencies)
     - [Links](#links)
 - [My process](#my-process)
-  - [Built with](#built-with)
+  - [Technologies Used](#technologies-used)
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
@@ -197,16 +197,20 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### Links
 
-- Solution URL: [https://github.com/joykara/qrcode_challenge.git]
-- Live URL: [https://joykara.github.io/qrcode_challenge/]
+- Website Link: [https://github.com/joykara/qrcode_challenge.git]
 
 ## My process
 
-### Built with
+### Technologies Used
 
-- Semantic HTML5 markup
-- CSS custom properties
-- [Styled Components](https://styled-components.com/) - For styles
+#### Front-end: 
+- The website is built using modern web technologies such as React.js, HTML5, CSS3, and JavaScript. We follow best practices to ensure a clean and maintainable codebase.
+#### Back-end: 
+- Our website utilizes ...
+#### Database: 
+- We leverage a database system ... to store and retrieve relevant information.
+#### Deployment: 
+- The website is deployed on ....
 
 
 ### Continued development
