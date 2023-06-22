@@ -165,6 +165,8 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 │   │   ├── helpers.js
 │   │   └── ...
 │   ├── App.js
+│   ├── App.css
+│   ├── index.css
 │   ├── index.js
 │   └── ...
 ├── .gitignore
@@ -176,18 +178,20 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 #### Explanation:
 
- - The `public` directory contains the HTML template (index.html) and other static files like favicon.
+ - The `public` directory contains static files that are publicly accessible, such as the favicon.ico, index.html, manifest.json, and robots.txt.
  - The `src` directory is the main directory for the project's source code.
- - The assets directory holds static assets such as images, fonts, or videos.
- - The components directory contains reusable UI components organized into separate folders (e.g., Header, Footer) with their respective JavaScript files, CSS files, and other related files.
- - The pages directory contains components that represent different pages of the website. Each page has its folder (e.g., Home, About) with its JavaScript file, CSS file, and other related files.
- - The services directory houses modules responsible for making API requests or handling data-related tasks.
- - The utils directory contains utility/helper functions or modules used throughout the project.
- - The App.js file is the main component that serves as the entry point for the application.
- - The index.js file is responsible for rendering the root component (App) and mounting it into the DOM.
- - The .gitignore file specifies which files and directories should be ignored by version control.
- - The package.json file includes project metadata and lists dependencies and scripts.
- - The README.md file provides an overview and documentation for the project.
+ - The `assets` directory holds static assets such as images, fonts, or videos used.
+ - The `components` directory contains reusable UI components organized into separate folders (e.g., Header, Footer). Each component has its own directory with a `.jsx` file for the component's logic and a corresponding CSS file for styling.
+ - The `container` directory includes container components that manage the presentation and state logic for specific sections or features of your application.
+ - The `pages` directory contains components that represent different pages of the website. Each page has its own directory(e.g., industry_pages, about_pages) with a .js file for the page's logic and a corresponding CSS file for styling.
+ - The `services` directory houses modules responsible for making API requests or handling data-related tasks.
+ - The `utils` directory contains utility/helper functions or modules used throughout the project.
+ - The `App.js`  file is the main entry point for the React application, where you define the overall structure and routing.
+ - The `index.js` file is the entry point for the ReactDOM rendering, where the React application is rendered into the HTML document.
+ - The root directory contains configuration files such as `.gitignore`, `package-lock.json`, `package.json`, and `README.md.`
+ - The `.gitignore` file specifies which files and directories should be ignored by version control.
+ - The `package.json` file includes project metadata and lists dependencies and scripts.
+ - The `README.md` file provides an overview and documentation for the project.
  - This folder structure provides a modular and organized approach to managing your React website project, separating components, pages, assets, and other resources into their respective directories. Feel free to adjust and customize it based on your specific project requirements and preferences.
 
 
