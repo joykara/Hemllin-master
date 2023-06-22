@@ -18,7 +18,7 @@
     height: 1px;
     background-color: transparent;
     position: absolute;
-    right: 0.5%;
+    right: 20px;
     overflow: hidden;
     transform-origin: center center;
 }
@@ -262,6 +262,9 @@
     .header-content{
         margin: 10rem 15rem 10rem 0;
     }
+    .curved-lines{
+        right: 15px;
+    }
 }
 @media screen and (max-width: 1200px){
     .header__highlight-bar{
@@ -275,6 +278,9 @@
     }
     .highlight-bar__container{
         white-space: nowrap;
+    }
+    .curved-lines{
+        right: 30px;
     }
 }
 @media screen and (max-width: 1080px){
@@ -292,13 +298,12 @@
     .header-content__button{
         padding: 1rem 0;
     }
-    .curved-lines::before{
-        top: 90%;
-        right: 50px;
+    .curved-lines{
+        right: 55px;
     }
 }
 @media only screen and (max-width: 991px){
-    .zuri {
+    .hemllin {
         top: 65vh !important;
     }
 }

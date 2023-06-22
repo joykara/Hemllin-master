@@ -70,15 +70,7 @@ p{
 .main-container .navbar{
   background: #0e0d0df3;
 }
-/* .hidden{
-  opacity: 0;
-  transition: all 1s;
-}
-.animate{
-  opacity: 1;
-} */
 
-/* MEDIA QUERIES */
 
 /* Cookies Area */
 .cookiesblock {
@@ -91,7 +83,7 @@ p{
   padding: 1rem;
   max-width: 400px;
   border-radius: 15px;
-  animation: 1s ease-in-out 0s normal none 1 running fadeInLeft;
+  animation: 5s ease-in-out 0s normal none 1 running fadeInLeft;
 }
 /* fadeInLeft animation */
 @keyframes fadeInLeft {

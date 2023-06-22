@@ -25,6 +25,14 @@ const Navbar = () => {
   const handleToggle = () => {
     setToggleMenu(!toggleMenu);
     handleContent('industries', true);
+    
+    // //if the navbar__mini-menu-content is active/not active set handleContent('industries'); to be false/true 
+    // if (toggleMenu) {
+    //   handleContent('industries', true);
+    // } else {
+    //   handleContent('industries', false);
+    // }
+    
   };
 
   // Navbar menu content for devices <768px
