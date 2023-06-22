@@ -14,9 +14,6 @@
   background: none;
   font-family: 'Roboto';
 }
-.col-md-12 span{
-  text-decoration: underline;
-}
 h1{
   font-size: 64px;
   font-weight: 700;
@@ -83,3 +80,109 @@ p{
 
 /* MEDIA QUERIES */
 
+/* Cookies Area */
+.cookiesblock {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 9;
+  padding: 1rem;
+  max-width: 400px;
+  border-radius: 15px;
+  animation: 1s ease-in-out 0s normal none 1 running fadeInLeft;
+}
+/* fadeInLeft animation */
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.cookies-container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.align-items-center {
+  -webkit-box-align: center !important;
+  -ms-flex-align: center !important;
+  align-items: center !important;
+}
+.cookiesblock .col-dets {
+  flex: 100% !important;
+  max-width: 100% !important;
+}
+.col-dets span a{
+  text-decoration: underline;
+  color: #fff;
+  font-family: var(--font-family);
+  font-size: 14px;
+}
+.col-dets span:hover a{
+  color: var(--color-link);
+}
+.cookiesblock p {
+  color: #FFF;
+  padding: 0;
+  font-size: 14px;
+}
+.cookiesbtn {
+  text-align: right;
+}
+.cookiesbtn ul {
+  display: inline-block;
+}
+.cookiesbtn ul li {
+  display: inline-block;
+  cursor: pointer;
+  margin: 0 5px;
+}
+.cookiesbtn ul li button {
+  display: inline-block;
+  padding: 7px 18px;
+  font-size: 14px;
+  background: #2CB34A;
+  border-radius: 20px;
+  color: #FFF;
+}
+.cookiesbtn ul li:last-child button {
+  background: #606060;
+}
+
+@media only screen and (max-width: 991px){
+.cookiesblock {
+    padding: 0 0 15px 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: auto;
+    right: 0;
+    border-radius: 0;
+  }
+  .cookiesbtn {
+    text-align: center;
+    margin: 10px 0 0;
+  }
+  .cookiesbtn ul li a {
+    padding: 5px 20px;
+    font-size: 12px;
+  }
+}

@@ -66,7 +66,7 @@ return (
         <div class="say-hello">
           <a class="close" onClick={handleCloseClick}>
             <span aria-hidden="true"><RiCloseLine/></span>
-            </a>
+          </a>
           <a title="Hemllin" href="https://api.whatsapp.com/send/?phone=254705080821&amp;text=%5BKE%5D+Hi+Hemllin&amp;app_absent=0" target="_blank" rel="nofollow noopener noreferrer">Hi welcome to Hemllin , how can I help you today?</a>
         </div>
         <a id='image-title' title="modal" href="https://api.whatsapp.com/send/?phone=254705080821&amp;text=%5BKE%5D+Hi+Zuri&amp;app_absent=0" target="_blank" rel="nofollow noopener noreferrer">

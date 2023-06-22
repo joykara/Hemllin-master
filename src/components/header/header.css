@@ -44,6 +44,7 @@
 }
 .header-container{
     height: 100%;
+    width: 100%;
 }
 .header{
     display: flex;
@@ -51,6 +52,7 @@
     align-items: center;
     background: var(--color-bg);
     height: 80%;
+    width: 100%;
 }
 .header-image{
     position: relative;
@@ -193,7 +195,7 @@
     height: 50px;
 }
 .say-hello{
-    background: #53b44b;
+    background: #3db433;
     color: #fff;
     padding: 15px 10px;
     width: 159px;
@@ -228,11 +230,12 @@
     cursor: pointer;
 }
 .say-hello a {
-    font-size: 12px;
+    font-size: 11px;
+    font-weight: 400;
     color: #000 !important;
     margin: 0;
     display: inline-block;
-    font-family: sans-serif;
+    font-family: 'Merriweather';
 }
 
 .say-hello .close:hover {
