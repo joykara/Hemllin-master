@@ -100,23 +100,23 @@ const ContactUs = () => {
                     <input
                     type="radio"
                     name="question"
-                    value="Consulting"
-                    id="Consulting"
-                    checked={question === "Consulting"}
+                    value="Coaching"
+                    id="Coaching"
+                    checked={question === "Coaching"}
                     onChange={onOptionChange}
                     />
-                    <label htmlFor="Consulting"><p>Coaching</p></label>
+                    <label htmlFor="Coaching"><p>Coaching</p></label>
                   </div>
                   <div className="contact-us-question-option">
                     <input
                     type="radio"
                     name="question"
-                    value="Consulting"
-                    id="Consulting"
-                    checked={question === "Consulting"}
+                    value="Book an Appointment"
+                    id="Book an Appointment"
+                    checked={question === "Book an Appointment"}
                     onChange={onOptionChange}
                     />
-                    <label htmlFor="Consulting"><p>Book an Appointment</p></label>
+                    <label htmlFor="Book an Appointment"><p>Book an Appointment</p></label>
                   </div>
                 </div>
                 </div>
@@ -125,7 +125,7 @@ const ContactUs = () => {
                   <FormInput key={input.id} {...input} value={values[input.name]} onChange={onChange} />
                 ))}
                 <label htmlFor="message">MESSAGE *</label>
-                <textarea required></textarea>
+                <textarea id='message' required></textarea>
                 {/* <ReCAPTCHA sitekey="Your client site key" onChange={onChange}/> */}
                   <button className='contact-submit-btn'>Submit</button>
               </form>
