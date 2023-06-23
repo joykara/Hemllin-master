@@ -1,0 +1,70 @@
+
+/* SEARCH BAR */
+#hamburger-curtain{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000046;
+    z-index: 999;
+}
+.navbar__search-bar__container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    background-color: #00000000;
+    z-index: 999;
+}
+.hm-navsearch-bar{
+    width: 100%;
+}
+.navbar__menu-links__searchbar {
+    display: flex;
+    width: 100%;
+    padding-bottom: 1rem;
+    background-color: #f4f4f4;
+    position: absolute;
+    z-index: 2;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.4);
+}
+.navbar__menu-links__searchbar input {
+    width: 100%;
+    height: 80px;
+    margin: auto 0;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    padding: 0 2.5rem;
+}
+.navbar__menu-links__searchbar button {
+    background: none;
+    border: none;
+    padding-right: 1rem;
+}
+.navbar__menu-links__searchbar-results__container {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    background: none;
+    top: 6rem;
+    z-index: 1;
+}
+.navbar__menu-links__searchbar-results__container.display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar__menu-links__searchbar-results__container .search-bar__list{
+    padding-top: 2rem;
+}
+.navbar__menu-links__searchbar-results__container .search-bar__item{
+    padding: 1rem 0;
+}
+.navbar__menu-links__searchbar-results__container a{
+    color: black;
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+}
