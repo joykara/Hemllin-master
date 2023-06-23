@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useReducer } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { RiMenuLine, RiCloseLine, RiSearchLine } from 'react-icons/ri';
@@ -6,9 +6,61 @@ import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
 import { SlArrowRight, SlArrowLeft } from 'react-icons/sl';
 import './navbar.css';
 import { Link } from 'react-router-dom';
+import List from '../../data/List';
 import { IndustriesMenu, ServicesMenu, InsightsMenu, AboutMenu, MobileIndustriesMenu, MobileAboutMenu, MobileInsightsMenu, MobileServicesMenu} from '../../container';
+import SearchBar from '../searchbar/SearchBar';
 
 const Navbar = () => {
+  //show data on typing in the input
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+    });
+  }, []);
+
+  // SEARCH FUNCTIONALITY
+  const [state, dispatch] = useReducer((state, action) => {
+    switch (action.type) {
+      case 'inputText':
+        return {
+        ...state,
+          inputText: action.payload,
+        };
+      case'showData':
+        return {
+        ...state,
+          showData: action.payload,
+        };
+      default:
+        return state;
+    }
+  }, {
+    inputText: '',
+    showData: '',
+  });
+
+  const { inputText, showData } = state;
+
+  const handleInputText = (e) => {
+    dispatch({ type: 'inputText', payload: e.target.value });
+  };
+  
+  const handleShowData = (e) => {
+    dispatch({ type: 'showData', payload: e.target.value });
+  };
+  
+  let inputHandler = (e) => {
+    var lowerCase = e.target.value.toLowerCase();
+    dispatch({ type: 'inputText', payload: lowerCase });
+  };
+  // SEARCHBAR DISPLAY FUNCTION
+  const [showSearchBar, setShowSearchBar] = useState(false);
+  const handleShowSearchBar = () => {
+    setShowSearchBar(!showSearchBar);
+  };
+
   useEffect(() => {
     AOS.init({
         duration: 1200,
@@ -25,17 +77,9 @@ const Navbar = () => {
   const handleToggle = () => {
     setToggleMenu(!toggleMenu);
     handleContent('industries', true);
-    
-    // //if the navbar__mini-menu-content is active/not active set handleContent('industries'); to be false/true 
-    // if (toggleMenu) {
-    //   handleContent('industries', true);
-    // } else {
-    //   handleContent('industries', false);
-    // }
-    
   };
 
-  // Navbar menu content for devices <768px
+  // NAVBAR MENU CONTENT FOR DEVICES <768PX
   const [industriesContentVisible, setIndustriesContentVisible] = useState(false);
   const [servicesContentVisible, setServicesContentVisible] = useState(false);
   const [insightsContentVisible, setInsightsContentVisible] = useState(false);
@@ -243,9 +287,16 @@ const Navbar = () => {
             </div>
           </div>
           <div className="navbar__menu-links__details">
-            <div className="navbar__menu-links__search">
-              <input type="text" placeholder="Type to search..." />
-              <button><RiSearchLine size={40} /></button>
+            <div className='hm-search-bar'>
+              <div className="navbar__menu-links__search">
+                <input name='search' type="text" onChange={inputHandler} onClick={handleInputText} onKeyUp={handleShowData} placeholder="Type to search..." />
+                <button><RiSearchLine size={40} /></button>
+              </div>
+              {showData && (
+                  <div className={`navbar__menu-links__search-results__container ${showData ? 'display' : ''}`}>
+                    <List input={inputText} />
+                  </div>
+                )}
             </div>
             <div className="navbar__menu-link__content">
               {industriesContent && <IndustriesMenu />}
@@ -308,7 +359,13 @@ const Navbar = () => {
       </div>
       <div className="navbar__search">
         <p><a href="/">Sign In</a> | <a href="/">Subscribe</a></p>
-        <p><a href="/"><RiSearchLine size={20} /></a></p>
+        <p onClick={handleShowSearchBar}><RiSearchLine size={25} color='white'/></p>
+        {showSearchBar && (
+          <div className={`navbar__search-bar__container ${showSearchBar? 'display' : ''}`} id='hamburger-curtain'>
+            <SearchBar/>
+          </div>
+
+        )}
       </div>
     </div>
   );
