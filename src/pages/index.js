@@ -13,6 +13,7 @@ export { default as CoachingAndTraining } from './service_pages/CoachingAndTrain
 export { default as Media } from './about_pages/Media';
 export { default as Career } from '../pages/Career';
 export { default as OurGovernance } from './about_pages/OurGovernance';
+export { default as OurTeam } from './about_pages/OurTeam';
 export { default as OurHistory } from '../pages/about_pages/OurHistory';
 export {default as HowWeWork} from './about_pages/HowWeWork';
 export { default as AgricultureIndustry } from './industry_pages/AgricultureIndustry';
