@@ -13,7 +13,7 @@ const Footer = () => {
                       <h3>Subscribe</h3>
                       <p>Want to get the latest market trends?</p>
                       <div className="hm-email-input">
-                        <input type="text" placeholder="Email address"  aria-invalid='false'/>
+                        <input type="email" name='email' placeholder="Email address" autoComplete='off' aria-invalid='false'/>
                         <button aria-label='submit for email alerts' type='submit' >Subscribe</button>
                       </div>
                   </div>
