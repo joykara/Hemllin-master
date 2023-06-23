@@ -195,7 +195,7 @@
     height: 50px;
 }
 .say-hello{
-    background: #3db433;
+    background: var(--color-bg);
     color: #fff;
     padding: 15px 10px;
     width: 159px;

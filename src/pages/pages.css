@@ -738,7 +738,7 @@ form .contact-us-question-option{
     cursor: pointer;
 }
 form .contact-us-question-option input{
-    width: 1.5rem;
+    width: 1rem;
     border: 1px solid #181616;
     box-sizing: border-box;
     outline: none;

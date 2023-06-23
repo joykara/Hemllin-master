@@ -56,7 +56,7 @@ const ContactUs = () => {
       required: true,
     },
   ]
-  const [question, setQuestion] = useState("Medium")
+  const [question, setQuestion] = useState("Consulting")
 
   const onOptionChange = e => {
     setQuestion(e.target.value)
