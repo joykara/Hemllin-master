@@ -18,6 +18,8 @@
     overflow: hidden;
     margin: auto;  
     padding: 10px;
+    font-family: var(--links-font-family);
+    font-size: 20px;
 }
 
 .search-bar__item:hover a{

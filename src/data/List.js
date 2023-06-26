@@ -20,6 +20,8 @@ function List(props) {
             {filteredData.map((item) => (
                 <li key={item.id} className='search-bar__item'><Link to={item.link_url}>{item.text}</Link></li>
             ))}
+            {/* if item not found display not found message */}
+            {filteredData.length === 0 && <li className='search-bar__item'>Not Found</li>}
         </ul>
     )
 }
