@@ -83,6 +83,9 @@
     margin-right: 1.5rem;
     padding-bottom: 1rem;
 }
+.hm-footer-cta-links li a:hover{
+    color: var(--color-link);
+}
 .hm-footer-cta-social-links{
     display: flex;
     justify-content: right;
