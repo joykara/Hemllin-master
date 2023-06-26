@@ -1634,12 +1634,38 @@ form .contact-us-question-options label:hover{
     .hm-gov-image01{
         width: 100%;
     }
+    .hm-gov-content03,
+    .hm-gov-content05{
+        display: flex;
+        flex-direction: column;
+    }
+    .hm-gov-sub-content,
     .hm-gov-sub-content3,
     .hm-governance-more-info-content{
         flex-direction: column;
     }
+    .hm-gov-sub-content2:nth-child(1) {
+        margin: 0 0 2rem 0;
+    }
+    .hm-gov-sub-content-image01,
+    .hm-gov-sub-content-text{
+        width: 100%;
+    }
+    .hm-gov-sub-content-text,
+    .hm-gov-sub-content-text2{
+        padding: 1rem;
+    }
     .hm-gov-sub-content-details{
         margin: 1rem 0;
+    }
+    .hm-gov-sub-content-detail-text{
+        padding: 0 1rem 1rem;
+    }
+    .hm-governance-more-info{
+        width: 90%;
+    }
+    .hm-governance-more-info h4 {
+        padding: 1rem 0;
     }
     .hm-governance-more-info-details{
         margin: 1rem 0;
@@ -1671,6 +1697,10 @@ form .contact-us-question-options label:hover{
     #hm-2020-history .history-img,
     #hm-2022-history .history-img{
         margin: 2rem;
+    }
+    #hm-2020-history .history-content-text, 
+    #hm-2022-history .history-content-text {
+        padding-right: 0;
     }
     .history-img,
     .history-content{
