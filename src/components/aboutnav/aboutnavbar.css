@@ -105,6 +105,13 @@
 .aboutnavbar__search a{
     color: #000000;
 }
+
+.aboutnavbar__search a:hover,
+.aboutnavbar__search p:hover svg {
+    cursor: pointer;
+    fill: var(--color-link);
+    color: var(--color-link);
+}
 /* hamburger-menu nav */
 .aboutnavbar__menu-links{
     display: none;

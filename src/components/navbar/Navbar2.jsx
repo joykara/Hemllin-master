@@ -8,7 +8,6 @@ import './navbar.css';
 import { Link } from 'react-router-dom';
 import List from '../../data/List';
 import { IndustriesMenu, ServicesMenu, InsightsMenu, AboutMenu, MobileIndustriesMenu, MobileAboutMenu, MobileInsightsMenu, MobileServicesMenu} from '../../container';
-import SearchBar from '../searchbar/SearchBar';
 
 const Navbar = () => {
   //show data on typing in the input
@@ -362,7 +361,18 @@ const Navbar = () => {
         <p onClick={handleShowSearchBar}><RiSearchLine size={25} color='white'/></p>
         {showSearchBar && (
           <div className={`navbar__search-bar__container ${showSearchBar? 'display' : ''}`} id='hamburger-curtain'>
-            <SearchBar/>
+            <div className='hm-navsearch-bar'>
+              <div className="navbar__menu-links__searchbar">
+                <input name='search' type="text" onChange={inputHandler} onClick={handleInputText} onKeyUp={handleShowData} placeholder="Type to search..." />
+                <button onClick={handleShowSearchBar}><RiCloseLine size={45} /></button>
+                <button><RiSearchLine size={40} /></button>
+              </div>
+              {showData && (
+                  <div className={`navbar__menu-links__searchbar-results__container ${showData ? 'display' : ''}`}>
+                    <List input={inputText} />
+                  </div>
+              )}
+            </div>
           </div>
 
         )}

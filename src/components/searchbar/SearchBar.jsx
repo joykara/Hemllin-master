@@ -48,18 +48,16 @@ const SearchBar = () => {
   return (
     <>
       
-      <div className='hm-navsearch-bar'>
-            <div className="navbar__menu-links__searchbar">
-              <input name='search' type="text" onChange={inputHandler} onClick={handleInputText} onKeyUp={handleShowData} placeholder="Type to search..." />
-              <button onClick={handleShowSearchBar}><RiCloseLine size={45} /></button>
-              <button><RiSearchLine size={40} /></button>
-            </div>
-            {showData && (
-                <div className={`navbar__menu-links__searchbar-results__container ${showData ? 'display' : ''}`}>
-                  <List input={inputText} />
-                </div>
-            )}
+        <div className="navbar__menu-links__searchbar">
+          <input name='search' type="text" onChange={inputHandler} onClick={handleInputText} onKeyUp={handleShowData} placeholder="Type to search..." />
+          <button onClick={handleShowSearchBar}><RiCloseLine size={45} /></button>
+          <button><RiSearchLine size={40} /></button>
         </div>
+        {showData && (
+            <div className={`navbar__menu-links__searchbar-results__container ${showData ? 'display' : ''}`}>
+              <List input={inputText} />
+            </div>
+        )}
     </>
   )
 }
