@@ -195,10 +195,10 @@
     height: 50px;
 }
 .say-hello{
-    background: var(--color-bg);
+    background: #fff;
     color: #fff;
-    padding: 15px 10px;
-    width: 159px;
+    padding: 20px 10px;
+    width: 200px;
     border-radius: 10px;
     position: relative;
     z-index: 2;
@@ -208,16 +208,10 @@
     transition: all linear 0.8s;
     animation: 1s ease-in-out 0s normal none 1 running fadeInUp;
 }
-.say-hello:hover {
-    background: #fff;
-}
-.say-hello:hover .close{
-    background: #53b44b;
-}
 .say-hello .close {
     position: absolute;
     left: -20px;
-    background: #eeeeee;
+    background: #53b44b;
     line-height: 0;
     padding: 7px;
     border-radius: 15px;
@@ -230,14 +224,17 @@
     cursor: pointer;
 }
 .say-hello a {
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 400;
     color: #000 !important;
     margin: 0;
     display: inline-block;
     font-family: 'Merriweather';
 }
-
+.say-hello a:hover{
+    color:  var(--color-bg) !important;
+    font-weight: 500;
+}
 .say-hello .close:hover {
     background: #000;
 }
