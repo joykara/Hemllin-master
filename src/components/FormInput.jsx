@@ -10,9 +10,8 @@ const FormInput = (props) => {
     }
   return (
       <div className="formInput">
-          <label>{label}
-          <input {...inputProps} onChange={onChange} onBlur={handleFocus} focused={focused.toString()} autoComplete='off' />
-          </label>
+          <label>{label}</label>
+          <input {...inputProps} onChange={onChange} onBlur={handleFocus} focused={focused.toString()} autoComplete='' />
           <span>{errorMessage}</span>
     </div>
   )

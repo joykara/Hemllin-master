@@ -1,9 +1,27 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import ReCAPTCHA from "react-google-recaptcha";
 import { Footer, Navbar2 } from '../components'
 import FormInput from '../components/FormInput'
+import emailjs from "@emailjs/browser";
 
 const ContactUs = () => {
+  const form = useRef();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_insq4yj', 'template_46j8jos', form.current, 'pzSmAssHG-LfZc60M')
+      .then((result) => {
+          // show the user a success message
+          alert("Message Sent Successfully");
+          console.log(result.text);
+      }, (error) => {
+          // show the user an error
+          console.log(error.text);
+      });
+
+      e.target.reset();
+  }
   const [values, setValues] = useState({
     username: '',
     email: '',
@@ -62,9 +80,6 @@ const ContactUs = () => {
     setQuestion(e.target.value)
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  }
 
   const onChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
@@ -81,53 +96,53 @@ const ContactUs = () => {
             <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut </p>
             <div className="hm-contact-form">
-              <form onSubmit={handleSubmit}>
-              <div className="contact-us-questions">
-                <h4>I HAVE A QUESTION ABOUT:</h4>
-                <div className="contact-us-question-options">
-                  <div className="contact-us-question-option">
-                    <input
-                    type="radio"
-                    name="question"
-                    value="Consulting"
-                    id="Consulting"
-                    checked={question === "Consulting"}
-                    onChange={onOptionChange}
-                    />
-                    <label htmlFor="Consulting"><p>Consulting</p></label>
+              <form onSubmit={handleSubmit} ref={form} action="https://formspree.io/f/mwkyqgyq" method="post" >
+                <div className="contact-us-questions">
+                  <h4>I HAVE A QUESTION ABOUT:</h4>
+                  <div className="contact-us-question-options">
+                    <div className="contact-us-question-option">
+                      <input
+                      type="radio"
+                      name="question"
+                      value="Consulting"
+                      id="Consulting"
+                      checked={question === "Consulting"}
+                      onChange={onOptionChange}
+                      />
+                      <label htmlFor="Consulting"><p>Consulting</p></label>
+                    </div>
+                    <div className="contact-us-question-option">
+                      <input
+                      type="radio"
+                      name="question"
+                      value="Coaching"
+                      id="Coaching"
+                      checked={question === "Coaching"}
+                      onChange={onOptionChange}
+                      />
+                      <label htmlFor="Coaching"><p>Coaching</p></label>
+                    </div>
+                    <div className="contact-us-question-option">
+                      <input
+                      type="radio"
+                      name="question"
+                      value="Book an Appointment"
+                      id="Book an Appointment"
+                      checked={question === "Book an Appointment"}
+                      onChange={onOptionChange}
+                      />
+                      <label htmlFor="Book an Appointment"><p>Book an Appointment</p></label>
+                    </div>
                   </div>
-                  <div className="contact-us-question-option">
-                    <input
-                    type="radio"
-                    name="question"
-                    value="Coaching"
-                    id="Coaching"
-                    checked={question === "Coaching"}
-                    onChange={onOptionChange}
-                    />
-                    <label htmlFor="Coaching"><p>Coaching</p></label>
-                  </div>
-                  <div className="contact-us-question-option">
-                    <input
-                    type="radio"
-                    name="question"
-                    value="Book an Appointment"
-                    id="Book an Appointment"
-                    checked={question === "Book an Appointment"}
-                    onChange={onOptionChange}
-                    />
-                    <label htmlFor="Book an Appointment"><p>Book an Appointment</p></label>
-                  </div>
-                </div>
                 </div>
 
                 {inputs.map((input) => (
                   <FormInput key={input.id} {...input} value={values[input.name]} onChange={onChange} />
                 ))}
                 <label htmlFor="message">MESSAGE *</label>
-                <textarea id='message' required></textarea>
+                <textarea id='message' name='message' required></textarea>
                 {/* <ReCAPTCHA sitekey="Your client site key" onChange={onChange}/> */}
-                  <button className='contact-submit-btn'>Submit</button>
+                  <button className='contact-submit-btn' type='submit'>Submit</button>
               </form>
             </div>
           </div>
