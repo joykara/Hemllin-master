@@ -14,7 +14,7 @@ const CookieConsent = () => {
   }, [cookies]);
 
   const giveCookieConsent = () => {
-    setCookie("cookieConsent", true, { path: "/about-us" });
+    setCookie("cookieConsent", true, { path: "/" });
   };
 
   const setCookies = () => {
