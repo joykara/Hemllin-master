@@ -3,6 +3,15 @@ import { Footer, Navbar2 } from '../../components';
 import './service-pages.css';
 import Cta from '../Cta';
 import { Link } from 'react-router-dom';
+import operations from '../../assets/operations .jpg';
+import strategy from '../../assets/strategy.jpg';
+import hr from '../../assets/hr.jpg';
+import marketing from '../../assets/marketing.jpg';
+import financial_advisory from '../../assets/financial_advisory.jpg';
+import coaching_1 from '../../assets/coaching_1.jpg';
+import travel_1 from '../../assets/travel_1.jpg';
+import education from '../../assets/education.png';
+
 
 const Management = () => {
   return (
@@ -11,7 +20,7 @@ const Management = () => {
           <div className="management-container">
               <div className="hm-management-title">
                   <h4>SERVICES / MANAGEMENT CONSULTANCY</h4>
-                  <p>At Hemllin, we specialise in providing strategic solutions and expert guidance to companies seeking to optimise their operations, maximise efficiency, and achieve sustainable growth.</p>
+                  <p>At Hemllin, we specialize in providing strategic solutions and expert guidance to companies seeking to optimise their operations, maximise efficiency, and achieve sustainable growth.</p>
               </div>
 
               <div className="hm-management-intro">
@@ -27,6 +36,7 @@ const Management = () => {
                   <div className="hm-management-content">
                         <div className="hm-management-options-container scale-up" >
                             <div className="hm-management-option__image">
+                              <img src={operations} alt="Operations Consulting" />
                             </div>
                             <div className="hm-management-option__content">
                                 <div className="hm-management-option__content__desc">
@@ -54,6 +64,7 @@ const Management = () => {
                         </div>
                         <div className="hm-management-options-container scale-up">
                             <div className="hm-management-option__image">
+                              <img src={strategy} alt="Strategy Consulting" />
                             </div>
                             <div className="hm-management-option__content">
                                 <div className="hm-management-option__content__desc">
@@ -93,6 +104,7 @@ const Management = () => {
                         </div>
                         <div className="hm-management-options-container scale-up">
                             <div className="hm-management-option__image">
+                              <img src={hr} alt="Human Resource Consulting" />
                             </div>
                             <div className="hm-management-option__content">
                                 <div className="hm-management-option__content__desc">
@@ -121,6 +133,7 @@ const Management = () => {
                         </div>
                         <div className="hm-management-options-container scale-up">
                             <div className="hm-management-option__image">
+                              <img src={marketing} alt="Marketing Consulting" />
                             </div>
                             <div className="hm-management-option__content">
                                 <div className="hm-management-option__content__desc">
@@ -142,6 +155,7 @@ const Management = () => {
                         </div>
                         <div className="hm-management-options-container scale-up">
                             <div className="hm-management-option__image">
+                              <img src={financial_advisory} alt="Financial Advisory" />
                             </div>
                             <div className="hm-management-option__content">
                                 <div className="hm-management-option__content__desc">
@@ -178,21 +192,27 @@ const Management = () => {
                     <h4>Explore</h4>
                     <div className="other-services-content">
                         <div className="other-services-content__detail scale-up">
-                            <div className="other-services-image"></div>
+                            <div className="other-services-image">
+                              <img src={education} alt="Education Consultancy" />
+                            </div>
                             <div className="other-services-text">
                                 <h4><Link to='/our-services/education'>Education Consultancy</Link></h4>
                                 <article>We work with students, parents, schools, and other beneficiaries with educational planning to improve educational experiences, facilities, and outcomes.</article>
                             </div>
                         </div>
                         <div className="other-services-content__detail scale-up">
-                            <div className="other-services-image"></div>
+                            <div className="other-services-image">
+                                <img src={travel_1} alt="Travel Consultancy" />
+                            </div>
                             <div className="other-services-text">
                                 <h4><Link to='/our-services/travel'>Travel Consultancy</Link></h4>
                                 <article>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam neque itaque ea asperi</article>
                             </div>
                         </div>
                         <div className="other-services-content__detail scale-up">
-                            <div className="other-services-image"></div>
+                            <div className="other-services-image">
+                              <img src={coaching_1} alt="Coaching and Training" />
+                            </div>
                             <div className="other-services-text">
                                 <h4><Link to='/our-services/training-and-coaching'>Coaching and Training</Link></h4>
                                 <article>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam neque itaque ea asperi</article>
@@ -201,7 +221,6 @@ const Management = () => {
                     </div>
               </div>
           </div>
-          
           <Cta ctaTitle='Ready to Work with Us?' ctaLink1='/contact-us' ctaLink1Text='Contact Us'ctaLink2='/contact-us' ctaLink2Text='Contact Us'/>
           <Footer/>
       </>

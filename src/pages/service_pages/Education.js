@@ -3,6 +3,12 @@ import { Footer, Navbar2 } from '../../components';
 import './service-pages.css';
 import Cta from '../Cta';
 import { Link } from 'react-router-dom';
+import coaching_1 from '../../assets/coaching_1.jpg';
+import travel_1 from '../../assets/travel_1.jpg';
+import overseas_education from '../../assets/education.png';
+import career_coaching from '../../assets/career_coaching.jpg';
+import language_training from '../../assets/language_training.jpeg';
+import hr from '../../assets/hr.jpg';
 
 const Education = () => {
   return (
@@ -24,6 +30,7 @@ const Education = () => {
                         <h3>Our Services include:</h3>
                         <div className="hm-education-options-container scale-up" >
                             <div className="hm-education-option__image">
+                                <img src={overseas_education} alt="Education Consultancy" />
                             </div>
                             <div className="hm-education-option__content">
                                 <div className="hm-education-option__content__desc">
@@ -42,6 +49,7 @@ const Education = () => {
                         </div>
                         <div className="hm-education-options-container scale-up" >
                             <div className="hm-education-option__image">
+                                <img src={career_coaching} alt="Career Coaching" />
                             </div>
                             <div className="hm-education-option__content">
                                 <div className="hm-education-option__content__desc">
@@ -60,6 +68,7 @@ const Education = () => {
                         </div>
                         <div className="hm-education-options-container scale-up" >
                             <div className="hm-education-option__image">
+                                <img src={language_training} alt="Language Training" />
                             </div>
                             <div className="hm-education-option__content">
                                 <div className="hm-education-option__content__desc">
@@ -111,21 +120,27 @@ const Education = () => {
                     <h4>Explore</h4>
                     <div className="other-services-content">
                         <div className="other-services-content__detail scale-up">
-                            <div className="other-services-image"></div>
+                            <div className="other-services-image">
+                                <img src={hr} alt="Human Resource Consulting" />
+                            </div>
                             <div className="other-services-text">
                                 <h4><Link to='/our-services/management'>Management Consultancy</Link></h4>
                                 <article>At Hemllin, we work with students, parents, schools, and other beneficiaries with educational planning to improve educational experiences, facilities, and outcomes.</article>
                             </div>
                         </div>
                         <div className="other-services-content__detail scale-up">
-                            <div className="other-services-image"></div>
+                            <div className="other-services-image">
+                                <img src={travel_1} alt="Travel Consultancy" />
+                            </div>
                             <div className="other-services-text">
                                 <h4><Link to='/our-services/travel'>Travel Consultancy</Link></h4>
                                 <article>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam neque itaque ea asperi</article>
                             </div>
                         </div>
                         <div className="other-services-content__detail scale-up">
-                            <div className="other-services-image"></div>
+                            <div className="other-services-image">
+                              <img src={coaching_1} alt="Coaching and Training" />
+                            </div>
                             <div className="other-services-text">
                                 <h4><Link to='/our-services/training-and-coaching'>Coaching and Training</Link></h4>
                                 <article>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam neque itaque ea asperi</article>

@@ -3,6 +3,11 @@ import { Footer, Navbar2 } from '../../components';
 import './service-pages.css';
 import Cta from '../Cta';
 import { Link } from 'react-router-dom';
+import coaching_1 from '../../assets/coaching_1.jpg';
+import travel_1 from '../../assets/travel_1.jpg';
+import travel_2 from '../../assets/travel_2.jpg';
+import hr from '../../assets/hr.jpg';
+import education from '../../assets/education.png';
 
 const Travel = () => {
   return (
@@ -22,6 +27,7 @@ const Travel = () => {
                   <div className="hm-travel-content">
                         <div className="hm-travel-options-container" >
                             <div className="hm-travel-option__image">
+                                <img src={travel_1} alt="Travel Consultancy" />
                             </div>
                             <div className="hm-travel-option__content">
                                 <div className="hm-travel-option__content__desc">
@@ -32,6 +38,7 @@ const Travel = () => {
                         </div>
                         <div className="hm-travel-options-container scale-up">
                             <div className="hm-travel-option__image">
+                                <img src={travel_2} alt="Travel Consultancy" />
                             </div>
                             <div className="hm-travel-option__content">
                                 <div className="hm-travel-option__content__desc">
@@ -51,21 +58,27 @@ const Travel = () => {
                     <h4>Explore</h4>
                     <div className="other-services-content">
                         <div className="other-services-content__detail scale-up">
-                            <div className="other-services-image"></div>
+                            <div className="other-services-image">
+                              <img src={education} alt="Education Consultancy" />
+                            </div>
                             <div className="other-services-text">
                                 <h4><Link to='/our-services/education'>Education Consultancy</Link></h4>
                                 <article>At Hemllin, we work with students, parents, schools, and other beneficiaries with educational planning to improve educational experiences, facilities, and outcomes.</article>
                             </div>
                         </div>
                         <div className="other-services-content__detail scale-up">
-                            <div className="other-services-image"></div>
+                            <div className="other-services-image">
+                                <img src={hr} alt="Human Resource Consulting" />
+                            </div>
                             <div className="other-services-text">
                                 <h4><Link to='/our-services/management'>Management Consultancy</Link></h4>
                                 <article>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam neque itaque ea asperi</article>
                             </div>
                         </div>
                         <div className="other-services-content__detail scale-up">
-                            <div className="other-services-image"></div>
+                            <div className="other-services-image">
+                              <img src={coaching_1} alt="Coaching and Training" />
+                            </div>
                             <div className="other-services-text">
                                 <h4><Link to='/our-services/training-and-coaching'>Coaching and Training</Link></h4>
                                 <article>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam neque itaque ea asperi</article>
