@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 // import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 import './App.css';
 import {BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import {Media, About, Homepage, ContactUs, Blog, Career, Mission, OurGovernance, Services, Management, Education, AgricultureIndustry, ArtificialIntelligence, OurHistory, HowWeWork, Travel, CoachingAndTraining, OurTeam} from './pages';
+import {Media, About, Homepage, ContactUs, Blog, Career, Mission, OurGovernance, Services, Management, Education, AgricultureIndustry, ArtificialIntelligence, OurHistory, HowWeWork, Travel, CoachingAndTraining, OurTeam, AutomotiveIndustry, EducationIndustry, ConstructionIndustry, FinancialIndustry, HealthcareIndustry, LifeSciencesIndustry, PublicAndSocialIndustry, RealEstateIndustry, RetailIndustry, TechnologyIndustry, TravelLogisticsIndustry} from './pages';
 import { SplashScreen } from './components';
 
 function App() {
@@ -38,6 +38,17 @@ function App() {
               <Route path="/our-services/travel" element={<Travel />} />
               <Route path="/our-services/training-and-coaching" element={<CoachingAndTraining />} />
               <Route path="/industries/agriculture" element={<AgricultureIndustry />} />
+              <Route path="/industries/automotive" element={<AutomotiveIndustry />} />
+              <Route path="/industries/education" element={<EducationIndustry />} />
+              <Route path="/industries/engineering-and-construction" element={<ConstructionIndustry />} />
+              <Route path="/industries/financial-services" element={<FinancialIndustry />} />
+              <Route path="/industries/healthcare" element={<HealthcareIndustry />} />
+              <Route path="/industries/life-sciences" element={<LifeSciencesIndustry />} />
+              <Route path="/industries/public-and-social" element={<PublicAndSocialIndustry />} />
+              <Route path="/industries/real-estate" element={<RealEstateIndustry />} />
+              <Route path="/industries/retail" element={<RetailIndustry />} />
+              <Route path="/industries/technology" element={<TechnologyIndustry />} />
+              <Route path="/industries/travel-logistics-and-infrastructure" element={<TravelLogisticsIndustry />} />
               <Route path="/featured-insights/ai" element={<ArtificialIntelligence />} />
 
           </Routes>
