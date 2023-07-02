@@ -63,7 +63,7 @@ const Travel = () => {
                             </div>
                             <div className="other-services-text">
                                 <h4><Link to='/our-services/education'>Education Consultancy</Link></h4>
-                                <article>At Hemllin, we work with students, parents, schools, and other beneficiaries with educational planning to improve educational experiences, facilities, and outcomes.</article>
+                                <article>Education consulting is intended to improve students' outcomes by increasing the accessibility and affordability of the education ecosystem. We ensure that you have the best possible chance of success in your educational journey.</article>
                             </div>
                         </div>
                         <div className="other-services-content__detail scale-up">
@@ -72,7 +72,7 @@ const Travel = () => {
                             </div>
                             <div className="other-services-text">
                                 <h4><Link to='/our-services/management'>Management Consultancy</Link></h4>
-                                <article>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam neque itaque ea asperi</article>
+                                <article>Management consulting comprises 50 percent of the industry because it is crucial in helping businesses achieve their objectives by equipping top leadership with indispensable strategies in increasing competitive advantage. </article>
                             </div>
                         </div>
                         <div className="other-services-content__detail scale-up">
@@ -81,7 +81,7 @@ const Travel = () => {
                             </div>
                             <div className="other-services-text">
                                 <h4><Link to='/our-services/training-and-coaching'>Coaching and Training</Link></h4>
-                                <article>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam neque itaque ea asperi</article>
+                                <article>We have specialized methods of training, counseling, or instructing an individual or a group on how to develop skills to enhance their productivity or overcome a performance problem.</article>
                             </div>
                         </div>
                     </div>

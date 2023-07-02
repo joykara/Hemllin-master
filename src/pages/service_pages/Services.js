@@ -1,5 +1,9 @@
 import React from 'react'
-import { Footer, Navbar2 } from '../../components'
+import { Footer, Navbar2 } from '../../components';
+import coaching_1 from '../../assets/coaching_1.jpg';
+import travel_1 from '../../assets/travel_1.jpg';
+import overseas_education from '../../assets/education.png';
+import hr from '../../assets/hr.jpg';
 
 const Services = () => {
   return (
@@ -10,8 +14,9 @@ const Services = () => {
                     <h2>Services</h2>
               </div>
               <div className="services-content">
-                  <div className="service-options-container">
-                    <div className="service-option__image">
+                  <div className="service-options-container scale-up">
+                      <div className="service-option__image">
+                          <img src={hr} alt="" />
                     </div>
                     <div className="service-option__content">
                         <h3>Management Consultancy</h3>
@@ -28,8 +33,9 @@ const Services = () => {
                         <button type='button'><a href="/our-services/management">Read More</a></button>
                     </div>
                 </div>
-                <div className="service-options-container">
-                    <div className="service-option__image">
+                <div className="service-options-container scale-up">
+                      <div className="service-option__image">
+                            <img src={overseas_education} alt="" />
                     </div>
                     <div className="service-option__content">
                         <h3>Education Consultancy</h3>
@@ -46,8 +52,9 @@ const Services = () => {
                         <button type='button'><a href="/our-services/education">Read More</a></button>
                     </div>
                 </div>
-                <div className="service-options-container">
-                    <div className="service-option__image">
+                <div className="service-options-container scale-up">
+                      <div className="service-option__image">
+                          <img src={travel_1} alt="" />
                     </div>
                     <div className="service-option__content">
                         <h3>Travel Consultancy</h3>
@@ -55,8 +62,9 @@ const Services = () => {
                         <button type='button'><a href="/our-services/travel">Read More</a></button>
                     </div>
                 </div>
-                <div className="service-options-container">
+                <div className="service-options-container scale-up">
                     <div className="service-option__image">
+                            <img src={coaching_1} alt="" />
                     </div>
                     <div className="service-option__content">
                         <h3>Training and Coaching</h3>
