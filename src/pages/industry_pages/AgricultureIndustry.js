@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
 import { IndustriesNavbar } from '../../components';
+import './industry-pages.css'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import agri_1 from '../../assets/ind images/agri_1.jpg';
 
 const AgricultureIndustry = () => {
     useEffect(() => {
@@ -17,8 +19,8 @@ const AgricultureIndustry = () => {
         <IndustriesNavbar/>
         <div className='hm-agriculture-industry-container'>
             <div className='hm-agriculture-industry__banner hidden' data-aos='fade-up'>
-                <div className='hm-agriculture-industry__banner-title'>
-                    <h4>LOREM IPSUM</h4>
+                <div className='hm-agriculture-industry__banner-image'>
+                    <img src={agri_1} alt="" />
                 </div>
 
             </div>
