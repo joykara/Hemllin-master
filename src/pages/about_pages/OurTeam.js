@@ -5,6 +5,9 @@ import ourHistory from '../../assets/history.png';
 import ourPurpose from '../../assets/how-we-work.png'
 import './about-pages.css'
 import { Link } from 'react-router-dom';
+import collins from '../../assets/team/Collins 2.jpg';
+import arthur from '../../assets/team/Arthur1.jpg';
+import kevin from '../../assets/team/kevin.jpg';
 
 const OurTeam = () => {
   return (
@@ -23,6 +26,7 @@ const OurTeam = () => {
                 <div className='hm-ot-content-details'>
                     <div className='hm-ot-member-detail'>
                         <div className='hm-ot-member-detail-img'>
+                            <img src={collins} alt="durector" />
                         </div>
                         <div className='hm-ot-member-detail-text'>
                             <p>Our Team</p>
@@ -31,6 +35,7 @@ const OurTeam = () => {
                     </div>
                     <div className='hm-ot-member-detail'>
                         <div className='hm-ot-member-detail-img'>
+                            <img src={arthur} alt="manager" />
                         </div>
                         <div className='hm-ot-member-detail-text'>
                             <p>Our Team</p>
@@ -39,6 +44,7 @@ const OurTeam = () => {
                     </div>
                     <div className='hm-ot-member-detail'>
                         <div className='hm-ot-member-detail-img'>
+                            <img src={kevin} alt="finance" />
                         </div>
                         <div className='hm-ot-member-detail-text'>
                             <p>Our Team</p>
