@@ -2,8 +2,10 @@ import React, { useEffect } from 'react';
 import { IndustriesNavbar } from '../../components';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import eng_1 from '../../assets/ind images/Engineering Patterns.jpg'
 
-const ConstructionIndustry = () => {
+
+const EngineeringIndustry = () => {
     useEffect(() => {
             AOS.init({
                 duration: 3000,
@@ -17,11 +19,11 @@ const ConstructionIndustry = () => {
             <IndustriesNavbar/>
             <div className='hm-agriculture-industry-container'>
                 <div className='hm-agriculture-industry__banner hidden' data-aos='fade-up'>
-                    <div className='hm-agriculture-industry__banner-title'>
-                        <h4>LOREM IPSUM</h4>
+                    <div className='hm-agriculture-industry__banner-image'>
+                        <img src={eng_1} alt="" />
                     </div>
-    
                 </div>
+
                 <div className='hm-agriculture-industry__content'>
                     <div className='hm-agriculture-industry__content-intro hidden' data-aos='fade-up'>
                         <p>Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consectetur</p>
@@ -67,4 +69,4 @@ const ConstructionIndustry = () => {
       )
 }
 
-export default ConstructionIndustry
+export default EngineeringIndustry

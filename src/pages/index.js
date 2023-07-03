@@ -18,7 +18,7 @@ export { default as OurHistory } from '../pages/about_pages/OurHistory';
 export {default as HowWeWork} from './about_pages/HowWeWork';
 export { default as AgricultureIndustry } from './industry_pages/AgricultureIndustry';
 export { default as AutomotiveIndustry } from './industry_pages/AutomotiveIndustry';
-export { default as ConstructionIndustry } from './industry_pages/ConstructionIndustry';
+export { default as EngineeringIndustry } from './industry_pages/EngineeringIndustry';
 export { default as EducationIndustry } from './industry_pages/EducationIndustry';
 export { default as FinancialIndustry } from './industry_pages/FinancialIndustry';
 export { default as HealthcareIndustry } from './industry_pages/HealthcareIndustry';
