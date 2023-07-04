@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { IndustriesNavbar } from '../../components';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import edu_1 from '../../assets/ind images/Education Patterns.jpg'
 
 const EducationIndustry = () => {
     useEffect(() => {
@@ -17,10 +18,9 @@ const EducationIndustry = () => {
             <IndustriesNavbar/>
             <div className='hm-agriculture-industry-container'>
                 <div className='hm-agriculture-industry__banner hidden' data-aos='fade-up'>
-                    <div className='hm-agriculture-industry__banner-title'>
-                        <h4>LOREM IPSUM</h4>
+                    <div className='hm-agriculture-industry__banner-image'>
+                        <img src={edu_1} alt="Industry Banner" />
                     </div>
-
                 </div>
                 <div className='hm-agriculture-industry__content'>
                     <div className='hm-agriculture-industry__content-intro hidden' data-aos='fade-up'>

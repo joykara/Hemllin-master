@@ -3,7 +3,7 @@ import { IndustriesNavbar } from '../../components';
 import './industry-pages.css'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import agri_1 from '../../assets/ind images/agri_1.jpg';
+import agri_1 from '../../assets/ind images/Agriculture Patterns.jpg';
 
 const AgricultureIndustry = () => {
     useEffect(() => {
@@ -22,8 +22,8 @@ const AgricultureIndustry = () => {
                 <div className='hm-agriculture-industry__banner-image'>
                     <img src={agri_1} alt="" />
                 </div>
-
             </div>
+
             <div className='hm-agriculture-industry__content'>
                 <div className='hm-agriculture-industry__content-intro hidden' data-aos='fade-up'>
                     <p>Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consectetur</p>

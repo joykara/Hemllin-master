@@ -208,7 +208,13 @@
 .hm-ot-member-detail-img{
     width: 100%;
     height: clamp(100px, 50vh, 300px);
-    background: #8d83837f;
+    background: #f6f6f67f;
+}
+.hm-ot-member-detail-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
 }
 .hm-ot-member-detail-text{
     width: 100%;
