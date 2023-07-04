@@ -20,7 +20,10 @@ const Education = () => {
                   <p>Welcome to Hemllin , your trusted partner in overseas education advisory, career coaching, and IELTS training! </p>
               </div>
 
-              <div className="hm-education-intro">
+              <div className="hm-education-intro custom-shape-divider-bottom-1688456518">
+                    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                    </svg>
                     <div className="hm-education-intro__text">
                       <h3>EDUCATION CONSULTANCY</h3>
                       <p>Our mission is to empower individuals achieve their educational and career goals, providing comprehensive guidance and support throughout the entire process. With our expertise and personalized approach, we ensure that you have the best possible chance of success in your educational journey.</p>
@@ -121,7 +124,7 @@ const Education = () => {
                     <div className="other-services-content">
                         <div className="other-services-content__detail scale-up">
                             <div className="other-services-image">
-                                <img src={hr} alt="Human Resource Consulting" />
+                                <img src={hr} alt="Human Resource Consulting" title="Management Consultancy" />
                             </div>
                             <div className="other-services-text">
                                 <h4><Link to='/our-services/management'>Management Consultancy</Link></h4>
@@ -130,7 +133,7 @@ const Education = () => {
                         </div>
                         <div className="other-services-content__detail scale-up">
                             <div className="other-services-image">
-                                <img src={travel_1} alt="Travel Consultancy" />
+                                <img src={travel_1} alt="Travel Consultancy" title="Travel Consultancy" />
                             </div>
                             <div className="other-services-text">
                                 <h4><Link to='/our-services/travel'>Travel Consultancy</Link></h4>
@@ -139,7 +142,7 @@ const Education = () => {
                         </div>
                         <div className="other-services-content__detail scale-up">
                             <div className="other-services-image">
-                              <img src={coaching_1} alt="Coaching and Training" />
+                              <img src={coaching_1} alt="Coaching and Training"  title="Training and Coaching" />
                             </div>
                             <div className="other-services-text">
                                 <h4><Link to='/our-services/training-and-coaching'>Coaching and Training</Link></h4>

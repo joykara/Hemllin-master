@@ -16,7 +16,7 @@ const Services = () => {
               <div className="services-content">
                   <div className="service-options-container scale-up">
                       <div className="service-option__image">
-                          <img src={hr} alt="" />
+                          <img src={hr} alt="" title="Management Consultancy" />
                     </div>
                     <div className="service-option__content">
                         <h3>Management Consultancy</h3>
@@ -35,7 +35,7 @@ const Services = () => {
                 </div>
                 <div className="service-options-container scale-up">
                       <div className="service-option__image">
-                            <img src={overseas_education} alt="" />
+                            <img src={overseas_education} alt="" title="Education Consultancy"/>
                     </div>
                     <div className="service-option__content">
                         <h3>Education Consultancy</h3>
@@ -54,7 +54,7 @@ const Services = () => {
                 </div>
                 <div className="service-options-container scale-up">
                       <div className="service-option__image">
-                          <img src={travel_1} alt="" />
+                          <img src={travel_1} alt="" title="Travel Consultancy" />
                     </div>
                     <div className="service-option__content">
                         <h3>Travel Consultancy</h3>
@@ -64,7 +64,7 @@ const Services = () => {
                 </div>
                 <div className="service-options-container scale-up">
                     <div className="service-option__image">
-                            <img src={coaching_1} alt="" />
+                            <img src={coaching_1} alt="Training and Coaching"  title="Training and Coaching"/>
                     </div>
                     <div className="service-option__content">
                         <h3>Training and Coaching</h3>

@@ -19,7 +19,10 @@ const Travel = () => {
                   <p>Destination Management Company | Online Travel Agency | Visitor Information Centre</p>
               </div>
 
-              <div className="hm-travel-intro">
+              <div className="hm-travel-intro custom-shape-divider-bottom-1688456518">
+                    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                    </svg>
                   <div className="hm-travel-intro__text">
                       <h4>TRAVEL CONSULTANCY</h4>
                   </div>
@@ -27,7 +30,7 @@ const Travel = () => {
                   <div className="hm-travel-content">
                         <div className="hm-travel-options-container" >
                             <div className="hm-travel-option__image">
-                                <img src={travel_1} alt="Travel Consultancy" />
+                                <img src={travel_1} alt="Travel Consultancy" title="Travel Consultancy" />
                             </div>
                             <div className="hm-travel-option__content">
                                 <div className="hm-travel-option__content__desc">
@@ -38,7 +41,7 @@ const Travel = () => {
                         </div>
                         <div className="hm-travel-options-container scale-up">
                             <div className="hm-travel-option__image">
-                                <img src={travel_2} alt="Travel Consultancy" />
+                                <img src={travel_2} alt="Travel Consultancy" title="Travel Consultancy" />
                             </div>
                             <div className="hm-travel-option__content">
                                 <div className="hm-travel-option__content__desc">
@@ -59,7 +62,7 @@ const Travel = () => {
                     <div className="other-services-content">
                         <div className="other-services-content__detail scale-up">
                             <div className="other-services-image">
-                              <img src={education} alt="Education Consultancy" />
+                              <img src={education} alt="Education Consultancy" title="Education Consultancy" />
                             </div>
                             <div className="other-services-text">
                                 <h4><Link to='/our-services/education'>Education Consultancy</Link></h4>
@@ -68,7 +71,7 @@ const Travel = () => {
                         </div>
                         <div className="other-services-content__detail scale-up">
                             <div className="other-services-image">
-                                <img src={hr} alt="Human Resource Consulting" />
+                                <img src={hr} alt="Human Resource Consulting" title="Management Consultancy"/>
                             </div>
                             <div className="other-services-text">
                                 <h4><Link to='/our-services/management'>Management Consultancy</Link></h4>
@@ -77,7 +80,7 @@ const Travel = () => {
                         </div>
                         <div className="other-services-content__detail scale-up">
                             <div className="other-services-image">
-                              <img src={coaching_1} alt="Coaching and Training" />
+                              <img src={coaching_1} alt="Coaching and Training"   title="Training and Coaching"/>
                             </div>
                             <div className="other-services-text">
                                 <h4><Link to='/our-services/training-and-coaching'>Coaching and Training</Link></h4>

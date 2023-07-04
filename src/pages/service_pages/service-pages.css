@@ -99,21 +99,58 @@
 .hm-education-title,
 .hm-travel-title,
 .hm-cntr-title{
-    height: 400px;
+    height: clamp(500px, 40vh, 80vh);
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: left;
     background: var(--color-bg);
     color: #ffffff;
+}
+.custom-shape-divider-bottom-1688456628 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: 999;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.hm-management-intro svg,
+.hm-education-intro svg,
+.hm-travel-intro svg,
+.hm-cntr-intro svg {
+    position: relative;
+    /* top: 205px; */
+    justify-content: flex-end;
+    margin-top: auto;
+    width: calc(100% + 1.3px);
+    height: 100px;
+}
+
+.hm-management-intro .shape-fill,
+.hm-education-intro .shape-fill,
+.hm-travel-intro .shape-fill,
+.hm-cntr-intro .shape-fill{
+    fill: var(--color-bg);
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .custom-shape-divider-bottom-1688456628 svg {
+        width: calc(152% + 1.3px);
+        height: 101px;
+    }
 }
 .hm-management-title h4,
 .hm-education-title h4,
 .hm-travel-title h4,
 .hm-cntr-title h4{
+    padding-top: 200px;
     padding-left: 5rem;
-    margin: 1rem 0;
     letter-spacing: 2px;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -128,7 +165,7 @@
 .hm-education-intro,
 .hm-travel-intro,
 .hm-cntr-intro{
-    margin: 2rem 0;
+    margin-bottom: 2rem;
 }
 .hm-management-intro__text,
 .hm-education-intro__text,
