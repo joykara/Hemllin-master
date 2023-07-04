@@ -382,6 +382,7 @@
 .other-services-text{
     width: 90%;
     padding: 1rem 0;
+    font-family: var(--font-family);
 }
 .other-services-text h4{
     padding-bottom: 2rem;
@@ -394,6 +395,9 @@
 .other-services-text h4:hover a{
     cursor: pointer;
     color: var(--color-link);
+}
+.other-services-text article{
+    font-family: var(--font-family);
 }
 
 
