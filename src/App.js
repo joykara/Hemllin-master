@@ -9,10 +9,11 @@ function App() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-     // Simulating a delay for demonstration purposes
+    // Simulating a delay for demonstration purposes
+    setLoading(true); // Start loading
     setTimeout(() => {
-      setLoading(false)
-    }, 2000)
+      setLoading(false); // Stop loading after a delay
+    }, 2000);
   }, [])
   return (
     <Router>
