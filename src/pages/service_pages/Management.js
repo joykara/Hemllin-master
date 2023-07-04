@@ -11,6 +11,8 @@ import financial_advisory from '../../assets/financial_advisory.jpg';
 import coaching_1 from '../../assets/coaching_1.jpg';
 import travel_1 from '../../assets/travel_1.jpg';
 import education from '../../assets/education.png';
+// use lazy load for images
+import LazyLoad from 'react-lazy-load';
 
 
 const Management = () => {
@@ -36,7 +38,9 @@ const Management = () => {
                   <div className="hm-management-content">
                         <div className="hm-management-options-container scale-up" >
                             <div className="hm-management-option__image">
-                              <img src={operations} alt="Operations Consulting" />
+                                <LazyLoad height={'100%'} offset={300}>
+                                    <img src={operations} alt="Operations Consulting" />
+                                </LazyLoad>
                             </div>
                             <div className="hm-management-option__content">
                                 <div className="hm-management-option__content__desc">
@@ -64,7 +68,9 @@ const Management = () => {
                         </div>
                         <div className="hm-management-options-container scale-up">
                             <div className="hm-management-option__image">
-                              <img src={strategy} alt="Strategy Consulting" />
+                                <LazyLoad height={'100%'} offset={300}>
+                                    <img src={strategy} alt="Strategy Consulting" />
+                                </LazyLoad>
                             </div>
                             <div className="hm-management-option__content">
                                 <div className="hm-management-option__content__desc">
@@ -104,7 +110,9 @@ const Management = () => {
                         </div>
                         <div className="hm-management-options-container scale-up">
                             <div className="hm-management-option__image">
-                              <img src={hr} alt="Human Resource Consulting" />
+                                <LazyLoad height={'100%'} offset={300}>
+                                    <img src={hr} alt="Human Resource Consulting" />
+                                </LazyLoad>
                             </div>
                             <div className="hm-management-option__content">
                                 <div className="hm-management-option__content__desc">
@@ -133,7 +141,9 @@ const Management = () => {
                         </div>
                         <div className="hm-management-options-container scale-up">
                             <div className="hm-management-option__image">
-                              <img src={marketing} alt="Marketing Consulting" />
+                                <LazyLoad height={'100%'} offset={300}>
+                                    <img src={marketing} alt="Marketing Consulting" />
+                                </LazyLoad>
                             </div>
                             <div className="hm-management-option__content">
                                 <div className="hm-management-option__content__desc">
@@ -155,7 +165,9 @@ const Management = () => {
                         </div>
                         <div className="hm-management-options-container scale-up">
                             <div className="hm-management-option__image">
-                              <img src={financial_advisory} alt="Financial Advisory" />
+                                <LazyLoad height={'100%'} offset={300}>
+                                    <img src={financial_advisory} alt="Financial Advisory" />
+                                </LazyLoad>
                             </div>
                             <div className="hm-management-option__content">
                                 <div className="hm-management-option__content__desc">
