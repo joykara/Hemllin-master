@@ -8,12 +8,14 @@
     border-bottom: 1px solid #514d4d;
 }
 .services-title{
-    height: 400px;
+    height: 250px;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #807b7b;
+    background: #000000;
+    color: #ffffff;
+    letter-spacing: 2px;
     padding: 0;
 }
 .services-content{
@@ -21,13 +23,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1rem 10rem;
+    padding: 1rem 8rem;
 }
 .service-options-container{
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding: 3rem;
+    padding: 1rem 3rem;
+    margin-bottom: 2rem;
     width: 100%;
 }
 .service-options-container:nth-child(2),
@@ -36,7 +39,6 @@
     flex-direction: row-reverse;
 }
 .service-option__image{
-    width: 40%;
     height: 300px;
     margin-top: 2rem;
     background: #e9e6e6;
@@ -52,7 +54,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 1rem 5rem;
+    padding: 1rem 2rem;
     width: 60%;
 }
 .service-option__content h3{
@@ -108,17 +110,6 @@
     background: var(--color-bg);
     color: #ffffff;
 }
-.custom-shape-divider-bottom-1688456628 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    z-index: 999;
-    line-height: 0;
-    transform: rotate(180deg);
-}
-
 .hm-management-intro svg,
 .hm-education-intro svg,
 .hm-travel-intro svg,
@@ -441,6 +432,43 @@
 
 /* MEDIA QUERIES */
 @media screen and (max-width: 1084px){
+    /* SERVICES PAGE */
+    .services-content{
+        display: flex;
+        padding: 1rem;
+    }
+    .service-options-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 3rem 0;
+    }
+    .service-options-container:nth-child(2),
+    .service-options-container:nth-child(4),
+    .service-options-container:nth-child(6){
+        flex-direction: column;
+    }
+    .service-options-container,
+    .service-option__content,
+    .service-option__image{
+        width: 90%;
+    }
+    .hm-media-intro__content-text{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .details{
+        margin-bottom: 2rem;
+    }
+    .hm-agriculture-industry__themes-content{
+        flex-direction: column;
+    }
+    .hm-agriculture-industry__themes-content-text{
+        margin: 1rem 0;
+        width: 90%;
+    }
     .hm-management-intro__text p,
     .hm-education-intro__text p,
     .hm-travel-intro__text p,

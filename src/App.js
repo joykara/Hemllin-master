@@ -6,7 +6,7 @@ import {Media, About, Homepage, ContactUs, Blog, Career, Mission, OurGovernance,
 import { SplashScreen } from './components';
 
 function App() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
      // Simulating a delay for demonstration purposes

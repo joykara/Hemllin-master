@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { IndustriesNavbar } from '../../components';
+import './industry-pages.css'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import auto_1 from '../../assets/ind images/Automotive Patterns.jpg';

@@ -6,8 +6,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border-bottom: 3px solid #857c7c;
-    margin-bottom: 3rem;
+    border-bottom: 2px solid #857c7c;
+    padding-bottom: 3rem;
     margin-top: auto;
 }
 .hm-agriculture-industry__banner{
@@ -16,11 +16,10 @@
     justify-content: center;
     align-items: center;
     padding: 2rem 0;
-    height:  clamp(300px,50vh,100vh);
-    border: 1px solid #857c7c;
+    height:  clamp(500px,90vh,100vh);
 }
 .hm-agriculture-industry__banner-image{
-    height: auto;
+    height: 100%;
     width: 100%;
     background: #fff;
     color: green;
