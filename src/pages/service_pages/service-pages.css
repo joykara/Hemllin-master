@@ -538,14 +538,23 @@
         width: 100%;
         margin: 0;
         padding: 0;
-    }.hm-management-title h4, 
-    .hm-education-title h4, 
-    .hm-travel-title h4, 
+    }
+    .hm-management-title,
+    .hm-education-title,
+    .hm-travel-title,
+    .hm-cntr-title {
+        height: 300px;
+    }
+    .hm-management-title h4,
+    .hm-education-title h4,
+    .hm-travel-title h4,
     .hm-cntr-title h4{
         padding-left: 1rem;
-    }.hm-management-title p, 
-    .hm-education-title p, 
-    .hm-travel-title p, 
+        padding-top: 90px;
+    }
+    .hm-management-title p,
+    .hm-education-title p,
+    .hm-travel-title p,
     .hm-cntr-title p {
         padding: 2rem 1rem;
     }
