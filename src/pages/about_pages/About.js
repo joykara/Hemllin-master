@@ -104,7 +104,7 @@ const About = () => {
               </div>
             </div>
           </div>
-          <button type='button'><a href="">Trending insights</a></button>
+          <button type='button'><a href="/">Trending insights</a></button>
         </div>
         <div className="explore">
           <h4>Explore</h4>

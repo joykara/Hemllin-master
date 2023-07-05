@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react'
-import ReCAPTCHA from "react-google-recaptcha";
+// import ReCAPTCHA from "react-google-recaptcha";
 import { Footer, Navbar2 } from '../components'
 import FormInput from '../components/FormInput'
 import emailjs from "@emailjs/browser";
