@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useCookies } from 'react-cookie';
+import ReactGA from 'react-ga';
 
 const CookieConsent = () => {
   const [cookies, setCookie] = useCookies(["cookieConsent"]);
@@ -10,6 +11,10 @@ const CookieConsent = () => {
     if (consentCookie) {
       // User has given consent, hide the cookie consent block
       document.getElementById('cookiesblock').style.display = 'none';
+
+      // Initialize Google Analytics
+      ReactGA.initialize('YOUR_TRACKING_ID');
+      ReactGA.pageview(window.location.pathname + window.location.search);
     }
   }, [cookies]);
 
