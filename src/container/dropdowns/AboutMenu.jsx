@@ -12,7 +12,7 @@ const AboutMenu = () => {
               </div>
               <div id="sections">
                 <div className="about-us-sections">
-                    <p>WHO WE ARE</p>
+                    <h5>WHO WE ARE</h5>
                     <ul>
                         <li className='about-us-dropdown-item'>
                             <a href='/about-us/our-team'>Our Team</a>
@@ -29,8 +29,8 @@ const AboutMenu = () => {
                     </ul>
                 </div>
                 <div className="about-us-sections">
-                    <p><Link to="/about-us/how-we-work">HOW WE WORK</Link></p>
-                    <p><Link to="/about-us/media"> MEDIA </Link></p>
+                    <h5><Link to="/about-us/how-we-work">HOW WE WORK</Link></h5>
+                    <h5><Link to="/about-us/media"> MEDIA </Link></h5>
                 </div>
               </div>
         </div>
