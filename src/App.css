@@ -15,7 +15,7 @@
   font-family: 'Roboto';
 }
 h1{
-  font-size: 64px;
+  font-size: clamp(3.5rem, 3.5vw, 4.5rem);
   font-weight: 700;
   font-family: var(--font-family);
 }
@@ -35,7 +35,7 @@ h4{
   font-family: var(--font-family);
 }
 a{
-  font-size: 16px;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
   color: #000;
   font-family: var(--links-font-family);
 }

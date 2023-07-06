@@ -99,7 +99,6 @@ const AboutNavbar = () => {
 
   const handleToggle = () => {
     setToggleMenu(!toggleMenu);
-    handleContent('industries', true);
   };
 
   const handleContent = (section, flag) => {

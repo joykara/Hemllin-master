@@ -20,6 +20,7 @@
     padding: 2rem;
     align-items: flex-start;
     height: auto;
+    width: 100%;
     background: #ffffff;
 }
 .article-content h3 a{
