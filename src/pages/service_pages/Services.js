@@ -1,11 +1,28 @@
-import React from 'react'
+import React, { useEffect } from 'react';
+import ReactGA from 'react-ga';
 import { Footer, Navbar2 } from '../../components';
 import coaching_1 from '../../assets/coaching_1.jpg';
 import travel_1 from '../../assets/travel_1.jpg';
 import overseas_education from '../../assets/education.png';
 import hr from '../../assets/hr.jpg';
+import { Link } from 'react-router-dom';
 
 const Services = () => {
+    useEffect(() => {
+        // Initialize Google Analytics
+        ReactGA.initialize('G-DEH0JXNN56');
+        // Track page view
+        ReactGA.pageview(window.location.pathname + window.location.search);
+    }, []);
+
+    const trackButtonClick = () => {
+        ReactGA.event({
+          category: 'Services',
+          action: 'Read More Button Clicked',
+          label: 'Service Name',
+        });
+    };
+
   return (
       <>
           <div className="main-container">
@@ -34,7 +51,7 @@ const Services = () => {
                             <li>Market Consultancy </li>
                             <li>Financial Advisory</li>
                         </ul>
-                        <button type='button'><a href="/our-services/management">Read More</a></button>
+                        <button type='button' onClick={trackButtonClick}><Link to="/our-services/management">Read More</Link></button>
                     </div>
                 </div>
                 <div className="service-options-container scale-up">
@@ -53,7 +70,7 @@ const Services = () => {
                             <li>Course advisory</li>
                             <li>Career counseling</li>
                         </ul>
-                        <button type='button'><a href="/our-services/education">Read More</a></button>
+                        <button type='button' onClick={trackButtonClick}><Link to="/our-services/education">Read More</Link></button>
                     </div>
                 </div>
                 <div className="service-options-container scale-up">
@@ -63,7 +80,7 @@ const Services = () => {
                     <div className="service-option__content">
                         <h3>Travel Consultancy</h3>
                         <p>Traveling to differing destinations for diverse reasons is an aspiration for many people. Whether for education, touring, or employment, we provide the necessary information and guidance to achieve these objectives. </p>
-                        <button type='button'><a href="/our-services/travel">Read More</a></button>
+                        <button type='button' onClick={trackButtonClick}><Link to="/our-services/travel">Read More</Link></button>
                     </div>
                 </div>
                 <div className="service-options-container scale-up">
@@ -73,7 +90,7 @@ const Services = () => {
                     <div className="service-option__content">
                         <h3>Training and Coaching</h3>
                         <p>We have specialized methods of training, counseling, or instructing an individual or a group on how to develop skills to enhance their productivity or overcome a performance problem.</p>
-                        <button type='button'><a href="/our-services/training-and-coaching">Read More</a></button>
+                        <button type='button' onClick={trackButtonClick}><Link to="/our-services/training-and-coaching">Read More</Link></button>
 
                     </div>
                 </div>
