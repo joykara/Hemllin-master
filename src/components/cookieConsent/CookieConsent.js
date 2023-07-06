@@ -15,7 +15,7 @@ const CookieConsent = () => {
       document.getElementById('cookiesblock').style.display = 'none';
 
       // Initialize Google Analytics
-      ReactGA.initialize('G-DEH0JXNN56');
+      ReactGA.initialize('G-GF16SJCMHV');
       ReactGA.pageview(window.location.pathname + window.location.search);
     }
   }, [cookies]);
@@ -43,7 +43,7 @@ const CookieConsent = () => {
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            gtag('config', 'G-DEH0JXNN56');
+            gtag('config', 'G-GF16SJCMHV');
           `}
         </script>
       </Helmet>

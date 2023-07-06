@@ -6,7 +6,7 @@ import './index.css';
 import App from './App';
 
 // Initialize Google Analytics
-ReactGA.initialize('G-DEH0JXNN56');
+ReactGA.initialize('G-GF16SJCMHV');
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
