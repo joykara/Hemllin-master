@@ -4,6 +4,7 @@ import { useCookies } from 'react-cookie';
 import { Header, Navbar2, Features, Articles, Footer, CookieConsent } from '../components';
 
 function Homepage() {
+  // eslint-disable-next-line
   const [cookies, setCookie] = useCookies(["cookieConsent"]);
 
   return (
