@@ -3,12 +3,33 @@ import React, { useState, useRef } from 'react'
 import { Footer, Navbar2 } from '../components'
 import FormInput from '../components/FormInput'
 import emailjs from "@emailjs/browser";
+import axios from 'axios';
 
 const ContactUs = () => {
   const form = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // Send the contact form to the server using axios.post
+    axios.post('/contact-us/data', {
+      name: form.current.username.value,
+      email: form.current.email.value,
+      organization: form.current.organization.value,
+      question: form.current.question.value,
+      title: form.current.title.value,
+      subject: form.current.subject.value,
+      message: form.current.message.value,
+    })
+    .then((response) => {
+      // If the contact form was sent successfully, alert the user
+      alert(response.data.message);
+      setValues('');
+    })
+    .catch((err) => {
+      // If there was an error sending the contact form, alert the user
+      alert(err.response.data.message);
+    });
 
     emailjs.sendForm('service_insq4yj', 'template_46j8jos', form.current, 'pzSmAssHG-LfZc60M')
       .then((result) => {

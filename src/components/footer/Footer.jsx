@@ -1,9 +1,34 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react';
+import React, { useState } from 'react';
 import { RiFacebookCircleFill, RiTwitterFill, RiYoutubeFill, RiLinkedinFill } from 'react-icons/ri';
-import './footer.css'
+import axios from 'axios';
+import './footer.css';
 
 const Footer = () => {
+  const [email, setEmail] = useState('');
+
+  // handle input change
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+  };
+
+  // handle subscription submission
+  const handleSubscriptionSubmit = (event) => {
+    event.preventDefault();
+
+    // Send the email subscription to the server
+    axios
+      .post('/subscriptions', { email })
+      .then((response) => {
+        console.log(response.data);
+        // Clear the email input after successful submission
+        setEmail('');
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
+
   return (
     <div className="hm-footer-container">
         <div className="hm-footer">
@@ -13,8 +38,8 @@ const Footer = () => {
                       <h3>Subscribe</h3>
                       <p>Want to get the latest market trends?</p>
                       <div className="hm-email-input">
-                        <input type="email" name='email' placeholder="Email address" autoComplete='off' aria-invalid='false'/>
-                        <button aria-label='submit for email alerts' type='submit' >Subscribe</button>
+                        <input type="email" name='email' placeholder="Email address" autoComplete='off' aria-invalid='false' value={email} onChange={handleEmailChange}/>
+                        <button aria-label='submit for email alerts' type='submit' onClick={handleSubscriptionSubmit}>Subscribe</button>
                       </div>
                   </div>
                   <div className="hm-footer-links">

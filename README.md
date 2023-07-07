@@ -154,11 +154,12 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 │   │   │   ├── About.css
 │   │   │   └── ...
 │   │   └── ...
-│   ├── services/
-│   │   ├── api.js
-│   │   └── ...
-│   ├── utils/
-│   │   ├── helpers.js
+│   ├── server/
+│   │   ├── server.js
+│   │   ├── models/
+│   │   │   ├── contactFormModel.js
+│   │   │   ├── subscriptionModel.js
+│   │   │   └── ...
 │   │   └── ...
 │   ├── App.js
 │   ├── App.css
@@ -181,7 +182,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
  - The `container` directory includes container components that manage the presentation and state logic for specific sections or features of your application.
  - The `pages` directory contains components that represent different pages of the website. Each page has its own directory(e.g., industry_pages, about_pages) with a .js file for the page's logic and a corresponding CSS file for styling.
  - The `services` directory houses modules responsible for making API requests or handling data-related tasks.
- - The `utils` directory contains utility/helper functions or modules used throughout the project.
+ - The `models` directory contains utility/helper functions or modules used throughout the project.
  - The `App.js`  file is the main entry point for the React application, where you define the overall structure and routing.
  - The `index.js` file is the entry point for the ReactDOM rendering, where the React application is rendered into the HTML document.
  - The root directory contains configuration files such as `.gitignore`, `package-lock.json`, `package.json`, and `README.md.`
