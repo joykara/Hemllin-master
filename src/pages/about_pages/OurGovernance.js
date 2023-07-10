@@ -72,7 +72,7 @@ const OurGovernance = () => {
                 </div>
               </div>
 
-              <div className='hm-gov-content05-intro'>
+{/*               <div className='hm-gov-content05-intro'>
                 <div id='hm-gov-content05' className='sub-text'>
                       <h4>Lorem Ipsum dolor</h4>
                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio</p>
@@ -130,7 +130,7 @@ const OurGovernance = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             <div className='hm-governance-more-info'>
