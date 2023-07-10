@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { RiFacebookCircleFill, RiTwitterFill, RiYoutubeFill, RiLinkedinFill } from 'react-icons/ri';
+import { RiFacebookCircleFill, RiTwitterFill, RiYoutubeFill, RiLinkedinFill, RiInstagramFill } from 'react-icons/ri';
 import axios from 'axios';
 import './footer.css';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const [email, setEmail] = useState('');
@@ -50,10 +51,11 @@ const Footer = () => {
                           <li><a href="">Terms of Use</a></li>
                       </ul>
                       <ul className='hm-footer-cta-social-links'>
-                          <li><a href=""><RiLinkedinFill size={25}/></a></li>
-                          <li><a href=""><RiTwitterFill size={25}/></a></li>
-                          <li><a href=""><RiFacebookCircleFill size={25}/></a></li>
-                          <li><a href=""><RiYoutubeFill size={25}/></a></li>
+                          <li><Link to="https://www.linkedin.com/company/hemllin/?viewAsMember=true"><RiLinkedinFill size={25}/></Link></li>
+                          <li><Link to="https://twitter.com/hemllin"><RiTwitterFill size={25}/></Link></li>
+                          <li><Link to="https://www.instagram.com/hemllin/"><RiInstagramFill size={25}/></Link></li>
+                          <li><Link to=""><RiFacebookCircleFill size={25}/></Link></li>
+                          <li><Link to="https://www.youtube.com/@hemllin/featured"><RiYoutubeFill size={25}/></Link></li>
                         </ul>
                   </div>
 
