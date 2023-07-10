@@ -54,7 +54,7 @@ const Footer = () => {
                           <li><Link to="https://www.linkedin.com/company/hemllin/?viewAsMember=true"><RiLinkedinFill size={25}/></Link></li>
                           <li><Link to="https://twitter.com/hemllin"><RiTwitterFill size={25}/></Link></li>
                           <li><Link to="https://www.instagram.com/hemllin/"><RiInstagramFill size={25}/></Link></li>
-                          <li><Link to=""><RiFacebookCircleFill size={25}/></Link></li>
+                          <li><Link to="http://facebook.com/hemllin/"><RiFacebookCircleFill size={25}/></Link></li>
                           <li><Link to="https://www.youtube.com/@hemllin/featured"><RiYoutubeFill size={25}/></Link></li>
                         </ul>
                   </div>
