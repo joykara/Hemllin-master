@@ -200,8 +200,8 @@ const Management = () => {
                     </div>
                 </div>
                 <div className="hm-management-footer">
-                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <h3>Contact us to schedule an appointment with one of our consultants or to learn more about our services.</h3>
+                    <p>We look forward to being a part of your journey towards success.</p>
                 </div>
                 <div className="explore-services">
                         <h4>Explore</h4>
@@ -236,7 +236,7 @@ const Management = () => {
                         </div>
                 </div>
           </div>
-          <Cta ctaTitle='Ready to Work with Us?' ctaLink1='/contact-us' ctaLink1Text='Contact Us'ctaLink2='/contact-us' ctaLink2Text='Contact Us'/>
+          <Cta ctaTitle='Want to learn more about the other services we offer?' ctaLink1='/contact-us' ctaLink1Text='Contact Us'ctaLink2='/contact-us' ctaLink2Text='Contact Us'/>
           <Footer />
       </>
   )

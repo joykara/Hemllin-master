@@ -91,7 +91,7 @@ const CoachingAndTraining = () => {
               </div>
           </div>
           
-          <Cta ctaTitle='Ready to Work with Us?' ctaLink1='/contact-us' ctaLink1Text='Contact Us'ctaLink2='/contact-us' ctaLink2Text='Contact Us'/>
+          <Cta ctaTitle='Want to learn more about the other services we offer?' ctaLink1='/contact-us' ctaLink1Text='Contact Us'ctaLink2='/contact-us' ctaLink2Text='Contact Us'/>
           <Footer/>
       </>
   )
