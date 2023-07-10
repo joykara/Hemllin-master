@@ -9,8 +9,6 @@ import { Link } from 'react-router-dom';
 
 const Services = () => {
     useEffect(() => {
-        // Initialize Google Analytics
-        ReactGA.initialize('G-GF16SJCMHV');
         // Track page view
         ReactGA.pageview(window.location.pathname + window.location.search);
     }, []);
