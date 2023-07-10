@@ -4,6 +4,7 @@ import { Footer, Navbar2 } from '../components'
 import FormInput from '../components/FormInput'
 import emailjs from "@emailjs/browser";
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const ContactUs = () => {
   const form = useRef();
@@ -12,7 +13,7 @@ const ContactUs = () => {
     e.preventDefault();
 
     // Send the contact form to the server using axios.post
-    axios.post('/contact-us/data', {
+    axios.post('https://hemllin-master.vercel.app:5000/contact-us/data', {
       name: form.current.username.value,
       email: form.current.email.value,
       organization: form.current.organization.value,
@@ -114,45 +115,56 @@ const ContactUs = () => {
         <h2 id='title'>Contact Us</h2>
         <div className="contact-us-container">
           <div className="contact-us-details">
-            <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut </p>
+            <h3>Thank you for your interest in Hemllin. Please fill out the form below to ask a question or report a technical problem.</h3>
+            <p>Required fields are marked with an asterisk (*).</p>
             <div className="hm-contact-form">
-              <form onSubmit={handleSubmit} ref={form} action="https://formspree.io/f/mwkyqgyq" method="post" >
+              <form onSubmit={handleSubmit} ref={form} method="post" >
                 <div className="contact-us-questions">
-                  <h4>I HAVE A QUESTION ABOUT:</h4>
+                  <h4>I HAVE A QUESTION ABOUT : *</h4>
                   <div className="contact-us-question-options">
                     <div className="contact-us-question-option">
                       <input
                       type="radio"
                       name="question"
-                      value="Consulting"
-                      id="Consulting"
-                      checked={question === "Consulting"}
+                      value="Consulting Services"
+                      id="Consulting Services"
+                      checked={question === "Consulting Services"}
                       onChange={onOptionChange}
                       />
-                      <label htmlFor="Consulting"><p>Consulting</p></label>
+                      <label htmlFor="Consulting"><p>Consulting Services</p></label>
                     </div>
                     <div className="contact-us-question-option">
                       <input
                       type="radio"
                       name="question"
-                      value="Coaching"
-                      id="Coaching"
-                      checked={question === "Coaching"}
+                      value="Training and Coaching"
+                      id="Training and Coaching"
+                      checked={question === "Training and Coaching"}
                       onChange={onOptionChange}
                       />
-                      <label htmlFor="Coaching"><p>Coaching</p></label>
+                      <label htmlFor="Coaching"><p>Training and Coaching</p></label>
                     </div>
                     <div className="contact-us-question-option">
                       <input
                       type="radio"
                       name="question"
-                      value="Book an Appointment"
-                      id="Book an Appointment"
-                      checked={question === "Book an Appointment"}
+                      value="Applying to Hemllin"
+                      id="Applying to Hemllin"
+                      checked={question === "Applying to Hemllin"}
                       onChange={onOptionChange}
                       />
-                      <label htmlFor="Book an Appointment"><p>Book an Appointment</p></label>
+                      <label htmlFor="Applying to Hemllin"><p>Applying to Hemllin</p></label>
+                    </div>
+                    <div className="contact-us-question-option">
+                      <input
+                      type="radio"
+                      name="question"
+                      value="Other Business Inquiries"
+                      id="Other Business Inquiries"
+                      checked={question === "Other Business Inquiries"}
+                      onChange={onOptionChange}
+                      />
+                      <label htmlFor="Applying to Hemllin"><p>Other Business Inquiries</p></label>
                     </div>
                   </div>
                 </div>
@@ -169,16 +181,16 @@ const ContactUs = () => {
           </div>
           <div className="contact-us-other-details">
             <div className="contact-us-other-content">
-              <h4>LOREM IPSUM</h4>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis beatae molestias optio sit, explicabo dolorum impedit iusto quis nam quod officia </p>
+              <h4>CAREERS AT HEMLLIN</h4>
+              <p>Visit our <Link to={'/careers'}>Careers Page</Link> to join us and embark on a journey where your skills will be honed, your ideas will be valued, and your career will thrive </p>
             </div>
             <div className="contact-us-other-content">
-              <h4>LOREM IPSUM</h4>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis beatae molestias optio sit, explicabo dolorum impedit iusto quis nam quod officia </p>
+              <h4>ABOUT US</h4>
+              <p>Our story begins with a vision of transforming businesses and empowering individuals to reach their full potential.</p>
           </div>
           <div className="contact-us-other-content">
-              <h4>LOREM IPSUM</h4>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis beatae molestias optio sit, explicabo dolorum impedit iusto quis nam quod officia </p>
+              <h4>HISTORY OF OUR FIRM</h4>
+              <p>Learn more about our journey and how we got to where we are today.</p>
             </div>
           </div>
       </div>

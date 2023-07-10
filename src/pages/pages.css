@@ -730,8 +730,9 @@
     padding: 1rem 2rem;
 }
 .contact-us-details h3{
-    padding: 3rem 0;
+    padding-bottom: 2rem;
     margin: 0;
+    font-size: 1.5rem;
     border: none;
     width: 100%;
 }
