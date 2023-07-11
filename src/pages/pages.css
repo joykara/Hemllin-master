@@ -824,9 +824,15 @@ form .contact-us-question-options label:hover{
     text-align: center;
     border: 1px solid #514d4d;
 }
+.hm-media-title img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
 .hm-media-intro{
     padding: 2rem 5rem;
-    background: #efe0e083;
+    background: #f8f8f883;
     width: 100%;
 }
 .hm-media-intro__text{
@@ -849,8 +855,6 @@ form .contact-us-question-options label:hover{
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding-right: 1rem;
-    margin-top: 1.2rem;
     width: 50%;
 }
 .hm-media-intro__content-title h2{
@@ -869,7 +873,7 @@ form .contact-us-question-options label:hover{
 }
 .hm-media-intro__content-text .image-details{
     width: 45%;
-    height: 300px;
+    height: auto;
     margin: .5rem;
     background: #ffffff;
     border: 1px solid #514d4d;
@@ -877,9 +881,11 @@ form .contact-us-question-options label:hover{
 .hm-media-intro__other-content{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
     padding: 1rem 0;
+    width: 90%;
+    border-top: 1px solid #514d4d;
 }
 .hm-media-intro__content h4,
 .hm-media-intro__other-content h4{
@@ -888,24 +894,30 @@ form .contact-us-question-options label:hover{
 
 .hm-media-intro__other-content{
     padding: 2rem 5rem;
-    background: #efe0e08f;
+    background: #f8f8f883;
 }
 .hm-media-intro__other-content-text{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 2rem 2.5rem;
     padding: 1rem 0;
 }
-.details{
+.details,
+.hm-media-details{
     margin-right: 1rem;
-    background: #dedada8c;
-}
-.details h2{
-    font-size: 24px;
+    background: #f6f0f08c;
 }
 .details h2,
-.details p{
+.hm-media-details h2 {
+    font-size: 24px;
     padding: .5rem 1rem;
+}
+.details p,
+.hm-media-details p{
+    padding: .5rem 1rem;
+}
+.hm-media-details{
+    padding: 1rem 0;
 }
 .hm-media-content-image{
     height: 200px;
@@ -913,7 +925,15 @@ form .contact-us-question-options label:hover{
     margin-bottom: 1rem;
     border: 1px solid #514d4d;
 }
-
+.hm-media-details .arrow img{
+    width: 30px;
+}
+.hm-media-details a{
+    padding-left: .5rem;
+}
+.hm-media-details a:hover{
+    color: var(--color-link);
+}
 
 /* CAREERS PAGE */
 .hm-careers-container{
@@ -1379,6 +1399,10 @@ form .contact-us-question-options label:hover{
         flex-direction: column;
         width: 100%;
     }
+    .hm-media-details{
+        margin: 0;
+        margin-bottom: 2rem;
+    }
     .hm-gov-sub-content3{
         padding: 1rem;
     }
@@ -1647,7 +1671,7 @@ form .contact-us-question-options label:hover{
     #hm-2022-history .history-img{
         margin: 2rem;
     }
-    #hm-2020-history .history-content-text, 
+    #hm-2020-history .history-content-text,
     #hm-2022-history .history-content-text {
         padding-right: 0;
     }

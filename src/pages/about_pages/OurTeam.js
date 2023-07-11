@@ -5,9 +5,11 @@ import ourHistory from '../../assets/history.png';
 import ourPurpose from '../../assets/how-we-work.png'
 import './about-pages.css'
 import { Link } from 'react-router-dom';
-import collins from '../../assets/team/Collins 2.jpg';
+import collins from '../../assets/team/collins0.jpg';
 import arthur from '../../assets/team/Arthur1.jpg';
 import kevin from '../../assets/team/kevin.jpg';
+import cynthia from '../../assets/team/Cynthia.jpeg'
+import shadrack from '../../assets/team/Shadrack1.jpeg'
 
 const OurTeam = () => {
   return (
@@ -15,7 +17,7 @@ const OurTeam = () => {
         <AboutNavbar />
         <div className='hm-ot-container'>
             <a id='back' href="/about-us"><span className='arrow links-font'><img src={arrow} alt="arrow nav" />Back to About Us Overview</span></a>
-            
+
             <div className='hm-ot-content'>
                 <div className='hm-ot-content-intro'>
                     <div className='hm-ot-title'>
@@ -24,31 +26,53 @@ const OurTeam = () => {
                     </div>
                 </div>
                 <div className='hm-ot-content-details'>
-                    <div className='hm-ot-member-detail'>
+                    <div className='hm-ot-member-detail scale-up'>
                         <div className='hm-ot-member-detail-img'>
                             <img src={collins} alt="durector" />
                         </div>
                         <div className='hm-ot-member-detail-text'>
-                            <p>Our Team</p>
-                            <p>CE0- Founder</p>
+                            <p>Beyond imagination</p>
+                            <p>COLLINS.K.CHINA</p>
+                            <p>DIRECTOR</p>
                         </div>
                     </div>
-                    <div className='hm-ot-member-detail'>
+                    <div className='hm-ot-member-detail scale-up'>
                         <div className='hm-ot-member-detail-img'>
                             <img src={arthur} alt="manager" />
                         </div>
                         <div className='hm-ot-member-detail-text'>
-                            <p>Our Team</p>
-                            <p>CE0- Founder</p>
+                            <p>If you cannot do great things, do small things in a great way.</p>
+                            <p>ARTHUR.S.NASIVILI</p>
+                            <p>BUSINESS DEVELOPMENT MANAGER</p>
                         </div>
                     </div>
-                    <div className='hm-ot-member-detail'>
+                    <div className='hm-ot-member-detail scale-up'>
                         <div className='hm-ot-member-detail-img'>
                             <img src={kevin} alt="finance" />
                         </div>
                         <div className='hm-ot-member-detail-text'>
-                            <p>Our Team</p>
-                            <p>CE0- Founder</p>
+                            <p>The mind that opens up to a new idea never returns to its original size.</p>
+                            <p>KEVIN WEKESA</p>
+                            <p>STRATEGY CONSULTANT</p>
+                        </div>
+                    </div>
+                    <div className='hm-ot-member-detail scale-up'>
+                        <div className='hm-ot-member-detail-img'>
+                            <img src={shadrack} alt="finance" />
+                        </div>
+                        <div className='hm-ot-member-detail-text'>
+                            <p>Seize the moment today, for tomorrow remains elusive</p>
+                              <p>SHADRACK</p>
+                              <p>ADMINISTRATOR</p>
+                        </div>
+                    </div>
+                    <div className='hm-ot-member-detail scale-up'>
+                        <div className='hm-ot-member-detail-img'>
+                            <img src={cynthia} alt="finance" />
+                        </div>
+                        <div className='hm-ot-member-detail-text'>
+                            <p>Seize the moment today, for tomorrow remains elusive</p>
+                            <p>CYNTHIA MWAMATI</p>
                         </div>
                     </div>
                 </div>
