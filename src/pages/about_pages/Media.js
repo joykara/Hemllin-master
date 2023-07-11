@@ -207,11 +207,6 @@ const Media = () => {
                   <p>At Hemllin, we follow a proven and strategic process to guide our clients towards achieving their goals and unlocking their full potential.</p>
                   <p><a href="/about-us/how-we-work">Learn more<span className='arrow'><img src={arrow} alt="arrow nav" /></span></a></p>
                 </div>
-                <div className='hm-media-details scale-up'>
-                  {/* <div className='hm-media-content-image'></div> */}
-                  <h2>Lorem Ipsum</h2>
-                  <p>Lorem Ipsum dolor sit amet. Rem reprehenderit nisi non quae iste qui architecto cumque vel iure corporis et ducimus perferendis ut ipsa velit.</p>
-                </div>
               </div>
             </div>
         </div>
