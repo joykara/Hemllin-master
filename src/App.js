@@ -10,11 +10,11 @@ import { SplashScreen } from './components';
 ReactGA.initialize('G-GF16SJCMHV');
 
 function App() {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     // Simulating a delay for demonstration purposes
-    setLoading(true); // Start loading
+    setLoading(loading); // Start loading
     setTimeout(() => {
       setLoading(false); // Stop loading after a delay
     }, 2000);
