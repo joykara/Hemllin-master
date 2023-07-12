@@ -768,6 +768,14 @@ textarea{
 .contact-us-other-content p{
     padding-bottom: 2rem;
 }
+.contact-us-other-content a{
+    font-family: var(--font-family);
+    font-weight: 600;
+    text-decoration: underline;
+}
+.contact-us-other-content a:hover{
+    color: var(--color-link);
+}
 form .contact-submit-btn{
     width: 5rem;
     padding: 1rem;
