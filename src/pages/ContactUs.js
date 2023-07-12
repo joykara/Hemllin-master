@@ -185,11 +185,11 @@ const ContactUs = () => {
               <p>Visit our <Link to={'/careers'}>Careers Page</Link> to join us and embark on a journey where your skills will be honed, your ideas will be valued, and your career will thrive </p>
             </div>
             <div className="contact-us-other-content">
-              <h4>ABOUT US</h4>
+              <h4><Link to={'/about-us'}>ABOUT US</Link></h4>
               <p>Our story begins with a vision of transforming businesses and empowering individuals to reach their full potential.</p>
           </div>
           <div className="contact-us-other-content">
-              <h4>HISTORY OF OUR FIRM</h4>
+              <h4><Link to={'/about-us/history-of-our-firm'}>HISTORY OF OUR FIRM</Link></h4>
               <p>Learn more about our journey and how we got to where we are today.</p>
             </div>
           </div>

@@ -771,9 +771,9 @@ textarea{
 .contact-us-other-content a{
     font-family: var(--font-family);
     font-weight: 600;
-    text-decoration: underline;
 }
 .contact-us-other-content a:hover{
+    text-decoration: underline;
     color: var(--color-link);
 }
 form .contact-submit-btn{
