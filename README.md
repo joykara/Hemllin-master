@@ -234,7 +234,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 #### Front-end: 
 - The website is built using modern web technologies such as React.js, HTML5, CSS3, and JavaScript. We follow best practices to ensure a clean and maintainable codebase.
 #### Back-end: 
-- Our website utilizes ...
+- Our website utilizes Node.js, Express and MongoDB for the database set-up.
 #### Database: 
 - We leverage a database system ... to store and retrieve relevant information.
 #### Deployment: 
