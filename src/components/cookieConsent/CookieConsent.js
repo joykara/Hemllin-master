@@ -21,7 +21,12 @@ const CookieConsent = () => {
   }, [cookies]);
 
   const giveCookieConsent = () => {
-    setCookie("cookieConsent", true, { path: "/" });
+      // Calculate the expiry date
+    const sixMonthsFromNow = new Date();
+    sixMonthsFromNow.setMonth(sixMonthsFromNow.getMonth() + 6);
+
+    setCookie("cookieConsent", true, { path: "/", expires: sixMonthsFromNow });
+
     ReactGA.event({
       category: 'Cookie Button',
       action: 'Click',
