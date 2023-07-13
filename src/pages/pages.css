@@ -872,7 +872,7 @@ form .contact-us-question-options label:hover{
     width: 95%;
     height: 500px;
     background: #ffffff;
-    border: 1px solid #514d4d;
+    /* border: 1px solid #514d4d; */
 }
 .hm-media-intro__content-text{
     display: flex;
@@ -884,7 +884,7 @@ form .contact-us-question-options label:hover{
     height: auto;
     margin: .5rem;
     background: #ffffff;
-    border: 1px solid #514d4d;
+    /* border: 1px solid #514d4d; */
 }
 .hm-media-intro__other-content{
     display: flex;
@@ -1415,6 +1415,8 @@ form .contact-us-question-options label:hover{
         flex-direction: column;
         width: 100%;
         padding: 0;
+        margin: 0;
+        margin-top: 0.5rem;
     }
     .hm-media-intro {
         padding: 2rem;

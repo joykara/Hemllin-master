@@ -193,7 +193,7 @@ const Media = () => {
                   {/* <div className='hm-media-content-image'></div> */}
                   <h2>Our Services</h2>
                   <p>We offer a wide range of services that include Training and Coaching Consultancy, Education Consultancy, Travel Consultancy and Management Consultancy.<br/> Partner with us to unlock the full potential of your business and take it to new heights.</p>
-                  <p><a href="/our services">See our services<span className='arrow'><img src={arrow} alt="arrow nav" /></span></a></p>
+                  <p><a href="/our-services">See our services<span className='arrow'><img src={arrow} alt="arrow nav" /></span></a></p>
                 </div>
                 <div className='hm-media-details scale-up'>
                   {/* <div className='hm-media-content-image'></div> */}
