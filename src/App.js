@@ -9,7 +9,7 @@ import { SplashScreen } from './components';
 // Initialize Google Analytics
 ReactGA.initialize('G-GF16SJCMHV');
 
-function App() {
+function AppContainer() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -55,14 +55,14 @@ function App() {
               <Route path="/industries/technology" element={<TechnologyIndustry />} />
               <Route path="/industries/travel-logistics-and-infrastructure" element={<TravelLogisticsIndustry />} />
               <Route path="/featured-insights/ai" element={<ArtificialIntelligence />} />
-
           </Routes>
         )}
       </div>
     </Router>
-
-
   );
 }
 
+function App() {
+  return <AppContainer />;
+}
 export default App;
