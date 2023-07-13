@@ -18,7 +18,7 @@ function App() {
     setTimeout(() => {
       setLoading(false); // Stop loading after a delay
     }, 2000);
-  }, [])
+  }, [loading])
   return (
     <Router>
       <div className="App">

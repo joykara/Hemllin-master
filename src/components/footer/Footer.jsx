@@ -18,7 +18,7 @@ const Footer = () => {
 
     // Send the email subscription to the server
     axios
-      .post('/subscriptions', { email })
+      .post('http://localhost:5000/subscriptions', { email })
       .then((response) => {
         console.log(response.data);
         // Clear the email input after successful submission
@@ -46,9 +46,9 @@ const Footer = () => {
                   <div className="hm-footer-links">
                       <ul className='hm-footer-cta-links'>
                           <li><a href="/contact-us">Contact Us</a></li>
-                          <li><a href="">FAQ</a></li>
-                          <li><a href="">Privacy policy</a></li>
-                          <li><a href="">Terms of Use</a></li>
+                          <li><a href="/">FAQ</a></li>
+                          <li><a href="/">Privacy policy</a></li>
+                          <li><a href="/">Terms of Use</a></li>
                       </ul>
                       <ul className='hm-footer-cta-social-links'>
                           <li><Link to="https://www.linkedin.com/company/hemllin/?viewAsMember=true"><RiLinkedinFill size={25}/></Link></li>

@@ -3,6 +3,11 @@ const mongoose = require('mongoose');
 const Subscription = require('./models/subscriptionModel');
 const ContactForm = require('./models/contactFormModel');
 const app = express();
+const cors = require('cors');
+
+// Enable CORS for all routes
+app.use(cors());
+
 
 // use express middleware
 app.use(express.json());
@@ -36,7 +41,7 @@ app.get('/subscriptions/:email', async (req, res) => {
 // get all email subscription data only
 app.get('/subscriptions/emails', async (req, res) => {
     try {
-        const subscription = await Subscription.findBy({email});
+        const subscription = await Subscription.findBy({ email: req.params.email});
         res.send(subscription);
     } catch (error) {
         return res.status(500).send({ message: error.message });
