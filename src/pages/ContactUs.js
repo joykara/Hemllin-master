@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react'
 // import ReCAPTCHA from "react-google-recaptcha";
 import { Footer, Navbar2 } from '../components'
-import FormInput from '../components/FormInput'
+import FormInput from '../components/form_input/FormInput'
 import emailjs from "@emailjs/browser";
 import axios from 'react-axios';
 import { Link } from 'react-router-dom';

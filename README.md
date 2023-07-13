@@ -74,19 +74,24 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 │   └── robots.txt
 ├── src
 │   ├── assets
-│   │   ├── images
-│   │   │   ├── illustration-editor-desktop.svg
-│   │   │   ├── illustration-editor-mobile.svg
-│   │   │   ├── illustration-laptop-desktop.svg
-│   │   │   ├── illustration-laptop-mobile.svg
-│   │   │   ├── illustration-phones.svg
-│   │   │   ├── illustration-stay-productive.png
-│   │   │   ├── logo.svg
-│   │   │   ├── pattern-background-desktop.svg
-│   │   │   ├── pattern-background-mobile.svg
-│   │   │   ├── photo1.png
-│   │   │   ├── photo2.png
+│   │   ├── ind images
+│   │   │   ├── Agriculture Patterns_2.jpg
+│   │   │   ├── Agriculture Patterns.jpg
+│   │   │   ├── Automotive Patterns_2.jpg
+│   │   │   ├── Automotive Patterns.jpg
+│   │   │   ├── Education Patterns_2_.jpg
+│   │   │   ├── Education Patterns.png
+│   │   │   ├── ...
 │   │   │   └── ...
+│   │   ├── riruta_central_pics
+│   │   │   ├── 514A0911.jpg
+│   │   │   └── ...
+│   │   ├── team
+│   │   │   ├── Arthur1.jpg
+│   │   │   ├── Collins0.jpg
+│   │   │   └── ...
+│   │   ├── ...
+│   │   └── ...
 │   ├── components/
 │   │   ├── aboutnav/
 │   │   │   ├── AboutNav.jsx
@@ -95,28 +100,32 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 │   │   │   ├── Articles.jsx
 │   │   │   ├── articles.css
 │   │   │   └── ...
+│   │   ├── cookieConsent/
+│   │   │   └── cookieConsent.js
 │   │   ├── features/
 │   │   │   ├── Features.jsx
-│   │   │   ├── features.css
-│   │   │   └── ...
+│   │   │   └── features.css
 │   │   ├── footer/
 │   │   │   ├── Footer.jsx
 │   │   │   └── footer.css
+│   │   ├── form_input/
+│   │   │   ├── FormInput.jsx
+│   │   │   └── formInput.css
 │   │   ├── header/
 │   │   │   ├── Header.jsx
 │   │   │   └── Header.css
 │   │   ├── industriesnav/
-│   │   │   ├── IndustriesNav.jsx
+│   │   │   ├── IndustriesNavbar.jsx
 │   │   │   └── industriesnav.css
 │   │   ├── navbar/
 │   │   │   ├── Navbar.jsx
 │   │   │   └── navbar.css
+│   │   ├── searchbar/
+│   │   │   ├── SearchBar.jsx
+│   │   │   └── searchbar.css
 │   │   ├── splashscreen/
 │   │   │   ├── Splashscreen.jsx
 │   │   │   └── splashscreen.css
-│   │   ├── form_input/
-│   │   │   ├── FormInput.jsx
-│   │   │   └── form_input.css
 │   │   └── index.js
 │   ├── container/
 │   │   ├── animate/
@@ -144,23 +153,45 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 │   │   │   ├── MobileServicesMenu.jsx
 │   │   │   └── mobiledropdownmenu.css
 │   │   └── index.js
+│   ├── data/
+│   │   ├── List.css
+│   │   ├── List.js
+│   │   └── MOCK_DATA.json
 │   ├── pages/
-│   │   ├── Home/
-│   │   │   ├── Home.js
-│   │   │   ├── Home.css
-│   │   │   └── ...
-│   │   ├── About/
+│   │   ├── about_pages/
+│   │   │   ├── about-pages.css
 │   │   │   ├── About.js
-│   │   │   ├── About.css
+│   │   │   ├── HowWeWork.js
+│   │   │   ├── Media.js
+│   │   │   ├── OurGovernance.js
+│   │   │   ├── OurHistory.js
+│   │   │   ├── OurMission.js
+│   │   │   ├── OurTeam.js
 │   │   │   └── ...
+│   │   ├── industry_pages/
+│   │   │   ├── AgricultureIndustry.js
+│   │   │   ├── AutomotiveIndustry.js
+│   │   │   ├── EducationIndustry.js
+│   │   │   ├── EngineeringIndustry.js
+│   │   │   ├── FinancialIndustry.js
+│   │   │   ├── HealthcareIndustry.js
+│   │   │   ├── LifeSciencesIndustry.js
+│   │   │   ├── PublicAndSocialIndustry.js
+│   │   │   ├── RealEstateIndustry.js
+│   │   │   ├── RetailIndustry.js
+│   │   │   ├── TechnologyIndustry.js
+│   │   │   ├── TelecommunicationsIndustry.js
+│   │   │   ├── TravelLogisticsIndustry.js
+│   │   │   └── industry-pages.css
 │   │   └── ...
 │   ├── server/
 │   │   ├── server.js
 │   │   ├── models/
 │   │   │   ├── contactFormModel.js
-│   │   │   ├── subscriptionModel.js
-│   │   │   └── ...
-│   │   └── ...
+│   │   │   └── subscriptionModel.js
+│   │   ├── node_modules
+│   │   ├── package-lock.json
+│   │   └── package.json
 │   ├── App.js
 │   ├── App.css
 │   ├── index.css
