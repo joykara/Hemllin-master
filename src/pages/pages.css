@@ -253,7 +253,7 @@
 }
 .blog-details{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     padding: 2rem 10rem;
     width: 100%;
     background-color: #e9e6e6;
