@@ -18,7 +18,7 @@ const Footer = () => {
 
     // Send the email subscription to the server
     axios
-      .post('http://localhost:5000/subscriptions', { email })
+      .post('http://hemllin-master.vercel.app:5000/subscriptions', { email })
       .then((response) => {
         console.log(response.data);
         // Clear the email input after successful submission
