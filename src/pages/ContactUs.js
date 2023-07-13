@@ -13,7 +13,8 @@ const ContactUs = () => {
     e.preventDefault();
 
     // Send the contact form to the server using axios.post
-    axios.post('https://hemllin-master.vercel.app:5000/contact-us/data', {
+    
+    axios.post('http://localhost:5000/contact-us/data', {
       name: form.current.username.value,
       email: form.current.email.value,
       organization: form.current.organization.value,
@@ -22,15 +23,24 @@ const ContactUs = () => {
       subject: form.current.subject.value,
       message: form.current.message.value,
     })
-    .then((response) => {
-      // If the contact form was sent successfully, alert the user
-      alert(response.data.message);
-      setValues('');
-    })
-    .catch((err) => {
-      // If there was an error sending the contact form, alert the user
-      alert(err.response.data.message);
-    });
+      .then((response) => {
+        // If the contact form was sent successfully, alert the user
+        alert('Success');
+        setValues({
+          username: '',
+          email: '',
+          organization: '',
+          title: '',
+          subject: '',
+        });
+      })
+      .catch((err) => {
+        if (err.response && err.response.data) {
+          alert(err.response.data.message);
+        } else {
+          alert('An error occurred while submitting the form.');
+        }
+      });
 
     emailjs.sendForm('service_insq4yj', 'template_46j8jos', form.current, 'pzSmAssHG-LfZc60M')
       .then((result) => {
