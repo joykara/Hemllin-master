@@ -28,7 +28,7 @@ const MobileIndustriesMenu = () => {
                 <a href='/industries/engineering-and-construction'>Engineering and Construction</a>
             </li>
             <li className='mb-industries-dropdown-item'>
-                <a href='/industries/financial'>Financial</a>
+                <a href='/industries/financial-services'>Financial</a>
             </li>
             <li className='mb-industries-dropdown-item'>
                 <a href='/industries/healthcare'>Healthcare</a>
