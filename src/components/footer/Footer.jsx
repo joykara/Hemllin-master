@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { RiFacebookCircleFill, RiTwitterFill, RiYoutubeFill, RiLinkedinFill, RiInstagramFill } from 'react-icons/ri';
-import axios from 'axios';
+import axios from 'react-axios';
 import './footer.css';
 import { Link } from 'react-router-dom';
 

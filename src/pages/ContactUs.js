@@ -3,7 +3,7 @@ import React, { useState, useRef } from 'react'
 import { Footer, Navbar2 } from '../components'
 import FormInput from '../components/FormInput'
 import emailjs from "@emailjs/browser";
-import axios from 'axios';
+import axios from 'react-axios';
 import { Link } from 'react-router-dom';
 
 const ContactUs = () => {
