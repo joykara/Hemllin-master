@@ -110,7 +110,8 @@
     font-family: sans-serif;
     font-size: 1rem;
 }
-.navbar__search a{
+.navbar__search a,
+.navbar__search p{
     color: #fff;
 }
 .navbar__search a:hover,
