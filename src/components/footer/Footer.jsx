@@ -61,7 +61,7 @@ const Footer = () => {
 
               </div>
               <div className="hm-footer__copyright">
-                  <p>©2017-2023 Hemllin consultancy</p>
+                  <p>©2017-2023 Hemllin</p>
               </div>
         </div>
     </div>

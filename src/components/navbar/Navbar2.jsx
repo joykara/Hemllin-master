@@ -8,6 +8,7 @@ import './navbar.css';
 import { Link } from 'react-router-dom';
 import List from '../../data/List';
 import { IndustriesMenu, ServicesMenu, InsightsMenu, AboutMenu, MobileIndustriesMenu, MobileAboutMenu, MobileInsightsMenu, MobileServicesMenu} from '../../container';
+import logo from '../../hemllinLogo.png'
 
 const Navbar = () => {
   //show data on typing in the input
@@ -175,6 +176,9 @@ const Navbar = () => {
         <p>
           <Link to="/">Logo</Link>
         </p>
+        {/* <div className='navbar-hm__logo'>
+          <Link to="/"><img src={logo} alt="" /></Link>
+        </div> */}
       </div>
       {toggleMenu && (
         <div className={`navbar__menu-links ${toggleMenu ? 'show' : ''}`}>
@@ -187,9 +191,10 @@ const Navbar = () => {
                   <RiMenuLine color="#fff" size={30} />
                 )}
               </button>
-              <p>
+              <div>
+                <img src="" alt="" />
                 <Link to="/">Logo</Link>
-              </p>
+              </div>
             </div>
             <div className="menu">
               <div className="show-menu">
