@@ -3,7 +3,7 @@ import React, { useState, useRef } from 'react'
 import { Footer, Navbar2 } from '../components'
 import FormInput from '../components/form_input/FormInput'
 import emailjs from "@emailjs/browser";
-import axios from 'react-axios';
+import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 const ContactUs = () => {
@@ -14,7 +14,7 @@ const ContactUs = () => {
 
     // Send the contact form to the server using axios.post
     
-    axios.post('http://localhost:5000/contact-us/data', {
+    axios.post('https://hemllin-master.vercel.app/contact-us/data', {
       name: form.current.username.value,
       email: form.current.email.value,
       organization: form.current.organization.value,

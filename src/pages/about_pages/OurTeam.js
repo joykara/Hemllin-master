@@ -62,7 +62,7 @@ const OurTeam = () => {
                         </div>
                         <div className='hm-ot-member-detail-text'>
                             <p>Seize the moment today, for tomorrow remains elusive</p>
-                              <p>SHADRACK</p>
+                              <p>SHADRACK WATIMA</p>
                               <p>ADMINISTRATOR</p>
                         </div>
                     </div>

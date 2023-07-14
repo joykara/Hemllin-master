@@ -94,7 +94,7 @@ app.post('/contact-us/data', async (req, res) => {
 })
 
 // connect mongoose
-mongoose.connect('mongodb+srv://admin:ms7Mm9VYyA9v8i37@hemllinapi.h2s1x7a.mongodb.net/Hemllin-API?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://system:VTq1ArIojdcaZPrt@hemllin.22xovxl.mongodb.net/?retryWrites=true&w=majorityWrites=true')
 .then(() => {
     console.log('Connected to database');
     app.listen(5000, () => {

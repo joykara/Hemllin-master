@@ -19,7 +19,7 @@ License
     - [Available Scripts](#available-scripts)
 - [Project Structure](#project-structure)
     - [Folder Structure](#folder-structure)
-    - [Dependencies](#dependencies)
+    - [Dependencies Used](#dependencies)
     - [Links](#links)
 - [My process](#my-process)
   - [Technologies Used](#technologies-used)
@@ -221,6 +221,9 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
  - The `package.json` file includes project metadata and lists dependencies and scripts.
  - The `README.md` file provides an overview and documentation for the project.
  - This folder structure provides a modular and organized approach to managing your React website project, separating components, pages, assets, and other resources into their respective directories. Feel free to adjust and customize it based on your specific project requirements and preferences.
+
+
+### Dependencies Used
 
 
 ### Links
