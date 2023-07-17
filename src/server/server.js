@@ -2,10 +2,15 @@ const express = require('express');
 const mongoose = require('mongoose');
 const Subscription = require('./models/subscriptionModel');
 const ContactForm = require('./models/contactFormModel');
+const BlogPost = require('./models/blogsModel');
 const app = express();
-const cors = require('cors');
+
+// import route
+const blogRoute = require('./routes/blogRoute');
+app.use('/blog-posts', blogRoute)
 
 // Enable CORS for all routes
+const cors = require('cors');
 app.use(cors());
 
 
@@ -93,8 +98,41 @@ app.post('/contact-us/data', async (req, res) => {
     }
 })
 
+// get blog posts
+app.get('/blog-posts', async (req, res) => {
+    try {
+        const blogPosts = await BlogPost.find();
+        res.send(blogPosts);
+    } catch (error) {
+        console.log(error.message);
+        return res.status(500).send({ message: error.message });
+    }
+})
+
+// get blog post by id
+app.get('/blog-posts/:id', async (req, res) => {
+    try {
+        const blogPost = await BlogPost.findOne({ id: req.params.id });
+        res.send(blogPost);
+    } catch (error) {
+        return res.status(500).send({ message: error.message });
+    }
+})
+
+// get blog post of specific category
+app.get('/blog-posts/category/:category', async (req, res) => {
+    try {
+        // find all the documents where 'categories' array contains a value equal to given parameter in query
+        const blogPost = await BlogPost.find({ categories: req.params.category });
+        res.send(blogPost);
+    } catch (error) {
+        return res.status(500).send({ message: error.message });
+    }
+})
+
 // connect mongoose
-mongoose.connect('mongodb+srv://system:VTq1ArIojdcaZPrt@hemllin.22xovxl.mongodb.net/?retryWrites=true&w=majorityWrites=true')
+// mongoose.connect('mongodb+srv://system:VTq1ArIojdcaZPrt@hemllin.22xovxl.mongodb.net/?retryWrites=true&w=majorityWrites=true')
+mongoose.connect('mongodb+srv://admin:ms7Mm9VYyA9v8i37@hemllinapi.h2s1x7a.mongodb.net/Hemllin-API?retryWrites=true&w=majority')
 .then(() => {
     console.log('Connected to database');
     app.listen(5000, () => {
