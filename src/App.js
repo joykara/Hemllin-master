@@ -3,7 +3,7 @@ import ReactGA from 'react-ga'; // Import react-ga
 // import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 import './App.css';
 import {BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import {Media, About, Homepage, ContactUs, Blog, Career, Mission, OurGovernance, Services, Management, Education, AgricultureIndustry, ArtificialIntelligence, OurHistory, HowWeWork, Travel, CoachingAndTraining, OurTeam, AutomotiveIndustry, EducationIndustry, FinancialIndustry, HealthcareIndustry, LifeSciencesIndustry, PublicAndSocialIndustry, RealEstateIndustry, RetailIndustry, TechnologyIndustry, TravelLogisticsIndustry, EngineeringIndustry} from './pages';
+import {Media, About, Homepage, ContactUs, Blog, Career, Mission, OurGovernance, Services, Management, Education, AgricultureIndustry, ArtificialIntelligence, OurHistory, HowWeWork, Travel, CoachingAndTraining, OurTeam, AutomotiveIndustry, EducationIndustry, FinancialIndustry, HealthcareIndustry, LifeSciencesIndustry, PublicAndSocialIndustry, RealEstateIndustry, RetailIndustry, TechnologyIndustry, TravelLogisticsIndustry, EngineeringIndustry, SingleBlog} from './pages';
 import { SplashScreen } from './components';
 
 // Initialize Google Analytics
@@ -29,6 +29,7 @@ function AppContainer() {
             <Route path="/" exact element={<Homepage/>} />
               <Route path="/about-us" element={<About />} />
               <Route path="/about-us/blog" element={<Blog />} />
+              <Route path="/blog-posts/:id" element={<SingleBlog />} />
               <Route path="/about-us/our-purpose-mission-and-values" element={<Mission />} />
               <Route path="/about-us/our-governance" element={<OurGovernance />} />
               <Route path="/about-us/our-team" element={<OurTeam />} />

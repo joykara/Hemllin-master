@@ -1,12 +1,34 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react'
+import React,{useEffect, useState} from 'react'
 import { RiFacebookCircleFill, RiTwitterFill, RiYoutubeFill, RiLinkedinFill } from 'react-icons/ri';
 import AboutNavbar from '../components/aboutnav/AboutNavbar'
 import Article from '../container/article/Article'
 import Footer from '../components/footer/Footer'
 import arrow from '../assets/Vector.png'
+import { Link, useLocation } from 'react-router-dom';
+import axios from 'axios';
 
 const Blog = () => {
+  // create blogs data to fetch from
+  const [blogs, setBlogs] = useState([]);
+
+  const location = useLocation();
+  console.log(location.pathname); // result: '/secondpage'
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        const response = await axios.get('/blog-posts'); // Replace with your backend API endpoint
+        setBlogs(response.data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchBlogs();
+  }, []);
+
+
   return (
     <>
         <AboutNavbar/>
@@ -30,15 +52,17 @@ const Blog = () => {
           </div>
 
           <div className="blog-details">
-            <Article articleTitle='Lorem ipsum dolor sit amet consectetur ' articleUrl='https://www.google.com' articleText='Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quos reiciendis laudantium'/>
-            <Article articleTitle='Lorem ipsum dolor sit amet consectetur ' articleUrl='https://www.google.com' articleText='Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quos reiciendis laudantium'/>
-            <Article articleTitle='Lorem ipsum dolor sit amet consectetur ' articleUrl='https://www.google.com' articleText='Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quos reiciendis laudantium'/>
-            <Article articleTitle='Lorem ipsum dolor sit amet consectetur ' articleUrl='https://www.google.com' articleText='Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quos reiciendis laudantium'/>
-            <Article articleTitle='Lorem ipsum dolor sit amet consectetur ' articleUrl='https://www.google.com' articleText='Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quos reiciendis laudantium'/>
-            <Article articleTitle='Lorem ipsum dolor sit amet consectetur ' articleUrl='https://www.google.com' articleText='Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quos reiciendis laudantium'/>
-            <Article articleTitle='Lorem ipsum dolor sit amet consectetur ' articleUrl='https://www.google.com' articleText='Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quos reiciendis laudantium'/>
-            <Article articleTitle='Lorem ipsum dolor sit amet consectetur ' articleUrl='https://www.google.com' articleText='Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quos reiciendis laudantium'/>
-            <Article articleTitle='Lorem ipsum dolor sit amet consectetur ' articleUrl='https://www.google.com' articleText='Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quos reiciendis laudantium'/>
+          {/* fetch blogs */}
+          {blogs.map(blog => (
+            <div className='article' key={blog.id}>
+              <div className="article-image">
+              </div>
+              <div className="article-content">
+                <h3><Link to={blog.url}>{blog.title}</Link></h3>
+                <p>{blog.text}</p>
+              </div>
+            </div>
+          ))}
           </div>
         </div>
         <Footer/>
