@@ -2,6 +2,7 @@
 export { default as Homepage } from '../pages/Homepage';
 export { default as About } from './about_pages/About';
 export { default as Blog } from '../pages/Blog';
+export { default as SingleBlog } from '../pages/SingleBlog';
 export { default as Mission } from './about_pages/OurMission';
 export { default as ContactUs } from '../pages/ContactUs';
 export { default as Cta } from '../pages/Cta';
