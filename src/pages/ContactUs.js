@@ -13,7 +13,7 @@ const ContactUs = () => {
     e.preventDefault();
 
     // Send the contact form to the server using axios.post
-    axios.post('https://hemllin-master.vercel.app/contact-us/data', {
+    axios.post('/contact-us/data', {
       name: form.current.username.value,
       email: form.current.email.value,
       organization: form.current.organization.value,
