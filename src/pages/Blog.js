@@ -21,23 +21,27 @@ const Blog = () => {
     fetchBlogs();
   }, [location]);
   console.log('Blog:', blogs)
-  
-  if(!Array.isArray(blogs))return null;
-  let blogListItems= [];
-  for(let i=0; i<blogs.length; i++){
-    blogListItems.push(
-      <div className='article' key={blogs[i].id}>
-        <div className="article-image">
-        </div>
-        <div className="article-content">
-          <h3><Link to={blogs[i].url}>{blogs[i].title}</Link></h3>
-          <span>{blogs[i].category}</span>
-          <span> by: {blogs[i].author} </span>
-          <p>{blogs[i].desc}</p>
-        </div>
-      </div>
-    )
+
+  if (!blogs) {
+    return <p>Loading...</p>;
   }
+  
+  // if(!Array.isArray(blogs))return null;
+  // let blogListItems= [];
+  // for(let i=0; i<blogs.length; i++){
+  //   blogListItems.push(
+  //     <div className='article' key={blogs[i].id}>
+  //       <div className="article-image">
+  //       </div>
+  //       <div className="article-content">
+  //         <h3><Link to={blogs[i].url}>{blogs[i].title}</Link></h3>
+  //         <span>{blogs[i].category}</span>
+  //         <span> by: {blogs[i].author} </span>
+  //         <p>{blogs[i].desc}</p>
+  //       </div>
+  //     </div>
+  //   )
+  // }
   
 
 
@@ -66,8 +70,8 @@ const Blog = () => {
 
           <div className="blog-details">
           {/* fetch blogs */}
-            {blogListItems}
-          {/* {Array.isArray(blogs) ? (
+            {/* {blogListItems} */}
+          {Array.isArray(blogs) ? (
             blogs.map(blog => (
               <div className='article' key={blog.id}>
                 <div className="article-image">
@@ -80,7 +84,7 @@ const Blog = () => {
             ))
           ) : (
             <p>Loading blogs...</p> // Add appropriate handling when blogs is not an array
-          )} */}
+          )}
           </div>
         </div>
         <Footer/>

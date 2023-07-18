@@ -260,6 +260,24 @@
     background-color: #e9e6e6;
 }
 
+/* EACH BLOG POST */
+.single-blog-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 90%;
+  margin: auto;
+  padding-top: 3rem;
+}
+.single-blog-container h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  padding-bottom: 2.5rem;
+}
+.single-blog-container p {
+  padding-bottom: 1rem;
+}
 
 /* OUR GOVERNANCE */
 .hm-governance-container{
