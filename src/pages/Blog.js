@@ -1,8 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React,{useEffect, useState} from 'react'
 import { RiFacebookCircleFill, RiTwitterFill, RiYoutubeFill, RiLinkedinFill, RiInstagramFill } from 'react-icons/ri';
-import AboutNavbar from '../components/aboutnav/AboutNavbar'
-import Article from '../container/article/Article'
+import AboutNavbar from '../components/aboutnav/AboutNavbar';
 import Footer from '../components/footer/Footer'
 import arrow from '../assets/Vector.png'
 import { Link, useLocation } from 'react-router-dom';
@@ -11,24 +10,35 @@ import { BsLinkedin, BsYoutube } from 'react-icons/bs';
 import { AiFillTwitterSquare } from 'react-icons/ai';
 
 const Blog = () => {
-  // create blogs data to fetch from
+  // fetch blogs from api and display them
   const [blogs, setBlogs] = useState([]);
-
   const location = useLocation();
-  console.log(location.pathname); // result: '/secondpage'
-
-  useEffect(() => {
+  useEffect(()=> {
     const fetchBlogs = async () => {
-      try {
-        const response = await axios.get('/blog-posts'); // Replace with your backend API endpoint
-        setBlogs(response.data);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-
+      const res = await axios.get('/blog-posts');
+      setBlogs(res.data);
+    }
     fetchBlogs();
-  }, []);
+  }, [location]);
+  console.log('Blog:', blogs)
+  
+  if(!Array.isArray(blogs))return null;
+  let blogListItems= [];
+  for(let i=0; i<blogs.length; i++){
+    blogListItems.push(
+      <div className='article' key={blogs[i].id}>
+        <div className="article-image">
+        </div>
+        <div className="article-content">
+          <h3><Link to={blogs[i].url}>{blogs[i].title}</Link></h3>
+          <span>{blogs[i].category}</span>
+          <span> by: {blogs[i].author} </span>
+          <p>{blogs[i].desc}</p>
+        </div>
+      </div>
+    )
+  }
+  
 
 
   return (
@@ -56,18 +66,7 @@ const Blog = () => {
 
           <div className="blog-details">
           {/* fetch blogs */}
-          {blogs.map(blog => (
-            <div className='article' key={blog.id}>
-              <div className="article-image">
-              </div>
-              <div className="article-content">
-                <h3><Link to={blog.url}>{blog.title}</Link></h3>
-                <span>{blog.cateoryy}</span>
-                <span> by: {blog.author} </span>
-                <p>{blog.desc}</p>
-              </div>
-            </div>
-          ))}
+            {blogListItems}
           {/* {Array.isArray(blogs) ? (
             blogs.map(blog => (
               <div className='article' key={blog.id}>
