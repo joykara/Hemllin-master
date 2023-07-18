@@ -56,20 +56,32 @@ const Blog = () => {
 
           <div className="blog-details">
           {/* fetch blogs */}
-          {Array.isArray(blogs) ? (
-  blogs.map(blog => (
-    <div className='article' key={blog.id}>
-      <div className="article-image">
-      </div>
-      <div className="article-content">
-        <h3><Link to={blog.url}>{blog.title}</Link></h3>
-        <p>{blog.desc}</p>
-      </div>
-    </div>
-  ))
-) : (
-  <p>Loading blogs...</p> // Add appropriate handling when blogs is not an array
-)}
+          {blogs.map(blog => (
+            <div className='article' key={blog.id}>
+              <div className="article-image">
+              </div>
+              <div className="article-content">
+                <h3><Link to={blog.url}>{blog.title}</Link></h3>
+                <span>{blog.cateoryy}</span>
+                <span> by: {blog.author} </span>
+                <p>{blog.desc}</p>
+              </div>
+            </div>
+          ))}
+          {/* {Array.isArray(blogs) ? (
+            blogs.map(blog => (
+              <div className='article' key={blog.id}>
+                <div className="article-image">
+                </div>
+                <div className="article-content">
+                  <h3><Link to={blog.url}>{blog.title}</Link></h3>
+                  <p>{blog.desc}</p>
+                </div>
+              </div>
+            ))
+          ) : (
+            <p>Loading blogs...</p> // Add appropriate handling when blogs is not an array
+          )} */}
           </div>
         </div>
         <Footer/>
