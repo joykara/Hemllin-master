@@ -129,10 +129,30 @@ app.get('/blog-posts/category/:category', async (req, res) => {
         return res.status(500).send({ message: error.message });
     }
 })
+// send blog posts
+app.post('/blog-posts', async (req, res) => {
+    try {
+        const blogPost = new BlogPost({
+            id: req.body.id,
+            author: req.body.author,
+            title: req.body.title,
+            desc: req.body.desc,
+            text: req.body.text,
+            category: req.body.category,
+            image: req.body.image,
+            url: req.body.url
+        })
+        await blogPost.save();
+        res.send(blogPost);
+    } catch (error) {
+        console.log(error.message);
+        return res.status(500).send({ message: error.message });
+    }
+})
 
 // connect mongoose
-// mongoose.connect('mongodb+srv://system:VTq1ArIojdcaZPrt@hemllin.22xovxl.mongodb.net/?retryWrites=true&w=majorityWrites=true')
-mongoose.connect('mongodb+srv://admin:ms7Mm9VYyA9v8i37@hemllinapi.h2s1x7a.mongodb.net/Hemllin-API?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://system:VTq1ArIojdcaZPrt@hemllin.22xovxl.mongodb.net/?retryWrites=true&w=majorityWrites=true')
+// mongoose.connect('mongodb+srv://admin:ms7Mm9VYyA9v8i37@hemllinapi.h2s1x7a.mongodb.net/Hemllin-API?retryWrites=true&w=majority')
 .then(() => {
     console.log('Connected to database');
     app.listen(5000, () => {

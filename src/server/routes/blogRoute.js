@@ -37,4 +37,25 @@ router.get('/blog-posts/category/:category', async (req, res) => {
     }
 })
 
+// send blog posts
+router.post('/blog-posts', async (req, res) => {
+    try {
+        const blogPost = new BlogPost({
+            id: req.body.id,
+            author: req.body.author,
+            title: req.body.title,
+            desc: req.body.desc,
+            text: req.body.text,
+            category: req.body.category,
+            image: req.body.image,
+            url: req.body.url
+        })
+        await blogPost.save();
+        res.send(blogPost);
+    } catch (error) {
+        console.log(error.message);
+        return res.status(500).send({ message: error.message });
+    }
+})
+
 module.exports = router;

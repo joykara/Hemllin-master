@@ -8,11 +8,11 @@ const blogSchema = mongoose.Schema(
         },
         author: {
             type: String,
-            required: true
+            required: false
         },
         category: {
             type: Array,
-            required: false
+            required: true
         },
         image: {
             type: String,
@@ -29,11 +29,11 @@ const blogSchema = mongoose.Schema(
         },
         desc: {
             type: String,
-            required: true
+            required: false
         },
         text: {
             type: String,
-            required: true
+            required: false
         }
     },
     {
