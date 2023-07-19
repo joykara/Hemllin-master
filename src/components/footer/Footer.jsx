@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { RiFacebookCircleFill, RiTwitterFill, RiYoutubeFill, RiLinkedinFill, RiInstagramFill } from 'react-icons/ri';
-import axios from 'react-axios';
+import axios from 'axios';
 import './footer.css';
 import { Link } from 'react-router-dom';
 
@@ -18,7 +18,7 @@ const Footer = () => {
 
     // Send the email subscription to the server
     axios
-      .post('https://hemllin-master.vercel.app:5000/subscriptions', { email })
+      .post('/subscriptions', { email })
       .then((response) => {
         console.log(response.data);
         // Clear the email input after successful submission

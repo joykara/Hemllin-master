@@ -42,7 +42,7 @@ const Blog = () => {
   //     </div>
   //   )
   // }
-  
+
 
 
   return (
@@ -52,7 +52,7 @@ const Blog = () => {
           <div className="blog-intro">
             <a href="/about-us"><span className='arrow'><img src={arrow} alt="arrow nav" />Back to About Us Overview</span></a>
             <h2>Hemllin Blog</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+            <p>Welcome to our Hemllin blog!</p>
           </div>
           <ul className="blog-cta-social-links">
             <li><Link to="https://www.linkedin.com/company/hemllin/?viewAsMember=true"><BsLinkedin size={22}/></Link></li>
@@ -75,9 +75,11 @@ const Blog = () => {
             blogs.map(blog => (
               <div className='article' key={blog.id}>
                 <div className="article-image">
+                <img src={`/uploads/${blog.image}`} alt="Blog Image" />
                 </div>
                 <div className="article-content">
                   <h3><Link to={blog.url}>{blog.title}</Link></h3>
+                  <span> by: {blog.author} </span>
                   <p>{blog.desc}</p>
                 </div>
               </div>

@@ -278,6 +278,17 @@
 .single-blog-container p {
   padding-bottom: 1rem;
 }
+.single-blog-container ul{
+    padding: 1rem 0;
+    margin-left: 1rem;
+}
+.single-blog-container ul li{
+    padding: 5px;
+    font-family: var(--font-family);
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    font-weight: 400;
+    list-style-type: disc;
+}
 
 /* OUR GOVERNANCE */
 .hm-governance-container{

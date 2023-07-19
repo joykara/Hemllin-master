@@ -1,13 +1,14 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const multer = require('multer');
 const Subscription = require('./models/subscriptionModel');
 const ContactForm = require('./models/contactFormModel');
 const BlogPost = require('./models/blogsModel');
 const app = express();
 
 // import route
-const blogRoute = require('./routes/blogRoute');
-app.use('/blog-posts', blogRoute)
+// const blogRoute = require('./routes/blogRoute');
+// app.use('/blog-posts', blogRoute)
 
 // Enable CORS for all routes
 const cors = require('cors');
@@ -98,6 +99,49 @@ app.post('/contact-us/data', async (req, res) => {
     }
 })
 
+// Configure the image storage destination and filename
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, './uploads');
+    },
+    filename: (req, file, cb) => {
+        cb(null, file.originalname);
+    }
+});
+
+// Configure the image file filter
+const fileFilter = (req, file, cb) => {
+    // Reject a file
+    if (file.mimetype === 'image/jpeg' || file.mimetype === 'image/png') {
+        cb(null, true);
+    }
+    // Accept a file
+    else {
+        cb(null, false);
+    }
+}
+
+// Configure multer
+const upload = multer({
+    storage: storage,
+    limits: {
+        fileSize: 1024 * 1024 * 5 // 5MB
+    },
+    fileFilter: fileFilter
+});
+
+app.use('/uploads', express.static('uploads'));
+// send blog post image
+app.post('/blog-posts/image', upload.single('image'), async (req, res) => {
+    try {
+        res.send(req.file);
+    } catch (error) {
+        console.log(error.message);
+        return res.status(500).send({ message: error.message });
+    }
+});
+
+
 // get blog posts
 app.get('/blog-posts', async (req, res) => {
     try {
@@ -151,8 +195,7 @@ app.post('/blog-posts', async (req, res) => {
 })
 
 // connect mongoose
-mongoose.connect('mongodb+srv://system:VTq1ArIojdcaZPrt@hemllin.22xovxl.mongodb.net/?retryWrites=true&w=majorityWrites=true')
-// mongoose.connect('mongodb+srv://admin:ms7Mm9VYyA9v8i37@hemllinapi.h2s1x7a.mongodb.net/Hemllin-API?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://system:VTq1ArIojdcaZPrt@hemllin.22xovxl.mongodb.net/?retryWrites=true&w=majority')
 .then(() => {
     console.log('Connected to database');
     app.listen(5000, () => {

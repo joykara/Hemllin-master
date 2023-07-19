@@ -300,7 +300,7 @@ const AboutNavbar = () => {
               }`}
               onMouseLeave={handleAboutDropdownLeave}
             >
-              <div className="aboutdrop-down-menu-container">
+              <ul className="aboutdrop-down-menu-container">
                 {/* enter correct links to pages */}
                 <AboutUs
                   linkUrl={'/about-us/our-team'}
@@ -318,7 +318,7 @@ const AboutNavbar = () => {
                   linkUrl={'/about-us/our-governance'}
                   linkItem={'Our Governance'}
                 />
-              </div>
+              </ul>
             </div>
           </div>
           <p>

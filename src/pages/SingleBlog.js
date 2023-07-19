@@ -13,7 +13,7 @@ const SingleBlog = () => {
   useEffect(() => {
     const fetchBlog = async () => {
       try {
-        const response = await axios.get(`/blog-posts/${(id)}`); // Parse id as a number
+        const response = await axios.get(`http://localhost:5000/blog-posts/${(id)}`); // Parse id as a number
         setBlog(response.data);
       } catch (error) {
         console.error(error);
@@ -32,7 +32,7 @@ const SingleBlog = () => {
         <AboutNavbar />
         <div className="single-blog-container">
             <h2>{blog.title}</h2>
-            <p>{blog.text}</p>
+            <div dangerouslySetInnerHTML={{ __html: blog.text }}></div>
             <Link to="/about-us/blog">Back to Blogs</Link>
         </div>
       </>
