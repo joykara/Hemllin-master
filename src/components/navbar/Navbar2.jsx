@@ -173,12 +173,9 @@ const Navbar = () => {
         <button onClick={handleToggle}>
           {toggleMenu ? <RiCloseLine size={50} /> : <RiMenuLine size={40} />}
         </button>
-        <p>
-          <Link to="/">Logo</Link>
-        </p>
-        {/* <div className='navbar-hm__logo'>
+        <div className='navbar-hm__logo'>
           <Link to="/"><img src={logo} alt="" /></Link>
-        </div> */}
+        </div>
       </div>
       {toggleMenu && (
         <div className={`navbar__menu-links ${toggleMenu ? 'show' : ''}`}>

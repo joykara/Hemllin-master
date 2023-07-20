@@ -9,8 +9,13 @@
     background: linear-gradient(0deg, #263738f7 10%, #111010 98.44%);
 }
 .navbar-hm__logo{
-    height: 20px;
-    width: 30px;
+    height: 50px;
+    width: 50px;
+}
+.navbar-hm__logo img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 .navbar__logo,
 .navbar__menu-links-top{

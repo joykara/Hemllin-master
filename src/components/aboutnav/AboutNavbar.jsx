@@ -8,6 +8,8 @@ import { Link } from 'react-router-dom';
 import AboutUs from '../../container/dropdowns/AboutUs';
 import List from '../../data/List';
 import { IndustriesMenu, ServicesMenu, InsightsMenu, AboutMenu, MobileIndustriesMenu, MobileAboutMenu, MobileInsightsMenu, MobileServicesMenu} from '../../container';
+import logo from '../../hemllinLogo.png';
+
 
 const AboutNavbar = () => {
   //show data on typing in the input
@@ -142,9 +144,9 @@ const AboutNavbar = () => {
         <button onClick={handleToggle}>
           {toggleMenu ? <RiCloseLine size={50} /> : <RiMenuLine size={40} />}
         </button>
-        <p>
-          <Link to="/">Logo</Link>
-        </p>
+        <div className='navbar-hm__logo'>
+          <Link to="/"><img src={logo} alt="" /></Link>
+        </div>
       </div>
       {toggleMenu && (
         <div className={`navbar__menu-links ${toggleMenu ? 'show' : ''}`}>
