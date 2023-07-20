@@ -25,25 +25,6 @@ const Blog = () => {
   if (!blogs) {
     return <p>Loading...</p>;
   }
-  
-  // if(!Array.isArray(blogs))return null;
-  // let blogListItems= [];
-  // for(let i=0; i<blogs.length; i++){
-  //   blogListItems.push(
-  //     <div className='article' key={blogs[i].id}>
-  //       <div className="article-image">
-  //       </div>
-  //       <div className="article-content">
-  //         <h3><Link to={blogs[i].url}>{blogs[i].title}</Link></h3>
-  //         <span>{blogs[i].category}</span>
-  //         <span> by: {blogs[i].author} </span>
-  //         <p>{blogs[i].desc}</p>
-  //       </div>
-  //     </div>
-  //   )
-  // }
-
-
 
   return (
     <>
@@ -75,10 +56,11 @@ const Blog = () => {
             blogs.map(blog => (
               <div className='article' key={blog.id}>
                 <div className="article-image">
-                <img src={`/uploads/${blog.image}`} alt="Blog Image" />
+                <img src={blog.image} alt="Blog Image" />
                 </div>
                 <div className="article-content">
-                  <h3><Link to={blog.url}>{blog.title}</Link></h3>
+                  <h3><Link to={`/blog-posts/${blog.id}`}>{blog.title}</Link></h3>
+                  <span>{new Date(blog.createdAt).toDateString()}</span>
                   <span> by: {blog.author} </span>
                   <p>{blog.desc}</p>
                 </div>

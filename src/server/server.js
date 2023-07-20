@@ -132,7 +132,7 @@ const upload = multer({
 
 app.use('/uploads', express.static('uploads'));
 // send blog post image
-app.post('/blog-posts/image', upload.single('image'), async (req, res) => {
+app.post('/blog-posts/uploads/:image', upload.single('image'), async (req, res) => {
     try {
         res.send(req.file);
     } catch (error) {
