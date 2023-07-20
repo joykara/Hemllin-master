@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const multer = require('multer');
+const path = require('path');
 const Subscription = require('./models/subscriptionModel');
 const ContactForm = require('./models/contactFormModel');
 const BlogPost = require('./models/blogsModel');
@@ -14,6 +15,11 @@ const app = express();
 const cors = require('cors');
 app.use(cors());
 
+
+// app.use('/uploads', express.static('uploads'));
+// send blog post image
+// Serve static files from the 'uploads' directory
+app.use('/uploads', express.static(path.join(__dirname, 'src', 'server', 'uploads')));
 
 // use express middleware
 app.use(express.json());
@@ -98,48 +104,6 @@ app.post('/contact-us/data', async (req, res) => {
         return res.status(500).send({ message: error.message });
     }
 })
-
-// Configure the image storage destination and filename
-const storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-        cb(null, './uploads');
-    },
-    filename: (req, file, cb) => {
-        cb(null, file.originalname);
-    }
-});
-
-// Configure the image file filter
-const fileFilter = (req, file, cb) => {
-    // Reject a file
-    if (file.mimetype === 'image/jpeg' || file.mimetype === 'image/png') {
-        cb(null, true);
-    }
-    // Accept a file
-    else {
-        cb(null, false);
-    }
-}
-
-// Configure multer
-const upload = multer({
-    storage: storage,
-    limits: {
-        fileSize: 1024 * 1024 * 5 // 5MB
-    },
-    fileFilter: fileFilter
-});
-
-app.use('/uploads', express.static('uploads'));
-// send blog post image
-app.post('/blog-posts/uploads/:image', upload.single('image'), async (req, res) => {
-    try {
-        res.send(req.file);
-    } catch (error) {
-        console.log(error.message);
-        return res.status(500).send({ message: error.message });
-    }
-});
 
 
 // get blog posts
