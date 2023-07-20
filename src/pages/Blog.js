@@ -15,7 +15,7 @@ const Blog = () => {
   const location = useLocation();
   useEffect(()=> {
     const fetchBlogs = async () => {
-      const res = await axios.get('/blog-posts');
+      const res = await axios.get('http://localhost:5000/blog-posts');
       setBlogs(res.data);
     }
     fetchBlogs();
