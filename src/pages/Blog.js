@@ -46,7 +46,7 @@ const Blog = () => {
           <div className="browse-blog">
             <h4>BROWSE BLOG</h4>
             <div className='browse-blog-options'>
-              <p>Browse by: <span>Lorem</span> | <span>Lorem</span></p>
+              <p>Browse by: <span>Category</span> | <span>Lorem</span></p>
             </div>
           </div>
 
@@ -55,7 +55,7 @@ const Blog = () => {
             {/* {blogListItems} */}
           {Array.isArray(blogs) ? (
             blogs.map(blog => (
-              <div className='article' key={blog.id}>
+              <div className='article scale-up' key={blog.id}>
                 <div className="article-image">
                 <img src={blogImg} alt="Blog Image" />
                 </div>
