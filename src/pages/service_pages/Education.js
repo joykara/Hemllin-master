@@ -152,7 +152,7 @@ const Education = () => {
                     </div>
               </div>
           </div>
-          <Cta ctaTitle='Get started on your educational and career advancement today! ' ctaLink1='/contact-us' ctaLink1Text='Book a Meeting'ctaLink2='/contact-us' ctaLink2Text='Contact Us'/>
+          <Cta ctaTitle='Get started on your educational and career advancement today! ' ctaLink1='https://calendly.com/hemllinconsultancy/consultation?month=2023-07' ctaLink1Text='Book a Meeting'ctaLink2='/contact-us' ctaLink2Text='Contact Us'/>
           <Footer/>
       </>
   )
