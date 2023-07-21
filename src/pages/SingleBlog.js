@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { useParams, Link, useLocation } from 'react-router-dom';
 import axios from 'axios';
 import { AboutNavbar, Footer } from '../components';
-import heroImg from '../server/uploads/blog.jpg';
 import arrow from '../assets/Vector.png';
 
 const SingleBlog = () => {
@@ -38,7 +37,7 @@ const SingleBlog = () => {
 
           <h1>{blog.title}</h1>
           <div className="single-blog__image">
-            <img src={heroImg} alt="Blog Image" />
+                <img src={blog.image} alt="Blog Image" />
           </div>
           <span>{new Date(blog.createdAt).toDateString()}</span>
           <p className='blog-author'><span> Author:</span>{blog.author}</p>

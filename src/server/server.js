@@ -1,25 +1,42 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const multer = require('multer');
+const fs = require('fs');
 const path = require('path');
 const Subscription = require('./models/subscriptionModel');
 const ContactForm = require('./models/contactFormModel');
 const BlogPost = require('./models/blogsModel');
 const app = express();
 
-// import route
-// const blogRoute = require('./routes/blogRoute');
-// app.use('/blog-posts', blogRoute)
-
 // Enable CORS for all routes
 const cors = require('cors');
 app.use(cors());
 
 
-// app.use('/uploads', express.static('uploads'));
-// send blog post image
-// Serve static files from the 'uploads' directory
-app.use('/uploads', express.static(path.join(__dirname, 'src', 'server', 'uploads')));
+// storage engine
+const storage = multer.diskStorage({
+    destination: './src/server/uploads/image',
+    filename: (req, file, cb) => {
+        return cb(null, `${file.fieldname}_${Date.now()}${path.extname(file.originalname)}`)
+    }
+})
+
+const upload = multer({
+    storage: storage,
+    limits: {
+        fileSize: 1000000
+    }
+})
+app.use('/blog-posts/image', express.static('/src/server/uploads/image'))
+
+app.post('/uploads', upload.single('image'), (req, res) => {
+    res.json({
+        success: 1,
+        image_url: `http://localhost:5000/blog-posts/image/${req.file.filename}`,
+        filename: req.file.filename
+    });
+});
+
 
 // use express middleware
 app.use(express.json());
@@ -137,6 +154,22 @@ app.get('/blog-posts/category/:category', async (req, res) => {
         return res.status(500).send({ message: error.message });
     }
 })
+
+// get blog post images
+app.get('/blog-posts/image/:image', async (req, res) => {
+    try {
+        const imagePath = path.join(__dirname, 'uploads', 'image', req.params.image);
+        fs.readFile(imagePath, function read(err, data) {
+            if (err) {
+                throw err;
+            }
+            res.send(data);
+        });
+    } catch (error) {
+        return res.status(500).send({ message: error.message });
+    }
+});
+
 // send blog posts
 app.post('/blog-posts', async (req, res) => {
     try {

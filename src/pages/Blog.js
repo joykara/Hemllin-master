@@ -8,7 +8,6 @@ import { Link, useLocation } from 'react-router-dom';
 import axios from 'axios';
 import { BsLinkedin, BsYoutube } from 'react-icons/bs';
 import { AiFillTwitterSquare } from 'react-icons/ai';
-import blogImg from '../server/uploads/animation.jpg';
 
 const Blog = () => {
   // fetch blogs from api and display them
@@ -57,7 +56,7 @@ const Blog = () => {
             blogs.map(blog => (
               <div className='article scale-up' key={blog.id}>
                 <div className="article-image">
-                <img src={blogImg} alt="Blog Image" />
+                <img src={blog.image} alt="Blog Image" />
                 </div>
                 <div className="article-content">
                   <h3><Link to={`/blog-posts/${blog.id}`}>{blog.title}</Link></h3>
