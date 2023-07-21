@@ -265,28 +265,70 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  width: 90%;
+  width: 80%;
   margin: auto;
-  padding-top: 3rem;
+  padding: 3rem 0;
 }
-.single-blog-container h2 {
-  font-size: 2rem;
+.single-blog__image{
+    margin: auto;
+    width: 90%;
+    height: 400px;
+    background: #f9f9f9;
+}
+.single-blog__image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.single-blog-container .arrow img{
+    margin-right: 1rem;
+    cursor: pointer;
+}
+.single-blog-container a:hover .arrow img{
+    fill: var(--color-link);
+    padding-right: 1rem;
+    transition: padding .4s ease-in-out;
+}
+.single-blog-container h1 {
   font-weight: 700;
-  padding-bottom: 2.5rem;
+  padding: 2.5rem 0;
+}
+.single-blog-container h3{
+    text-decoration: underline;
+}
+.single-blog-container h4{
+    font-weight: 600;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
 }
 .single-blog-container p {
   padding-bottom: 1rem;
 }
+.single-blog-container span{
+    font-family: 'Merriweather';
+    font-size: clamp(1rem, 1.2vw, 1.2rem);
+    font-weight: 500;
+    color: var(--color-bg);
+    padding-bottom: .5rem;
+}
+.single-blog-container .blog-author{
+    font-family: 'Merriweather';
+}
+.single-blog-container a:hover,
+.single-blog-container a span:hover{
+    color: var(--color-link);
+    cursor: pointer;
+}
 .single-blog-container ul{
     padding: 1rem 0;
-    margin-left: 1rem;
+    margin-left: 2rem;
 }
 .single-blog-container ul li{
     padding: 5px;
     font-family: var(--font-family);
     font-size: clamp(1rem, 1.5vw, 1.5rem);
     font-weight: 400;
-    list-style-type: disc;
+    list-style-type: decimal;
 }
 
 /* OUR GOVERNANCE */
@@ -1410,8 +1452,12 @@ form .contact-us-question-options label:hover{
         padding: 2rem 5rem;
     }
 
+    /* SINGLE BLOG */
+    .single-blog-container{
+        width: 90%;
+    }
+
     /* CONTACT PAGE */
-    
     .contact-us-container{
         padding: 1rem 2rem;
     }

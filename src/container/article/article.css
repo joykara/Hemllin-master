@@ -4,6 +4,7 @@
     justify-content: space-between;
     align-items: center;
     margin: 1rem;
+    padding: 1rem 1rem 0 1rem;
 }
 .article-image{
     height: 300px;
@@ -33,12 +34,17 @@
     font-weight: 600;
     font-family: var(--font-family);
 }
+.article-content h3 a:hover{
+    color: var(--color-link);
+    text-decoration: underline;
+}
 .article-content span{
-    font-size: clamp(1rem, 2vw, 1.2rem);
-    font-weight: 400;
-    font-family: serif;
-    font-style: italic;
-    margin-bottom:  .5rem 0;
+    font-family: 'Merriweather', serif;
+    font-size: clamp(1rem, 1.2vw, 1.2rem);
+    font-weight: 500;
+    color: var(--color-bg);
+    margin-right: 1rem;
+    padding-bottom: .5rem;
 }
 .article-content p{
     padding: .5rem 0;
@@ -65,8 +71,6 @@
     }
     .article-content{
         margin: 0;
-        padding: 1rem;
-        align-items: center;
     }
     .article-content h1{
         font-size: 1.2rem;

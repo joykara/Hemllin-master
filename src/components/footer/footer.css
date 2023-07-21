@@ -7,7 +7,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem 0;
+    padding: 2rem 0 .5rem 0;
+    border-top: 1px solid var(--color-bg);
 }
 .hm-footer{
     padding: 30px;
@@ -107,6 +108,11 @@
 }
 
 /* MEDIA QUERIES */
+@media screen and (max-width: 1280px){
+    .hm-footer{
+        width: 80%;
+    }
+}
 @media screen and (max-width: 900px){
     .hm-footer{
         width: 100%;

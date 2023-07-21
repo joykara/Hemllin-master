@@ -35,14 +35,14 @@ h4{
   font-family: var(--font-family);
 }
 a{
-  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  font-size: clamp(1.1rem, 1.3vw, 1.3rem);
   color: #000;
   font-family: var(--links-font-family);
 }
 p{
   font-family: var(--font-family);
   line-height: 32px;
-  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  font-size: clamp(1.1rem, 1.3vw, 1.3rem);
   font-weight: 400;
 }
 .cta-link:hover{
@@ -167,6 +167,21 @@ p{
   background: #606060;
 }
 
+
+@media only screen and (min-width: 1800px){
+  a{
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    color: #000;
+    font-family: var(--links-font-family);
+  }
+  p{
+    font-family: var(--font-family);
+    line-height: 32px;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    font-weight: 400;
+  }
+
+}
 @media only screen and (max-width: 991px){
 .cookiesblock {
     padding: 0 0 15px 0;
