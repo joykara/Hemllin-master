@@ -3,6 +3,7 @@ import { RiFacebookCircleFill, RiTwitterFill, RiYoutubeFill, RiLinkedinFill, RiI
 import axios from 'axios';
 import './footer.css';
 import { Link } from 'react-router-dom';
+import logo from '../../hemllinLogo.png';
 
 const Footer = () => {
   const [email, setEmail] = useState('');
@@ -33,7 +34,9 @@ const Footer = () => {
   return (
     <div className="hm-footer-container">
         <div className="hm-footer">
-              <div className="hm-logo">Logo</div>
+              <div className="navbar-hm__logo">
+                <Link to="/"><img src={logo} alt="" /></Link>
+              </div>
               <div className="hm-footer-content">
                   <div className="hm-email">
                       <h3>Subscribe</h3>
