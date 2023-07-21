@@ -195,7 +195,7 @@ app.post('/blog-posts', async (req, res) => {
 mongoose.connect('mongodb+srv://system:VTq1ArIojdcaZPrt@hemllin.22xovxl.mongodb.net/?retryWrites=true&w=majority')
 .then(() => {
     console.log('Connected to database');
-    app.listen(5000, () => {
+    app.listen('5000', () => {
         console.log('Server is running on port 5000');
     })
 }
