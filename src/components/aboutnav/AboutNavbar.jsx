@@ -159,9 +159,9 @@ const AboutNavbar = () => {
                   <RiMenuLine color="#fff" size={30} />
                 )}
               </button>
-              <p>
-                <Link to="/">Logo</Link>
-              </p>
+              <div className="navbar-hm__logo">
+                <Link to="/"><img src={logo} alt="" /></Link>
+              </div>
             </div>
             <div className="menu">
               <div className="show-menu">

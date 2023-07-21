@@ -188,9 +188,8 @@ const Navbar = () => {
                   <RiMenuLine color="#fff" size={30} />
                 )}
               </button>
-              <div>
-                <img src="" alt="" />
-                <Link to="/">Logo</Link>
+              <div className="navbar-hm__logo">
+                <Link to="/"><img src={logo} alt="" /></Link>
               </div>
             </div>
             <div className="menu">
