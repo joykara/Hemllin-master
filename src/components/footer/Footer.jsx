@@ -64,6 +64,7 @@ const Footer = () => {
 
               </div>
               <div className="hm-footer__copyright">
+                  <p>Hemllin - Get our latest thinking on your devices</p>
                   <p>©2017-2023 Hemllin</p>
               </div>
         </div>

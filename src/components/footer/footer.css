@@ -98,6 +98,11 @@
 .hm-footer-cta-social-links li{
     margin-top: auto;
 }
+.hm-footer__copyright{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .hm-footer__copyright p{
     padding-top: 1rem;
     display: flex;
