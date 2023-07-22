@@ -292,8 +292,9 @@
     transition: padding .4s ease-in-out;
 }
 .single-blog-container h1 {
-  font-weight: 700;
-  padding: 2.5rem 0;
+   font-size: clamp(2.5rem, 3vw, 3.5rem);
+   font-weight: 700;
+   padding: 2.5rem 0;
 }
 .single-blog-container h3{
     text-decoration: underline;
