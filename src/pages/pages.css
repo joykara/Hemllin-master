@@ -248,6 +248,10 @@
 .browse-blog-options span{
     color: var(--color-bg);
 }
+.browse-blog-options p option{
+    font-family: var(--font-family);
+    padding-bottom: .5rem;
+}
 .browse-blog-options span:hover{
     color: var(--color-link);
 }
