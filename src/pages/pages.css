@@ -271,6 +271,7 @@
 }
 .single-blog__image{
     margin: auto;
+    margin-bottom: 1rem;
     width: 90%;
     height: 400px;
     background: #f9f9f9;

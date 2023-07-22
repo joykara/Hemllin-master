@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link, useLocation } from 'react-router-dom';
 import axios from 'axios';
-import { AboutNavbar, Footer } from '../components';
+import { Footer, Navbar2 } from '../components';
 import arrow from '../assets/Vector.png';
 
 const SingleBlog = () => {
@@ -25,12 +25,13 @@ const SingleBlog = () => {
   }, [id]);
 
   if (!blog) {
-    return <AboutNavbar />;
+    return <Navbar2 />;
   }
 
     return (
       <>
-        <AboutNavbar />
+     <div className='main-container'>
+        <Navbar2 />
         <div className="single-blog-container">
 
           <Link to="/about-us/blog"><span className='arrow'><img src={arrow} alt="arrow nav" />Back to Blogs</span></Link>
@@ -43,7 +44,8 @@ const SingleBlog = () => {
           <p className='blog-author'><span> Author:</span>{blog.author}</p>
           <div dangerouslySetInnerHTML={{ __html: blog.text }}></div>
         </div>
-        <Footer/>
+          <Footer />
+      </div>
       </>
   );
 };

@@ -204,4 +204,3 @@ mongoose.connect('mongodb+srv://system:VTq1ArIojdcaZPrt@hemllin.22xovxl.mongodb.
     console.log('Connection failed');
 })
 
-// Path: src\server\models\subscriptionModel.js
