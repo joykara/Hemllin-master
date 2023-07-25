@@ -55,7 +55,7 @@
 } */
 
 /* other content and career content*/
-.other-content, 
+.other-content,
 .career-content{
     padding-top: 3rem;
 }
@@ -63,7 +63,7 @@
     background: var(--color-bg);
     margin-top: -1.2rem;
 }
-.other-content__container, 
+.other-content__container,
 .career-content__container{
     display: flex;
     justify-content: space-between;
