@@ -1,11 +1,20 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import './articles.css';
-import videoImage from '../../assets/514A1520 1.png'
+import { FaMicrophone, FaMicrophoneSlash } from 'react-icons/fa';
+import videoImage from '../../assets/RCS-video.mp4'
 import joinUS from '../../assets/join-us.png';
 import arrow from '../../assets/arrow.png'
 
 const Articles = () => {
+    const [muted, setMuted] = useState(true);
+    const videoRef = useRef(null);
+
+    const handleToggleMute = () => {
+      setMuted(!muted);
+      videoRef.current.muted = !muted;
+    };
+
   return (
     <>
       {/* <div className="articles-container">
@@ -23,7 +32,13 @@ const Articles = () => {
       <div className="other-content">
         <div className="other-content__container">
           <div className="other-content__video">
-            <img src={videoImage} alt="" />
+            <video ref={videoRef} autoPlay loop muted={muted}>
+              <source src={videoImage} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <button onClick={handleToggleMute}>
+              {muted ? <FaMicrophoneSlash color='white' size={25}/> : <FaMicrophone color='white' size={20}/>}
+            </button>
           </div>
         </div>
       </div>

@@ -47,7 +47,7 @@ const Media = () => {
             <div className='hm-media-intro'>
               <div className='hm-media-intro__text'>
                 <h2>Media Center</h2>
-                <p>Lorem Ipsum dolor sit amet. Rem reprehenderit nisi non quae iste qui architecto cumque qt totam </p>
+                <p> Through captivating stories, and vibrant visuals, we invite you to explore the moments that define our purpose and passion.</p>
               </div>
 
               <div className='hm-media-intro__content'>
