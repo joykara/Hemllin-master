@@ -1,5 +1,5 @@
 import React from 'react';
-import { AboutNavbar, Footer } from '../../components';
+import { AboutNavbar, Footer, ScrollToTop } from '../../components';
 import { CgArrowLongRight } from 'react-icons/cg';
 import { AiOutlineLine } from 'react-icons/ai';
 import { HashLink as Link } from 'react-router-hash-link';
@@ -87,7 +87,8 @@ const OurHistory = () => {
                 </div>
             </div>
         </div>
-        <Footer/>
+          <Footer />
+          <ScrollToTop />
     </>
   )
 }

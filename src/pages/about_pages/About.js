@@ -5,7 +5,7 @@ import wwa1 from '../../assets/who-are-we.png';
 import hww from '../../assets/how-we-work.png';
 import ourValues from '../../assets/our-values.png'
 import '../pages.css';
-import { Footer } from '../../components';
+import { Footer, ScrollToTop } from '../../components';
 
 
 const About = () => {
@@ -134,7 +134,8 @@ const About = () => {
           </div>
         </div>
 
-        <Footer/>
+        <Footer />
+        <ScrollToTop />
 
       </div>
     </>

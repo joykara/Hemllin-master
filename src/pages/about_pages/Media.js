@@ -1,5 +1,5 @@
 import React from 'react'
-import { Footer, AboutNavbar } from '../../components';
+import { Footer, AboutNavbar, ScrollToTop } from '../../components';
 import arrow from '../../assets/arrow.png';
 import media from '../../assets/riruta_central_pics/mondaypost.png';
 import riruta1 from '../../assets/riruta_central_pics/514A0911.jpg';
@@ -210,7 +210,8 @@ const Media = () => {
               </div>
             </div>
         </div>
-        <Footer/>
+      <Footer />
+      <ScrollToTop />
     </>
   )
 }
