@@ -1,5 +1,5 @@
 import React from 'react';
-import { Footer, Navbar2 } from '../../components';
+import { Footer, Navbar2, ScrollToTop } from '../../components';
 import './service-pages.css';
 import Cta from '../Cta';
 import { Link } from 'react-router-dom';
@@ -90,9 +90,9 @@ const Travel = () => {
                     </div>
               </div>
           </div>
-          
           <Cta ctaTitle='Want to learn more about the other services we offer?' ctaLink1='https://calendly.com/hemllinconsultancy/consultation?month=2023-07' ctaLink1Text='Book a Meeting'ctaLink2='/contact-us' ctaLink2Text='Contact Us'/>
-          <Footer/>
+          <Footer />
+          <ScrollToTop />
       </>
   )
 }
