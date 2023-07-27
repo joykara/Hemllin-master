@@ -2,7 +2,7 @@
 import React, {useEffect} from 'react';
 import ReactGA from 'react-ga'; // Import react-ga
 import { useCookies } from 'react-cookie';
-import { Header, Navbar2, Features, Articles, Footer, CookieConsent } from '../components';
+import { Header, Navbar2, Features, Articles, Footer, CookieConsent, ScrollToTop } from '../components';
 
 function Homepage() {
   // eslint-disable-next-line
@@ -19,6 +19,7 @@ function Homepage() {
       <Features />
       <Articles />
       <Footer />
+      <ScrollToTop />
       {!cookies['cookieConsent'] && <CookieConsent />}
     </div>
   );
