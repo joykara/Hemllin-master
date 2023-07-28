@@ -17,7 +17,7 @@ const Blog = () => {
 
   useEffect(() => {
     const fetchBlogs = async () => {
-      const res = await axios.get("http://localhost:5000/blog-posts");
+      const res = await axios.get("https://hemllin-master.vercel.app:443/blog-posts");
       setBlogs(res.data);
     };
     fetchBlogs();
