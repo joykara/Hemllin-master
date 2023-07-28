@@ -55,10 +55,10 @@ const Footer = () => {
                       </ul>
                       <ul className='hm-footer-cta-social-links'>
                           <li><Link to="https://www.linkedin.com/company/hemllin/?viewAsMember=true"><RiLinkedinFill size={25}/></Link></li>
-                          <li><Link to="https://twitter.com/hemllin"><RiTwitterFill size={25}/></Link></li>
-                          <li><Link to="https://www.instagram.com/hemllin/"><RiInstagramFill size={25}/></Link></li>
-                          <li><Link to="http://facebook.com/hemllin/"><RiFacebookCircleFill size={25}/></Link></li>
-                          <li><Link to="https://www.youtube.com/@hemllin/featured"><RiYoutubeFill size={25}/></Link></li>
+                          <li><Link to="https://twitter.com/hemllin" target="_blank" rel="noopener noreferrer"><RiTwitterFill size={25}/></Link></li>
+                          <li><Link to="https://www.instagram.com/hemllin/" target="_blank" rel="noopener noreferrer"><RiInstagramFill size={25}/></Link></li>
+                          <li><Link to="http://facebook.com/hemllin/" target="_blank" rel="noopener noreferrer"><RiFacebookCircleFill size={25}/></Link></li>
+                          <li><Link to="https://www.youtube.com/@hemllin/featured" target="_blank" rel="noopener noreferrer"><RiYoutubeFill size={25}/></Link></li>
                         </ul>
                   </div>
 
