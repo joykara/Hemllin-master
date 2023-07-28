@@ -342,8 +342,9 @@
 /* MEDIA QUERIES */
 @media screen and (min-width: 1440px){
     .navbar__menu p,
-    .navbar__menu p a{
-    font-size: 17px;
+    .navbar__menu p a,
+    .navbar__menu-content-detail a{
+        font-size: 17px;
     }
 }
 @media screen and (max-width: 1370px){
