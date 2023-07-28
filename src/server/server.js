@@ -32,7 +32,7 @@ app.use('/blog-posts/image', express.static('/src/server/uploads/image'))
 app.post('/uploads', upload.single('image'), (req, res) => {
     res.json({
         success: 1,
-        image_url: `http://localhost:5000/blog-posts/image/${req.file.filename}`,
+        image_url: `http://localhost:443/blog-posts/image/${req.file.filename}`,
         filename: req.file.filename
     });
 });
@@ -192,11 +192,11 @@ app.post('/blog-posts', async (req, res) => {
 })
 
 // connect mongoose
-mongoose.connect('mongodb+srv://system:VTq1ArIojdcaZPrt@hemllin.22xovxl.mongodb.net/?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://system:VTq1ArIojdcaZPrt@hemllin.22xovxl.mongodb.net/Hemllin?retryWrites=true&w=majority')
 .then(() => {
     console.log('Connected to database');
-    app.listen('5000', () => {
-        console.log('Server is running on port 5000');
+    app.listen('443', () => {
+        console.log('Server is running on port 443');
     })
 }
 ).catch((error) => {

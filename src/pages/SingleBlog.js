@@ -14,7 +14,7 @@ const SingleBlog = () => {
   useEffect(() => {
     const fetchBlog = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/blog-posts/${(id)}`); // Parse id as a number
+        const response = await axios.get(`https://hemllin-master.vercel.app:443/blog-posts/${(id)}`); // Parse id as a number
         setBlog(response.data);
       } catch (error) {
         console.error(error);
