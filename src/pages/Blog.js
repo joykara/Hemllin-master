@@ -1,12 +1,12 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React,{useEffect, useState} from 'react'
-import { RiFacebookCircleFill, RiTwitterFill, RiYoutubeFill, RiLinkedinFill, RiInstagramFill } from 'react-icons/ri';
+import { RiFacebookCircleFill, RiYoutubeFill, RiLinkedinFill, RiInstagramFill } from 'react-icons/ri';
 import Footer from '../components/footer/Footer'
 import arrow from '../assets/Vector.png'
 import { Link, useLocation } from 'react-router-dom';
 import axios from 'axios';
-import { BsLinkedin, BsYoutube } from 'react-icons/bs';
-import { AiFillTwitterSquare } from 'react-icons/ai';
+import { BsYoutube } from 'react-icons/bs';
+import { AiFillTwitterCircle } from 'react-icons/ai';
 import { Navbar2 } from '../components';
 
 const Blog = () => {
@@ -45,8 +45,8 @@ const Blog = () => {
             <p>Welcome to our Hemllin blog!</p>
           </div>
           <ul className="blog-cta-social-links">
-            <li><Link to="https://www.linkedin.com/company/hemllin/?viewAsMember=true" target="_blank" rel="noopener noreferrer"><BsLinkedin size={22}/></Link></li>
-            <li><Link to="https://twitter.com/hemllin" target="_blank" rel="noopener noreferrer"><AiFillTwitterSquare size={27}/></Link></li>
+            <li><Link to="https://www.linkedin.com/company/hemllin/?viewAsMember=true" target="_blank" rel="noopener noreferrer"><RiLinkedinFill size={22}/></Link></li>
+            <li><Link to="https://twitter.com/hemllin" target="_blank" rel="noopener noreferrer"><AiFillTwitterCircle size={25}/></Link></li>
             <li><Link to="https://www.instagram.com/hemllin/" target="_blank" rel="noopener noreferrer"><RiInstagramFill size={25}/></Link></li>
             <li><Link to="http://facebook.com/hemllin/" target="_blank" rel="noopener noreferrer"><RiFacebookCircleFill size={25}/></Link></li>
             <li><Link to="https://www.youtube.com/@hemllin/featured" target="_blank" rel="noopener noreferrer"><BsYoutube size={25}/></Link></li>

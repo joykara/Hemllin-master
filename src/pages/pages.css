@@ -227,12 +227,15 @@
 }
 .blog-cta-social-links{
     display: flex;
-    justify-content: left;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     padding: .8rem 0;
 }
 .blog-cta-social-links li{
     padding-right: .5rem;
+}
+.blog-cta-social-links li:first-child{
+    border-radius: 50%;
 }
 .browse-blog{
     display: flex;
@@ -318,6 +321,7 @@
 }
 .single-blog-container p {
   padding-bottom: 1rem;
+  font-size: clamp(1.1rem, 1.3vw, 1.3rem);
 }
 .single-blog-container span{
     font-family: 'Merriweather';
@@ -328,6 +332,7 @@
 }
 .single-blog-container .blog-author{
     font-family: 'Merriweather';
+    font-size: clamp(1rem, 1.2vw, 1.2rem);
 }
 .single-blog-container a:hover,
 .single-blog-container a span:hover{
@@ -1355,6 +1360,11 @@ form .contact-us-question-options label:hover{
 
 
 /* MEDIA QUERIES */
+@media screen and (min-width: 1640px){
+    .single-blog-container{
+        width: 70%;
+    }
+}
 @media screen and (max-width: 1440px){
     /* ABOUT US OVERVIEW */
     .overview-videotext{
