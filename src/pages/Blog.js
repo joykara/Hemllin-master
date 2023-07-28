@@ -80,7 +80,7 @@ const Blog = () => {
             filteredBlogs.map((blog) => (
               <div className="article scale-up" key={blog.id}>
                 <div className="article-image">
-                  <img src={blog.image} alt="Blog Image" />
+                  <img src={blog.image} alt="Blog Pic" />
                 </div>
                 <div className="article-content">
                   <h3>

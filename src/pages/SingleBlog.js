@@ -38,7 +38,7 @@ const SingleBlog = () => {
 
           <h1>{blog.title}</h1>
           <div className="single-blog__image">
-                <img src={blog.image} alt="Blog Image" />
+                <img src={blog.image} alt="Blog Pic" />
           </div>
           <span>{new Date(blog.createdAt).toDateString()}</span>
           <p className='blog-author'><span> Author:</span>{blog.author}</p>
