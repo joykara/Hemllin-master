@@ -127,7 +127,7 @@
     align-items: center;
     background: #fff;
     padding: .5rem 0;
-    margin-top: -.8rem;
+    margin-top: -1.5rem;
 }
 .highlight-bar__container{
     display: flex;
@@ -151,7 +151,7 @@
 }
 .highlight-bar__container ul li p{
     font-size: 48px;
-    line-height: 24px;
+    line-height: 20px;
     padding: 1rem;
     border-right: .2rem solid #d3f084;
 }

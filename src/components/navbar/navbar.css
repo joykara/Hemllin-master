@@ -122,6 +122,7 @@
 .navbar__search a,
 .navbar__search p{
     color: #fff;
+    font-size: clamp(1.1rem, 1.3vw, 1.3rem);
 }
 .navbar__search a:hover,
 .navbar__search p:hover svg{
