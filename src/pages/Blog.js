@@ -25,7 +25,7 @@ const Blog = () => {
 
   console.log("Blog:", blogs);
 
-  if (!blogs) {
+  if (blogs.length === 0) {
     return <p>Loading...</p>;
   }
 
@@ -45,11 +45,11 @@ const Blog = () => {
             <p>Welcome to our Hemllin blog!</p>
           </div>
           <ul className="blog-cta-social-links">
-            <li><Link to="https://www.linkedin.com/company/hemllin/?viewAsMember=true"><BsLinkedin size={22}/></Link></li>
-            <li><Link to="https://twitter.com/hemllin"><AiFillTwitterSquare size={27}/></Link></li>
-            <li><Link to="https://www.instagram.com/hemllin/"><RiInstagramFill size={25}/></Link></li>
-            <li><Link to="http://facebook.com/hemllin/"><RiFacebookCircleFill size={25}/></Link></li>
-            <li><Link to="https://www.youtube.com/@hemllin/featured"><BsYoutube size={25}/></Link></li>
+            <li><Link to="https://www.linkedin.com/company/hemllin/?viewAsMember=true" target="_blank" rel="noopener noreferrer"><BsLinkedin size={22}/></Link></li>
+            <li><Link to="https://twitter.com/hemllin" target="_blank" rel="noopener noreferrer"><AiFillTwitterSquare size={27}/></Link></li>
+            <li><Link to="https://www.instagram.com/hemllin/" target="_blank" rel="noopener noreferrer"><RiInstagramFill size={25}/></Link></li>
+            <li><Link to="http://facebook.com/hemllin/" target="_blank" rel="noopener noreferrer"><RiFacebookCircleFill size={25}/></Link></li>
+            <li><Link to="https://www.youtube.com/@hemllin/featured" target="_blank" rel="noopener noreferrer"><BsYoutube size={25}/></Link></li>
           </ul>
           <div className="browse-blog">
             <h4>BROWSE BLOG</h4>
@@ -68,7 +68,7 @@ const Blog = () => {
                   <option value="Technology">Technology</option>
                   {/* Add more options for each category you have */}
                 </select>{" "}
-                | <span>Lorem</span>
+                {/* | <span>Lorem</span> */}
               </p>
             </div>
           </div>

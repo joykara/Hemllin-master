@@ -248,9 +248,18 @@
 .browse-blog-options span{
     color: var(--color-bg);
 }
+.browse-blog-options p select{
+    font-family: var(--font-family);
+    font-size: clamp(1rem, 1.1vw, 1.1rem);
+    padding: 0 1rem;
+}
 .browse-blog-options p option{
     font-family: var(--font-family);
-    padding-bottom: .5rem;
+    font-size: clamp(1rem, 1.1vw, 1.1rem);
+}
+.browse-blog-options p select:hover{
+    color: var(--color-bg);
+    cursor: pointer;
 }
 .browse-blog-options span:hover{
     color: var(--color-link);

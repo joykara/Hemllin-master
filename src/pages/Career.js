@@ -169,7 +169,7 @@ const Career = () => {
               </section>
             </div>
         </div>
-        <Cta ctaTitle='Ready to Work with Us?' ctaLink1='/contact-us' ctaLink1Text='Contact Us'ctaLink2='/contact-us' ctaLink2Text='Contact Us'/>
+        <Cta ctaTitle='Ready to Work with Us?' ctaLink1='https://calendly.com/hemllinconsultancy/consultation?month=2023-07' ctaLink1Text='Book a Meeting'ctaLink2='/contact-us' ctaLink2Text='Contact Us'/>
         <Footer/>
     </>
   )
