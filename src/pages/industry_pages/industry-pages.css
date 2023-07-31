@@ -30,11 +30,12 @@
     object-fit: cover;
 }
 .hm-agriculture-industry__content{
-    padding: 5rem 5rem 0 5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 80%;
+    margin: auto;
 }
 .hm-agriculture-industry__content-intro{
     display: flex;
@@ -55,7 +56,7 @@
     justify-content: center;
     align-items: center;
     padding: 2rem 0;
-    height: 100vh;
+    height: 80vh;
 }
 .hm-agriculture-industry__themes-content{
     display: flex;
@@ -70,5 +71,16 @@
     align-items: flex-start;
     padding: 1rem;
     margin-right: 1rem;
-    background: #e9e6e6;
+    background: #ffffff;
+}
+.hm-agriculture-industry__themes-content-text p{
+    padding-bottom: 2rem;
+}
+.hm-agriculture-industry__themes-content-text em,
+.hm-agriculture-industry__themes-content-text span{
+    font-family: var(--font-family);
+}
+.hm-agriculture-industry__themes-content-text span{
+    text-decoration: underline;
+    font-weight: 600;
 }
