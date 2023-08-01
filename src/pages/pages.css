@@ -888,6 +888,7 @@ form .contact-us-question-options{
 }
 form .contact-us-question-option{
     margin-right: 2rem;
+    padding-bottom: 5px;
     cursor: pointer;
 }
 form .contact-us-question-option input{
@@ -897,10 +898,15 @@ form .contact-us-question-option input{
     outline: none;
     transition: all 0.3s ease-in-out;
 }
+form .contact-us-question-option input:checked + label p{
+    border-bottom: 1px solid var(--color-link);
+    color: var(--color-link);
+    fill: var(--color-link);
+}
 form .contact-us-question-options label p{
     margin-left: 2rem;
     margin-top: -1.7rem;
-    font-family: sans-serif;
+    font-family: serif;
 }
 form .contact-us-question-options label:hover{
     border-bottom: 1px solid var(--color-link);
