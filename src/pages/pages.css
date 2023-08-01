@@ -1610,6 +1610,9 @@ form .contact-us-question-options label:hover{
         width: 90%;
         margin: auto;
     }
+    .mission-other-content{
+        margin: 0;
+    }
     .service-options-container,
     .service-option__content,
     .service-option__image{
