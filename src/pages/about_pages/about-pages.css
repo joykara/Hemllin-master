@@ -207,17 +207,26 @@
     margin: 2rem auto;
 }
 .hm-ot-member-detail{
+    position: relative;
+    height: 500px;
+    align-items: flex-start;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
 }
-.hm-ot-member-detail-img{
-    width: 400px;
-    height: 400px;
-    margin: auto;
+.hm-ot-member-detail-img {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: #fdfdfd7f;
     border-radius: 50%;
+    height: 300px;
+    margin: auto;
+    width: 300px;
 }
 .hm-ot-member-detail-img img{
     width: 100%;
@@ -232,18 +241,34 @@
     overflow: hidden;
 }
 .hm-ot-member-detail-text{
+    position: absolute;
+    bottom: 15px;
+    height: 45%;
+    padding: 3rem 1rem 1rem;
     width: 100%;
-    padding: 1rem;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-shadow: 0 16px 32px -1px rgba(5,28,44,.2), 0 0 1px 0 rgba(5,28,44,.15);
+    border-radius: 1rem;
 }
+.hm-ot-member-detail-text p:nth-child(2),
 .hm-ot-member-detail-text h3{
     font-family: 'Merriweather';
-    font-size: 24px;
-    line-height: 52px;
+    font-size: 1.4rem;
+    line-height: 40px;
 }
 .hm-ot-member-detail-text p{
     font-family: var(--font-family);
     line-height: 30px;
     text-align: center;
+}
+.hm-ot-member-detail-text p span{
+    font-family: serif;
+    font-size: 1rem;
+    color: #194736;
+    padding-right: 1rem;
 }
 .hm-ot-member-detail-text p:nth-child(1){
     margin-bottom:.8em!important ;
@@ -305,6 +330,10 @@
     .hm-ot-member-detail-img {
         width: 300px;
         height: 300px;
+        margin: auto;
+        left: 50%;
+        top: 30%;
+        transform: translate(-50%, -50%);
     }
 }
 @media screen and (max-width: 768px){
@@ -352,5 +381,28 @@
     .hm-ot-content-details{
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .hm-ot-member-detail {
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        margin: auto;
+    }
+    .hm-ot-member-detail-img{
+        width: 250px;
+        height: 250px;
+    }
+    .hm-ot-member-detail-text{
+        bottom: 15px;
+        height: auto;
+        padding: 4rem 1rem 1rem;
+        margin-bottom: 1rem;
+    }
+    .hm-ot-member-detail:last-child .hm-ot-member-detail-text,
+    .hm-ot-member-detail:first-child .hm-ot-member-detail-text{
+        bottom: 45px;
     }
 }

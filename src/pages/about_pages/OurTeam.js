@@ -26,47 +26,47 @@ const OurTeam = () => {
                     </div>
                 </div>
                 <div className='hm-ot-content-details'>
-                    <div className='hm-ot-member-detail scale-up'>
+                    <div className='hm-ot-member-detail'>
                         <div className='hm-ot-member-detail-img'>
                             <img src={collins} alt="durector" />
                         </div>
                         <div className='hm-ot-member-detail-text'>
                             <p>Beyond imagination</p>
                             <p>COLLINS.K.CHINA</p>
-                            <p>DIRECTOR</p>
+                            <p><span>DIRECTOR</span></p>
                         </div>
                     </div>
-                    <div className='hm-ot-member-detail scale-up'>
+                    <div className='hm-ot-member-detail'>
                         <div className='hm-ot-member-detail-img'>
                             <img src={arthur} alt="manager" />
                         </div>
                         <div className='hm-ot-member-detail-text'>
                             <p>If you cannot do great things, do small things in a great way.</p>
                             <p>ARTHUR.S.NASIVILI</p>
-                            <p>BUSINESS DEVELOPMENT MANAGER</p>
+                            <p><span>BUSINESS DEVELOPMENT MANAGER</span></p>
                         </div>
                     </div>
-                    <div className='hm-ot-member-detail scale-up'>
+                    <div className='hm-ot-member-detail'>
                         <div className='hm-ot-member-detail-img'>
                             <img src={kevin} alt="finance" />
                         </div>
                         <div className='hm-ot-member-detail-text'>
                             <p>The mind that opens up to a new idea never returns to its original size.</p>
                             <p>KEVIN WEKESA</p>
-                            <p>STRATEGY CONSULTANT</p>
+                            <p><span>STRATEGY CONSULTANT</span></p>
                         </div>
                     </div>
-                    <div className='hm-ot-member-detail scale-up'>
+                    <div className='hm-ot-member-detail'>
                         <div className='hm-ot-member-detail-img'>
                             <img src={shadrack} alt="finance" />
                         </div>
                         <div className='hm-ot-member-detail-text'>
                             <p>Seize the moment today, for tomorrow remains elusive</p>
                               <p>SHADRACK WATIMA</p>
-                              <p>ADMINISTRATOR</p>
+                              <p><span>ADMINISTRATOR</span></p>
                         </div>
                     </div>
-                    <div className='hm-ot-member-detail scale-up'>
+                    <div className='hm-ot-member-detail'>
                         <div className='hm-ot-member-detail-img'>
                             <img src={cynthia} alt="finance" />
                         </div>
