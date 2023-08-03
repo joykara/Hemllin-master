@@ -2,7 +2,7 @@
 import React, { useState, useRef } from 'react';
 import './articles.css';
 import { FaMicrophone, FaMicrophoneSlash } from 'react-icons/fa';
-import videoImage from '../../assets/RCS-video.mp4'
+import videoImage from '../../assets/RCS-video_1.mp4'
 import joinUS from '../../assets/join-us.png';
 import arrow from '../../assets/arrow.png'
 
@@ -17,18 +17,6 @@ const Articles = () => {
 
   return (
     <>
-      {/* <div className="articles-container">
-        <div className="articles-heading">
-          <h4>Lorem Ipsum</h4>
-        </div>
-        <div className="articles-content">
-          <Article articleTitle='Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quos reiciendis laudantium' articleUrl='https://www.google.com' articleText='Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quos reiciendis laudantium'/>
-          <Article articleTitle='Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quos reiciendis laudantium' articleUrl='https://www.google.com' articleText='Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quos reiciendis laudantium'/>
-          <Article articleTitle='Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quos reiciendis laudantium' articleUrl='https://www.google.com' articleText='Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quos reiciendis laudantium'/>
-          <Article articleTitle='Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quos reiciendis laudantium' articleUrl='https://www.google.com' articleText='Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quos reiciendis laudantium'/>
-          <Article articleTitle='Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quos reiciendis laudantium' articleUrl='https://www.google.com' articleText='Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quos reiciendis laudantium'/>
-        </div>
-      </div> */}
       <div className="other-content">
         <div className="other-content__container">
           <div className="other-content__video">
