@@ -52,6 +52,10 @@
     display: flex;
     justify-content: center;
     background: #748e61;
+    background-image: url('../../assets/Designer.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: cover;
     height: clamp(200px, 50vh, 500px);
     width: 100%;
 }
@@ -106,13 +110,14 @@
     align-items: center;
     margin-top: 2rem;
     padding: 1rem 5rem;
+    border-bottom: 1px solid var(--color-bg);
 }
 .hww-other-content__details{
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-start;
-    border-top: 1px solid #2d2c2c;
+    border-top: 1px solid #000;
     width: 80%;
 }
 .hww-other-content__details h4{
@@ -122,30 +127,33 @@
 .hww-other-content-link__container{
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem;
     width: 100%;
 }
 .hww-other-content-link{
     display: flex;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    padding: 1rem 0;
+    flex-direction: column;
+    border: 1px solid #00000007;
+    margin-right: 2rem;
 }
 .hww-other--link-image{
-    width: 50%;
+    width: 100%;
     height: clamp(100px, 50vh, 300px);
 }
 .hww-other--link-image img{
-    width: 90%;
+    width: 100%;
     height: 100%;
-    padding-left: 1rem;
+    object-fit: cover;
+    object-position: center;
+    padding: 1rem;
 }
 .hww-other--link-text{
-    width: 50%;
-    padding-right: 2rem;
+    width: 100%;
+    padding: 1rem;
 }
 .hww-other--link-text a{
     font-family: var(--font-family);
-    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
     line-height: 52px;
     padding: 1rem 0;
 }
@@ -159,7 +167,7 @@
     justify-content: center;
     padding-bottom: 2rem;
     margin: auto;
-    width: 80%;
+    width: 95%;
 }
 .hm-ot-content{
     display: flex;
@@ -184,7 +192,7 @@
     align-items: center;
     text-align: center;
     padding-bottom: 2rem;
-    width: 80%;
+    width: 90%;
     border-bottom: 1px solid grey;
 }
 .hm-ot-title p{
@@ -194,35 +202,90 @@
 .hm-ot-content-details{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    grid-gap: 1rem 2.5rem;
-    width: 80%;
+    grid-gap: 2rem 3.5rem;
+    width: 90%;
     margin: 2rem auto;
 }
 .hm-ot-member-detail{
+    position: relative;
+    height: 500px;
+    align-items: flex-start;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
-    border: 1px solid rgb(59, 224, 59);
 }
-.hm-ot-member-detail-img{
+.hm-ot-member-detail-img {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fdfdfd7f;
+    border-radius: 50%;
+    height: 300px;
+    margin: auto;
+    width: 300px;
+}
+.hm-ot-member-detail-img img{
     width: 100%;
-    height: clamp(100px, 50vh, 300px);
-    background: #8d83837f;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    background-size: cover;
+    /* background-repeat: no-repeat;
+    background-size: cover; */
+    border-radius: 50%;
+    background-position: center;
+    overflow: hidden;
 }
 .hm-ot-member-detail-text{
+    position: absolute;
+    bottom: 15px;
+    height: 45%;
+    padding: 3rem 1rem 1rem;
     width: 100%;
-    padding: 1rem;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-shadow: 0 16px 32px -1px rgba(5,28,44,.2), 0 0 1px 0 rgba(5,28,44,.15);
+    border-radius: 1rem;
 }
+.hm-ot-member-detail-text p:nth-child(2),
 .hm-ot-member-detail-text h3{
     font-family: 'Merriweather';
-    font-size: 24px;
-    line-height: 52px;
+    font-size: 1.4rem;
+    line-height: 40px;
 }
 .hm-ot-member-detail-text p{
     font-family: var(--font-family);
-    font-size: clamp(1rem, 2.5vw, 1.5rem);
-    line-height: 52px;
+    line-height: 30px;
+    text-align: center;
+}
+.hm-ot-member-detail-text p span{
+    font-family: serif;
+    font-size: 1rem;
+    color: #194736;
+    padding-right: 1rem;
+}
+.hm-ot-member-detail-text p:nth-child(1){
+    margin-bottom:.8em!important ;
+}
+
+/* OUR GOVERNANCE */
+.hm-gov-image01 img,
+.hm-gov-sub-content-image02 img,
+.hm-gov-sub-content-image01 img,
+.hm-gov-sub-content-image02 img,
+.hm-governance-more-info-image img,
+.hm-media-intro__content-text .image-details img,
+.hm-media-intro__content-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 
@@ -238,6 +301,9 @@
     .overview-wwa__content-text p{
         width: 90%;
     }
+    .hm-ot-content-details{
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
 }
 @media screen and (max-width: 1440px){
     .hm-hww-content{
@@ -246,6 +312,9 @@
     .hww-content-intro,
     .hww-content-title{
         width: 100%;
+    }
+    .hm-ot-content-details {
+        grid-template-columns: repeat(2, minmax(20rem, 1fr));
     }
 }
 @media screen and (max-width: 1086px){
@@ -257,6 +326,14 @@
     }
     .hm-ot-title p{
         width: 100%;
+    }
+    .hm-ot-member-detail-img {
+        width: 300px;
+        height: 300px;
+        margin: auto;
+        left: 50%;
+        top: 30%;
+        transform: translate(-50%, -50%);
     }
 }
 @media screen and (max-width: 768px){
@@ -284,7 +361,8 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin: auto;
+        margin: 0;
+        margin-bottom: 2rem;
     }
     .hww-other-content__details{
         width: 100%;
@@ -303,5 +381,28 @@
     .hm-ot-content-details{
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .hm-ot-member-detail {
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        margin: auto;
+    }
+    .hm-ot-member-detail-img{
+        width: 250px;
+        height: 250px;
+    }
+    .hm-ot-member-detail-text{
+        bottom: 15px;
+        height: auto;
+        padding: 4rem 1rem 1rem;
+        margin-bottom: 1rem;
+    }
+    .hm-ot-member-detail:last-child .hm-ot-member-detail-text,
+    .hm-ot-member-detail:first-child .hm-ot-member-detail-text{
+        bottom: 45px;
     }
 }

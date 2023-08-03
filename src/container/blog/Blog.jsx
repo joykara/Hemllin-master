@@ -1,12 +1,16 @@
 import React from 'react';
 import './blog.css'
-import arrow from '../../assets/arrow.png'
+import arrow from '../../assets/arrow.png';
+// use lazy load for images
+import LazyLoad from 'react-lazy-load';
 
 const Blog = ({imageUrl, featureTitle, featureUrl1, featureUrl2, featureCta1, featureCta2, featureText}) => {
   return (
     <div className='blog'>
       <div className="blog-image">
-        <img src={imageUrl} alt="" />
+        <LazyLoad height={'100%'} offset={300}>
+          <img src={imageUrl} alt="Our services" />
+        </LazyLoad>
       </div>
       <div className="blog-content">
         <div className="blog-content__text">
@@ -17,7 +21,6 @@ const Blog = ({imageUrl, featureTitle, featureUrl1, featureUrl2, featureCta1, fe
               <button type='button'><a href={featureUrl2} className='cta-link'>{featureCta2} <span className='arrow'><img src={arrow} alt="arrow nav" /></span></a> </button>
             </div>
         </div>
-        
       </div>
     </div>
   )

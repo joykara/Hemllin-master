@@ -1,5 +1,8 @@
 import React, { useEffect } from 'react';
 import { useCookies } from 'react-cookie';
+import ReactGA from 'react-ga';
+import { Helmet } from 'react-helmet';
+
 
 const CookieConsent = () => {
   const [cookies, setCookie] = useCookies(["cookieConsent"]);
@@ -10,11 +13,25 @@ const CookieConsent = () => {
     if (consentCookie) {
       // User has given consent, hide the cookie consent block
       document.getElementById('cookiesblock').style.display = 'none';
+
+      // Initialize Google Analytics
+      ReactGA.initialize('G-GF16SJCMHV');
+      ReactGA.pageview(window.location.pathname + window.location.search);
     }
   }, [cookies]);
 
   const giveCookieConsent = () => {
-    setCookie("cookieConsent", true, { path: "/about-us" });
+      // Calculate the expiry date
+    const sixMonthsFromNow = new Date();
+    sixMonthsFromNow.setMonth(sixMonthsFromNow.getMonth() + 6);
+
+    setCookie("cookieConsent", true, { path: "/", expires: sixMonthsFromNow });
+
+    ReactGA.event({
+      category: 'Cookie Button',
+      action: 'Click',
+      label: 'Button Clicked',
+    });
   };
 
   const setCookies = () => {
@@ -23,6 +40,18 @@ const CookieConsent = () => {
 
   return (
     <>
+      <Helmet>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-DEH0JXNN56"></script>
+        <script>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-GF16SJCMHV');
+          `}
+        </script>
+      </Helmet>
       <div className="cookiesblock" id="cookiesblock">
         <div className="cookies-container">
           <div className="row align-items-center">

@@ -1,8 +1,13 @@
 import React from 'react';
-import { Footer, Navbar2 } from '../../components';
+import { Footer, Navbar2, ScrollToTop } from '../../components';
 import './service-pages.css';
 import Cta from '../Cta';
 import { Link } from 'react-router-dom';
+import coaching_1 from '../../assets/coaching_1.jpg';
+import travel_1 from '../../assets/travel_1.jpg';
+import travel_2 from '../../assets/travel_2.jpg';
+import hr from '../../assets/hr.jpg';
+import education from '../../assets/education.png';
 
 const Travel = () => {
   return (
@@ -14,7 +19,10 @@ const Travel = () => {
                   <p>Destination Management Company | Online Travel Agency | Visitor Information Centre</p>
               </div>
 
-              <div className="hm-travel-intro">
+              <div className="hm-travel-intro custom-shape-divider-bottom-1688456518">
+                    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                    </svg>
                   <div className="hm-travel-intro__text">
                       <h4>TRAVEL CONSULTANCY</h4>
                   </div>
@@ -22,6 +30,7 @@ const Travel = () => {
                   <div className="hm-travel-content">
                         <div className="hm-travel-options-container" >
                             <div className="hm-travel-option__image">
+                                <img src={travel_1} alt="Travel Consultancy" title="Travel Consultancy" />
                             </div>
                             <div className="hm-travel-option__content">
                                 <div className="hm-travel-option__content__desc">
@@ -32,6 +41,7 @@ const Travel = () => {
                         </div>
                         <div className="hm-travel-options-container scale-up">
                             <div className="hm-travel-option__image">
+                                <img src={travel_2} alt="Travel Consultancy" title="Travel Consultancy" />
                             </div>
                             <div className="hm-travel-option__content">
                                 <div className="hm-travel-option__content__desc">
@@ -51,32 +61,38 @@ const Travel = () => {
                     <h4>Explore</h4>
                     <div className="other-services-content">
                         <div className="other-services-content__detail scale-up">
-                            <div className="other-services-image"></div>
+                            <div className="other-services-image">
+                              <img src={education} alt="Education Consultancy" title="Education Consultancy" />
+                            </div>
                             <div className="other-services-text">
                                 <h4><Link to='/our-services/education'>Education Consultancy</Link></h4>
-                                <article>At Hemllin, we work with students, parents, schools, and other beneficiaries with educational planning to improve educational experiences, facilities, and outcomes.</article>
+                                <article>Education consulting is intended to improve students' outcomes by increasing the accessibility and affordability of the education ecosystem. We ensure that you have the best possible chance of success in your educational journey.</article>
                             </div>
                         </div>
                         <div className="other-services-content__detail scale-up">
-                            <div className="other-services-image"></div>
+                            <div className="other-services-image">
+                                <img src={hr} alt="Human Resource Consulting" title="Management Consultancy"/>
+                            </div>
                             <div className="other-services-text">
                                 <h4><Link to='/our-services/management'>Management Consultancy</Link></h4>
-                                <article>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam neque itaque ea asperi</article>
+                                <article>Management consulting comprises 50 percent of the industry because it is crucial in helping businesses achieve their objectives by equipping top leadership with indispensable strategies in increasing competitive advantage. </article>
                             </div>
                         </div>
                         <div className="other-services-content__detail scale-up">
-                            <div className="other-services-image"></div>
+                            <div className="other-services-image">
+                              <img src={coaching_1} alt="Coaching and Training"   title="Training and Coaching"/>
+                            </div>
                             <div className="other-services-text">
                                 <h4><Link to='/our-services/training-and-coaching'>Coaching and Training</Link></h4>
-                                <article>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam neque itaque ea asperi</article>
+                                <article>We have specialized methods of training, counseling, or instructing an individual or a group on how to develop skills to enhance their productivity or overcome a performance problem.</article>
                             </div>
                         </div>
                     </div>
               </div>
           </div>
-          
-          <Cta ctaTitle='Ready to Work with Us?' ctaLink1='/contact-us' ctaLink1Text='Contact Us'ctaLink2='/contact-us' ctaLink2Text='Contact Us'/>
-          <Footer/>
+          <Cta ctaTitle='Want to learn more about the other services we offer?' ctaLink1='https://calendly.com/hemllinconsultancy/consultation?month=2023-07' ctaLink1Text='Book a Meeting'ctaLink2='/contact-us' ctaLink2Text='Contact Us'/>
+          <Footer />
+          <ScrollToTop />
       </>
   )
 }

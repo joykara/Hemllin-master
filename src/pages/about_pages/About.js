@@ -1,11 +1,13 @@
-import React from 'react'
-import AboutNavbar from '../../components/aboutnav/AboutNavbar'
+import React from 'react';
+import AboutNavbar from '../../components/aboutnav/AboutNavbar';
+import { Link } from 'react-router-dom';
 import arrow from '../../assets/arrow.png';
 import wwa1 from '../../assets/who-are-we.png';
 import hww from '../../assets/how-we-work.png';
-import ourValues from '../../assets/our-values.png'
+import ourValues from '../../assets/our-values.png';
+import education from '../../assets/education.png';
 import '../pages.css';
-import { Footer } from '../../components';
+import { Footer, ScrollToTop } from '../../components';
 
 
 const About = () => {
@@ -104,37 +106,43 @@ const About = () => {
               </div>
             </div>
           </div>
-          <button type='button'><a href="">Trending insights</a></button>
+          <button type='button'><a href="/">Trending insights</a></button>
         </div>
-        <div className="explore">
+        <div className="explore-services">
           <h4>Explore</h4>
-          <div className="case-study-content">
-            <div className="case-study-content__detail scale-up">
-              <div className="case-study-image"></div>
-              <div className="case-study-text">
-                <span>lorem ipsum</span>
-                <h4>Lorem ipsum dolor sit amet consectetur</h4>
-                <article>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam neque itaque ea asperi</article>
-              </div>
+          <div className="other-services-content">
+            <div className="other-services-content__detail scale-up">
+                <div className="other-services-image">
+                <img src={education} alt="Education Consultancy" title="Education Consultancy"/>
+                </div>
+                <div className="other-services-text">
+                    <h4><Link to='/our-services/education'>Education Consultancy</Link></h4>
+                    <article>Education consulting is intended to improve students' outcomes by increasing the accessibility and affordability of the education ecosystem. We ensure that you have the best possible chance of success in your educational journey.</article>
+                </div>
             </div>
-            <div className="case-study-content__detail scale-up">
-              <div className="case-study-image"></div>
-              <div className="case-study-text">
-                <h4>Lorem ipsum dolor sit amet consectetur</h4>
-                <article>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam neque itaque ea asperi</article>
-              </div>
+            <div className="other-services-content__detail scale-up">
+                <div className="other-services-image">
+                    <img src={education} alt="Travel Consultancy" title="Travel Consultancy" />
+                </div>
+                <div className="other-services-text">
+                    <h4><Link to='/our-services/travel'>Travel Consultancy</Link></h4>
+                    <article>Traveling to differing destinations for diverse reasons is an aspiration for many people. Whether for education, touring, or employment, we provide the necessary information and guidance.</article>
+                </div>
             </div>
-            <div className="case-study-content__detail scale-up">
-              <div className="case-study-image"></div>
-              <div className="case-study-text">
-                <h4>Lorem ipsum dolor sit amet consectetur</h4>
-                <article>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam neque itaque ea asperi</article>
-              </div>
+            <div className="other-services-content__detail scale-up">
+                <div className="other-services-image">
+                <img src={education} alt="Coaching and Training"  title="Training and Coaching" />
+                </div>
+                <div className="other-services-text">
+                    <h4><Link to='/our-services/training-and-coaching'>Coaching and Training</Link></h4>
+                    <article>We have specialized methods of training, counseling, or instructing an individual or a group on how to develop skills to enhance their productivity or overcome a performance problem.</article>
+                </div>
             </div>
           </div>
         </div>
 
-        <Footer/>
+        <Footer />
+        <ScrollToTop />
 
       </div>
     </>

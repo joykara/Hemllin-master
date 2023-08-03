@@ -1,19 +1,24 @@
 import React, { useEffect, useState } from 'react';
+import ReactGA from 'react-ga'; // Import react-ga
 // import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 import './App.css';
 import {BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import {Media, About, Homepage, ContactUs, Blog, Career, Mission, OurGovernance, Services, Management, Education, AgricultureIndustry, ArtificialIntelligence, OurHistory, HowWeWork, Travel, CoachingAndTraining, OurTeam} from './pages';
+import {Media, About, Homepage, ContactUs, Blog, Career, Mission, OurGovernance, Services, Management, Education, AgricultureIndustry, ArtificialIntelligence, OurHistory, HowWeWork, Travel, CoachingAndTraining, OurTeam, AutomotiveIndustry, EducationIndustry, FinancialIndustry, HealthcareIndustry, LifeSciencesIndustry, PublicAndSocialIndustry, RealEstateIndustry, RetailIndustry, TechnologyIndustry, TravelLogisticsIndustry, EngineeringIndustry, SingleBlog} from './pages';
 import { SplashScreen } from './components';
 
-function App() {
+// Initialize Google Analytics
+ReactGA.initialize('G-GF16SJCMHV');
+
+function AppContainer() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-     // Simulating a delay for demonstration purposes
+    // Simulating a delay for demonstration purposes
+    setLoading(loading); // Start loading
     setTimeout(() => {
-      setLoading(false)
-    }, 2000)
-  }, [])
+      setLoading(false); // Stop loading after a delay
+    }, 2000);
+  }, [loading])
   return (
     <Router>
       <div className="App">
@@ -24,6 +29,7 @@ function App() {
             <Route path="/" exact element={<Homepage/>} />
               <Route path="/about-us" element={<About />} />
               <Route path="/about-us/blog" element={<Blog />} />
+              <Route path="/blog-posts/:id" element={<SingleBlog />} />
               <Route path="/about-us/our-purpose-mission-and-values" element={<Mission />} />
               <Route path="/about-us/our-governance" element={<OurGovernance />} />
               <Route path="/about-us/our-team" element={<OurTeam />} />
@@ -38,15 +44,26 @@ function App() {
               <Route path="/our-services/travel" element={<Travel />} />
               <Route path="/our-services/training-and-coaching" element={<CoachingAndTraining />} />
               <Route path="/industries/agriculture" element={<AgricultureIndustry />} />
+              <Route path="/industries/automotive" element={<AutomotiveIndustry />} />
+              <Route path="/industries/education" element={<EducationIndustry />} />
+              <Route path="/industries/engineering-and-construction" element={<EngineeringIndustry />} />
+              <Route path="/industries/financial-services" element={<FinancialIndustry />} />
+              <Route path="/industries/healthcare" element={<HealthcareIndustry />} />
+              <Route path="/industries/life-sciences" element={<LifeSciencesIndustry />} />
+              <Route path="/industries/public-and-social" element={<PublicAndSocialIndustry />} />
+              <Route path="/industries/real-estate" element={<RealEstateIndustry />} />
+              <Route path="/industries/retail" element={<RetailIndustry />} />
+              <Route path="/industries/technology" element={<TechnologyIndustry />} />
+              <Route path="/industries/travel-logistics-and-infrastructure" element={<TravelLogisticsIndustry />} />
               <Route path="/featured-insights/ai" element={<ArtificialIntelligence />} />
-
           </Routes>
         )}
       </div>
     </Router>
-
-
   );
 }
 
+function App() {
+  return <AppContainer />;
+}
 export default App;

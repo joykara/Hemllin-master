@@ -8,6 +8,7 @@ import './navbar.css';
 import { Link } from 'react-router-dom';
 import List from '../../data/List';
 import { IndustriesMenu, ServicesMenu, InsightsMenu, AboutMenu, MobileIndustriesMenu, MobileAboutMenu, MobileInsightsMenu, MobileServicesMenu} from '../../container';
+import logo from '../../hemllinLogo.png'
 
 const Navbar = () => {
   //show data on typing in the input
@@ -172,9 +173,9 @@ const Navbar = () => {
         <button onClick={handleToggle}>
           {toggleMenu ? <RiCloseLine size={50} /> : <RiMenuLine size={40} />}
         </button>
-        <p>
-          <Link to="/">Logo</Link>
-        </p>
+        <div className='navbar-hm__logo'>
+          <Link to="/"><img src={logo} alt="" /></Link>
+        </div>
       </div>
       {toggleMenu && (
         <div className={`navbar__menu-links ${toggleMenu ? 'show' : ''}`}>
@@ -187,9 +188,9 @@ const Navbar = () => {
                   <RiMenuLine color="#fff" size={30} />
                 )}
               </button>
-              <p>
-                <Link to="/">Logo</Link>
-              </p>
+              <div className="navbar-hm__logo">
+                <Link to="/"><img src={logo} alt="" /></Link>
+              </div>
             </div>
             <div className="menu">
               <div className="show-menu">
@@ -279,10 +280,10 @@ const Navbar = () => {
                     {mobileAboutVisible && <MobileAboutMenu />}
                   </div>
               </div>
-              <p><a href="/careers">Careers</a></p>
-              <p><a href="/about-us/blog">Blog</a></p>
-              <p><a href="#subscribe">Email Subscriptions</a></p>
-              <p><a href="#sign-in">Sign In</a></p>
+              <p><Link to="/careers">Careers</Link></p>
+              <p><Link to="/about-us/blog">Blog</Link></p>
+              <p><Link to="/contact-us#hm-footer-container">Email Subscriptions</Link></p>
+              <p><Link to="/">Sign In</Link></p>
             </div>
           </div>
           <div className="navbar__menu-links__details">
@@ -307,54 +308,54 @@ const Navbar = () => {
         </div>
       )}
       <div className="navbar__menu">
-        <div className="navbar__menu-content">
-          <div>
-            <p onMouseEnter={handleIndustriesContent} className={activeDropdown === 'industries' ? 'active-dropdown' : ''}>
+        <ul className="navbar__menu-content">
+          <li className="navbar__menu-content-detail" onMouseEnter={handleIndustriesContent} onMouseLeave={handleDropdownLeave} id={activeDropdown === 'industries' ? 'active-dropdown' : ''}>
+            <p>
               Industries <span>
               {activeDropdown === 'industries' ? < IoIosArrowUp /> : <IoIosArrowDown />}</span>
             </p>
-            <div className={`drop-down-menu ${activeDropdown === 'industries' ? 'active' : ''}`} onMouseLeave={handleDropdownLeave}>
+            <div className={`drop-down-menu ${activeDropdown === 'industries' ? 'active' : ''}`}>
               <div className="drop-down-menu-container">
                 <IndustriesMenu />
               </div>
             </div>
-          </div>
-          <div>
-            <p onMouseEnter={handleServicesContent} className={activeDropdown === 'services' ? 'active-dropdown' : ''}>
+          </li>
+          <li className="navbar__menu-content-detail" onMouseEnter={handleServicesContent} onMouseLeave={handleDropdownLeave} id={activeDropdown === 'services' ? 'active-dropdown' : ''}>
+            <p>
               <a href="/our-services">Services</a> <span>
               {activeDropdown === 'services' ? < IoIosArrowUp /> : <IoIosArrowDown />}</span>
             </p>
-            <div className={`drop-down-menu2 ${activeDropdown === 'services' ? 'active2' : ''}`} onMouseLeave={handleDropdownLeave}>
+            <div className={`drop-down-menu2 ${activeDropdown === 'services' ? 'active2' : ''}`}>
               <div className="drop-down-menu-container">
                 <ServicesMenu />
               </div>
             </div>
-          </div>
-          <div>
-            <p onMouseEnter={handleInsightsContent} className={activeDropdown === 'insights' ? 'active-dropdown' : ''}>
+          </li>
+          <li className="navbar__menu-content-detail" onMouseEnter={handleInsightsContent} onMouseLeave={handleDropdownLeave} id={activeDropdown === 'insights' ? 'active-dropdown' : ''}>
+            <p>
               Featured Insights <span>
               {activeDropdown === 'insights' ? < IoIosArrowUp /> : <IoIosArrowDown />}</span>
             </p>
-            <div className={`drop-down-menu3 ${activeDropdown === 'insights' ? 'active3' : ''}`} onMouseLeave={handleDropdownLeave}>
+            <div className={`drop-down-menu3 ${activeDropdown === 'insights' ? 'active3' : ''}`}>
               <div className="drop-down-menu-container">
                 <InsightsMenu />
               </div>
             </div>
-          </div>
-          <p><Link to='/careers'>Careers</Link></p>
-          <p><a href="/about-us/blog">Blog</a></p>
-          <div>
-            <p onMouseEnter={handleAboutContent} className={activeDropdown === 'about' ? 'active-dropdown' : ''}>
+          </li>
+          <li className="navbar__menu-content-detail"><Link to='/careers'>Careers</Link></li>
+          <li className="navbar__menu-content-detail"><a href="/about-us/blog">Blog</a></li>
+          <li className="navbar__menu-content-detail" onMouseEnter={handleAboutContent} id={activeDropdown === 'about' ? 'active-dropdown' : ''} onMouseLeave={handleDropdownLeave}>
+            <p>
               About Us <span>
               {activeDropdown === 'about' ? < IoIosArrowUp /> : <IoIosArrowDown />}</span>
             </p>
-            <div className={`drop-down-menu4 ${activeDropdown === 'about' ? 'active4' : ''}`} onMouseLeave={handleDropdownLeave}>
+            <div className={`drop-down-menu4 ${activeDropdown === 'about' ? 'active4' : ''}`}>
               <div className="drop-down-menu-container">
                 <AboutMenu />
               </div>
             </div>
-          </div>
-        </div>
+          </li>
+        </ul>
       </div>
       <div className="navbar__search">
         <p><a href="/">Sign In</a> | <a href="/">Subscribe</a></p>

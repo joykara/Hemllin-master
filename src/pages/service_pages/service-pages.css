@@ -1,4 +1,5 @@
 /* SERVICES PAGE */
+
 .services-container{
     display: flex;
     flex-direction: column;
@@ -7,12 +8,14 @@
     border-bottom: 1px solid #514d4d;
 }
 .services-title{
-    height: 400px;
+    height: 250px;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #807b7b;
+    background: #000000;
+    color: #ffffff;
+    letter-spacing: 2px;
     padding: 0;
 }
 .services-content{
@@ -20,13 +23,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1rem 10rem;
+    padding: 1rem 8rem;
 }
 .service-options-container{
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding: 3rem;
+    padding: 1rem 3rem;
+    margin-bottom: 2rem;
     width: 100%;
 }
 .service-options-container:nth-child(2),
@@ -35,17 +39,22 @@
     flex-direction: row-reverse;
 }
 .service-option__image{
-    width: 40%;
     height: 300px;
     margin-top: 2rem;
     background: #e9e6e6;
+}
+.service-option__image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 .service-option__content{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 1rem 5rem;
+    padding: 1rem 2rem;
     width: 60%;
 }
 .service-option__content h3{
@@ -96,17 +105,43 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: left;
     background: var(--color-bg);
     color: #ffffff;
+}
+.hm-management-intro svg,
+.hm-education-intro svg,
+.hm-travel-intro svg,
+.hm-cntr-intro svg {
+    position: relative;
+    /* top: 205px; */
+    justify-content: flex-end;
+    margin-top: auto;
+    width: calc(100% + 1.3px);
+    height: 100px;
+}
+
+.hm-management-intro .shape-fill,
+.hm-education-intro .shape-fill,
+.hm-travel-intro .shape-fill,
+.hm-cntr-intro .shape-fill{
+    fill: var(--color-bg);
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .custom-shape-divider-bottom-1688456628 svg {
+        width: calc(152% + 1.3px);
+        height: 101px;
+    }
 }
 .hm-management-title h4,
 .hm-education-title h4,
 .hm-travel-title h4,
 .hm-cntr-title h4{
+    padding-top: 200px;
     padding-left: 5rem;
-    margin: 1rem 0;
     letter-spacing: 2px;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -121,7 +156,7 @@
 .hm-education-intro,
 .hm-travel-intro,
 .hm-cntr-intro{
-    margin: 2rem 0;
+    margin-bottom: 2rem;
 }
 .hm-management-intro__text,
 .hm-education-intro__text,
@@ -169,14 +204,14 @@
     align-items: center;
     padding: 2rem 0;
     margin-bottom: 2rem;
-    width: 60%;
+    width: 90%;
     transition: all 2s ease-in-out;
     transition-delay: .2s;
 }
 .hm-education-options-container,
 .hm-travel-options-container,
 .hm-cntr-options-container{
-    width: 80%;
+    width: 90%;
     justify-content: space-evenly;
 }
 .hm-management-options-container:nth-child(2),
@@ -192,9 +227,20 @@
 .hm-travel-option__image,
 .hm-cntr-option__image{
     width: 40%;
-    height: 300px;
+    height: clamp(200px, 40vh, 500px);
     background: #e9e6e6;
-    padding: 0 1rem;
+    margin-bottom: auto;
+    padding: 0;
+}
+
+.hm-management-option__image img,
+.hm-education-option__image img,
+.hm-travel-option__image img,
+.hm-cntr-option__image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 .hm-management-option__content,
 .hm-education-option__content,
@@ -355,9 +401,16 @@
     overflow: hidden;
     background-color: #514d4d;
 }
+.other-services-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
 .other-services-text{
     width: 90%;
     padding: 1rem 0;
+    font-family: var(--font-family);
 }
 .other-services-text h4{
     padding-bottom: 2rem;
@@ -371,11 +424,51 @@
     cursor: pointer;
     color: var(--color-link);
 }
+.other-services-text article{
+    font-family: var(--font-family);
+}
 
 
 
 /* MEDIA QUERIES */
 @media screen and (max-width: 1084px){
+    /* SERVICES PAGE */
+    .services-content{
+        display: flex;
+        padding: 1rem;
+    }
+    .service-options-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 3rem 0;
+    }
+    .service-options-container:nth-child(2),
+    .service-options-container:nth-child(4),
+    .service-options-container:nth-child(6){
+        flex-direction: column;
+    }
+    .service-options-container,
+    .service-option__content,
+    .service-option__image{
+        width: 90%;
+    }
+    .hm-media-intro__content-text{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .details{
+        margin-bottom: 2rem;
+    }
+    .hm-agriculture-industry__themes-content{
+        flex-direction: column;
+    }
+    .hm-agriculture-industry__themes-content-text{
+        margin: 1rem 0;
+        width: 90%;
+    }
     .hm-management-intro__text p,
     .hm-education-intro__text p,
     .hm-travel-intro__text p,
@@ -427,6 +520,7 @@
     .other-services-content__detail{
         margin: 0;
         margin-bottom: 1rem;
+        box-shadow: 0px 16px 32px -1px rgba(5,28,44,.2), 0px 0px 1px 0px rgba(5,28,44,.15);
     }
 }
 @media screen and (max-width: 768px){
@@ -444,14 +538,23 @@
         width: 100%;
         margin: 0;
         padding: 0;
-    }.hm-management-title h4, 
-    .hm-education-title h4, 
-    .hm-travel-title h4, 
+    }
+    .hm-management-title,
+    .hm-education-title,
+    .hm-travel-title,
+    .hm-cntr-title {
+        height: 300px;
+    }
+    .hm-management-title h4,
+    .hm-education-title h4,
+    .hm-travel-title h4,
     .hm-cntr-title h4{
         padding-left: 1rem;
-    }.hm-management-title p, 
-    .hm-education-title p, 
-    .hm-travel-title p, 
+        padding-top: 90px;
+    }
+    .hm-management-title p,
+    .hm-education-title p,
+    .hm-travel-title p,
     .hm-cntr-title p {
         padding: 2rem 1rem;
     }

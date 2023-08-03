@@ -99,6 +99,9 @@
     font-size: 20px;
     width: 100%;
 }
+.about-us-dropdown-item{
+    padding-bottom: 20px;
+}
 
 
 /* FEATURED INSIGHTS */
@@ -129,7 +132,7 @@
 }
 
 /* SERVICES */
-.services-list UL{
+.services-list ul{
     font-size: 20px;
 }
 
@@ -141,6 +144,14 @@
     color: var(--color-bg);
     padding: 20px 0;
     font-family: var(--links-font-family);
+}
+.about-us-sections h5{
+    color: var(--color-bg);
+    padding: 10px 0;
+    font-family: var(--links-font-family);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
 }
 .industries-dropdown-item  a:hover,
 .services-dropdown-item  a:hover,

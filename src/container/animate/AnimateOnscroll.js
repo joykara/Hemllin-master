@@ -1,5 +1,3 @@
-import React from 'react'
-
 const AnimateOnscroll = () => {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {

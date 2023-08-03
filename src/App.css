@@ -15,7 +15,7 @@
   font-family: 'Roboto';
 }
 h1{
-  font-size: 64px;
+  font-size: clamp(3.5rem, 3.5vw, 4.5rem);
   font-weight: 700;
   font-family: var(--font-family);
 }
@@ -35,14 +35,14 @@ h4{
   font-family: var(--font-family);
 }
 a{
-  font-size: 16px;
+  font-size: clamp(1.1rem, 1.3vw, 1.3rem);
   color: #000;
   font-family: var(--links-font-family);
 }
 p{
   font-family: var(--font-family);
   line-height: 32px;
-  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  font-size: clamp(1.1rem, 1.3vw, 1.3rem);
   font-weight: 400;
 }
 .cta-link:hover{
@@ -68,7 +68,20 @@ p{
   padding: 2rem 0;
 }
 .main-container .navbar{
-  background: #0e0d0df3;
+  background: #798680;
+}
+.dark-container .navbar{
+  background: #000000;
+}
+.custom-shape-divider-bottom-1688456628 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: 999;
+  line-height: 0;
+  transform: rotate(180deg);
 }
 
 
@@ -110,8 +123,6 @@ p{
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
 }
 .align-items-center {
   -webkit-box-align: center !important;
@@ -159,6 +170,21 @@ p{
   background: #606060;
 }
 
+
+@media only screen and (min-width: 1800px){
+  a{
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    color: #000;
+    font-family: var(--links-font-family);
+  }
+  p{
+    font-family: var(--font-family);
+    line-height: 32px;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    font-weight: 400;
+  }
+
+}
 @media only screen and (max-width: 991px){
 .cookiesblock {
     padding: 0 0 15px 0;
@@ -176,5 +202,10 @@ p{
   .cookiesbtn ul li a {
     padding: 5px 20px;
     font-size: 12px;
+  }
+}
+@media only screen and (max-width: 767px){
+  .scale-up{
+    box-shadow: 0px 16px 32px -1px rgba(5,28,44,.2), 0px 0px 1px 0px rgba(5,28,44,.15);
   }
 }

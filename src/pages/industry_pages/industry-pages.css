@@ -1,0 +1,86 @@
+/* INDUSTRY PAGES */
+.industry-nav{
+    position: fixed;
+}
+.hm-agriculture-industry-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 2px solid #857c7c;
+    padding-bottom: 3rem;
+    margin-top: auto;
+}
+.hm-agriculture-industry__banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    height:  clamp(500px,90vh,100vh);
+}
+.hm-agriculture-industry__banner-image{
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    color: green;
+}
+.hm-agriculture-industry__banner-image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.hm-agriculture-industry__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+.hm-agriculture-industry__content-intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.hm-agriculture-industry__content-intro-image{
+    height: 300px;
+    width: 90%;
+    margin: 2rem;
+    background: #e9e6e6;
+}
+.hm-agriculture-industry__themes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    height: 80vh;
+}
+.hm-agriculture-industry__themes-content{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2rem 0;
+}
+.hm-agriculture-industry__themes-content-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1rem;
+    margin-right: 1rem;
+    background: #ffffff;
+}
+.hm-agriculture-industry__themes-content-text p{
+    padding-bottom: 2rem;
+}
+.hm-agriculture-industry__themes-content-text em,
+.hm-agriculture-industry__themes-content-text span{
+    font-family: var(--font-family);
+}
+.hm-agriculture-industry__themes-content-text span{
+    text-decoration: underline;
+    font-weight: 600;
+}

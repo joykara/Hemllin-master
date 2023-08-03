@@ -1,5 +1,5 @@
 .aboutnavbar{
-    padding: 0.5rem 1rem 0 1rem;
+    padding: 0.2rem 1rem 0 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -62,12 +62,11 @@
 .aboutnavbar__menu-content a{
     color: #000000;
     font-family: var(--font-family);
-    font-size: 18px;
     font-weight: 700;
     line-height: 24px;
 }
 #about-overview p{
-    padding-bottom: 1rem;
+    padding-bottom: .5rem;
     border-bottom: 3px solid #051C2C;
 }
 .aboutnavbar__menu-content p:hover{

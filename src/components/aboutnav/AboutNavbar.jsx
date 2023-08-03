@@ -8,6 +8,8 @@ import { Link } from 'react-router-dom';
 import AboutUs from '../../container/dropdowns/AboutUs';
 import List from '../../data/List';
 import { IndustriesMenu, ServicesMenu, InsightsMenu, AboutMenu, MobileIndustriesMenu, MobileAboutMenu, MobileInsightsMenu, MobileServicesMenu} from '../../container';
+import logo from '../../hemllinLogo.png';
+
 
 const AboutNavbar = () => {
   //show data on typing in the input
@@ -99,7 +101,6 @@ const AboutNavbar = () => {
 
   const handleToggle = () => {
     setToggleMenu(!toggleMenu);
-    handleContent('industries', true);
   };
 
   const handleContent = (section, flag) => {
@@ -143,9 +144,9 @@ const AboutNavbar = () => {
         <button onClick={handleToggle}>
           {toggleMenu ? <RiCloseLine size={50} /> : <RiMenuLine size={40} />}
         </button>
-        <p>
-          <Link to="/">Logo</Link>
-        </p>
+        <div className='navbar-hm__logo'>
+          <Link to="/"><img src={logo} alt="" /></Link>
+        </div>
       </div>
       {toggleMenu && (
         <div className={`navbar__menu-links ${toggleMenu ? 'show' : ''}`}>
@@ -158,9 +159,9 @@ const AboutNavbar = () => {
                   <RiMenuLine color="#fff" size={30} />
                 )}
               </button>
-              <p>
-                <Link to="/">Logo</Link>
-              </p>
+              <div className="navbar-hm__logo">
+                <Link to="/"><img src={logo} alt="" /></Link>
+              </div>
             </div>
             <div className="menu">
               <div className="show-menu">
@@ -301,7 +302,7 @@ const AboutNavbar = () => {
               }`}
               onMouseLeave={handleAboutDropdownLeave}
             >
-              <div className="aboutdrop-down-menu-container">
+              <ul className="aboutdrop-down-menu-container">
                 {/* enter correct links to pages */}
                 <AboutUs
                   linkUrl={'/about-us/our-team'}
@@ -319,7 +320,7 @@ const AboutNavbar = () => {
                   linkUrl={'/about-us/our-governance'}
                   linkItem={'Our Governance'}
                 />
-              </div>
+              </ul>
             </div>
           </div>
           <p>

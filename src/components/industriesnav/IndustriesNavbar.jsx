@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import { RiMenuLine, RiCloseLine } from 'react-icons/ri';
 import './industriesnavbar.css';
 import { Link } from 'react-router-dom';
+import logo from '../../hemllinLogo.png';
 
 
 const Menu = () => (
@@ -24,8 +25,8 @@ const IndustriesNavbar = () => {
 
   return (
     <div className="industry-nav">
-        <div className="industry__logo">               
-            <p><Link to='/'>Logo</Link></p>
+        <div className='navbar-hm__logo'>
+        <Link to="/"><img src={logo} alt="" /></Link>
         </div>
         {toggleMenu && (
             <div className={`industry__menu-links ${toggleMenu ? 'show' : ''}`}>
@@ -38,7 +39,7 @@ const IndustriesNavbar = () => {
                 </div>
             </div>
         )}
-        
+
         <div className="industry__toogle-menu">
             <button onClick={handleToggle}>
                 {toggleMenu ? <RiCloseLine size={50} /> : <RiMenuLine size={40} />}
