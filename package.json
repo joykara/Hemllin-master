@@ -2,19 +2,26 @@
   "name": "hemllinn",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:5000",
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "aos": "^2.3.4",
-    "axios": "^1.4.0",
+    "axios": "^0.27.2",
+    "helmet": "^7.0.0",
     "native": "^0.3.3",
+    "nodemon": "^2.0.22",
     "react": "^18.2.0",
+    "react-axios": "^2.0.6",
     "react-cookie": "^4.1.1",
     "react-dom": "^18.2.0",
+    "react-ga": "^3.3.1",
     "react-google-recaptcha": "^3.1.0",
+    "react-helmet": "^6.1.0",
     "react-icons": "^4.9.0",
+    "react-lazy-load": "^4.0.1",
     "react-router-dom": "^6.11.2",
     "react-router-hash-link": "^2.4.3",
     "react-scripts": "5.0.1",
@@ -25,7 +32,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "concurrently \"npm run server\" \"npm run frontend\"",
+    "frontend": "react-scripts start",
+    "server": "nodemon src/server/server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -47,5 +56,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
   }
 }

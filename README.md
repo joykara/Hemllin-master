@@ -19,7 +19,7 @@ License
     - [Available Scripts](#available-scripts)
 - [Project Structure](#project-structure)
     - [Folder Structure](#folder-structure)
-    - [Dependencies](#dependencies)
+    - [Dependencies Used](#dependencies)
     - [Links](#links)
 - [My process](#my-process)
   - [Technologies Used](#technologies-used)
@@ -74,19 +74,24 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 │   └── robots.txt
 ├── src
 │   ├── assets
-│   │   ├── images
-│   │   │   ├── illustration-editor-desktop.svg
-│   │   │   ├── illustration-editor-mobile.svg
-│   │   │   ├── illustration-laptop-desktop.svg
-│   │   │   ├── illustration-laptop-mobile.svg
-│   │   │   ├── illustration-phones.svg
-│   │   │   ├── illustration-stay-productive.png
-│   │   │   ├── logo.svg
-│   │   │   ├── pattern-background-desktop.svg
-│   │   │   ├── pattern-background-mobile.svg
-│   │   │   ├── photo1.png
-│   │   │   ├── photo2.png
+│   │   ├── ind images
+│   │   │   ├── Agriculture Patterns_2.jpg
+│   │   │   ├── Agriculture Patterns.jpg
+│   │   │   ├── Automotive Patterns_2.jpg
+│   │   │   ├── Automotive Patterns.jpg
+│   │   │   ├── Education Patterns_2_.jpg
+│   │   │   ├── Education Patterns.png
+│   │   │   ├── ...
 │   │   │   └── ...
+│   │   ├── riruta_central_pics
+│   │   │   ├── 514A0911.jpg
+│   │   │   └── ...
+│   │   ├── team
+│   │   │   ├── Arthur1.jpg
+│   │   │   ├── Collins0.jpg
+│   │   │   └── ...
+│   │   ├── ...
+│   │   └── ...
 │   ├── components/
 │   │   ├── aboutnav/
 │   │   │   ├── AboutNav.jsx
@@ -95,28 +100,32 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 │   │   │   ├── Articles.jsx
 │   │   │   ├── articles.css
 │   │   │   └── ...
+│   │   ├── cookieConsent/
+│   │   │   └── cookieConsent.js
 │   │   ├── features/
 │   │   │   ├── Features.jsx
-│   │   │   ├── features.css
-│   │   │   └── ...
+│   │   │   └── features.css
 │   │   ├── footer/
 │   │   │   ├── Footer.jsx
 │   │   │   └── footer.css
+│   │   ├── form_input/
+│   │   │   ├── FormInput.jsx
+│   │   │   └── formInput.css
 │   │   ├── header/
 │   │   │   ├── Header.jsx
 │   │   │   └── Header.css
 │   │   ├── industriesnav/
-│   │   │   ├── IndustriesNav.jsx
+│   │   │   ├── IndustriesNavbar.jsx
 │   │   │   └── industriesnav.css
 │   │   ├── navbar/
 │   │   │   ├── Navbar.jsx
 │   │   │   └── navbar.css
+│   │   ├── searchbar/
+│   │   │   ├── SearchBar.jsx
+│   │   │   └── searchbar.css
 │   │   ├── splashscreen/
 │   │   │   ├── Splashscreen.jsx
 │   │   │   └── splashscreen.css
-│   │   ├── form_input/
-│   │   │   ├── FormInput.jsx
-│   │   │   └── form_input.css
 │   │   └── index.js
 │   ├── container/
 │   │   ├── animate/
@@ -144,22 +153,45 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 │   │   │   ├── MobileServicesMenu.jsx
 │   │   │   └── mobiledropdownmenu.css
 │   │   └── index.js
+│   ├── data/
+│   │   ├── List.css
+│   │   ├── List.js
+│   │   └── MOCK_DATA.json
 │   ├── pages/
-│   │   ├── Home/
-│   │   │   ├── Home.js
-│   │   │   ├── Home.css
-│   │   │   └── ...
-│   │   ├── About/
+│   │   ├── about_pages/
+│   │   │   ├── about-pages.css
 │   │   │   ├── About.js
-│   │   │   ├── About.css
+│   │   │   ├── HowWeWork.js
+│   │   │   ├── Media.js
+│   │   │   ├── OurGovernance.js
+│   │   │   ├── OurHistory.js
+│   │   │   ├── OurMission.js
+│   │   │   ├── OurTeam.js
 │   │   │   └── ...
+│   │   ├── industry_pages/
+│   │   │   ├── AgricultureIndustry.js
+│   │   │   ├── AutomotiveIndustry.js
+│   │   │   ├── EducationIndustry.js
+│   │   │   ├── EngineeringIndustry.js
+│   │   │   ├── FinancialIndustry.js
+│   │   │   ├── HealthcareIndustry.js
+│   │   │   ├── LifeSciencesIndustry.js
+│   │   │   ├── PublicAndSocialIndustry.js
+│   │   │   ├── RealEstateIndustry.js
+│   │   │   ├── RetailIndustry.js
+│   │   │   ├── TechnologyIndustry.js
+│   │   │   ├── TelecommunicationsIndustry.js
+│   │   │   ├── TravelLogisticsIndustry.js
+│   │   │   └── industry-pages.css
 │   │   └── ...
-│   ├── services/
-│   │   ├── api.js
-│   │   └── ...
-│   ├── utils/
-│   │   ├── helpers.js
-│   │   └── ...
+│   ├── server/
+│   │   ├── server.js
+│   │   ├── models/
+│   │   │   ├── contactFormModel.js
+│   │   │   └── subscriptionModel.js
+│   │   ├── node_modules
+│   │   ├── package-lock.json
+│   │   └── package.json
 │   ├── App.js
 │   ├── App.css
 │   ├── index.css
@@ -181,7 +213,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
  - The `container` directory includes container components that manage the presentation and state logic for specific sections or features of your application.
  - The `pages` directory contains components that represent different pages of the website. Each page has its own directory(e.g., industry_pages, about_pages) with a .js file for the page's logic and a corresponding CSS file for styling.
  - The `services` directory houses modules responsible for making API requests or handling data-related tasks.
- - The `utils` directory contains utility/helper functions or modules used throughout the project.
+ - The `models` directory contains utility/helper functions or modules used throughout the project.
  - The `App.js`  file is the main entry point for the React application, where you define the overall structure and routing.
  - The `index.js` file is the entry point for the ReactDOM rendering, where the React application is rendered into the HTML document.
  - The root directory contains configuration files such as `.gitignore`, `package-lock.json`, `package.json`, and `README.md.`
@@ -189,6 +221,9 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
  - The `package.json` file includes project metadata and lists dependencies and scripts.
  - The `README.md` file provides an overview and documentation for the project.
  - This folder structure provides a modular and organized approach to managing your React website project, separating components, pages, assets, and other resources into their respective directories. Feel free to adjust and customize it based on your specific project requirements and preferences.
+
+
+### Dependencies Used
 
 
 ### Links
@@ -202,7 +237,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 #### Front-end: 
 - The website is built using modern web technologies such as React.js, HTML5, CSS3, and JavaScript. We follow best practices to ensure a clean and maintainable codebase.
 #### Back-end: 
-- Our website utilizes ...
+- Our website utilizes Node.js, Express and MongoDB for the database set-up.
 #### Database: 
 - We leverage a database system ... to store and retrieve relevant information.
 #### Deployment: 
