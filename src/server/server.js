@@ -32,7 +32,7 @@ app.use('/blog-posts/image', express.static('/src/server/uploads/image'))
 app.post('/uploads', upload.single('image'), (req, res) => {
     res.json({
         success: 1,
-        image_url: `http://localhost:443/blog-posts/image/${req.file.filename}`,
+        image_url: `http://localhost:5000/blog-posts/image/${req.file.filename}`,
         filename: req.file.filename
     });
 });
