@@ -274,6 +274,13 @@
     padding: 2rem 1rem;
     width: 100%;
 }
+#blog-empty{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    width: 100%;
+}
 
 /* EACH BLOG POST */
 .single-blog-container {
