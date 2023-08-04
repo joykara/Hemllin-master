@@ -61,9 +61,10 @@ const OurTeam = () => {
                             <img src={shadrack} alt="finance" />
                         </div>
                         <div className='hm-ot-member-detail-text'>
-                            <p>Seize the moment today, for tomorrow remains elusive</p>
-                              <p>SHADRACK WATIMA</p>
-                              <p><span>MARKETING MANAGER</span></p>
+                            <p>Nothing truly valuable has ever been acquired passively</p>
+                            {/* <p>Instead of trying to calm the sea, strengthen your vessel</p> */}
+                            <p>SHADRACK WATIMA</p>
+                            <p><span>MARKETING MANAGER</span></p>
                         </div>
                     </div>
                     <div className='hm-ot-member-detail'>
