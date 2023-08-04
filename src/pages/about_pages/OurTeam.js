@@ -76,6 +76,24 @@ const OurTeam = () => {
                             <p>CYNTHIA MWAMATI</p>
                         </div>
                     </div>
+                    <div className='hm-ot-member-detail'>
+                        <div className='hm-ot-member-detail-img'>
+                            <img src={cynthia} alt="finance" />
+                        </div>
+                        <div className='hm-ot-member-detail-text'>
+                            <p>The only strategy that is guaranteed to fail is not taking risks</p>
+                            <p>BARBARA ONKOBA</p>
+                        </div>
+                    </div>
+                    <div className='hm-ot-member-detail'>
+                        <div className='hm-ot-member-detail-img'>
+                            <img src={cynthia} alt="finance" />
+                        </div>
+                        <div className='hm-ot-member-detail-text'>
+                            <p>Every accomplishment starts with the decision to try</p>
+                            <p>JANET</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
