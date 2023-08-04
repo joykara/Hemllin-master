@@ -99,7 +99,7 @@ const OurTeam = () => {
                                 <img src={ourPurpose} alt="our history" />
                             </div>
                             <div className='hww-other--link-text'>
-                                <h2><Link to='/about-us/history-of-our-firm'>Our Purpose, Mission and Values</Link></h2>
+                                <h2><Link to='/about-us/our-purpose-mission-and-values'>Our Purpose, Mission and Values</Link></h2>
                                 <p>Learn more about our journey and how we got to where we are today.</p>
                             </div>
                         </div>
