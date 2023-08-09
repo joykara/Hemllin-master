@@ -2,7 +2,7 @@
 import React, { useState, useRef } from 'react';
 import './articles.css';
 import { FaMicrophone, FaMicrophoneSlash } from 'react-icons/fa';
-import videoImage from '../../assets/RCS-video_1.mp4'
+import videoImage from '../../assets/RCS-video.mp4'
 import joinUS from '../../assets/join-us.png';
 import arrow from '../../assets/arrow.png'
 

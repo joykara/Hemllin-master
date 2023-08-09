@@ -61,9 +61,10 @@ const OurTeam = () => {
                             <img src={shadrack} alt="finance" />
                         </div>
                         <div className='hm-ot-member-detail-text'>
-                            <p>Seize the moment today, for tomorrow remains elusive</p>
-                              <p>SHADRACK WATIMA</p>
-                              <p><span>ADMINISTRATOR</span></p>
+                            <p>Nothing truly valuable has ever been acquired passively</p>
+                            {/* <p>Instead of trying to calm the sea, strengthen your vessel</p> */}
+                            <p>SHADRACK WATIMA</p>
+                            <p><span>MARKETING MANAGER</span></p>
                         </div>
                     </div>
                     <div className='hm-ot-member-detail'>
@@ -73,6 +74,24 @@ const OurTeam = () => {
                         <div className='hm-ot-member-detail-text'>
                             <p>Seize the moment today, for tomorrow remains elusive</p>
                             <p>CYNTHIA MWAMATI</p>
+                        </div>
+                    </div>
+                    <div className='hm-ot-member-detail'>
+                        <div className='hm-ot-member-detail-img'>
+                            <img src={cynthia} alt="finance" />
+                        </div>
+                        <div className='hm-ot-member-detail-text'>
+                            <p>The only strategy that is guaranteed to fail is not taking risks</p>
+                            <p>BARBARA ONKOBA</p>
+                        </div>
+                    </div>
+                    <div className='hm-ot-member-detail'>
+                        <div className='hm-ot-member-detail-img'>
+                            <img src={cynthia} alt="finance" />
+                        </div>
+                        <div className='hm-ot-member-detail-text'>
+                            <p>Every accomplishment starts with the decision to try</p>
+                            <p>JANET</p>
                         </div>
                     </div>
                 </div>
@@ -98,7 +117,7 @@ const OurTeam = () => {
                                 <img src={ourPurpose} alt="our history" />
                             </div>
                             <div className='hww-other--link-text'>
-                                <h2><Link to='/about-us/history-of-our-firm'>Our Purpose, Mission and Values</Link></h2>
+                                <h2><Link to='/about-us/our-purpose-mission-and-values'>Our Purpose, Mission and Values</Link></h2>
                                 <p>Learn more about our journey and how we got to where we are today.</p>
                             </div>
                         </div>
