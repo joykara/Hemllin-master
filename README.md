@@ -229,27 +229,17 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### Links
 
-- Website Link: [https://github.com/joykara/qrcode_challenge.git]
+- Website Link: [https://hemllin-master.vercel.app/]
 
 ## My process
 
 ### Technologies Used
 
 #### Front-end: 
-- The website is built using modern web technologies such as React.js, HTML5, CSS3, and JavaScript. We follow best practices to ensure a clean and maintainable codebase.
+- The website is built using modern web technologies such as React.js, HTML5, CSS3, and JavaScript following best practices to ensure a clean and maintainable codebase.
 #### Back-end: 
-- Our website utilizes Node.js, Express and MongoDB for the database set-up.
-#### Database: 
-- We leverage a database system ... to store and retrieve relevant information.
-#### Deployment: 
-- The website is deployed on ....
+- The website utilizes Node.js, Express and MongoDB for the database set-up.
 
-
-### Continued development
-
-The areas I want to continue focusing on in future projects include:
-- Dealing with the styling of my margins and padding
-- Refining my code lines too.
 
 
 ### Useful resources
@@ -258,9 +248,7 @@ The areas I want to continue focusing on in future projects include:
 
 
 ## Author
-
-- Website - [Joy Mwende Karani](https://github.com/joykara/qrcode_challenge.git)
-- Frontend Mentor - [@joykara](https://www.frontendmentor.io/profile/joykara)
+- Github - [Joy Mwende Karani](https://github.com/joykara/)
 
 
 
