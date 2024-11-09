@@ -14,7 +14,7 @@ const Blog = ({imageUrl, featureTitle, featureUrl1, featureUrl2, featureCta1, fe
       </div>
       <div className="blog-content">
         <div className="blog-content__text">
-          <h1>{featureTitle}</h1>
+          <h2>{featureTitle}</h2>
           <p>{featureText}</p>
             <div className="blog-content__button">
               <button type='button'><a href={featureUrl1} className='cta-link'>{featureCta1} <span className='arrow'><img src={arrow} alt="arrow nav" /></span></a> </button>
